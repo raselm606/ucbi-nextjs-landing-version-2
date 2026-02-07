@@ -325,7 +325,7 @@ img {
 }
 .driving_section .cline {
     background: #F0F1F5;
-    padding: 100px 70px 135px 70px !important;
+    padding: 150px 70px 150px!important;
     border-right: 1px solid rgb(17 46 80 / 15%) !important;
     border-left: 1px solid rgb(17 46 80 / 15%) !important;
 }
@@ -376,8 +376,8 @@ img {
     font-weight: 600; 
 }
 .big_text_number {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 38px;
+    padding-bottom: 40px;
 }
 .line_right{ 
     border-right: 1px solid #ddd;
