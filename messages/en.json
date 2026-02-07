@@ -1,0 +1,24 @@
+{
+  "advance": {
+    "section": {
+      "title": {
+        "line1": "Advancing UCBI through",
+        "line2": "strategic growth"
+      }
+    },
+    "items": {
+      "treasury": {
+        "title": "Treasury Investment",
+        "desc": "Our liquidity framework is designed with strategic asset management at its core, ensuring optimal capital efficiency, balanced risk allocation and seamless fund flow across the ecosystem."
+      },
+      "institutional": {
+        "title": "Strengthening Institutional",
+        "desc": "A scalable and interoperable ecosystem that enables seamless connectivity, efficient expansion, and unified access across diverse digital and financial networks, built to support long-term innovation and global growth."
+      },
+      "partnership": {
+        "title": "Partnerships & Global Expansion",
+        "desc": "Our strategy focuses on scaling operations in key markets through targeted market entry, regulatory alignment, and ecosystem-driven expansion."
+      }
+    }
+  }
+}
