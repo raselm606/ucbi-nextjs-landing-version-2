@@ -337,11 +337,21 @@ img {
 .driving_img img {
     height: auto;
     width: 390px;
+    margin-top: 62px;
+}
+.t1_width{
+    width: 90%;
+}
+.t2_width{
+    width: 90%;
+}
+.t3_width{
+    width: 90%;
 }
 .section_title_dark {
     color: var(--text_dark);
-    font-size: 30px;
-    line-height: 38px;
+    font-size: 26px;
+    line-height: 34px;
     font-family: var(--title_font);
     margin-bottom: 40px;
     font-weight: 500;

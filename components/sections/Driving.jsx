@@ -17,13 +17,13 @@ const Driving = () => {
                             <h2 className="section_title_dark">
                                 {drivingData.title[0]} <br /> {drivingData.title[1]}
                             </h2>
-                            <p className="section_paragraph_dark">
+                            <p className="section_paragraph_dark t1_width">
                                 {drivingData.para[0]}
                             </p>
-                            <p className="section_paragraph_dark" >
+                            <p className="section_paragraph_dark t2_width" >
                                 {drivingData.para[1]}
                             </p>
-                            <p className="section_paragraph_dark" >
+                            <p className="section_paragraph_dark t3_width" >
                                 {drivingData.para[2]}
                             </p>
                         </div>
