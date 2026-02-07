@@ -197,7 +197,7 @@ img {
   cursor: pointer;
   text-align: center;
   font-size: 13px;
-  line-height: 52px;
+  line-height: 44px;
   font-weight: 600;
   display: inline-block;
   transition: var(--transition);
@@ -353,7 +353,7 @@ img {
     font-size: 26px;
     line-height: 34px;
     font-family: var(--title_font);
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     font-weight: 500;
     letter-spacing: -1px;
 }
@@ -366,14 +366,14 @@ img {
 }
 .big_text_number span {
     text-align: center;
-    color: #112E50;
+    color: #112e50;
     letter-spacing: -1px;
     word-break: break-all;
     font-family: tasaOrbiter;
-    font-size: 40px;
-    line-height: 40px;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 36px;
     display: block;
-    font-weight: 600; 
 }
 .big_text_number {
     padding-top: 38px;
@@ -385,7 +385,7 @@ img {
 .big_text_number p {
     color: #112E50; 
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
 }
 /** PapersToken Section Styles */
@@ -413,19 +413,22 @@ img {
     width: 1px;
     background: #cfd4dc;
 }
+ 
 .papers_token_section .clinee {
     background: url("../../public/images/paper_bg.jpg") no-repeat;
+    height: 356px;
     margin-top: 100px;
-    position: relative; 
-    background-size: cover;
-    height: 414px;
     margin-bottom: 100px;
+    position: relative;
     overflow: hidden;
+    background-size: contain;
+    background-position: center center;
+    background-color: #0f2c4e;
 }
  
- 
+  
 .white_paper_area { 
-    padding: 70px 160px 70px 70px ; 
+    padding: 50px 160px 50px 70px ; 
     margin-bottom: 100px; 
     position: relative;
     background-size: cover;
@@ -476,7 +479,7 @@ img {
     bottom: -100px;
 }
 .tokenomics_area { 
-    padding: 70px 130px 70px 70px ;  
+    padding: 50px 130px 50px 70px ;  
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
@@ -503,11 +506,11 @@ img {
 }
 .section_title_white {
     color: var(--text_white);
-    font-size: 30px;
-    line-height: 38px;
+    font-size: 26px;
+    line-height: 30px;
     font-family: var(--title_font);
     letter-spacing: -1px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     font-weight: 500;
 }
 .section_paragraph_white {
