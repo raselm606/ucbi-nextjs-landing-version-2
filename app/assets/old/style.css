@@ -188,40 +188,42 @@ img {
     border-right: 1px solid #dce0e5; 
 }
 .btn-primary {
-  background: var(--primary_color);
-  color: var(--text_white);
-  /* height: 52px;
-  width: 140px; */
-  border: none !important;
-  border-radius: 0 !important;
-  cursor: pointer;
-  text-align: center;
-  font-size: 13px;
-  line-height: 52px;
-  font-weight: 600;
-  display: inline-block;
-  transition: var(--transition);
-  padding: 1px 35px;
+    background: var(--primary_color);
+    color: var(--text_white);
+    cursor: pointer;
+    text-align: center;
+    transition: var(--transition);
+    padding: 1px 35px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 42px;
+    display: inline-block;
+    border: none !important;
+    border-radius: 0 !important;
 }
 .btn-primary:hover {
   background: #129fb8;
   color: var(--text_white); 
   transition: var(--transition);
 }
+.navbar-brand img {
+    width: 105px;
+}
 .top_nav_button {
-  background: var(--primary_color);
-  color: var(--text_white);
-  height: 44px;
-  width: 120px;
-  border: none !important;
-  border-radius: 0 !important;
-  cursor: pointer;
-  text-align: center;
-  font-size: 13px;
-  line-height: 44px;
-  font-weight: 600;
-  display: inline-block;
-  transition: var(--transition);
+    background: var(--primary_color);
+    color: var(--text_white);
+    cursor: pointer;
+    text-align: center;
+    /* width: 120px; */
+    /* height: 44px; */
+    transition: var(--transition);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 39px;
+    display: inline-block;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 1px 18px;
 }
 .top_nav_button:hover {
   background: #129fb8;
@@ -270,31 +272,31 @@ img {
     animation: 4s linear infinite top_bottom_bounce;
     position: absolute;
     bottom: 8%;
-    right: 16%;
+    right: 14%;
 }
 .hero_image .eth_coin {
     mix-blend-mode: luminosity;
-    width: 260px;
-    height: 260px;
+    width: 220px;
+    height: 220px;
     animation: 6s linear infinite top_bottom_bounce;
     position: absolute;
-    bottom: 15%;
-    right: 34%;
+    bottom: 18%;
+    right: 33%;
 }
 .hero_image .btc_coin {
-    width: 240px;
-    height: 240px;
+    width: 200px;
+    height: 200px;
     animation: 8s linear infinite top_bottom_bounce;
     position: absolute;
-    top: 20%;
-    margin-left: -96px;
+    top: 24%;
+    margin-left: 0;
 }
 .hero_content {
     margin-top: 115px;
 }
 .hero_title {
-    font-size: 34px;
-    line-height: 42px;
+    font-size: 36px;
+    line-height: 47px;
     font-family: var(--title_font);
     font-weight: 500;
 }
@@ -336,16 +338,16 @@ img {
 
 .driving_img img {
     height: auto;
-    width: 550px;
+    width: 400px;
 }
 .section_title_dark {
     color: var(--text_dark);
-    font-size: 30px;
-    line-height: 38px;
+    font-size: 28px;
+    line-height: 34px;
     font-family: var(--title_font);
-    margin-bottom: 40px;
-    font-weight: 500;
     letter-spacing: -1px;
+    margin-bottom: 30px;
+    font-weight: 500;
 }
 .section_paragraph_dark { 
     color: var(--paragraph_color);
@@ -360,8 +362,8 @@ img {
     letter-spacing: -1px;
     word-break: break-all;
     font-family: tasaOrbiter;
-    font-size: 40px;
-    line-height: 40px;
+    font-size: 30px;
+    line-height: 37px;
     display: block;
     font-weight: 600; 
 }
@@ -412,11 +414,12 @@ img {
     height: 414px;
     margin-bottom: 100px;
     overflow: hidden;
+    background-position: center center;
 }
  
  
 .white_paper_area { 
-    padding: 70px 160px 70px 70px ; 
+    padding: 40px 106px 70px 70px ; 
     margin-bottom: 100px; 
     position: relative;
     background-size: cover;
@@ -467,7 +470,7 @@ img {
     bottom: -100px;
 }
 .tokenomics_area { 
-    padding: 70px 130px 70px 70px ;  
+    padding: 50px 130px 70px 70px ;  
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
@@ -509,15 +512,19 @@ img {
     margin-bottom: 30px;
     text-align: justify;
 }
-/*Journey section*/
-.ourjourney_section{
-    background: url("../../public/images/journey_bg.jpg"); 
+/*Journey section*/ 
+.ourjourney_section {
+    background: url("../../public/images/journey_bg.jpg");
+    background-position: bottom left;
+    background-size: contain;
+    background-color: #112d50;
+    background-repeat: no-repeat;
 }
 .ourjourney_section .cline { 
     padding: 100px 70px;
 }
 .timeline_one{
-    margin-top: 200px;
+    margin-top: 146px;
     position: relative;
 }
 .timeline_one:before {
@@ -540,7 +547,7 @@ img {
     background: rgb(255 255 255 / 20%);
 }
 .timeline_two{
-    margin-top: 150px;
+    margin-top: 97px;
     position: relative;
 }
 .timeline_two:before {
@@ -563,7 +570,7 @@ img {
     left: 9px;
 }
 .timeline_three{
-    margin-top: 100px;
+    margin-top: 63px;
     position: relative;
 }
 .timeline_three:before {
@@ -587,6 +594,7 @@ img {
 }
 .timeline_four{
     position: relative;
+    margin-top: -6px;
 }
 .timeline_four:before {
     content: "";
@@ -620,8 +628,7 @@ img {
 .timeline_area{
     position: relative;
 }
-.timeline_area img {
-    width: auto;
+.timeline_area img { 
     height: auto;
 }
 .line_img {
@@ -744,17 +751,17 @@ img {
 }
 .bg_bb {
     background: #F0F1F5;
-    padding: 70px 70px 49px 70px;
+    padding: 45px 70px 49px;
 }
 .divider_lin {
-    height: 1px;
-    width: 80%;
     background: #dce0e5;
-    margin-bottom: 54px;
-    margin-top: 50px;
+    width: 80%;
+    height: 1px;
+    margin-top: 40px;
+    margin-bottom: 19px;
 }
 .goal_content p {
-    width: 80%;
+    width: 95%;
 }
 /*blog section*/
 .blog_section { 
@@ -832,7 +839,7 @@ img {
 }
 /*scaleable section*/
 .scaleable_section{
-    background: url("../../public/images/scaleable_bg1.jpg");
+    background: url("../../public/images/scaleable_bg2.jpg");
     background-size: cover;
     background-position: top center;
 }
@@ -891,7 +898,7 @@ img {
 .footer_elements {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-left: 70px;
     margin-right: 70px;
 }
@@ -975,7 +982,7 @@ label.form-check-label {
     border-right: 1px solid #112e5026 !important;
 }
 .divider_lin.ggl {
-    margin-top: 100px !important;
+    margin-top: 75px !important;
     background: rgb(255 255 255 / 14%) !important;
 }
 /*swiper blog css*/

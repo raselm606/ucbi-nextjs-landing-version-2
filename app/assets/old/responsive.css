@@ -1,8 +1,8 @@
-@media (min-width: 1600px) {
+/* @media (min-width: 1600px) {
     .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
         max-width: 1600px !important;
     }
-}
+} */
 @media (min-width: 1400px) {
     .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
         max-width: 1400px ;
@@ -116,6 +116,7 @@
         width: 130px;
         height: 130px; 
         top: 60%;
+        left: 20%;
     }
     .hero_image .eth_coin { 
         width: 150px;
