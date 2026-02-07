@@ -336,7 +336,7 @@ img {
 
 .driving_img img {
     height: auto;
-    width: 550px;
+    width: 350px;
 }
 .section_title_dark {
     color: var(--text_dark);
