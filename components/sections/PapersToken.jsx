@@ -16,7 +16,10 @@ const PapersToken = () => {
                         <Button variant="primary" href="#" > Download</Button> 
                     </div>
                 </div>
-                <div className=" offset-lg-2 col-lg-5">
+                <div className="col-lg-2">
+                    <div className="middle_paper"></div>
+                </div>
+                <div className="  col-lg-5">
                     <div className="tokenomics_area" >
                         <h2 className="section_title_dark" >
                             Tokenomics  

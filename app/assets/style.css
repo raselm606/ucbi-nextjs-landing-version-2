@@ -1022,3 +1022,15 @@ label.form-check-label {
     background: var(--dark_color);
     transition: var(--transition); 
 }
+.middle_paper {
+    position: relative;
+}
+.middle_paper:before {
+    content: "";
+    position: absolute;
+    left: -24px;
+    top: 0;
+    background: #0d2a4c75;
+    height: 356px;
+    width: 126%;
+}
