@@ -414,6 +414,7 @@ img {
     background: #cfd4dc;
 }
  
+ 
 .papers_token_section .clinee {
     background: url("../../public/images/paper_bg.jpg") no-repeat;
     height: 356px;
@@ -421,9 +422,8 @@ img {
     margin-bottom: 100px;
     position: relative;
     overflow: hidden;
-    background-size: contain;
-    background-position: center center;
-    background-color: #0f2c4e;
+    background-size: cover;
+    background-position: top;
 }
  
   
@@ -434,7 +434,7 @@ img {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    background: rgb(17 46 80 / 90%);
+    background: rgb(17 46 80 / 78%);
 }
  .white_paper_area:before {
     content: "";
