@@ -397,29 +397,27 @@ img {
 }
 .left_100:before {
     content: "";
-    position: absolute;
-    left: 0;
-    top: -100px;
-    height: 100px;
-    width: 1px;
     background: #cfd4dc;
+    width: 1px;
+    height: 160px;
+    position: absolute;
+    top: -160px;
+    left: 0;
 }
 .left_100:after {
     content: "";
-    position: absolute;
-    right: 0;
-    top: -100px;
-    height: 100px;
-    width: 1px;
     background: #cfd4dc;
+    width: 1px;
+    height: 160px;
+    position: absolute;
+    top: -160px;
+    right: 0;
 }
- 
- 
 .papers_token_section .clinee {
     background: url("../../public/images/paper_bg.jpg") no-repeat;
     height: 356px;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 160px;
+    margin-bottom: 160px;
     position: relative;
     overflow: hidden;
     background-size: cover;
@@ -459,24 +457,24 @@ img {
 }
 .extra_line_whtiepaper_left:before {
     content: "";
-    position: absolute;
-    left: 0;
-    height: 100px;
-    width: 1px;
     background: #cfd4dc;
-    bottom: -100px;
+    width: 1px;
+    height: 171px;
+    position: absolute;
+    bottom: -169px;
+    left: -1px;
 }
 .extra_line_whtiepaper_right{
     position: relative;
 }
 .extra_line_whtiepaper_right:before {
     content: "";
-    position: absolute;
-    right: -2px;
-    height: 100px;
-    width: 1px;
     background: #cfd4dc;
-    bottom: -100px;
+    width: 1px;
+    height: 162px;
+    position: absolute;
+    bottom: -160px;
+    right: -2px;
 }
 .tokenomics_area { 
     padding: 50px 130px 50px 70px ;  
