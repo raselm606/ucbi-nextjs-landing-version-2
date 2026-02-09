@@ -14,7 +14,7 @@ const Driving = () => {
                     </div>
                     <div className="offset-lg-2 offset-md-1 col-md-5 col-lg-5">
                         <div className="driving_content">
-                            <h2 className="section_title_dark">
+                            <h2 className="section_title_dark" style={{fontSize:'34px', fontWeight:'44px'}}>
                                 {drivingData.title[0]} <br /> {drivingData.title[1]}
                             </h2>
                             <p className="section_paragraph_dark t1_width">
