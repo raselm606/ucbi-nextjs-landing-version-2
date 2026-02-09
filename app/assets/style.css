@@ -290,7 +290,7 @@ img {
     margin-left: -90px;
 }
 .hero_content {
-    margin-top: 115px;
+    margin-top: 148px;
 }
 .hero_title {
     font-size: 34px;
@@ -312,9 +312,7 @@ img {
     border-left: 1px solid rgb(17 46 80 / 15%) !important;
     padding: 14px 0!important;
 }
-.partner_img img {
-    width: auto;
-    height: auto;
+.partner_img img { 
     margin-right: 40px;
     margin-left: 40px;
 }
@@ -1034,3 +1032,44 @@ label.form-check-label {
     height: 356px;
     width: 126%;
 }
+.img1{
+  width: 168px;
+  height: 40px;
+}
+
+.img2{
+  width: 92.47px;
+  height: 36px;
+}
+
+.img3{
+  width: 80;
+  height: 36px;
+  margin-top: 5px;
+}
+
+.img4{
+  width: 43px;
+  height: 43px;
+}
+
+.img5{
+  width: 65.23px;
+  height: 24px;
+}
+
+.img6{
+  width: 80.19px;
+  height: 31px;
+}
+
+.img7{
+  width: 73.29px;
+  height: 37px;
+}
+
+.img8{
+  width: 130px; 
+  height: 30px;
+}
+
