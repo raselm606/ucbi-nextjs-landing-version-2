@@ -15,7 +15,7 @@ const Driving = () => {
                     <div className="offset-lg-2 offset-md-1 col-md-5 col-lg-5">
                         <div className="driving_content">
                             <h2 className="section_title_dark" style={{fontSize:'34px', fontWeight:'44px'}}>
-                                <span style={{color:'#0cc0df', fontSize:'34px'}}> Strategic </span> and Institutional Positioning
+                                <span style={{color:'#0cc0df', fontSize:'34px'}}> Strategic </span> <br/> and Institutional Positioning
                             </h2>
                             <p className="section_paragraph_dark t1_width">
                                 {drivingData.para[0]}
