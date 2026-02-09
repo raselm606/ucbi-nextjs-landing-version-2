@@ -16,7 +16,7 @@ const Partners =  () => {
         <div className="container cline ">
           
                  <Marquee speed={60} gradient={false}>
-                  <div className="partner_imgg">
+                  <div className="partner_img">
                         <Image className="img1"  src={logo1} alt="Partner Logo" width={228} height={57}/>
                         <Image  className="img2"  src={logo2} alt="Partner Logo" width={131} height={51}/>
                         <Image  className="img3"  src={logo3} alt="Partner Logo" width={111} height={44}/>
