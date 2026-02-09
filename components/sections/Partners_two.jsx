@@ -2,6 +2,7 @@ import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import logo1 from "../../public/images/partners/1.jpg";
 import logo10 from "../../public/images/partners/10.png";
+import logo11 from "../../public/images/partners/11.png";
 // import logo2 from "../../public/images/partners/2.jpg";
 // import logo3 from "../../public/images/partners/3.jpg";
 // import logo3 from "../../public/images/partners/3.jpg";
@@ -30,6 +31,7 @@ const Partners =  () => {
                         <Image className="img8"  src={logo8} alt="Partner Logo" />
                         <Image className="img9"  src={logo9} alt="Partner Logo" />
                         <Image className="img10"  src={logo10} alt="Partner Logo" />
+                        <Image className="img11"  src={logo11} alt="Partner Logo" />
 
                         
                         <Image className="img6"  src={logo6} alt="Partner Logo" />
@@ -47,6 +49,7 @@ const Partners =  () => {
                         <Image className="img8"  src={logo8} alt="Partner Logo" />
                         <Image className="img9"  src={logo9} alt="Partner Logo" />
                         <Image className="img10"  src={logo10} alt="Partner Logo" />
+                        <Image className="img11"  src={logo11} alt="Partner Logo" />
 
                         
                         <Image className="img6"  src={logo6} alt="Partner Logo" />

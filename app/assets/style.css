@@ -1050,9 +1050,9 @@ label.form-check-label {
 }
 
 .img4 {
-    width: 91.1px;
-    height: 24.1px;
-    margin-top: 4.1px;
+    width: 91px;
+    height: 24px;
+    margin-top: 4px;
 }
 
 .img5{
@@ -1086,7 +1086,11 @@ label.form-check-label {
     width: 116px;
     height: 22px;
 }
-
+.img11 {
+    width: 142px;
+    height: 19px;
+    margin-top: 4px;
+}
 /* .img1{
   width: 126px;
   height: 23px;
