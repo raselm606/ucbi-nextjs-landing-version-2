@@ -278,7 +278,7 @@ img {
     height: 260px;
     animation: 6s linear infinite top_bottom_bounce;
     position: absolute;
-    bottom: 15%;
+    bottom: 16%;
     right: 34%;
 }
 .hero_image .btc_coin {
@@ -286,7 +286,7 @@ img {
     height: 240px;
     animation: 8s linear infinite top_bottom_bounce;
     position: absolute;
-    top: 20%;
+    top: 22%;
     margin-left: -90px;
 }
 .hero_content {
@@ -1055,8 +1055,8 @@ label.form-check-label {
 }
 
 .img5{
-  width: 38.05px;
-  height: 14px;
+  width: 46.05px;
+  height: 20px;
 }
 
 .img6{
