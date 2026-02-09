@@ -4,6 +4,7 @@ import logo1 from "../../public/images/partners/1.jpg";
 import logo10 from "../../public/images/partners/10.png";
 // import logo2 from "../../public/images/partners/2.jpg";
 // import logo3 from "../../public/images/partners/3.jpg";
+// import logo3 from "../../public/images/partners/3.jpg";
 import logo4 from "../../public/images/partners/4.jpg";
 import logo5 from "../../public/images/partners/5.jpg";
 import logo6 from "../../public/images/partners/6.jpg";
