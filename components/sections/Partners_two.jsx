@@ -32,8 +32,8 @@ const Partners =  () => {
                         <Image className="img8"  src={logo8} alt="Partner Logo" />
                         <Image className="img9"  src={logo9} alt="Partner Logo" />
                         <Image className="img10"  src={logo10} alt="Partner Logo" />
-                        <Image className="img11"  src={logo11} alt="Partner Logo" />
                         <Image className="img12"  src={logo12} alt="Partner Logo" />
+                        <Image className="img11"  src={logo11} alt="Partner Logo" />
 
                         
                         <Image className="img6"  src={logo6} alt="Partner Logo" />
@@ -51,8 +51,8 @@ const Partners =  () => {
                         <Image className="img8"  src={logo8} alt="Partner Logo" />
                         <Image className="img9"  src={logo9} alt="Partner Logo" />
                         <Image className="img10"  src={logo10} alt="Partner Logo" />
-                        <Image className="img11"  src={logo11} alt="Partner Logo" />
                         <Image className="img12"  src={logo12} alt="Partner Logo" />
+                        <Image className="img11"  src={logo11} alt="Partner Logo" />
 
                         
                         <Image className="img6"  src={logo6} alt="Partner Logo" />
