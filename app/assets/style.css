@@ -1049,9 +1049,10 @@ label.form-check-label {
     margin-top: 5px;
 }
 
-.img4{
-  width: 33px;
-  height: 33px;
+.img4 {
+    width: auto;
+    height: 23px;
+    margin-top: 6px;
 }
 
 .img5{
