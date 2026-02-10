@@ -39,19 +39,19 @@ const Driving = () => {
                 <div className="row">
                     <div className="col-lg-4 line_right  ">
                         <div className="big_text_number text-center extra_line_whtiepaper_left">
-                            <p>on-chain marketcap  :</p>
+                            <p>on-chain marketcap</p>
                             <span>$167727</span>
                         </div>
                     </div>
                     <div className="col-lg-4 line_right  ">
                         <div className="big_text_number text-center">
-                            <p>Total Supply  :</p>
+                            <p>Total Supply</p>
                             <span>12 M</span>
                         </div>
                     </div>
                     <div className="col-lg-4  ">
                         <div className="big_text_number text-center extra_line_whtiepaper_right">
-                            <p>Share-holders :</p>
+                            <p>Share-holders</p>
                             <span>359</span>
                         </div>
                     </div>
