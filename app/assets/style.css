@@ -1152,10 +1152,11 @@ label.form-check-label {
     box-shadow: 2px 2px 9px 4px #b1b1b126;
     border-radius: 32px;
     padding: 30px 40px;
+    background: #fff;
 }
 .t_tittle {
     color: #000000a8;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-size: 14px;
     font-weight: 500;
 }
@@ -1167,7 +1168,7 @@ label.form-check-label {
     mix-blend-mode: multiply;
 }
 .t_number {
-    font-size: 32px;
+    font-size: 22px;
     font-weight: 700;
     color: #112e50;
 }
