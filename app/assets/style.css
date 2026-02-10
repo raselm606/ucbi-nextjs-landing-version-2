@@ -415,7 +415,7 @@ img {
     background: url("../../public/images/paper_bg.jpg") no-repeat;
     height: 354px; 
     margin-bottom: 160px;
-    margin-top: 160px; 
+    /* margin-top: 160px;  */
     position: relative;
     overflow: hidden;
     background-size: cover;
@@ -1179,6 +1179,7 @@ label.form-check-label {
 
 .ptt-90 {
     padding-top: 120px; 
+    padding-bottom: 120px;
 }
 .tt_area:hover .t_number{
     color: #0cc0df;
