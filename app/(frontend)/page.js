@@ -8,7 +8,7 @@ import GoalandEffort from "@/components/sections/GoalandEffort";
 import HeroSection from "@/components/sections/HeroSection";
 import OurJourney from "@/components/sections/OurJourney";
 import PapersToken from "@/components/sections/PapersToken";
-import Partners from "@/components/sections/Partners_twoooo";
+import Partners from "@/components/sections/Partners_two";
 import Scaleable from "@/components/sections/Scaleable";
 const Homepage = () => {
   return (
