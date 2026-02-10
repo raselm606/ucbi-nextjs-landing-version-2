@@ -413,8 +413,7 @@ img {
 }
 .papers_token_section .clinee {
     background: url("../../public/images/paper_bg.jpg") no-repeat;
-    height: 354px;
-    margin-top: 160px;
+    height: 354px; 
     margin-bottom: 160px;
     position: relative;
     overflow: hidden;
@@ -1146,3 +1145,40 @@ label.form-check-label {
     width: 116px;
     height: 23px;
 } */
+
+.tt_area {
+    border: 1px solid #0000001a;
+    box-shadow: 2px 2px 9px 4px #b1b1b126;
+    border-radius: 32px;
+    padding: 30px 40px;
+}
+.t_tittle {
+    color: #000000a8;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 500;
+}
+.tt_area img {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    display: block; 
+}
+.t_number {
+    font-size: 32px;
+    font-weight: 700;
+    color: #112e50;
+}
+.t_sub {
+    font-size: 18px;
+    color: #909090;
+    margin-top: 20px;
+}
+
+.ptt-90 {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+.tt_area:hover .t_number{
+    color: #0cc0df;
+}
