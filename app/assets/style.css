@@ -382,7 +382,7 @@ img {
 }
 .big_text_number p {
     color: #112E50; 
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-size: 13px;
     font-weight: 500;
 }
