@@ -29,32 +29,7 @@ const Driving = () => {
                     
                 </div>
 
-                <div className="row justify-content-center ptt-90">
-                    <div className="col-lg-3 mb-3   ">
-                        <div className="tt_area text-center ">
-                            <p className="t_tittle">on-chain marketcap</p>
-                            <Image src={c3} alt="#" />
-                            <span  className="t_number"> 167727 $</span>
-                            <p className="t_sub">On-chain data</p>
-                        </div>
-                    </div>
-                    <div className="col-lg-3 mb-3">
-                        <div className="tt_area text-center">
-                            <p className="t_tittle">Total Supply</p>
-                            <Image src={c2} alt="#" />
-                            <span className="t_number">12 M</span> 
-                            <p className="t_sub">Total Circulating</p>
-                        </div>
-                    </div>
-                    <div className="col-lg-3 mb-3 ">
-                        <div className="tt_area text-center ">
-                            <p className="t_tittle">Share-holders</p>
-                            <Image src={c1} alt="#" />
-                            <span className="t_number">359</span>
-                            <p className="t_sub">Wallet Address</p>
-                        </div>
-                    </div>
-                </div>
+                
 
 
                 
@@ -89,11 +64,38 @@ const Driving = () => {
             </div>
         </div> */}
 
-        {/* <div className="white_counter_area_setion">
+        <div className="white_counter_area_setion">
             <div className="container cline_white">
-                
+                <div className="row justify-content-center ptt-90">
+                    <div className="col-lg-2 mb-3   ">
+                        <div className="tt_area text-center ">
+                            <p className="t_tittle">on-chain marketcap</p>
+                            <Image src={c3} alt="#" />
+                            <span  className="t_number"> 167727 $</span>
+                            <p className="t_sub">On-chain data</p>
+                        </div>
+                    </div>
+                    <div className="col-lg-2 mb-3">
+                        <div className="tt_area text-center">
+                            <p className="t_tittle">Total Supply</p>
+                            <Image src={c2} alt="#" />
+                            <span className="t_number">12 M</span> 
+                            <p className="t_sub">Total Circulating</p>
+                        </div>
+                    </div>
+                    <div className="col-lg-2 mb-3 ">
+                        <div className="tt_area text-center ">
+                            <p className="t_tittle">Share-holders</p>
+                            <Image src={c1} alt="#" />
+                            <span className="t_number">359</span>
+                            <p className="t_sub">Wallet Address</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div> */}
+        </div>
+
+        
     </>
   )
 }

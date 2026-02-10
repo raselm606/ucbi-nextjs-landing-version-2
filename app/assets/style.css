@@ -1156,7 +1156,7 @@ label.form-check-label {
 .t_tittle {
     color: #000000a8;
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 500;
 }
 .tt_area img {
@@ -1182,4 +1182,11 @@ label.form-check-label {
 }
 .tt_area:hover .t_number{
     color: #0cc0df;
+}
+
+.white_counter_area_setion {
+    margin-top: -186px;
+    position: relative;
+    /* z-index: 99; */
+    /* background: #fff; */
 }
