@@ -18,13 +18,7 @@ const Driving = () => {
                                 <span style={{color:'#0cc0df', fontSize:'34px'}}> Strategic </span> <br/> and Institutional Positioning
                             </h2>
                             <p className="section_paragraph_dark t1_width">
-                                {drivingData.para[0]}
-                            </p>
-                            <p className="section_paragraph_dark t2_width" >
-                                {drivingData.para[1]}
-                            </p>
-                            <p className="section_paragraph_dark t3_width" >
-                                {drivingData.para[2]}
+                                <strong>UCBI</strong>’s mission is to support the responsible structured, and sustainable development of digital financial infrastructure through a long-term approach grounded in strong governance principles operating as a strategic holding company UCBI focuses on the integration of blockchain-based and distributed technologies within robust organizational frameworks this ensures full alignment with regulatory requirements operational resilience, and the highest institutional standards through disciplined governance, prudent capital structuring, and comprehensive risk management <strong>UCBI</strong> seeks to foster sustainable growth while maintaining a controlled private and secure operating environment this model enables technological innovation while preserving stability compliance, and long-term stakeholder confidence
                             </p>
                         </div>
                     </div>
