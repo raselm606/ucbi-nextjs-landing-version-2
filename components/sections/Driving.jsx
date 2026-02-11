@@ -25,17 +25,8 @@ const Driving = () => {
                             </p>
                         </div>
                     </div>
-
-                    
                 </div>
-
-                
-
-
-                
             </div>
-            
-            
 
         </div>
 
@@ -66,7 +57,7 @@ const Driving = () => {
 
         <div className="white_counter_area_setion">
             <div className="container cline_white">
-                <div className="row justify-content-center ptt-90">
+                <div className="row gx-4 justify-content-center ptt-90">
                     <div className="col-lg-2 mb-3   ">
                         <div className="tt_area text-center ">
                             <p className="t_tittle">onchain marketcap</p>
@@ -91,8 +82,6 @@ const Driving = () => {
                 </div>
             </div>
         </div>
-
-        
     </>
   )
 }
