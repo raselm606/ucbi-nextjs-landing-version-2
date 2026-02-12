@@ -1,9 +1,10 @@
 'use client';
 import { drivingData } from "@/lib/mock-data/driving";
 import Image from "next/image";
-import c1 from "../../public/images/c1.jpg";
 import c2 from "../../public/images/c2.jpg";
 import c3 from "../../public/images/c3.jpg";
+import c4 from "../../public/images/c4.jpg";
+import c5 from "../../public/images/c5.jpg";
 const Driving = () => {
   return (
     <>
@@ -75,7 +76,14 @@ const Driving = () => {
                     <div className="col-lg-2 mb-3 ">
                         <div className="tt_area text-center ">
                             <p className="t_tittle">Shareholders</p>
-                            <Image src={c1} alt="#" />
+                            <Image src={c4} alt="#" />
+                            <span className="t_number">359</span> 
+                        </div>
+                    </div>
+                    <div className="col-lg-2 mb-3 ">
+                        <div className="tt_area text-center ">
+                            <p className="t_tittle">Shareholders</p>
+                            <Image src={c5} alt="#" />
                             <span className="t_number">359</span> 
                         </div>
                     </div>
