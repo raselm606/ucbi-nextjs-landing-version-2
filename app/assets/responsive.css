@@ -1,4 +1,4 @@
-@media (min-width: 1600px) {
+/*@media (min-width: 1600px) {
     .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
         max-width: 1600px !important;
     }
@@ -7,7 +7,7 @@
     .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
         max-width: 1400px ;
     }
-}
+}*/
 
 /* Large / Desktop */
 @media only screen and (width: 992px) {

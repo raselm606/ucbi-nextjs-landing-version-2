@@ -323,7 +323,7 @@ img {
 }
 .driving_section .cline {
     background: #F0F1F5;
-    padding: 130px 70px 160px 70px !important;
+    padding: 150px 70px 150px!important;
     border-right: 1px solid rgb(17 46 80 / 15%) !important;
     border-left: 1px solid rgb(17 46 80 / 15%) !important;
 }
@@ -424,7 +424,7 @@ img {
  
   
 .white_paper_area { 
-    padding: 40px 110px 50px 70px ; 
+    padding: 50px 160px 50px 70px ; 
     margin-bottom: 100px; 
     position: relative;
     background-size: cover;
@@ -475,7 +475,7 @@ img {
     right: -2px;
 }
 .tokenomics_area { 
-    padding: 40px 80px 50px 70px ;  
+    padding: 50px 130px 50px 70px ;  
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
@@ -532,7 +532,7 @@ img {
     content: "";
     position: absolute;
     left: 0;
-    top: -113px;
+    top: -128px;
     height: 20px;
     width: 20px;
     border-radius: 50%;
@@ -542,7 +542,7 @@ img {
     content: "";
     position: absolute;
     left: 9px;
-    top: -101px;
+    top: -115px;
     height: 61px;
     width: 1px;
     background: rgb(255 255 255 / 20%);
@@ -555,7 +555,7 @@ img {
     content: "";
     position: absolute;
     left: 0;
-    top: -80px;
+    top: -89px;
     height: 20px;
     width: 20px;
     border-radius: 50%;
@@ -567,7 +567,7 @@ img {
     width: 1px;
     height: 42px;
     position: absolute;
-    top: -64px;
+    top: -72px;
     left: 9px;
 }
 .timeline_three{
@@ -600,19 +600,19 @@ img {
     content: "";
     position: absolute;
     left: 0;
-    top: -161px;
+    top: -136px;
     height: 20px;
     width: 20px;
     border-radius: 50%;
     background: var(--primary_color);
 }
-.timeline_four::after {
+.timeline_four:after {
     content: "";
-    background: rgba(255, 255, 255, 0.2);
+    background: #fff3;
     width: 1px;
-    height: 80px;
+    height: 61px;
     position: absolute;
-    top: -144px;
+    top: -120px;
     left: 9px;
 }
 .timeline_item h4 {
@@ -629,8 +629,8 @@ img {
     position: relative;
 }
 .timeline_area img {
-    width: 1000px;
-    margin-top: 68px;
+    width: auto;
+    height: auto;
 }
 .line_img {
     position: absolute;
@@ -677,7 +677,7 @@ img {
 }
 /*contract Investment*/
 .contract_in{
-    padding: 50px 70px 0px 70px;
+    padding: 70px;
 }
 .cont_bg {
     background: url(../../public/images/invest_bg.jpg);
@@ -742,7 +742,7 @@ img {
     padding: 100px 0 !important;
 }
 .featured_o .fe_link img {
-    width: 90px;
+    width: auto;
     margin-right: 24px; 
 }
 .featured_o p {
@@ -752,14 +752,14 @@ img {
 }
 .bg_bb {
     background: #F0F1F5;
-    padding: 50px 70px 32px;
+    padding: 70px 70px 49px 70px;
 }
 .divider_lin {
-    background: rgb(220, 224, 229);
-    width: 80%;
     height: 1px;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    width: 80%;
+    background: #dce0e5;
+    margin-bottom: 54px;
+    margin-top: 50px;
 }
 .goal_content p {
     width: 80%;
@@ -983,7 +983,7 @@ label.form-check-label {
     border-right: 1px solid #112e5026 !important;
 }
 .divider_lin.ggl {
-    margin-top: 50px !important;
+    margin-top: 100px !important;
     background: rgb(255 255 255 / 14%) !important;
 }
 /*swiper blog css*/

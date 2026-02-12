@@ -1,10 +1,9 @@
 'use client';
 import { drivingData } from "@/lib/mock-data/driving";
-import Image from "next/image";
-import c2 from "../../public/images/c2.jpg";
-import c3 from "../../public/images/c3.jpg";
+import Image from "next/image"; 
 import c4 from "../../public/images/c4.jpg";
 import c5 from "../../public/images/c5.jpg";
+import c6 from "../../public/images/c6.jpg";
 const Driving = () => {
   return (
     <>
@@ -31,30 +30,6 @@ const Driving = () => {
 
         </div>
 
-        {/* <div className="counter_area_setion">
-            <div className="container cline_white">
-                <div className="row">
-                    <div className="col-lg-4 line_right  ">
-                        <div className="big_text_number text-center extra_line_whtiepaper_left">
-                            <p>on-chain marketcap</p>
-                            <span> 167727 $</span>
-                        </div>
-                    </div>
-                    <div className="col-lg-4 line_right  ">
-                        <div className="big_text_number text-center">
-                            <p>Total Supply</p>
-                            <span>12 M</span>
-                        </div>
-                    </div>
-                    <div className="col-lg-4  ">
-                        <div className="big_text_number text-center extra_line_whtiepaper_right">
-                            <p>Share-holders</p>
-                            <span>359</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> */}
 
         <div className="white_counter_area_setion">
             <div className="container cline_white">
@@ -62,28 +37,21 @@ const Driving = () => {
                     <div className="col-lg-2 mb-3   ">
                         <div className="tt_area text-center ">
                             <p className="t_tittle">onchain marketcap</p>
-                            <Image src={c3} alt="#" />
+                            <Image src={c4} alt="#" />
                             <span  className="t_number"> 167727 </span> 
                         </div>
                     </div>
                     <div className="col-lg-2 mb-3">
                         <div className="tt_area text-center">
                             <p className="t_tittle">Total Supply</p>
-                            <Image src={c2} alt="#" />
+                            <Image src={c5} alt="#" />
                             <span className="t_number">12 M</span>  
                         </div>
                     </div>
                     <div className="col-lg-2 mb-3 ">
                         <div className="tt_area text-center ">
                             <p className="t_tittle">Shareholders</p>
-                            <Image src={c4} alt="#" />
-                            <span className="t_number">359</span> 
-                        </div>
-                    </div>
-                    <div className="col-lg-2 mb-3 ">
-                        <div className="tt_area text-center ">
-                            <p className="t_tittle">Shareholders</p>
-                            <Image src={c5} alt="#" />
+                            <Image src={c6} alt="#" />
                             <span className="t_number">359</span> 
                         </div>
                     </div>
