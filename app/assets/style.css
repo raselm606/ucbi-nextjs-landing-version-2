@@ -291,11 +291,11 @@ img {
     margin-top: 162px;
 }
 .hero_title {
-    font-size: 28px;
-    line-height: 36px;
+    font-size: 22px;
+    line-height: 30px;
     font-family: var(--title_font);
     font-weight: 500;
-}   
+}  
 .hero_paragraph {
     font-size: 13px;
     font-family: var(--paragraph_font);
@@ -1155,7 +1155,7 @@ label.form-check-label {
 .t_tittle {
     color: #112e50;
     text-transform: capitalize;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
 }
 .tt_area img {
@@ -1169,7 +1169,7 @@ label.form-check-label {
 }
 .t_number {
     color: #112e50;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
 }
 .t_sub {
