@@ -853,7 +853,7 @@ img {
 }
 .footer_info p {
     color: var(--text_dark);
-    font-size: 13px;
+    font-size: 12px;
     font-family: var(--paragraph_font);
     margin-top: 30px;
     margin-bottom: 20px;
@@ -861,16 +861,16 @@ img {
 }
 .footer_nav_menus h6 {
     color: var(--text_dark);
-    font-size: 16px;
+    font-size: 14px;
     font-family: var(--title_font);
-    margin-bottom: 35px;
+    margin-bottom: 25px;
     font-weight: 600;
 }
 .footer_navs ul li a {
-    font-size: 13px;
+    font-size: 12px;
     font-family: var(--paragraph_font);
     color: var(--text_dark);
-    line-height: 34px;
+    line-height: 28px;
 }
 .cc_terms ul li a:hover {
     color: #0cc0df;
