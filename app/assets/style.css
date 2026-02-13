@@ -812,6 +812,13 @@ img {
 }
 .blog_img {
     position: relative;
+    height: 200px;
+    width: 270px;
+    overflow: hidden;
+}
+.blog_img img{
+    height: 100%;
+    width: 100%;
 }
 .blog_date {
     position: absolute;

@@ -38,7 +38,7 @@ const BlogSection =   () => {
   useEffect(() => {
     async function loadPosts() {
       try {
-        const res = await fetch("/api/coindesk");
+        const res = await fetch("/api/coindex");
         const data = await res.json();
 
         const latest10 = (data?.Data || [])
@@ -76,8 +76,11 @@ const BlogSection =   () => {
                     </div> */}
 
                 
+
+                
                 <Swiper
                     // install Swiper modules
+                             
                     modules={[ Autoplay]}
                     spaceBetween={30}
                     slidesPerView={3}
@@ -120,27 +123,40 @@ const BlogSection =   () => {
                 const title = item.TITLE || "Untitled";
                 const desc = item.BODY || "";
                 const date = formatDate(item.PUBLISHED_ON);
-                const thumb = item.IMAGE_URL ? item.IMAGE_URL : placeholder_blog;
+
+                const rawThumb = item.IMAGE_URL || "";
+                const safeThumb =
+                  rawThumb && rawThumb.startsWith("http")
+                    ? rawThumb.replace(/^http:/, "https:")
+                    : "";
+                const thumb = safeThumb ? safeThumb : placeholder_blog;
+
                 const link = item.URL || "#";
 
 
 
                 return (
-                   
+
+
                     <SwiperSlide key={id}>
 
                             
                             <div className="blog_item" >
                                 <Link href={link} target="_blank">
                                 <div className="blog_img" >
-                                    <Image src={thumb} alt={title} style={{ objectFit: "cover" }} width={370} height={250} />
+                                    <Image 
+                                    src={thumb} 
+                                    alt={title} 
+                                    style={{ objectFit: "cover" }} 
+                                    unoptimized={typeof thumb === "string"}
+                                    width={370} height={200} />
                                     <div className="blog_date">
                                         <span>{date}</span>
                                     </div>
                                 </div>
                                 </Link>
                                 <div className="blog_content">
-                                    <h4  >{title}</h4>
+                                    <h4  >{trimByWords(title,10)}</h4>
                                     <p  >{trimByWords(desc,20)}</p>
                                     <Link href={link} target="_blank">Read more 
                                     <Image src={arrow_blog} alt="arrow" width={15} height={15} /> </Link>
