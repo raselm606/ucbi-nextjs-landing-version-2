@@ -863,17 +863,17 @@ img {
     margin-bottom: 30px;
 }
 .footer_nav_menus h6 {
-    font-size: 18px;
-    color:var(--text_dark);
+    color: var(--text_dark);
+    font-size: 16px;
     font-family: var(--title_font);
-    font-weight: 600; 
-    margin-bottom: 50px;
+    margin-bottom: 35px;
+    font-weight: 600;
 }
 .footer_navs ul li a {
-    font-size: 14px;
+    font-size: 13px;
     font-family: var(--paragraph_font);
-    line-height: 37px;
-    color: var(--text_dark); 
+    color: var(--text_dark);
+    line-height: 34px;
 }
 .cc_terms ul li a:hover {
     color: #0cc0df;
