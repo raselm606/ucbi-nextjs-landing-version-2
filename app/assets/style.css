@@ -212,11 +212,11 @@ img {
     cursor: pointer;
     text-align: center;
     width: 120px;
-    height: 41px;
+    height: 40px;
     transition: var(--transition);
     font-size: 12px;
     font-weight: 600;
-    line-height: 43px;
+    line-height: 39px;
     display: inline-block;
     border: none !important;
     border-radius: 0 !important;
