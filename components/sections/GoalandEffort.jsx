@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import goalImg from '../../public/images/goal2.jpg';
+import goalImg from '../../public/images/goal3.jpg';
 import yahoof from '../../public/images/yahoo1.png';
 const GoalandEffort = () => {
   return (
