@@ -10,7 +10,7 @@ const Driving = () => {
         <div className="driving_section ">
             <div className="container cline">
                 <div className="row align-items-center justify-content-center">
-                    <div className="col-lg-4 col-md-6 mb-3">
+                    <div className="col-lg-4 col-md-4 mb-3">
                         <div className="driving_img text-center">
                             <Image src={drivingData.img} alt="Driving Image" height={100} width={550} />
                         </div>
