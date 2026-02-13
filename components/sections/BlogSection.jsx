@@ -1,10 +1,16 @@
 "use client";
+
+import { siteConfig } from "@/lib/config/site"; 
 import { blogData, blogSectionData } from "@/lib/mock-data/blog";
 import { slugify, trimByWords } from "@/lib/utils/text";
+
+import { useEffect, useState } from "react";
+
 import Image from "next/image";
 import Link from "next/link";
 import { Autoplay } from 'swiper/modules';
 import arrow_blog from '../../public/images/arrow_blog.svg';
+import placeholder_blog from '../../public/images/blog3.jpg';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -14,10 +20,41 @@ import 'swiper/css/autoplay';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
+function formatDate(unixSeconds) {
+  if (!unixSeconds) return "";
+  return new Date(unixSeconds * 1000).toLocaleString("en-US", {
+    dateStyle: "medium",
+    timeStyle: "short",
+  });
+}
 
-
+// function trimByWords(text = "", count = 20) {
+//   return text.split(" ").slice(0, count).join(" ") + "...";
+// }
 
 const BlogSection =   () => {
+
+    const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    async function loadPosts() {
+      try {
+        const res = await fetch("/api/coindesk");
+        const data = await res.json();
+
+        const latest10 = (data?.Data || [])
+          .sort((a, b) => (b.PUBLISHED_ON || 0) - (a.PUBLISHED_ON || 0))
+          .slice(0, 10);
+
+        setPosts(latest10);
+      } catch (err) {
+        console.error("Failed to load posts", err);
+      }
+    }
+
+    loadPosts();
+  }, []);
+
   return (
     <>
     <div className="blog_section">
@@ -73,20 +110,28 @@ const BlogSection =   () => {
                     }}
                     pagination={{ clickable: false }}
                     scrollbar={{ draggable: true }}
-                    className="swiper_blog" 
-                    >
+                    className="swiper_blog" >
 
                         
                     
                 
 
-                { blogData.map(({ id, thumb, date, title, desc }) => (
+               {posts.map((item) => {
+                const id = item.ID || item.URL;
+                const title = item.TITLE;
+                const desc = item.BODY;
+                const date = formatDate(item.PUBLISHED_ON);
+                const thumb = item.IMAGE_URL || placeholder_blog;
+                const link = item.URL || "#";
+
+                return (
+
                     <SwiperSlide key={id}>
                             
                             <div className="blog_item" >
-                                <Link href={`/blog/${slugify(title)}`}>
+                                <Link href={link} target="_blank">
                                 <div className="blog_img" >
-                                    <Image src={thumb} alt="blog1" width={370} height={250} />
+                                    <Image src={thumb} alt={title} style={{ objectFit: "cover" }} width={370} height={250} />
                                     <div className="blog_date">
                                         <span>{date}</span>
                                     </div>
@@ -95,13 +140,14 @@ const BlogSection =   () => {
                                 <div className="blog_content">
                                     <h4  >{title}</h4>
                                     <p  >{trimByWords(desc,20)}</p>
-                                    <Link href="#">Read more <Image src={arrow_blog} alt="arrow" width={15} height={15} /> </Link>
+                                    <Link href={link} target="_blank">Read more 
+                                    <Image src={arrow_blog} alt="arrow" width={15} height={15} /> </Link>
                                 </div>
                             </div>
                         
                         
                     </SwiperSlide>
-                ))}
+                ); })}
 
                 </Swiper>
 
