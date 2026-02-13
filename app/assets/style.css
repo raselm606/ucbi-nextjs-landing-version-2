@@ -268,7 +268,7 @@ img {
     animation: 4s linear infinite top_bottom_bounce;
     position: absolute;
     bottom: 21%;
-    right: 17%;
+    right: 20%;
 }
 .hero_image .eth_coin {
     mix-blend-mode: luminosity;
@@ -277,12 +277,12 @@ img {
     animation: 6s linear infinite top_bottom_bounce;
     position: absolute;
     bottom: 23%;
-    right: 33%;
+    right: 36%;
 }
 .hero_image .btc_coin {
     width: 200px;
     height: 200px;
-    margin-left: -5px;
+    margin-left: -57px;
     animation: 8s linear infinite top_bottom_bounce;
     position: absolute;
     top: 27%;
@@ -835,7 +835,7 @@ img {
 }
 /*scaleable section*/
 .scaleable_section{
-    background: url("../../public/images/scaleable_bg1.jpg");
+    background: url("../../public/images/scaleable_bg_4.jpg");
     background-size: cover;
     background-position: top center;
 }
@@ -1154,6 +1154,7 @@ label.form-check-label {
     box-shadow: 2px 2px 9px 4px #b1b1b126;
     margin-bottom: 20px;
 }
+
 .t_tittle {
     color: #112e50;
     text-transform: capitalize;
