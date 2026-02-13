@@ -882,9 +882,9 @@ img {
     color: var(--primary_color);
 }
 .social ul li a img {
-    width: 22px !important;
-    height: 22px !important;
     transition: var(--transition);
+    width: 20px !important;
+    height: 20px !important;
 }
 .social ul li a img:hover {
     transform: scale(1.2);
