@@ -855,12 +855,12 @@ img {
     padding-bottom: 100px;
 }
 .footer_info p {
-    font-size: 14px;
     color: var(--text_dark);
+    font-size: 13px;
     font-family: var(--paragraph_font);
+    margin-top: 30px;
+    margin-bottom: 20px;
     font-weight: 500;
-    margin-top: 50px;
-    margin-bottom: 30px;
 }
 .footer_nav_menus h6 {
     color: var(--text_dark);
