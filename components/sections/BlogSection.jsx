@@ -43,7 +43,7 @@ const BlogSection =   () => {
 
         const latest10 = (data?.Data || [])
           .sort((a, b) => (b.PUBLISHED_ON || 0) - (a.PUBLISHED_ON || 0))
-          .slice(0, 10);
+          .slice(0, 15);
 
         setPosts(latest10);
       } catch (err) {
@@ -89,9 +89,10 @@ const BlogSection =   () => {
                         nextEl: '.next-btn',
                     }}
                     autoplay= {{
-                        delay: 2000,
+                        delay: 4000,
                         disableOnInteraction: false,
                     }}
+                    loop={true}
                     breakpoints={{
                         0: {
                             slidesPerView: 1,
@@ -110,6 +111,7 @@ const BlogSection =   () => {
                             spaceBetween: 20,
                         },
                     }}
+
                     pagination={{ clickable: false }}
                     scrollbar={{ draggable: true }}
                     className="swiper_blog" >
@@ -120,7 +122,7 @@ const BlogSection =   () => {
 
                {posts.map((item) => {
                 const id = item.ID || item.URL;
-                const title = item.TITLE || "Untitled";
+                const title = item.TITLE || "UCBI Blogs ";
                 const desc = item.BODY || "";
                 const date = formatDate(item.PUBLISHED_ON);
 
