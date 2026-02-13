@@ -917,7 +917,7 @@ img {
     color: var(--text_white);
 }
 .copyright p {
-    font-size: 13px;
+    font-size: 12px;
     font-family: var(--paragraph_font);
 }
 .cc_web img {
