@@ -516,7 +516,7 @@ img {
     padding: 100px 70px;
 }
 .timeline_one{
-    margin-top: 200px;
+    margin-top: 175px;
     position: relative;
 }
 .timeline_one:before {
@@ -534,12 +534,12 @@ img {
     position: absolute;
     left: 9px;
     top: -101px;
-    height: 61px;
+    height: 93px;
     width: 1px;
     background: rgb(255 255 255 / 20%);
 }
 .timeline_two{
-    margin-top: 150px;
+    margin-top: 127px;
     position: relative;
 }
 .timeline_two:before {
@@ -556,20 +556,20 @@ img {
     content: "";
     background: #fff3;
     width: 1px;
-    height: 42px;
+    height: 52px;
     position: absolute;
     top: -64px;
     left: 9px;
 }
 .timeline_three{
-    margin-top: 100px;
+    margin-top: 60px;
     position: relative;
 }
 .timeline_three:before {
     content: "";
     position: absolute;
     left: 0;
-    top: -104px;
+    top: -82px;
     height: 20px;
     width: 20px;
     border-radius: 50%;
@@ -579,31 +579,32 @@ img {
     content: "";
     background: #fff3;
     width: 1px;
-    height: 52px;
+    height: 63px;
     position: absolute;
-    top: -90px;
+    top: -69px;
     left: 10px;
 }
-.timeline_four{
+.timeline_four {
     position: relative;
+    margin-top: -64px;
 }
 .timeline_four:before {
     content: "";
     position: absolute;
     left: 0;
-    top: -161px;
+    top: -103px;
     height: 20px;
     width: 20px;
     border-radius: 50%;
     background: var(--primary_color);
 }
-.timeline_four::after {
+.timeline_four:after {
     content: "";
-    background: rgba(255, 255, 255, 0.2);
+    background: #fff3;
     width: 1px;
-    height: 80px;
+    height: 87px;
     position: absolute;
-    top: -144px;
+    top: -94px;
     left: 9px;
 }
 .timeline_item h4 {
