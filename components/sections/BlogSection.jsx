@@ -1,8 +1,7 @@
 "use client";
-
-import { siteConfig } from "@/lib/config/site"; 
+ 
 import { blogData, blogSectionData } from "@/lib/mock-data/blog";
-import { slugify, trimByWords } from "@/lib/utils/text";
+import { trimByWords } from "@/lib/utils/text";
 
 import { useEffect, useState } from "react";
 
@@ -118,15 +117,18 @@ const BlogSection =   () => {
 
                {posts.map((item) => {
                 const id = item.ID || item.URL;
-                const title = item.TITLE;
-                const desc = item.BODY;
+                const title = item.TITLE || "Untitled";
+                const desc = item.BODY || "";
                 const date = formatDate(item.PUBLISHED_ON);
-                const thumb = item.IMAGE_URL || placeholder_blog;
+                const thumb = item.IMAGE_URL ? item.IMAGE_URL : placeholder_blog;
                 const link = item.URL || "#";
 
-                return (
 
+
+                return (
+                   
                     <SwiperSlide key={id}>
+
                             
                             <div className="blog_item" >
                                 <Link href={link} target="_blank">
