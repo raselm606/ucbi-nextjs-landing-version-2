@@ -1146,13 +1146,13 @@ label.form-check-label {
     background: #fff;
     border: 1px solid #0000001a;
     border-radius: 32px;
+    width: 240px;
     height: 246px;
+    margin-left: 10px;
+    margin-right: 10px;
     padding: 30px 20px;
     box-shadow: 2px 2px 9px 4px #b1b1b126;
-    /* display: flex; */
-    width: 240px;
-    margin-right: 10px;
-    margin-left: 10px;
+    margin-bottom: 20px;
 }
 .t_tittle {
     color: #112e50;
