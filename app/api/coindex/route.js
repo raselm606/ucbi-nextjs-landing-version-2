@@ -11,7 +11,7 @@ export async function GET() {
 
   const url =
     "https://data-api.coindesk.com/news/v1/article/list" +
-    `?lang=EN&limit=10&categories=ETH,DIGITAL%20ASSET%20TREASURY,ETHFI,BTC&api_key=${encodeURIComponent(key)}`;
+    `?lang=EN&limit=15&categories=DIGITAL%20ASSET%20TREASURY,ETHFI&api_key=${encodeURIComponent(key)}`;
 
   const res = await fetch(url, {
     next: { revalidate: 60 },
