@@ -1,7 +1,7 @@
 "use client";
  
 import { blogData, blogSectionData } from "@/lib/mock-data/blog";
-import { trimText,trimByWords } from "@/lib/utils/text";
+import { trimText,trimByWords, dateOnly } from "@/lib/utils/text";
 
 import { useEffect, useState } from "react";
 
@@ -19,14 +19,7 @@ import 'swiper/css/autoplay';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-function formatDate(unixSeconds) {
-  if (!unixSeconds) return "";
-  return new Date(unixSeconds * 1000).toLocaleString("en-US", {
-    dateStyle: "medium",
-    timeStyle: "short",
-  });
-}
-
+ 
 // function trimByWords(text = "", count = 20) {
 //   return text.split(" ").slice(0, count).join(" ") + "...";
 // }
@@ -124,7 +117,7 @@ const BlogSection =   () => {
                 const id = item.ID || item.URL;
                 const title = item.TITLE || "UCBI Blogs ";
                 const desc = item.BODY || "";
-                const date = formatDate(item.PUBLISHED_ON);
+                const date = dateOnly(item.PUBLISHED_ON);
 
                 const rawThumb = item.IMAGE_URL || "";
                 const safeThumb =
