@@ -35,7 +35,7 @@ const Header = () => {
                      
                 </ul>
                 <div className="top_button">
-                    <Button variant="top_nav_button" href="#"> Dashboard</Button>
+                    <Button variant="top_nav_button" href="https://tothemoon.com/trading/UCBI_USDC" target="_blank"> Dashboard</Button>
                 </div>
                 </div>
             </div>

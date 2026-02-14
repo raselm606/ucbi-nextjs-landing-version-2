@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const Button = ({ href, children, variant = "", className = "", ...props }) => {
+const Button = ({ href, children, target, variant = "", className = "", ...props }) => {
   const variants = {
     primary: "btn-primary",
     top_nav_button: "top_nav_button",
@@ -13,7 +13,7 @@ const Button = ({ href, children, variant = "", className = "", ...props }) => {
 
   if (href) {
     return (
-      <Link href={href} className={combined} {...props}>
+      <Link href={href} target={target} className={combined} {...props}>
         {children}
       </Link>
     );

@@ -13,7 +13,7 @@ const PapersToken = () => {
                        <p className="section_paragraph_white" >
                         The UCBI Banking Whitepaper provides a structured overview of UCBI’s blockchain-based data banking ecosystem It outlines the underlying architecture governance considerations and security principles supporting the development of a secure and institutionally aligned digital infrastructure
                         </p> 
-                        <Button variant="primary" href="#" > Download</Button> 
+                        <Button variant="primary" href="https://doc.ucbibanking.io/ucbi_whitepaper" target="_blank"> Download</Button> 
                     </div>
                 </div>
                 <div className="col-lg-2">
@@ -27,7 +27,8 @@ const PapersToken = () => {
                         <p className="section_paragraph_dark" >
                             The UCBI tokenomics framework is presented for informational purposes only and describes the structural principles governing the issuance allocation and lifecycle of digital units within the UCBI ecosystem It outlines governance mechanisms technical constraints and alignment considerations without constituting
                         </p>
-                        <Button style={{background:'#112E50 !important'}} variant="primary" href="#" > Download</Button> 
+                        <Button style={{background:'#112E50 !important'}} variant="primary" 
+                        href="https://doc.ucbibanking.io/ucbi_tokenomics" target="_blank"> Download</Button> 
                     </div>
                 </div>
             </div>
