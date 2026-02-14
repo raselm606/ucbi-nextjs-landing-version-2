@@ -99,8 +99,8 @@ const Footer = () => {
               </div>
               <div className="cc_terms">
                 <ul>
-                  <li><Link href="#">Terms & Conditions</Link></li>
-                  <li><Link href="#">Privacy Policy</Link></li>
+                  <li><Link href="https://doc.ucbibanking.io/ucbi_terms_condition" target="_blank">Terms & Conditions</Link></li>
+                  <li><Link href="https://doc.ucbibanking.io/ucbi_terms_condition" target="_blank">Privacy Policy</Link></li>
                 </ul>
               </div>
             </div>
