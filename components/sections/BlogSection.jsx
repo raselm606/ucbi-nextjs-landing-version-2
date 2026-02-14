@@ -1,7 +1,7 @@
 "use client";
  
 import { blogData, blogSectionData } from "@/lib/mock-data/blog";
-import { trimByWords } from "@/lib/utils/text";
+import { trimText,trimByWords } from "@/lib/utils/text";
 
 import { useEffect, useState } from "react";
 
@@ -159,7 +159,7 @@ const BlogSection =   () => {
                                 </Link>
                                 <div className="blog_content">
                                     <h4  >{trimByWords(title,10)}</h4>
-                                    <p  >{trimByWords(desc,20)}</p>
+                                    <p  >{trimText(desc,100)}</p>
                                     <Link href={link} target="_blank">Read more 
                                     <Image src={arrow_blog} alt="arrow" width={15} height={15} /> </Link>
                                 </div>
