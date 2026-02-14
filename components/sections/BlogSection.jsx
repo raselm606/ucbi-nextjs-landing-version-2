@@ -24,7 +24,7 @@ import 'swiper/css/pagination';
 //   return text.split(" ").slice(0, count).join(" ") + "...";
 // }
 
-const BlogSection =   () => {
+const BlogSection = () => {
 
     const [posts, setPosts] = useState([]);
 
@@ -34,11 +34,11 @@ const BlogSection =   () => {
         const res = await fetch("/api/coindex");
         const data = await res.json();
 
-        const latest10 = (data?.Data || [])
+        const latest15 = (data?.Data || [])
           .sort((a, b) => (b.PUBLISHED_ON || 0) - (a.PUBLISHED_ON || 0))
           .slice(0, 15);
 
-        setPosts(latest10);
+        setPosts(latest15);
       } catch (err) {
         console.error("Failed to load posts", err);
       }
@@ -55,7 +55,7 @@ const BlogSection =   () => {
                 <div className="col-lg-12 text-center">
                     <h2  className="section_title_dark">
                         {blogSectionData.title}
-                        </h2>
+                    </h2>
                 </div>
             </div>
              
