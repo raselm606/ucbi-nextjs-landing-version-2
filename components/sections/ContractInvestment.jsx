@@ -16,6 +16,10 @@ const ContractInvestment = () => {
     const [xrp, setXrp] = useState(null);
     const [err, setErr] = useState(null);
 
+    const [ucbiPrice, setUcbiPrice] = useState(null);
+    const [ucbiError, setUcbiError] = useState(null);
+
+
     useEffect(() => {
     async function load() {
       try {
@@ -42,6 +46,65 @@ const ContractInvestment = () => {
     console.log(btc, eth, atom, xrp, err);
 
   }, []);
+
+    //ucbi price
+    useEffect(() => {
+  let alive = true;
+
+  function findPrice(obj) {
+    if (!obj || typeof obj !== "object") return null;
+
+    if (typeof obj.price === "number") {
+      return obj.price;
+    }
+
+    if (Array.isArray(obj)) {
+      for (const v of obj) {
+        const found = findPrice(v);
+        if (found !== null) return found;
+      }
+      return null;
+    }
+
+    for (const k of Object.keys(obj)) {
+      const found = findPrice(obj[k]);
+      if (found !== null) return found;
+    }
+
+    return null;
+  }
+
+  async function loadUcbiPrice() {
+    try {
+      setUcbiError(null);
+
+      const res = await fetch("/api/ucbi/market", { cache: "no-store" });
+      const json = await res.json();
+
+      if (!res.ok) throw new Error("API failed");
+
+      const foundPrice = findPrice(json);
+
+      if (foundPrice === null) {
+        console.log("API response:", json);
+        throw new Error("Price not found");
+      }
+
+      if (!alive) return;
+      setUcbiPrice(foundPrice);
+    } catch (e) {
+      console.log("UCBI price load error:", e);
+      if (alive) setUcbiError("Failed to load price");
+    }
+  }
+
+  loadUcbiPrice();
+
+  return () => {
+    alive = false;
+  };
+}, []);
+
 
 
 
@@ -79,7 +142,7 @@ const ContractInvestment = () => {
                             
                                 <div className="token_item">
                                     <div className="main_coin">
-                                        <Image src={btc_icon} alt={btc} width={50} height={50} />
+                                        <Image src={btc_icon} alt="#" width={50} height={50} />
                                     <span>Bitcoin</span>
                                     </div>
                                     <span className="price_t">${btc ?? "--"}  </span>
@@ -106,7 +169,7 @@ const ContractInvestment = () => {
                                         <Image src={ucbi_icon} alt="" width={50} height={50} />
                                     <span> UCBI</span>
                                     </div>
-                                    <span className="price_t">$0.562     </span>
+                                    <span className="price_t"> {ucbiPrice == null ? "--" : `$${ucbiPrice.toFixed(3)}`}     </span>
                                 </div>
 
                                 <div className="token_item">
@@ -146,7 +209,7 @@ const ContractInvestment = () => {
                                         <Image src={ucbi_icon} alt="" width={50} height={50} />
                                     <span> UCBI</span>
                                     </div>
-                                    <span className="price_t">$0.562     </span>
+                                    <span className="price_t"> {ucbiPrice == null ? "--" : `$${ucbiPrice.toFixed(3)}`}     </span>
                                 </div>
 
                                 <div className="token_item">
