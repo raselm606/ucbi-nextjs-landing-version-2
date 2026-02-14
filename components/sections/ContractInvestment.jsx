@@ -1,43 +1,49 @@
 "use client";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
-import ripple from '../../public/images/ripple.png';
-import atom from '../../public/images/atom.png';
-import btc from '../../public/images/btc.png';
-import eth from '../../public/images/eth.png';
-import ucbi from '../../public/images/ucbi.png';
+import ripple_icon from '../../public/images/ripple.png';
+import atom_icon from '../../public/images/atom.png';
+import btc_icon from '../../public/images/btc.png';
+import eth_icon from '../../public/images/eth.png';
+import ucbi_icon from '../../public/images/ucbi.png';
 
 const ContractInvestment = () => {
-// const [priceBTC, setBTCPrice] = useState(null);
-//   const [loading, setLoading] = useState(true);
-//   const [error, setError] = useState(null);
+    const [btc, setBtc] = useState(null);
+    const [eth, setEth] = useState(null);
+    const [atom, setAtom] = useState(null);
+    const [xrp, setXrp] = useState(null);
+    const [err, setErr] = useState(null);
 
-//   useEffect(() => {
-//     fetch(
-//       "https://api.coingecko.com/api/v3/simple/price?vs_currencies=usd&ids=bitcoin",
-//       {
-//         headers: {
-//           "x-cg-demo-api-key": "x-cg-demo-api-key",
-//         },
-//       }
-//     )
-//       .then(res => {
-//         if (!res.ok) throw new Error("API Error");
-//         return res.json();
-//       })
-//       .then(data => {
-//         setBTCPrice(data?.bitcoin?.usd ?? "N/A");
-//         setLoading(false);
-//       })
-//       .catch(err => {
-//         console.error(err);
-//         setError("Failed to load crypto prices");
-//         setLoading(false);
-//       });
-//   }, []);
+    useEffect(() => {
+    async function load() {
+      try {
+        const btcRes = await fetch("/api/price/btc", { cache: "no-store" }).then(r => r.json());
+        const ethRes = await fetch("/api/price/eth", { cache: "no-store" }).then(r => r.json());
+        const atomRes = await fetch("/api/price/atom", { cache: "no-store" }).then(r => r.json());
+        const xrpRes = await fetch("/api/price/xrp", { cache: "no-store" }).then(r => r.json());
 
-//   if (loading) return <p>Loading...</p>;
-//   if (error) return <p>{error}</p>;
+        if (!btcRes.ok || !ethRes.ok || !atomRes.ok || !xrpRes.ok) {
+          setErr("Price load failed");
+          return;
+        }
+
+        setBtc(btcRes.price);
+        setEth(ethRes.price);
+        setAtom(atomRes.price);
+        setXrp(xrpRes.price);
+      } catch (e) {
+        setErr("Network/API error");
+      }
+    }
+
+    load();
+    console.log(btc, eth, atom, xrp, err);
+
+  }, []);
+
+
 
   return (
     <>
@@ -73,84 +79,85 @@ const ContractInvestment = () => {
                             
                                 <div className="token_item">
                                     <div className="main_coin">
-                                        <Image src={btc} alt="" width={50} height={50} />
+                                        <Image src={btc_icon} alt={btc} width={50} height={50} />
                                     <span>Bitcoin</span>
                                     </div>
-                                    <span className="price_t">$45678.908  </span>
+                                    <span className="price_t">${btc ?? "--"}  </span>
                                 </div>
 
                                 <div className="token_item">
                                     <div className="main_coin">
-                                        <Image src={eth} alt="" width={50} height={50} />
+                                        <Image src={eth_icon} alt="" width={50} height={50} />
                                     <span> Ethereum</span>
                                     </div>
-                                    <span className="price_t">$3.09876  </span>
+                                    <span className="price_t">${eth ?? "--"}  </span>
                                 </div>
 
                                 <div className="token_item">
                                     <div className="main_coin">
-                                        <Image src={ripple} alt="" width={50} height={50} />
+                                        <Image src={ripple_icon} alt="" width={50} height={50} />
                                     <span> Ripple</span>
                                     </div>
-                                    <span className="price_t">$ 30.0989      </span>
+                                    <span className="price_t">${xrp ?? "--"}      </span>
                                 </div>
 
                                 <div className="token_item">
                                     <div className="main_coin">
-                                        <Image src={ucbi} alt="" width={50} height={50} />
+                                        <Image src={ucbi_icon} alt="" width={50} height={50} />
                                     <span> UCBI</span>
                                     </div>
-                                    <span className="price_t">-$0.562     </span>
+                                    <span className="price_t">$0.562     </span>
                                 </div>
 
                                 <div className="token_item">
                                     <div className="main_coin">
-                                        <Image src={atom} alt="" width={50} height={50} />
+                                        <Image src={atom_icon} alt="" width={50} height={50} />
                                     <span>Atom</span>
                                     </div>
-                                    <span className="price_t">-$0.839  </span>
+                                    <span className="price_t">${atom ?? "--"}  </span>
                                 </div>
                             
                                 <div className="token_item">
                                     <div className="main_coin">
-                                        <Image src={btc} alt="" width={50} height={50} />
+                                        <Image src={btc_icon} alt="" width={50} height={50} />
                                     <span>Bitcoin</span>
                                     </div>
-                                    <span className="price_t">$45678.908  </span>
+                                    <span className="price_t">${btc ?? "--"}  </span>
                                 </div>
 
                                 <div className="token_item">
                                     <div className="main_coin">
-                                        <Image src={eth} alt="" width={50} height={50} />
+                                        <Image src={eth_icon} alt="" width={50} height={50} />
                                     <span> Ethereum</span>
                                     </div>
-                                    <span className="price_t">$3.09876  </span>
+                                    <span className="price_t">${eth ?? "--"}  </span>
                                 </div>
 
                                 <div className="token_item">
                                     <div className="main_coin">
-                                        <Image src={ripple} alt="" width={50} height={50} />
+                                        <Image src={ripple_icon} alt="" width={50} height={50} />
                                     <span> Ripple</span>
                                     </div>
-                                    <span className="price_t">$ 30.0989      </span>
+                                    <span className="price_t">${xrp ?? "--"}      </span>
                                 </div>
 
                                 <div className="token_item">
                                     <div className="main_coin">
-                                        <Image src={ucbi} alt="" width={50} height={50} />
+                                        <Image src={ucbi_icon} alt="" width={50} height={50} />
                                     <span> UCBI</span>
                                     </div>
-                                    <span className="price_t">-$0.562     </span>
+                                    <span className="price_t">$0.562     </span>
                                 </div>
 
                                 <div className="token_item">
                                     <div className="main_coin">
-                                        <Image src={atom} alt="" width={50} height={50} />
+                                        <Image src={atom_icon} alt="" width={50} height={50} />
                                     <span>Atom</span>
                                     </div>
-                                    <span className="price_t">-$0.839  </span>
+                                    <span className="price_t">${atom ?? "--"}  </span>
                                 </div>
-
+                            
+                                
                                 
 
                             </Marquee>
