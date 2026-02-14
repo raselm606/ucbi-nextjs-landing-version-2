@@ -82,7 +82,7 @@ const BlogSection = () => {
                         nextEl: '.next-btn',
                     }}
                     autoplay= {{
-                        delay: 4000,
+                        delay: 3000,
                         disableOnInteraction: false,
                     }}
                     loop={true}

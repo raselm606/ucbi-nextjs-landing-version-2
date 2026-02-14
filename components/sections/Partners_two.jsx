@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Marquee from "react-fast-marquee";
 import logo1 from "../../public/images/partners/1.jpg";
 import logo10 from "../../public/images/partners/10.png";
@@ -22,41 +23,66 @@ const Partners =  () => {
           
                  <Marquee speed={60} gradient={false}>
                   <div className="partner_img">
-                        <Image className="img1"  src={logo1} alt="Partner Logo" />
+                        <Link href="https://tothemoon.com/trading/UCBI_USDC" target="_blank"> 
+                        <Image className="img1"  src={logo1} alt="Partner Logo" /> </Link>
                         {/* <Image  className="img2"  src={logo2} alt="Partner Logo" />
                         <Image  className="img3"  src={logo3} alt="Partner Logo" /> */}
-                        <Image className="img4"  src={logo4} alt="Partner Logo" />
-                        <Image className="img5"  src={logo5} alt="Partner Logo" />
-                        <Image className="img6"  src={logo6} alt="Partner Logo" />
-                        <Image className="img7"  src={logo7} alt="Partner Logo" />
-                        <Image className="img8"  src={logo8} alt="Partner Logo" />
-                        <Image className="img9"  src={logo9} alt="Partner Logo" />
-                        <Image className="img10"  src={logo10} alt="Partner Logo" />
-                        <Image className="img12"  src={logo12} alt="Partner Logo" />
-                        <Image className="img11"  src={logo11} alt="Partner Logo" />
+
+                       <Link href="http://perrier-immo.com/" target="_blank"> 
+                       <Image className="img4"  src={logo4} alt="Partner Logo" /> </Link> 
+                       <Link href="https://finance.yahoo.com/quote/UCBI-USD/" target="_blank">
+                       <Image className="img5"  src={logo5} alt="Partner Logo" /></Link> 
+                        <Link href="https://web3.okx.com/fr/token/ethereum/0x2adba23cf1252de095aced801e758b369ec10426" target="_blank">
+                        <Image className="img6"  src={logo6} alt="Partner Logo" /></Link>
+                        <Link href="https://trustwallet.com/" target="_blank">
+                        <Image className="img7"  src={logo7} alt="Partner Logo" /></Link>
+                        <Link href="https://metamask.io/" target="_blank">
+                        <Image className="img8"  src={logo8} alt="Partner Logo" /></Link>
+                        <Link href="https://etherscan.io/token/0x2adba23cf1252de095aced801e758b369ec10426" target="_blank">
+                        <Image className="img9"  src={logo9} alt="Partner Logo" /></Link>
+                        <Link href="https://www.coinbase.com/wallet" target="_blank">
+                        <Image className="img10"  src={logo10} alt="Partner Logo" /></Link>
+                        <Link href="https://intel.arkm.com/" target="_blank">
+                        <Image className="img12"  src={logo12} alt="Partner Logo" /></Link>
+                        <Link href="https://coinmarketcap.com/currencies/ucbi-banking/" target="_blank">
+                        <Image className="img11"  src={logo11} alt="Partner Logo" /></Link>
 
                         
-                        <Image className="img6"  src={logo6} alt="Partner Logo" />
-                        <Image className="img7"  src={logo7} alt="Partner Logo" />
+                        <Link href="https://web3.okx.com/fr/token/ethereum/0x2adba23cf1252de095aced801e758b369ec10426" target="_blank">
+                        <Image className="img6"  src={logo6} alt="Partner Logo" /></Link>
+                        <Link href="https://trustwallet.com/" target="_blank">
+                        <Image className="img7"  src={logo7} alt="Partner Logo" /></Link>
 
 
 
-                        <Image className="img1"  src={logo1} alt="Partner Logo" />
+                        <Link href="https://tothemoon.com/trading/UCBI_USDC" target="_blank"> 
+                        <Image className="img1"  src={logo1} alt="Partner Logo" /> </Link>
                          {/*<Image  className="img2"  src={logo2} alt="Partner Logo" /> 
                         <Image  className="img3"  src={logo3} alt="Partner Logo" />*/}
-                        <Image className="img4"  src={logo4} alt="Partner Logo" />
-                        <Image className="img5"  src={logo5} alt="Partner Logo" />
-                        <Image className="img6"  src={logo6} alt="Partner Logo" />
-                        <Image className="img7"  src={logo7} alt="Partner Logo" />
-                        <Image className="img8"  src={logo8} alt="Partner Logo" />
-                        <Image className="img9"  src={logo9} alt="Partner Logo" />
-                        <Image className="img10"  src={logo10} alt="Partner Logo" />
-                        <Image className="img12"  src={logo12} alt="Partner Logo" />
-                        <Image className="img11"  src={logo11} alt="Partner Logo" />
+                        <Link href="http://perrier-immo.com/" target="_blank"> 
+                       <Image className="img4"  src={logo4} alt="Partner Logo" /> </Link> 
+                       <Link href="https://finance.yahoo.com/quote/UCBI-USD/" target="_blank">
+                       <Image className="img5"  src={logo5} alt="Partner Logo" /></Link> 
+                        <Link href="https://web3.okx.com/fr/token/ethereum/0x2adba23cf1252de095aced801e758b369ec10426" target="_blank">
+                        <Image className="img6"  src={logo6} alt="Partner Logo" /></Link>
+                        <Link href="https://trustwallet.com/" target="_blank">
+                        <Image className="img7"  src={logo7} alt="Partner Logo" /></Link>
+                        <Link href="https://metamask.io/" target="_blank">
+                        <Image className="img8"  src={logo8} alt="Partner Logo" /></Link>
+                        <Link href="https://etherscan.io/token/0x2adba23cf1252de095aced801e758b369ec10426" target="_blank">
+                        <Image className="img9"  src={logo9} alt="Partner Logo" /></Link>
+                        <Link href="https://www.coinbase.com/wallet" target="_blank">
+                        <Image className="img10"  src={logo10} alt="Partner Logo" /></Link>
+                        <Link href="https://intel.arkm.com/" target="_blank">
+                        <Image className="img12"  src={logo12} alt="Partner Logo" /></Link>
+                        <Link href="https://coinmarketcap.com/currencies/ucbi-banking/" target="_blank">
+                        <Image className="img11"  src={logo11} alt="Partner Logo" /></Link>
 
                         
-                        <Image className="img6"  src={logo6} alt="Partner Logo" />
-                        <Image className="img7"  src={logo7} alt="Partner Logo" />
+                        <Link href="https://web3.okx.com/fr/token/ethereum/0x2adba23cf1252de095aced801e758b369ec10426" target="_blank">
+                        <Image className="img6"  src={logo6} alt="Partner Logo" /></Link>
+                        <Link href="https://trustwallet.com/" target="_blank">
+                        <Image className="img7"  src={logo7} alt="Partner Logo" /></Link>
                     </div>
 
                     {/* {partnetData.map((item, index) => (
