@@ -1150,7 +1150,7 @@ label.form-check-label {
     border: 1px solid #0000001a;
     border-radius: 6px;
     width: 300px;
-    height: 185px;
+    height: 180px;
     margin-bottom: 20px;
     margin-left: 10px;
     margin-right: 10px;
@@ -1177,7 +1177,7 @@ label.form-check-label {
 }
 .t_number {
     color: #112e50;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
 }
 .t_sub {
