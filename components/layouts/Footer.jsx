@@ -94,7 +94,7 @@ const Footer = () => {
                   <li><Link href="#"><Image   src={linkedin} alt="linkedin"/></Link></li> 
                 </ul>
               </div>
-              <div className="copyright">
+              <div className="copyright text-center">
                 <p>UCBI Group Technologies LTD Copyright © 2026 All rights reserved</p>
               </div>
               <div className="cc_terms">
