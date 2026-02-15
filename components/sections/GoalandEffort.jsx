@@ -18,7 +18,7 @@ const GoalandEffort = () => {
                         <div className="divider_lin"></div>
 
                         <div className="featured_o"  >
-                            <p>Market Data</p>
+                            <p>Market data</p>
                             <Link href="#" className="fe_link"><Image src={yahoof} alt="featured logos"   /></Link> 
                              
                         </div>
