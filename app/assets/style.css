@@ -914,8 +914,7 @@ img {
 }
 .cc_terms ul li {
     display: inline;
-    margin-right: 10px;
-    margin-left: 10px;
+    margin-right: 10px; 
 }
 .cc_terms ul li a {
     font-size: 12px;
