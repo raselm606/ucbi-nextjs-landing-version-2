@@ -1148,14 +1148,14 @@ label.form-check-label {
 .tt_area {
     background: #fff;
     border: 1px solid #0000001a;
-    border-radius: 32px;
-    width: 370px;
-    height: 246px;
+    border-radius: 6px;
+    width: 300px;
+    height: 185px;
+    margin-bottom: 20px;
     margin-left: 10px;
     margin-right: 10px;
-    padding: 30px 20px;
+    padding: 20px 17px;
     box-shadow: 2px 2px 9px 4px #b1b1b126;
-    margin-bottom: 20px;
 }
 
 .t_tittle {
@@ -1166,14 +1166,14 @@ label.form-check-label {
 }
 .tt_area img {
     mix-blend-mode: multiply;
-    background: #ffffff;
+    background: #fff;
+    border: 10px solid #eaeceb;
     border-radius: 50%;
-    width: 70px;
-    height: 70px;
-    margin: 25px auto 23px;
+    width: 60px;
+    height: 60px;
+    margin: 14px auto;
     padding: 6px;
     display: block;
-    border: 10px solid #eaeceb;
 }
 .t_number {
     color: #112e50;
