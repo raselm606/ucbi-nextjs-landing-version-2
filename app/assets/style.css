@@ -1168,12 +1168,13 @@ label.form-check-label {
 }
 .tt_area img {
     mix-blend-mode: multiply;
-    width: 80px;
-    height: 80px;
-    margin: 0 auto;
+    width: 70px;
+    height: 70px;
+    margin: 25px auto 23px;
     display: block;
-    margin-bottom: 23px;
-    margin-top: 25px;
+    background: #eaeceb;
+    border-radius: 50%;
+    padding: 11px;
 }
 .t_number {
     color: #112e50;
