@@ -133,7 +133,7 @@ const ContractInvestment = () => {
 
                 <div className="col-lg-12">
                     <div className="token_info" >
-                        <p>Our assets: 
+                        <p>Our assets
        
                         </p>
                         <div className="token_slide"  >
