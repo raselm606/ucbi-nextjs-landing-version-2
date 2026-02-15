@@ -408,7 +408,7 @@ img {
 }
 .papers_token_section .clinee {
     background: url("../../public/images/paper_bg.jpg") no-repeat;
-    height: 324px; 
+    height: 303px; 
     margin-bottom: 160px;
     /* margin-top: 160px;  */
     position: relative;
@@ -420,7 +420,7 @@ img {
 .white_paper_area {
     background: #112e50c7;
     margin-bottom: 100px;
-    padding: 40px 103px 50px 70px;
+    padding: 30px 103px 50px 70px;
     position: relative;
 }
  .white_paper_area:before {
@@ -466,7 +466,7 @@ img {
     right: -2px;
 }
 .tokenomics_area { 
-    padding: 40px 72px 50px 70px ;  
+    padding: 32px 72px 50px 70px ;  
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;

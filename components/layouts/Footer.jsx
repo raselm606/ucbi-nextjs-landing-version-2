@@ -31,7 +31,7 @@ const Footer = () => {
               </form>
             </div>
           </div>
-          <div className=" offset-lg-2 col-lg-2 mb-3">
+          <div className=" offset-lg-2  col-lg-2 mb-3">
             <div className="footer_nav_menus">
               <h6>Company</h6>
               <div className="footer_navs">
@@ -58,7 +58,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="  col-lg-2 mb-3">
+          <div className="  col-lg-3 mb-3">
             <div className="footer_nav_menus">
               <h6>Contact</h6>
               <div className="footer_navs">
