@@ -1149,8 +1149,8 @@ label.form-check-label {
     background: #fff;
     border: 1px solid #0000001a;
     border-radius: 6px;
-    width: 300px;
-    height: 180px;
+    width: 350px;
+    height: 172px;
     margin-bottom: 20px;
     margin-left: 10px;
     margin-right: 10px;
@@ -1167,11 +1167,11 @@ label.form-check-label {
 .tt_area img {
     mix-blend-mode: multiply;
     background: #fff;
-    border: 10px solid #eaeceb;
+    border: 8px solid #eaeceb;
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    margin: 14px auto;
+    width: 55px;
+    height: 55px;
+    margin: 8px auto;
     padding: 6px;
     display: block;
 }
