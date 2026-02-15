@@ -899,9 +899,7 @@ img {
 .footer_elements {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-left: 70px;
-    margin-right: 70px;
+    justify-content: space-between; 
 }
 .social ul li {
     display: inline;
@@ -923,6 +921,7 @@ img {
 .copyright p {
     font-size: 12px;
     font-family: var(--paragraph_font);
+    margin-left: 150px;
 }
 .cc_web img {
     margin-right: 10px;

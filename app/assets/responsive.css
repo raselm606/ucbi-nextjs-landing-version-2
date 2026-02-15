@@ -16,6 +16,9 @@
 
 /* Medium / Tablet */
 @media only screen and (max-width: 768px) {
+    .copyright p { 
+        margin-left:0;
+    }
      .container {
         padding-left: 15px !important;
         padding-right: 15px !important;
