@@ -745,7 +745,7 @@ img {
 }
 .bg_bb {
     background: #F0F1F5;
-    padding: 63px 70px 70px 32px;
+    padding: 63px 70px 70px 70px;
 }
 .divider_lin {
     background: rgb(220, 224, 229);
