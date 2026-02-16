@@ -3,94 +3,94 @@ import { useEffect, useState } from "react";
 import { drivingData } from "@/lib/mock-data/driving"; 
 import { removeComma } from "@/lib/utils/text";
 import Image from "next/image"; 
-import c4 from "../../public/images/c3.jpg";
-import c5 from "../../public/images/c2.jpg";
-import c6 from "../../public/images/c1.jpg";
+import c7 from "../../public/images/c7.png";
+import c8 from "../../public/images/c8.png";
+import c9 from "../../public/images/c9.png";
 const Driving = () => {
 
     const [price, setPrice] = useState(null);
-  const [change24h, setChange24h] = useState(null);
-  const [fdv, setFdv] = useState(null);
-  const [err, setErr] = useState(null);
+    const [change24h, setChange24h] = useState(null);
+    const [fdv, setFdv] = useState(null);
+    const [err, setErr] = useState(null);
 
     useEffect(() => {
-  let alive = true;
+          let alive = true;
 
-  function findUsdQuote(obj) {
-    // obj এর ভেতরে এমন একটা object খুঁজবো যেখানে
-    // price, percent_change_24h, fully_diluted_market_cap আছে
-    if (!obj || typeof obj !== "object") return null;
+          function findUsdQuote(obj) {
+            // obj এর ভেতরে এমন একটা object খুঁজবো যেখানে
+            // price, percent_change_24h, fully_diluted_market_cap আছে
+            if (!obj || typeof obj !== "object") return null;
 
-    // যদি এটা USD quote object হয়
-    if (
-      typeof obj.price === "number" &&
-      typeof obj.percent_change_24h === "number" &&
-      typeof obj.fully_diluted_market_cap === "number"
-    ) {
-      return obj;
-    }
+            // যদি এটা USD quote object হয়
+            if (
+              typeof obj.price === "number" &&
+              typeof obj.percent_change_24h === "number" &&
+              typeof obj.fully_diluted_market_cap === "number"
+            ) {
+              return obj;
+            }
 
-    // array হলে iterate
-    if (Array.isArray(obj)) {
-      for (const v of obj) {
-        const found = findUsdQuote(v);
-        if (found) return found;
-      }
-      return null;
-    }
+            // array হলে iterate
+            if (Array.isArray(obj)) {
+              for (const v of obj) {
+                const found = findUsdQuote(v);
+                if (found) return found;
+              }
+              return null;
+            }
 
-    // object হলে iterate
-    for (const k of Object.keys(obj)) {
-      const found = findUsdQuote(obj[k]);
-      if (found) return found;
-    }
+            // object হলে iterate
+            for (const k of Object.keys(obj)) {
+              const found = findUsdQuote(obj[k]);
+              if (found) return found;
+            }
 
-    return null;
-  }
+            return null;
+          }
 
-  async function load() {
-    try {
-      setErr(null);
+          async function load() {
+            try {
+              setErr(null);
 
-      const res = await fetch("/api/ucbi/market", { cache: "no-store" });
-      const text = await res.text();
+              const res = await fetch("/api/ucbi/market", { cache: "no-store" });
+              const text = await res.text();
 
-      let json;
-      try {
-        json = JSON.parse(text);
-      } catch {
-        throw new Error("API JSON parse failed");
-      }
+              let json;
+              try {
+                json = JSON.parse(text);
+              } catch {
+                throw new Error("API JSON parse failed");
+              }
 
-      if (!res.ok) {
-        throw new Error(`API HTTP ${res.status}`);
-      }
+              if (!res.ok) {
+                throw new Error(`API HTTP ${res.status}`);
+              }
 
-      // ✅ এখানে magic: পুরো JSON এর ভেতর থেকে USD quote auto find
-      const usd = findUsdQuote(json);
+              // এখানে magic: পুরো JSON এর ভেতর থেকে USD quote auto find
+              const usd = findUsdQuote(json);
 
-      if (!usd) {
-        // debug help (একবার দেখার জন্য)
-        console.log("API response shape:", json);
-        throw new Error("USD quote not found in response");
-      }
+              if (!usd) {
+                // debug help (একবার দেখার জন্য)
+                console.log("API response shape:", json);
+                throw new Error("USD quote not found in response");
+              }
 
-      if (!alive) return;
+              if (!alive) return;
 
-      setPrice(usd.price);
-      setChange24h(usd.percent_change_24h);
-      setFdv(usd.fully_diluted_market_cap);
-    } catch (e) {
-      console.log("UCBI component error:", e);
-      if (alive) setErr(e?.message || "Failed to load market data");
-    }
-  }
+              setPrice(usd.price);
+              setChange24h(usd.percent_change_24h);
+              setFdv(usd.fully_diluted_market_cap);
+            } catch (e) {
+              console.log("UCBI component error:", e);
+              if (alive) setErr(e?.message || "Failed to load market data");
+            }
+          }
 
-  load();
-  return () => {
-    alive = false;
-  };
-}, []);
+          load();
+          return () => {
+            alive = false;
+          };
+    }, []);
 
 
 
@@ -128,7 +128,7 @@ const Driving = () => {
                 {err && <p style={{ color: "red", textAlign: "center" }}>{err}</p>}
                         <div className="tt_area text-center ">
                             <p className="t_tittle">onchain marketcap</p>
-                            <Image src={c4} alt="#" />
+                            <Image src={c7} alt="#" />
                             <span  className="t_number d-block"> 
                            {fdv == null ? "--" : `$${removeComma(Math.round(fdv).toLocaleString())}`}  {"  "} 
 
@@ -140,12 +140,12 @@ const Driving = () => {
                         </div>
                         <div className="tt_area text-center">
                             <p className="t_tittle">Total Supply</p>
-                            <Image src={c5} alt="#" />
+                            <Image src={c8} alt="#" />
                             <span className="t_number">12 M</span>  
                         </div>
                         <div className="tt_area text-center ">
                             <p className="t_tittle">Shareholders</p>
-                            <Image src={c6} alt="#" />
+                            <Image src={c9} alt="#" />
                             <span className="t_number">135</span> 
                         </div>
                    
