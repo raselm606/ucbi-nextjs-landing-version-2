@@ -1188,13 +1188,12 @@ label.form-check-label {
     display: block;
 }*/
 .tt_area img {
-    mix-blend-mode: multiply;
     background: #fff;
     /* border: 8px solid #eaeceb; */
     /* border-radius: 50%; */
-    width: 100px;
-    height: 100px;
-    margin: -10px auto;
+    width: 70px;
+    height: 70px;
+    margin: 11px auto;
     padding: 6px;
     display: block;
 }
