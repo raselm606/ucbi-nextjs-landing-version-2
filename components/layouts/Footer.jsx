@@ -63,6 +63,7 @@ const Footer = () => {
               <h6>Contact</h6>
               <div className="footer_navs">
                 <ul>
+                  <li></li>
                   <li><Link   href="mailto:contact@ucbibanking.io">Contact@ucbibanking.io</Link></li> 
                   <li><Link href="+33376876876"  >+33 376 876 876 ( FR )</Link></li> 
                   <li><Link href="+441632960123"  >+44 1632 960 123 ( UK )</Link></li> 

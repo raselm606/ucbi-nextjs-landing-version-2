@@ -6,7 +6,37 @@ import Image from "next/image";
 import c7 from "../../public/images/c7.png";
 import c8 from "../../public/images/c8.png";
 import c9 from "../../public/images/c9.png";
+
+import ApexCharts from 'apexcharts'
+import dynamic from "next/dynamic";
+
+// SSR বন্ধ করে ReactApexChart লোড
+const ReactApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });
+
+
 const Driving = () => {
+
+    const series = [
+    {
+      name: "UCBI",
+      data:  [175, 90, 200, 220, 180, 281]
+    },
+  ];
+
+    const options = {
+    chart: {
+      type: "area", 
+      zoom: { enabled: false },
+    },
+    dataLabels: { enabled: false },
+    stroke: { curve: "straight" },
+    labels: ["2024-01-01","2025-01-01","2026-01-01","2027-01-01","2028-01-01","2029-01-01"], 
+    xaxis: { type: "datetime" },
+    yaxis: { opposite: false },
+    legend: { horizontalAlign: "left" },
+  };
+
+    
 
     const [price, setPrice] = useState(null);
     const [change24h, setChange24h] = useState(null);
@@ -125,7 +155,7 @@ const Driving = () => {
         <div className="white_counter_area_setion">
             <div className="container cline_white">
                 <div className="row gx-4 justify-content-center ptt-90">
-                {err && <p style={{ color: "red", textAlign: "center" }}>{err}</p>}
+                    {err && <p style={{ color: "red", textAlign: "center" }}>{err}</p>}
                         <div className="tt_area text-center ">
                             <p className="t_tittle">onchain marketcap</p>
                             <Image src={c7} alt="#" />
@@ -149,6 +179,15 @@ const Driving = () => {
                             <span className="t_number">135</span> 
                         </div>
                    
+                </div>
+
+                <div className="row">
+                    <div className="col-lg-6 mt-5">
+                     <div id="chart">
+      <ReactApexChart options={options} series={series} type="area" height={350} />
+    </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>

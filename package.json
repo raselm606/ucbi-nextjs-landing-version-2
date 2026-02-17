@@ -10,9 +10,11 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
+    "apexcharts": "^5.5.0",
     "bootstrap": "^5.3.8",
     "next": "^16.1.6",
     "react": "19.2.3",
+    "react-apexcharts": "^2.0.0",
     "react-countup": "^6.5.3",
     "react-dom": "19.2.3",
     "react-fast-marquee": "^1.6.5",

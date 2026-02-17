@@ -888,8 +888,8 @@ img {
 }
 .social ul li a img {
     transition: var(--transition);
-    width: 20px !important;
-    height: 20px !important;
+    width: 15px!important;
+    height: 15px!important;
 }
 .social ul li a img:hover {
     transform: scale(1.2);
@@ -915,7 +915,7 @@ img {
     margin-right: 10px; 
 }
 .cc_terms ul li a {
-    font-size: 12px;
+    font-size: 10px;
     color: var(--text_white);
 }
 .copyright p {
