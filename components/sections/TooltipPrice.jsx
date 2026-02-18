@@ -21,7 +21,7 @@ const TooltipPrice = ({ active, payload }) => {
       fontSize: 12,
       lineHeight: 1.35
     }}>
-      {/* ✅ label/number দেখাব না */}
+      {/*  label/number দেখাব না */}
       <div style={{ fontWeight: 700 }}>
         Price: {typeof p?.price === "number" ? `$${p.price.toFixed(4)}` : "--"}
       </div>

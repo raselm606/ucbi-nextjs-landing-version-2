@@ -1,8 +1,98 @@
+'use client';
+import { useEffect, useState  } from "react"; 
+import { removeComma } from "@/lib/utils/text";
 import Button from "@/components/ui/Button";
 import Image from "next/image";
 import Link from "next/link";
 import Logo from '../../public/images/logo.svg';
 const Header = () => {
+
+    const [price, setPrice] = useState(null);
+    const [change24h, setChange24h] = useState(null);
+    const [fdv, setFdv] = useState(null);
+    const [err, setErr] = useState(null);
+
+    useEffect(() => {
+          let alive = true;
+
+          function findUsdQuote(obj) {
+            // obj এর ভেতরে এমন একটা object খুঁজবো যেখানে
+            // price, percent_change_24h, fully_diluted_market_cap আছে
+            if (!obj || typeof obj !== "object") return null;
+
+            // যদি এটা USD quote object হয়
+            if (
+              typeof obj.price === "number" &&
+              typeof obj.percent_change_24h === "number" &&
+              typeof obj.fully_diluted_market_cap === "number"
+            ) {
+              return obj;
+            }
+
+            // array হলে iterate
+            if (Array.isArray(obj)) {
+              for (const v of obj) {
+                const found = findUsdQuote(v);
+                if (found) return found;
+              }
+              return null;
+            }
+
+            // object হলে iterate
+            for (const k of Object.keys(obj)) {
+              const found = findUsdQuote(obj[k]);
+              if (found) return found;
+            }
+
+            return null;
+          }
+
+          async function load() {
+            try {
+              setErr(null);
+
+              const res = await fetch("/api/ucbi/market", { cache: "no-store" });
+              const text = await res.text();
+
+              let json;
+              try {
+                json = JSON.parse(text);
+              } catch {
+                throw new Error("API JSON parse failed");
+              }
+
+              if (!res.ok) {
+                throw new Error(`API HTTP ${res.status}`);
+              }
+
+              // এখানে magic: পুরো JSON এর ভেতর থেকে USD quote auto find
+              const usd = findUsdQuote(json);
+
+              if (!usd) {
+                // debug help (একবার দেখার জন্য)
+                console.log("API response shape:", json);
+                throw new Error("USD quote not found in response");
+              }
+
+              if (!alive) return;
+
+              setPrice(usd.price);
+              setChange24h(usd.percent_change_24h);
+              setFdv(usd.fully_diluted_market_cap);
+            } catch (e) {
+              console.log("UCBI component error:", e);
+              if (alive) setErr(e?.message || "Failed to load market data");
+            }
+          }
+
+          load();
+          return () => {
+            alive = false;
+          };
+    }, []);
+
+  const isPos = typeof change24h === "number" && change24h >= 0;
+
   return (
     <>
     <div className="top_header">
@@ -34,7 +124,15 @@ const Header = () => {
                      
                      
                 </ul>
+                <div className="price_arra mx-4">
+                    {err && <p style={{ color: "red", textAlign: "center" }}>{err}</p>}
+                <span className="d-block " style={{ color: isPos ? "#16c784" : "#EA3943", fontSize:'11px', fontWeight:'600' }}> 
+                {price == null ? "--" : `$${price.toFixed(2)}`}  {" UCBI "}
+                            {/*(  {change24h == null ? "--" : `${isPos ? "+" : ""}${change24h.toFixed(2)}%`} 24h )*/}
+                            </span>
+                </div>
                 <div className="top_button">
+
                     <Button variant="top_nav_button" href="https://tothemoon.com/trading/UCBI_USDC" target="_blank"> Dashboard</Button>
                 </div>
                 </div>

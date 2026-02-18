@@ -10,101 +10,125 @@ import MarkecapChart from "@/components/sections/MarkecapChart"
 import ChartsUCBI from "@/components/sections/ChartsUCBI"
 import TooltipPrice from "@/components/sections/TooltipPrice";
 
-
+import ApexCharts from 'apexcharts'
+import dynamic from "next/dynamic";
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
 
-
+// SSR বন্ধ করে ReactApexChart লোড
+const ReactApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
 
 const Driving = () => {
 
+    const series = [
+    {
+      name: "UCBI",
+      data:  [175, 90, 200, 220, 180, 281]
+    },
+  ];
+
+    const options = {
+    chart: {
+      type: "area", 
+      zoom: { enabled: false },
+    },
+    dataLabels: { enabled: false },
+    stroke: { curve: "straight" },
+    labels: ["2024-01-01","2025-01-01","2026-01-01","2027-01-01","2028-01-01","2029-01-01"], 
+    xaxis: { type: "datetime" },
+    yaxis: { opposite: false },
+    legend: { horizontalAlign: "left" },
+  };
+
     
 
-  //   const [price, setPrice] = useState(null);
-  //   const [change24h, setChange24h] = useState(null);
-  //   const [fdv, setFdv] = useState(null);
-  //   const [err, setErr] = useState(null);
+    const [price, setPrice] = useState(null);
+    const [change24h, setChange24h] = useState(null);
+    const [fdv, setFdv] = useState(null);
+    const [err, setErr] = useState(null);
 
-  //   useEffect(() => {
-  //         let alive = true;
+    useEffect(() => {
+          let alive = true;
 
-  //         function findUsdQuote(obj) {
-  //           // obj এর ভেতরে এমন একটা object খুঁজবো যেখানে
-  //           // price, percent_change_24h, fully_diluted_market_cap আছে
-  //           if (!obj || typeof obj !== "object") return null;
+          function findUsdQuote(obj) {
+            // obj এর ভেতরে এমন একটা object খুঁজবো যেখানে
+            // price, percent_change_24h, fully_diluted_market_cap আছে
+            if (!obj || typeof obj !== "object") return null;
 
-  //           // যদি এটা USD quote object হয়
-  //           if (
-  //             typeof obj.price === "number" &&
-  //             typeof obj.percent_change_24h === "number" &&
-  //             typeof obj.fully_diluted_market_cap === "number"
-  //           ) {
-  //             return obj;
-  //           }
+            // যদি এটা USD quote object হয়
+            if (
+              typeof obj.price === "number" &&
+              typeof obj.percent_change_24h === "number" &&
+              typeof obj.fully_diluted_market_cap === "number"
+            ) {
+              return obj;
+            }
 
-  //           // array হলে iterate
-  //           if (Array.isArray(obj)) {
-  //             for (const v of obj) {
-  //               const found = findUsdQuote(v);
-  //               if (found) return found;
-  //             }
-  //             return null;
-  //           }
+            // array হলে iterate
+            if (Array.isArray(obj)) {
+              for (const v of obj) {
+                const found = findUsdQuote(v);
+                if (found) return found;
+              }
+              return null;
+            }
 
-  //           // object হলে iterate
-  //           for (const k of Object.keys(obj)) {
-  //             const found = findUsdQuote(obj[k]);
-  //             if (found) return found;
-  //           }
+            // object হলে iterate
+            for (const k of Object.keys(obj)) {
+              const found = findUsdQuote(obj[k]);
+              if (found) return found;
+            }
 
-  //           return null;
-  //         }
+            return null;
+          }
 
-  //         async function load() {
-  //           try {
-  //             setErr(null);
+          async function load() {
+            try {
+              setErr(null);
 
-  //             const res = await fetch("/api/ucbi/market", { cache: "no-store" });
-  //             const text = await res.text();
+              const res = await fetch("/api/ucbi/market", { cache: "no-store" });
+              const text = await res.text();
 
-  //             let json;
-  //             try {
-  //               json = JSON.parse(text);
-  //             } catch {
-  //               throw new Error("API JSON parse failed");
-  //             }
+              let json;
+              try {
+                json = JSON.parse(text);
+              } catch {
+                throw new Error("API JSON parse failed");
+              }
 
-  //             if (!res.ok) {
-  //               throw new Error(`API HTTP ${res.status}`);
-  //             }
+              if (!res.ok) {
+                throw new Error(`API HTTP ${res.status}`);
+              }
 
-  //             // এখানে magic: পুরো JSON এর ভেতর থেকে USD quote auto find
-  //             const usd = findUsdQuote(json);
+              // এখানে magic: পুরো JSON এর ভেতর থেকে USD quote auto find
+              const usd = findUsdQuote(json);
 
-  //             if (!usd) {
-  //               // debug help (একবার দেখার জন্য)
-  //               console.log("API response shape:", json);
-  //               throw new Error("USD quote not found in response");
-  //             }
+              if (!usd) {
+                // debug help (একবার দেখার জন্য)
+                console.log("API response shape:", json);
+                throw new Error("USD quote not found in response");
+              }
 
-  //             if (!alive) return;
+              if (!alive) return;
 
-  //             setPrice(usd.price);
-  //             setChange24h(usd.percent_change_24h);
-  //             setFdv(usd.fully_diluted_market_cap);
-  //           } catch (e) {
-  //             console.log("UCBI component error:", e);
-  //             if (alive) setErr(e?.message || "Failed to load market data");
-  //           }
-  //         }
+              setPrice(usd.price);
+              setChange24h(usd.percent_change_24h);
+              setFdv(usd.fully_diluted_market_cap);
+            } catch (e) {
+              console.log("UCBI component error:", e);
+              if (alive) setErr(e?.message || "Failed to load market data");
+            }
+          }
 
-  //         load();
-  //         return () => {
-  //           alive = false;
-  //         };
-  //   }, []);
+          load();
+          return () => {
+            alive = false;
+          };
+    }, []);
 
-  // const isPos = typeof change24h === "number" && change24h >= 0;
+
+
+  const isPos = typeof change24h === "number" && change24h >= 0;
 
 
   //chart data
@@ -187,10 +211,11 @@ const marketcapp_data = useMemo(() => {
         <div className="white_counter_area_setion">
             <div className="container cline_white">
                 <div className="row gx-4 justify-content-center ptt-90">
-                    {/*{err && <p style={{ color: "red", textAlign: "center" }}>{err}</p>}
+                    {err && <p style={{ color: "red", textAlign: "center" }}>{err}</p>}
                         <div className="tt_area text-center ">
                             <p className="t_tittle">onchain marketcap</p>
-                           
+                            {/*<Image src={c7} alt="#" />*/}
+                             {/*<MarkecapChart />*/}
                               <AreaChart
                                   style={{ width: '100%',  height: '100px', aspectRatio: 1.618 }}
                                   responsive
@@ -213,13 +238,15 @@ const marketcapp_data = useMemo(() => {
                             <span  className="t_number d-block"> 
                            {fdv == null ? "--" : `$${removeComma(Math.round(fdv).toLocaleString())}`}  {"  "} 
 
-                           
+                            {/*<span className="d-block" style={{ color: isPos ? "#16c784" : "#EA3943", fontSize:'10px' }}> 
+                              {change24h == null ? "--" : `${isPos ? "+" : ""}${change24h.toFixed(2)}%`} (24h)
+                            </span>*/}
                              
                             </span> 
                         </div>
                         <div className="tt_area text-center">
                             <p className="t_tittle">Total Supply</p>
-                            
+                            {/*<Image src={c8} alt="#" />*/}
                            <AreaChart
                                   style={{ width: '100%',  height: '100px', aspectRatio: 1.618 }}
                                   responsive
@@ -263,11 +290,20 @@ const marketcapp_data = useMemo(() => {
                             
                                 </AreaChart>
                             <span className="t_number">135 </span> 
-                        </div>*/}
+                        </div>
                    
                 </div>
 
-                
+                {/*<div className="row">
+                    <div className="col-lg-6 mt-5">
+                     <div id="chart">
+                          
+                    
+                        </div>
+                    </div>
+                    
+                    
+                </div>*/}
             </div>
         </div>
     </>
