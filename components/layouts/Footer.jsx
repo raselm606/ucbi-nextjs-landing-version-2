@@ -26,7 +26,7 @@ const Footer = () => {
                 </div>
                 <div className="mb-3 mt-3 form-check">
                   <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                  <label className="form-check-label"  >Check me out</label>
+                  <label className="form-check-label"  >I agree <Link href="#">Terms & Conditions</Link> </label>
                 </div>
               </form>
             </div>
@@ -62,11 +62,11 @@ const Footer = () => {
             <div className="footer_nav_menus">
               <h6>Contact</h6>
               <div className="footer_navs">
-                <ul style={{marginTop:'55px'}}> 
+                <ul > 
                   <li><Link   href="mailto:contact@ucbibanking.io">Contact@ucbibanking.io</Link></li> 
                   <li><Link href="+33376876876"  >+33 376 876 876 ( FR )</Link></li> 
                   <li><Link href="+441632960123"  >+44 1632 960 123 ( UK )</Link></li> 
-                  <li>Monday to Friday at 9am to 6pm</li> 
+                  <li><Link href="mailto:contact@ucbibanking.io">Monday to Friday at 9am to 6pm</Link></li> 
                   
                 </ul>
               </div>

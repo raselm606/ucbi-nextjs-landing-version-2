@@ -343,10 +343,9 @@ img {
 }
 .section_title_dark {
     color: var(--text_dark);
-    font-size: 20px;
+    font-size: 18px;
     line-height: 26px;
-    font-family: var(--title_font);
-    letter-spacing: -1px;
+    font-family: var(--title_font); 
     margin-bottom: 20px;
     font-weight: 500;
 }
@@ -408,7 +407,7 @@ img {
 }
 .papers_token_section .clinee {
     background: url("../../public/images/paper_bg.jpg") no-repeat;
-    height: 303px; 
+    height: 260px; 
     margin-bottom: 160px;
     /* margin-top: 160px;  */
     position: relative;
@@ -493,20 +492,19 @@ img {
 }
 .section_title_white {
     color: var(--text_white);
-    font-size: 20px;
+    font-size: 18px;
     line-height: 26px;
     font-family: var(--title_font);
-    letter-spacing: -1px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     font-weight: 500;
 }
 .section_paragraph_white {
     color: var(--text_gray);
     font-size: 12px;
-    line-height: 23px;
+    line-height: 21px;
     font-family: var(--paragraph_font);
     text-align: justify;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 /*Journey section*/
 .ourjourney_section{
@@ -645,7 +643,7 @@ img {
     color: var(--text_dark);
     font-family: var(--title_font);
     margin-bottom: 15px;
-    font-size: 16px;
+    font-size: 14px;
 }
 .advancing_para {
     border-bottom: 1px solid #dce0e5;
@@ -1221,4 +1219,11 @@ label.form-check-label {
     position: relative;
     /* z-index: 99; */
     /* background: #fff; */
+}
+.tokenomics_area h2 {
+    margin-bottom: 15px;
+}
+.tokenomics_area p { 
+    line-height: 21px; 
+    margin-bottom: 15px;
 }
