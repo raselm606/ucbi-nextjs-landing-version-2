@@ -12,7 +12,7 @@ const HeroSection = () => {
           <div className="col-lg-5 mb-3">
             <div className="hero_content">
               <h1 className="hero_title" >
-                <strong style={{color: '#0CC0DF'}}>UCBI</strong> <br /> Blockchain Data Banking
+                <strong style={{color: '#0CC0DF'}}>UCBI</strong> <br /> Private Blockchain Data Banking
                 </h1>
               <p className="hero_paragraph" >Union of Cryptocurrencies and Blockchain International</p>
               <div className="hero_button" >
