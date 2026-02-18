@@ -7,6 +7,7 @@ import c7 from "../../public/images/c7.png";
 import c8 from "../../public/images/c8.png";
 import c9 from "../../public/images/c9.png";
 import MarkecapChart from "@/components/sections/MarkecapChart"
+import ChartsUCBI from "@/components/sections/ChartsUCBI"
 import ApexCharts from 'apexcharts'
 import dynamic from "next/dynamic";
 
@@ -159,7 +160,8 @@ const Driving = () => {
                         <div className="tt_area text-center ">
                             <p className="t_tittle">onchain marketcap</p>
                             {/*<Image src={c7} alt="#" />*/}
-                             <MarkecapChart />
+                             {/*<MarkecapChart />*/}
+                              <ChartsUCBI/>
                             <span  className="t_number d-block"> 
                            {fdv == null ? "--" : `$${removeComma(Math.round(fdv).toLocaleString())}`}  {"  "} 
 
@@ -171,7 +173,8 @@ const Driving = () => {
                         </div>
                         <div className="tt_area text-center">
                             <p className="t_tittle">Total Supply</p>
-                            <Image src={c8} alt="#" />
+                            {/*<Image src={c8} alt="#" />*/}
+                            <ChartsUCBI/>
                             <span className="t_number">12 M</span>  
                         </div>
                         <div className="tt_area text-center ">
@@ -182,11 +185,12 @@ const Driving = () => {
                    
                 </div>
 
-               {/* <div className="row">
+                {/*<div className="row">
                     <div className="col-lg-6 mt-5">
                      <div id="chart">
-      <ReactApexChart options={options} series={series} type="area" height={350} />
-    </div>
+                          
+                    
+                        </div>
                     </div>
                     
                     

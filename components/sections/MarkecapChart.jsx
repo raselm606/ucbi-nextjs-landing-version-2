@@ -31,12 +31,12 @@ export default function MarkecapChart() {
           <defs>
             {/* gradient fill */}
             <linearGradient id="mc" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#3b82f6" stopOpacity={0.4}/>
-              <stop offset="95%" stopColor="#3b82f6" stopOpacity={0}/>
+              <stop offset="5%" stopColor="#0cc0df" stopOpacity={0.4}/>
+              <stop offset="95%" stopColor="#0cc0df" stopOpacity={0}/>
             </linearGradient>
           </defs>
 
-          <CartesianGrid strokeDasharray="3 3" />
+          <CartesianGrid strokeDasharray="1 1" />
 
           <XAxis dataKey="date" />
 
@@ -58,9 +58,9 @@ export default function MarkecapChart() {
           <Area
             type="monotone"
             dataKey="marketCap"
-            stroke="#3b82f6"
+            stroke="#0cc0df"
             fill="url(#mc)"
-            strokeWidth={2}
+            strokeWidth={1}
           />
         </AreaChart>
       </ResponsiveContainer>
