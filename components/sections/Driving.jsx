@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo  } from "react";
 import { drivingData } from "@/lib/mock-data/driving"; 
 import { removeComma } from "@/lib/utils/text";
 import Image from "next/image"; 
@@ -8,6 +8,8 @@ import c8 from "../../public/images/c8.png";
 import c9 from "../../public/images/c9.png";
 import MarkecapChart from "@/components/sections/MarkecapChart"
 import ChartsUCBI from "@/components/sections/ChartsUCBI"
+import TooltipPrice from "@/components/sections/TooltipPrice";
+
 import ApexCharts from 'apexcharts'
 import dynamic from "next/dynamic";
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
@@ -131,62 +133,41 @@ const Driving = () => {
 
   //chart data
 
-  const marketcapp_data = [
-  { name: 'Jan',   marketcap: 15044555, pv: 2400, amt: 2400 },
-  { name: 'Feb',   marketcap: 13789641, pv: 1398, amt: 2210 },
-  { name: 'March', marketcap: 9193094,  pv: 9800, amt: 2290 },
-  { name: 'April', marketcap: 12778400, pv: 3908, amt: 2000 },
-  { name: 'May',   marketcap: 8687474,  pv: 4800, amt: 2181 },
-  { name: 'June',  marketcap: 10985749, pv: 3800, amt: 2500 },
-  { name: 'Aug',   marketcap: fdv, pv: 4300, amt: 2100 }
+  const baseData = [
+  { name: 'Jan',   price: 1.312893, pv: 2400, amt: 2400 },
+  { name: 'Feb',   price: 1.134672, pv: 1398, amt: 2210 },
+  { name: 'March', price: 0.756447, pv: 9800, amt: 2290 },
+  { name: 'April', price: 1.051463, pv: 3908, amt: 2000 },
+  { name: 'May',   price: 0.714842, pv: 4800, amt: 2181 },
+  { name: 'June',  price: 1.093953, pv: 3800, amt: 2500 },
+  { name: 'Aug',   price: 1.32,     pv: 4300, amt: 2100 },
 ];
+
+
+const marketcapp_data = useMemo(() => {
+  const arr = baseData.map((d) => ({ ...d, isLive: false, change24h: null }));
+
+  const lastIdx = arr.length - 1;
+  const live = typeof price === "number" ? price : arr[lastIdx].price;
+
+  arr[lastIdx] = {
+    ...arr[lastIdx],
+    price: live,                 //  only last item gets live price
+    isLive: true,
+    change24h: typeof change24h === "number" ? change24h : null, //  only last gets change
+  };
+
+  return arr;
+}, [price, change24h]);                                                                  
 
 
  //chart data
 
   const total_supply_value = [
-  {
-    name: 'Jan',
-    TotalSupply: 12000000,
-    pv: 2400,
-    amt: 2400,
-  },
-  {
-    name: 'Feb',
-    TotalSupply: 12000000,
-    pv: 1398,
-    amt: 2210,
-  },
-  {
-    name: 'March',
-    TotalSupply: 12000000,
-    pv: 9800,
-    amt: 2290,
-  },
-  {
-    name: 'April',
-    TotalSupply: 12000000,
-    pv: 3908,
-    amt: 2000,
-  },
-  {
-    name: 'May',
-    TotalSupply: 12000000,
-    pv: 4800,
-    amt: 2181,
-  },
-  {
-    name: 'June',
-    TotalSupply: 12000000,
-    pv: 3800,
-    amt: 2500,
-  },
-  {
-    name: 'Aug',
-    TotalSupply: 12000000, 
-    pv: 4300,
-    amt: 2100,
-  },
+  {name: 'Jan',TotalSupply: 12000000,pv: 2400,amt: 2400,},
+  {name: 'Feb',TotalSupply: 12000000,pv: 1398,amt: 2210,},
+  {name: 'March',TotalSupply: 12000000,pv: 9800,amt: 2290,},
+  
 ];
 
 
@@ -249,17 +230,17 @@ const Driving = () => {
                                 >
                                  
                                   
-                                  <Tooltip />
-                                  <Area type="monotone" dataKey="marketcap" fillOpacity="1"  
+                                  <Tooltip content={<TooltipPrice />} />
+                                  <Area type="monotone" dataKey="price" fillOpacity="1"  
                                   stroke="#0cc0df" fill="#112E50" />
                             
                                 </AreaChart>
                             <span  className="t_number d-block"> 
                            {fdv == null ? "--" : `$${removeComma(Math.round(fdv).toLocaleString())}`}  {"  "} 
 
-                            <span className="d-block" style={{ color: isPos ? "#16c784" : "#EA3943", fontSize:'10px' }}> 
+                            {/*<span className="d-block" style={{ color: isPos ? "#16c784" : "#EA3943", fontSize:'10px' }}> 
                               {change24h == null ? "--" : `${isPos ? "+" : ""}${change24h.toFixed(2)}%`} (24h)
-                            </span>
+                            </span>*/}
                              
                             </span> 
                         </div>
