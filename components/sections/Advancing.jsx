@@ -23,8 +23,8 @@ const Advancing = async  () => {
                 <div className="col-lg-4">
                     <div className="advancing_content">
                         <h2 className="section_title_dark" >
-                           {section.title[0]} <br />
-                           {section.title[1]}
+                           Advancing through <br />
+                           Structured Growth
                         </h2>
                     </div>   
                 </div>
