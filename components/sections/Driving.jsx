@@ -250,7 +250,8 @@ const Driving = () => {
                                  
                                   
                                   <Tooltip />
-                                  <Area type="monotone" dataKey="marketcap"  stroke="#8884d8" fill="#104e98" />
+                                  <Area type="monotone" dataKey="marketcap" fillOpacity="1"  
+                                  stroke="#0cc0df" fill="#112E50" />
                             
                                 </AreaChart>
                             <span  className="t_number d-block"> 
@@ -280,7 +281,8 @@ const Driving = () => {
                                  
                                   
                                   <Tooltip />
-                                  <Area type="monotone" dataKey="TotalSupply"  stroke="#8884d8" fill="#104e98" />
+                                  <Area type="monotone" dataKey="TotalSupply" fillOpacity="1"  
+                                  stroke="#0cc0df" fill="#112E50" />
                             
                                 </AreaChart>
                             <span className="t_number">12000000 M</span>  
@@ -290,7 +292,7 @@ const Driving = () => {
                            <AreaChart
                                   style={{ width: '100%',  height: '100px', aspectRatio: 1.618 }}
                                   responsive
-                                  data={shareholders_data}
+                                  data={shareholders_data} 
                                   margin={{
                                     top: 5,
                                     right: 0,
@@ -302,7 +304,8 @@ const Driving = () => {
                                  
                                   
                                   <Tooltip />
-                                  <Area type="monotone" dataKey="shareholders"  stroke="#8884d8" fill="#104e98" />
+                                  <Area type="monotone" dataKey="shareholders" fillOpacity="1"  
+                                  stroke="#0cc0df" fill="#112E50" />
                             
                                 </AreaChart>
                             <span className="t_number">135 </span> 
