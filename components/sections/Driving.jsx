@@ -10,6 +10,7 @@ import MarkecapChart from "@/components/sections/MarkecapChart"
 import ChartsUCBI from "@/components/sections/ChartsUCBI"
 import ApexCharts from 'apexcharts'
 import dynamic from "next/dynamic";
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
 
 // SSR বন্ধ করে ReactApexChart লোড
 const ReactApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });
@@ -127,6 +128,79 @@ const Driving = () => {
 
   const isPos = typeof change24h === "number" && change24h >= 0;
 
+
+  //chart data
+
+  const marketcapp_data = [
+  { name: 'Jan',   marketcap: 15044555, pv: 2400, amt: 2400 },
+  { name: 'Feb',   marketcap: 13789641, pv: 1398, amt: 2210 },
+  { name: 'March', marketcap: 9193094,  pv: 9800, amt: 2290 },
+  { name: 'April', marketcap: 12778400, pv: 3908, amt: 2000 },
+  { name: 'May',   marketcap: 8687474,  pv: 4800, amt: 2181 },
+  { name: 'June',  marketcap: 10985749, pv: 3800, amt: 2500 },
+  { name: 'Aug',   marketcap: fdv, pv: 4300, amt: 2100 }
+];
+
+
+ //chart data
+
+  const total_supply_value = [
+  {
+    name: 'Jan',
+    TotalSupply: 12000000,
+    pv: 2400,
+    amt: 2400,
+  },
+  {
+    name: 'Feb',
+    TotalSupply: 12000000,
+    pv: 1398,
+    amt: 2210,
+  },
+  {
+    name: 'March',
+    TotalSupply: 12000000,
+    pv: 9800,
+    amt: 2290,
+  },
+  {
+    name: 'April',
+    TotalSupply: 12000000,
+    pv: 3908,
+    amt: 2000,
+  },
+  {
+    name: 'May',
+    TotalSupply: 12000000,
+    pv: 4800,
+    amt: 2181,
+  },
+  {
+    name: 'June',
+    TotalSupply: 12000000,
+    pv: 3800,
+    amt: 2500,
+  },
+  {
+    name: 'Aug',
+    TotalSupply: 12000000, 
+    pv: 4300,
+    amt: 2100,
+  },
+];
+
+
+//chart data
+
+  const shareholders_data = [
+  { name: "Jan",  shareholders: 1,   pv: 2400, amt: 2400 },
+  { name: "Feb",  shareholders: 6,   pv: 1398, amt: 2210 },
+  { name: "March",shareholders: 18,  pv: 9800, amt: 2290 },
+  { name: "April",shareholders: 42,  pv: 3908, amt: 2000 },
+  { name: "May",  shareholders: 73,  pv: 4800, amt: 2181 },
+  { name: "June", shareholders: 108, pv: 3800, amt: 2500 },
+  { name: "Aug",  shareholders: 135, pv: 4300, amt: 2100 },
+];
   return (
     <>
         <div className="driving_section ">
@@ -161,7 +235,24 @@ const Driving = () => {
                             <p className="t_tittle">onchain marketcap</p>
                             {/*<Image src={c7} alt="#" />*/}
                              {/*<MarkecapChart />*/}
-                              <ChartsUCBI/>
+                              <AreaChart
+                                  style={{ width: '100%',  height: '100px', aspectRatio: 1.618 }}
+                                  responsive
+                                  data={marketcapp_data}
+                                  margin={{
+                                    top: 5,
+                                    right: 0,
+                                    left: 0,
+                                    bottom: 0,
+                                  }}
+                                  onContextMenu={(_, e) => e.preventDefault()}
+                                >
+                                 
+                                  
+                                  <Tooltip />
+                                  <Area type="monotone" dataKey="marketcap"  stroke="#8884d8" fill="#104e98" />
+                            
+                                </AreaChart>
                             <span  className="t_number d-block"> 
                            {fdv == null ? "--" : `$${removeComma(Math.round(fdv).toLocaleString())}`}  {"  "} 
 
@@ -174,13 +265,47 @@ const Driving = () => {
                         <div className="tt_area text-center">
                             <p className="t_tittle">Total Supply</p>
                             {/*<Image src={c8} alt="#" />*/}
-                            <ChartsUCBI/>
-                            <span className="t_number">12 M</span>  
+                           <AreaChart
+                                  style={{ width: '100%',  height: '100px', aspectRatio: 1.618 }}
+                                  responsive
+                                  data={total_supply_value}
+                                  margin={{
+                                    top: 5,
+                                    right: 0,
+                                    left: 0,
+                                    bottom: 0,
+                                  }}
+                                  onContextMenu={(_, e) => e.preventDefault()}
+                                >
+                                 
+                                  
+                                  <Tooltip />
+                                  <Area type="monotone" dataKey="TotalSupply"  stroke="#8884d8" fill="#104e98" />
+                            
+                                </AreaChart>
+                            <span className="t_number">12000000 M</span>  
                         </div>
                         <div className="tt_area text-center ">
                             <p className="t_tittle">Shareholders</p>
-                            <Image src={c9} alt="#" />
-                            <span className="t_number">135</span> 
+                           <AreaChart
+                                  style={{ width: '100%',  height: '100px', aspectRatio: 1.618 }}
+                                  responsive
+                                  data={shareholders_data}
+                                  margin={{
+                                    top: 5,
+                                    right: 0,
+                                    left: 0,
+                                    bottom: 0,
+                                  }}
+                                  onContextMenu={(_, e) => e.preventDefault()}
+                                >
+                                 
+                                  
+                                  <Tooltip />
+                                  <Area type="monotone" dataKey="shareholders"  stroke="#8884d8" fill="#104e98" />
+                            
+                                </AreaChart>
+                            <span className="t_number">135 </span> 
                         </div>
                    
                 </div>
