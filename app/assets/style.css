@@ -495,7 +495,7 @@ img {
     font-size: 18px;
     line-height: 26px;
     font-family: var(--title_font);
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     font-weight: 500;
 }
 .section_paragraph_white {
@@ -1221,7 +1221,7 @@ label.form-check-label {
     /* background: #fff; */
 }
 .tokenomics_area h2 {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 .tokenomics_area p { 
     line-height: 21px; 
