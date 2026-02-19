@@ -50,9 +50,9 @@ const Footer = () => {
               <div className="footer_navs">
                 <ul>
                   <li><Link href="#">Arkham Intel</Link></li>
-                  <li><Link href="#">Yahoo Finance</Link></li>
-                  <li><Link href="#">Coinmarketcap</Link></li>
-                  <li><Link href="#">Blockchain Explorer</Link></li> 
+                  <li><Link target="_blank" href="https://finance.yahoo.com/quote/UCBI-USD/">Yahoo Finance</Link></li>
+                  <li><Link target="_blank" href="https://coinmarketcap.com/currencies/ucbi-banking/">Coinmarketcap</Link></li>
+                  <li><Link target="_blank" href="https://etherscan.io/token/0x2adba23cf1252de095aced801e758b369ec10426">Blockchain Explorer</Link></li> 
                 </ul>
               </div>
             </div>
