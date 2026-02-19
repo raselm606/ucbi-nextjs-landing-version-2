@@ -1,19 +1,5 @@
-import { siteConfig } from "@/lib/config/site";
-
-async function getAdvancing() {
-  const res = await fetch(`${siteConfig.baseUrl}/api/advance-api`, {
-    cache: "no-store",
-  });
-
-  if (!res.ok) {
-    throw new Error("Failed to fetch advancing data");
-  }
-
-  return res.json();
-}
-
-const Advancing = async  () => {
-    const { section, posts } = await getAdvancing();
+import { advanceData } from "@/lib/mock-data/advancing"; 
+const Advancing =  () => { 
 
   return (
     <>
@@ -30,7 +16,7 @@ const Advancing = async  () => {
                 </div>
 
                 <div className="offset-lg-2 col-lg-6">
-                    {posts.map((item, index) => (
+                    {advanceData.map((item, index) => (
                     <div className="advancing_para" key={item.id}>
                         <h5 >{item.title}</h5>
                         <p > {item.desc}</p>

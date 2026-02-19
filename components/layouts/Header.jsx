@@ -58,7 +58,7 @@ const Header = () => {
               try {
                 json = JSON.parse(text);
               } catch {
-                throw new Error("API JSON parse failed");
+                throw new Error("API Error");
               }
 
               if (!res.ok) {
