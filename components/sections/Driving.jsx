@@ -109,55 +109,55 @@ const Driving = () => {
 
   //chart data
 
-  const baseData = [
-  { name: 'Jan',   price: 1.312893, pv: 2400, amt: 2400 },
-  { name: 'Feb',   price: 1.134672, pv: 1398, amt: 2210 },
-  { name: 'March', price: 0.756447, pv: 9800, amt: 2290 },
-  { name: 'April', price: 1.051463, pv: 3908, amt: 2000 },
-  { name: 'May',   price: 0.714842, pv: 4800, amt: 2181 },
-  { name: 'June',  price: 1.093953, pv: 3800, amt: 2500 },
-  { name: 'Aug',   price: 1.32,     pv: 4300, amt: 2100 },
-];
+//   const baseData = [
+//   { name: 'Jan',   price: 1.312893, pv: 2400, amt: 2400 },
+//   { name: 'Feb',   price: 1.134672, pv: 1398, amt: 2210 },
+//   { name: 'March', price: 0.756447, pv: 9800, amt: 2290 },
+//   { name: 'April', price: 1.051463, pv: 3908, amt: 2000 },
+//   { name: 'May',   price: 0.714842, pv: 4800, amt: 2181 },
+//   { name: 'June',  price: 1.093953, pv: 3800, amt: 2500 },
+//   { name: 'Aug',   price: 1.32,     pv: 4300, amt: 2100 },
+// ];
 
 
-const marketcapp_data = useMemo(() => {
-  const arr = baseData.map((d) => ({ ...d, isLive: false, change24h: null }));
+// const marketcapp_data = useMemo(() => {
+//   const arr = baseData.map((d) => ({ ...d, isLive: false, change24h: null }));
 
-  const lastIdx = arr.length - 1;
-  const live = typeof price === "number" ? price : arr[lastIdx].price;
+//   const lastIdx = arr.length - 1;
+//   const live = typeof price === "number" ? price : arr[lastIdx].price;
 
-  arr[lastIdx] = {
-    ...arr[lastIdx],
-    price: live,                 //  only last item gets live price
-    isLive: true,
-    change24h: typeof change24h === "number" ? change24h : null, //  only last gets change
-  };
+//   arr[lastIdx] = {
+//     ...arr[lastIdx],
+//     price: live,                
+//     isLive: true,
+//     change24h: typeof change24h === "number" ? change24h : null, 
+//   };
 
-  return arr;
-}, [price, change24h]);                                                                  
+//   return arr;
+// }, [price, change24h]);                                                                  
 
 
  //chart data
 
-  const total_supply_value = [
-  {name: 'Jan',TotalSupply: 12000000,pv: 2400,amt: 2400,},
-  {name: 'Feb',TotalSupply: 12000000,pv: 1398,amt: 2210,},
-  {name: 'March',TotalSupply: 12000000,pv: 9800,amt: 2290,},
+//   const total_supply_value = [
+//   {name: 'Jan',TotalSupply: 12000000,pv: 2400,amt: 2400,},
+//   {name: 'Feb',TotalSupply: 12000000,pv: 1398,amt: 2210,},
+//   {name: 'March',TotalSupply: 12000000,pv: 9800,amt: 2290,},
   
-];
+// ];
 
 
 //chart data
 
-  const shareholders_data = [
-  { name: "Jan",  shareholders: 1,   pv: 2400, amt: 2400 },
-  { name: "Feb",  shareholders: 6,   pv: 1398, amt: 2210 },
-  { name: "March",shareholders: 18,  pv: 9800, amt: 2290 },
-  { name: "April",shareholders: 42,  pv: 3908, amt: 2000 },
-  { name: "May",  shareholders: 73,  pv: 4800, amt: 2181 },
-  { name: "June", shareholders: 108, pv: 3800, amt: 2500 },
-  { name: "Aug",  shareholders: 135, pv: 4300, amt: 2100 },
-];
+//   const shareholders_data = [
+//   { name: "Jan",  shareholders: 1,   pv: 2400, amt: 2400 },
+//   { name: "Feb",  shareholders: 6,   pv: 1398, amt: 2210 },
+//   { name: "March",shareholders: 18,  pv: 9800, amt: 2290 },
+//   { name: "April",shareholders: 42,  pv: 3908, amt: 2000 },
+//   { name: "May",  shareholders: 73,  pv: 4800, amt: 2181 },
+//   { name: "June", shareholders: 108, pv: 3800, amt: 2500 },
+//   { name: "Aug",  shareholders: 135, pv: 4300, amt: 2100 },
+// ];
   return (
     <>
         <div className="driving_section ">
