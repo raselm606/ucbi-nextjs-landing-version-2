@@ -22,7 +22,7 @@ const InterSans = Inter({
 });
 
 
-const siteUrl = "https://ucbibanking.io";
+const siteUrl = "https://ucbi-nextjs-landing-version-2.vercel.app/";
 const ogImage = "/logo_ucbi.jpg";
 
  export const metadata = {
