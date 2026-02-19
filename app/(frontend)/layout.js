@@ -34,20 +34,10 @@ const ogImage = "/logo_ucbi.jpg";
   },
   description:
     "Exclusive private investment platform combining private equity crypto-finance and strategic treasury management to support long-term technological value creation within the UCBI Holding structure reserved for selected partners",
-  keywords: [
-    "UCBI",
-    "Blockchain",
-    "Blockchain Banking",
-    "Finance",
-    "Crypto",
-    "defi",
-    "UCBI Banking",
-    "Blockchain data banking",
-    "blackrock",
-    "strategic investment",
-    "usdt",
-    "usdc",
-  ],
+  keywords: ["ucbi", "ucbi banking", "private equity", "crypto finance", "crypto treasury", 
+    "microstrategy", "blackrock", "treasury management", "private investors", "fidelity", 
+    "coinshare", "ethereum", "bitmine", "staking", "coinmarketcap", "yahoo finance", 
+    "coinbase", "jp morgan"],
   
   openGraph: {
     title: "UCBI Banking - Private Blockchain Data Banking",
