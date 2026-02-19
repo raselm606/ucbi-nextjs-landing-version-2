@@ -29,7 +29,7 @@ const ogImage = "/logo_ucbi.jpg";
   // base URL 
   metadataBase: new URL(siteUrl),
   title: {
-    default: "UCBI Banking - Blockchain Data Banking",
+    default: "UCBI Banking - Private Blockchain Data Banking",
     template: "%s | UCBI",
   },
   description:
@@ -50,7 +50,7 @@ const ogImage = "/logo_ucbi.jpg";
   ],
   
   openGraph: {
-    title: "UCBI Banking - Blockchain Data Banking",
+    title: "UCBI Banking - Private Blockchain Data Banking",
     description:
       "UCBI’s mission is to support the responsible structured and sustainable development of digital financial infrastructure through a long-term approach grounded in strong governance principles operating as a strategic holding company UCBI focuses on the integration of blockchain-based and the distributed technologies ",
     url: siteUrl,
@@ -69,7 +69,7 @@ const ogImage = "/logo_ucbi.jpg";
   
   twitter: {
     card: "summary",
-    title: "UCBI Banking - Blockchain Data Banking ",
+    title: "UCBI Banking - Private Blockchain Data Banking ",
     description:
       "UCBI’s mission is to support the responsible structured and sustainable development of digital financial infrastructure through a long-term approach grounded in strong governance principles operating as a strategic holding company UCBI focuses on the integration of blockchain-based and the distributed technologies ",
     images: ["/logo_ucbi.jpg"],
