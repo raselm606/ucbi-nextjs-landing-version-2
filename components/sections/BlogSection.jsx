@@ -151,8 +151,8 @@ const BlogSection = () => {
                                 </div>
                                 </Link>
                                 <div className="blog_content">
-                                    <h4  >{trimText(title,60)}</h4>
-                                    <p  >{trimText(desc,100)}</p>
+                                    <h4  >{trimText(title,32)}</h4>
+                                    <p  >{trimText(desc,70)}</p>
                                     <Link href={link} target="_blank">Read more 
                                     <Image src={arrow_blog} alt="arrow" width={15} height={15} /> </Link>
                                 </div>

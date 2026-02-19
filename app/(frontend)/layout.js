@@ -33,7 +33,7 @@ const ogImage = "/logo_ucbi.jpg";
     template: "%s | UCBI",
   },
   description:
-    "UCBI’s mission is to support the responsible structured and sustainable development of digital financial infrastructure through a long-term approach grounded in strong governance principles operating as a strategic holding company UCBI focuses on the integration of blockchain-based and the distributed technologies ",
+    "Exclusive private investment platform combining private equity crypto-finance and strategic treasury management to support long-term technological value creation within the UCBI Holding structure reserved for selected partners",
   keywords: [
     "UCBI",
     "Blockchain",
@@ -43,8 +43,8 @@ const ogImage = "/logo_ucbi.jpg";
     "defi",
     "UCBI Banking",
     "Blockchain data banking",
-    "ethereum",
-    "bitcoin",
+    "blackrock",
+    "strategic investment",
     "usdt",
     "usdc",
   ],
@@ -52,7 +52,7 @@ const ogImage = "/logo_ucbi.jpg";
   openGraph: {
     title: "UCBI Banking - Private Blockchain Data Banking",
     description:
-      "UCBI’s mission is to support the responsible structured and sustainable development of digital financial infrastructure through a long-term approach grounded in strong governance principles operating as a strategic holding company UCBI focuses on the integration of blockchain-based and the distributed technologies ",
+      "Exclusive private investment platform combining private equity crypto-finance and strategic treasury management to support long-term technological value creation within the UCBI Holding structure reserved for selected partners",
     url: siteUrl,
     siteName: "ucbibanking.io",
     type: "website",
@@ -71,7 +71,7 @@ const ogImage = "/logo_ucbi.jpg";
     card: "summary",
     title: "UCBI Banking - Private Blockchain Data Banking ",
     description:
-      "UCBI’s mission is to support the responsible structured and sustainable development of digital financial infrastructure through a long-term approach grounded in strong governance principles operating as a strategic holding company UCBI focuses on the integration of blockchain-based and the distributed technologies ",
+      "Exclusive private investment platform combining private equity crypto-finance and strategic treasury management to support long-term technological value creation within the UCBI Holding structure reserved for selected partners",
     images: ["/logo_ucbi.jpg"],
     creator: "@ucbi_banking",
   },
