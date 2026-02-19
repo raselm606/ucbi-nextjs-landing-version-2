@@ -91,7 +91,7 @@ const Footer = () => {
             <div className="footer_elements">
               <div className="social">
                 <ul> 
-                  <li><Link href="#"><Image   src={linkedin} alt="linkedin"/></Link></li> 
+                  <li><Link target="_blank" href="https://www.linkedin.com/company/ucbi-banking"><Image   src={linkedin} alt="linkedin"/></Link></li> 
                 </ul>
               </div>
               <div className="copyright text-center">

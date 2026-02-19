@@ -60,17 +60,13 @@ const BlogSection = () => {
             </div>
              
             <div className="row  drs justify-content-center">
-                
-                 
+                              
                 <div className="col-lg-9">
                     {/* <div className="swiper_nav_btn mb-4 d-flex justify-content-end">
                         <button className="prev-btn">←</button>
                         <button className="next-btn">→</button>
                     </div> */}
-
-                
-
-                
+                       
                 <Swiper
                     // install Swiper modules
                              
@@ -107,12 +103,9 @@ const BlogSection = () => {
 
                     pagination={{ clickable: false }}
                     scrollbar={{ draggable: true }}
-                    className="swiper_blog" >
-
-                        
-                    
+                    className="swiper_blog" >                    
+                   
                 
-
                {posts.map((item) => {
                 const id = item.ID || item.URL;
                 const title = item.TITLE || "UCBI Blogs ";
@@ -125,17 +118,10 @@ const BlogSection = () => {
                     ? rawThumb.replace(/^http:/, "https:")
                     : "";
                 const thumb = safeThumb ? safeThumb : placeholder_blog;
-
                 const link = item.URL || "#";
 
-
-
                 return (
-
-
-                    <SwiperSlide key={id}>
-
-                            
+                    <SwiperSlide key={id}>                   
                             <div className="blog_item" >
                                 <Link href={link} target="_blank">
                                 <div className="blog_img" >
@@ -157,19 +143,13 @@ const BlogSection = () => {
                                     <Image src={arrow_blog} alt="arrow" width={15} height={15} /> </Link>*/}
                                 </div>
                             </div>
-                        
-                        
+                                               
                     </SwiperSlide>
                 ); })}
 
                 </Swiper>
 
-                </div>
-               
-               
-
-                
-
+                </div>                                         
             </div>
         </div>
     </div>
