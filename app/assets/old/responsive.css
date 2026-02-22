@@ -1,0 +1,368 @@
+/* @media (min-width: 1600px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 1600px !important;
+    }
+} */
+@media (min-width: 1400px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 1400px ;
+    }
+}
+
+/* Large / Desktop */
+@media only screen and (width: 992px) {
+
+}
+
+/* Medium / Tablet */
+@media only screen and (max-width: 768px) {
+     .container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    .driving_img img {
+        width: 100% !important; 
+    }
+    .hero_title {
+        font-size: 34px;
+        line-height: 44px;
+        font-family: var(--title_font);
+        margin-bottom: 20px;
+    }
+    .white_paper_area { 
+        padding: 30px;
+        border: 0px solid #fff;
+        margin-bottom: 30px;
+    }
+    .tokenomics_area { 
+        padding: 30px;
+        border: 0px solid #fff;
+        margin-bottom: 30px;
+        margin-top: 0px;
+    }
+    .driving_section .cline { 
+        padding: 80px 30px !important;
+    }
+    
+    .papers_token_section .cline:after { 
+        bottom: 16px; 
+    }
+    
+    .footer_section:before { 
+        width: 100%; 
+    }
+    .footer_elements { 
+        margin-left: 30px;
+        margin-right: 30px; 
+    }
+    .social {
+        margin-bottom: 30px;
+    }
+    .copyright p { 
+        margin-bottom: 30px;
+    }
+    .bg_bb { 
+        padding: 30px;
+    }
+    .goal_content p {
+        width: 100%;
+    }
+    .section_title_dark { 
+        font-size: 26px; 
+    }
+    .big_text_number span { 
+        line-height: 50px; 
+        font-size: 40px;
+    }
+    .section_title_white { 
+        font-size: 24px;
+        line-height: 32px; 
+    }
+    .line_img {
+        display: none;
+    }
+    .ourjourney_section { 
+        background-size: cover;
+    }
+    .timeline_item:before {
+        display: none ;
+    }
+    .timeline_item:after {
+        display: none ;
+    }
+    .timeline_one, .timeline_two , .timeline_three , .timeline_four   {
+        margin-top: 20px;
+    }
+    .white_paper_area:before {
+        display: none;
+    }
+    .white_paper_area:after {
+        display: none;
+    }
+    .goal_sectio .cline { 
+        padding: 100px 8px !important;
+    }
+
+    .hero_section { 
+        background-position: center center;
+    }
+    .hero_section .cline {
+        height: 800px;
+    }
+    .hero_content {
+        margin-top: 0;
+    }
+    .hero_image .btc_coin {
+        width: 130px;
+        height: 130px; 
+        top: 60%;
+        left: 20%;
+    }
+    .hero_image .eth_coin { 
+        width: 150px;
+        height: 150px; 
+        bottom: 4%;
+        left: 4%;
+        mix-blend-mode: normal;
+    }
+    .hero_image .ucbi_coin {
+        mix-blend-mode: normal;
+        width: 300px;
+        height: 300px;  
+        bottom: 2%;
+        right: 0;
+    }
+
+    .big_text_number {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .line_right {
+        border-right: 1px solid transparent !important;
+    }
+    .extra_line_whtiepaper_left:before {
+        background: none;
+    }
+    .extra_line_whtiepaper_right:before {
+        background: none;
+    }
+    .cline_white {
+        border-right: 1px solid transparent !important;
+    }
+
+    .papers_token_section .clinee { 
+        height: auto;  
+        background-position: right center;
+        padding-top: 20px;
+    }
+    .tokenomics_area:before { 
+        background: none; 
+    }
+    .tokenomics_area:after { 
+        background: none; 
+    }
+    .cont_bg:before { 
+        opacity: 0.2;
+    }
+    
+
+
+}
+
+/* Small / Mobile */
+@media only screen and (max-width: 576px) {
+     .container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    .driving_img img {
+        width: 100% !important; 
+    }
+    .hero_title {
+        font-size: 34px;
+        line-height: 44px;
+        font-family: var(--title_font);
+        margin-bottom: 20px;
+    }
+    .white_paper_area { 
+        padding: 30px;
+        border: 0px solid #fff;
+        margin-bottom: 30px;
+    }
+    .tokenomics_area { 
+        padding: 30px;
+        border: 0px solid #fff;
+        margin-bottom: 30px;
+        margin-top: 0px;
+    }
+    .driving_section .cline { 
+        padding: 80px 30px !important;
+    }
+    
+    .papers_token_section .cline:after { 
+        bottom: 16px; 
+    }
+    
+    .footer_section:before { 
+        width: 100%; 
+    }
+    .footer_elements { 
+        margin-left: 30px;
+        margin-right: 30px; 
+    }
+    .social {
+        margin-bottom: 30px;
+    }
+    .copyright p { 
+        margin-bottom: 30px;
+    }
+    .bg_bb { 
+        padding: 30px;
+    }
+    .goal_content p {
+        width: 100%;
+    }
+    .section_title_dark { 
+        font-size: 26px; 
+    }
+    .big_text_number span { 
+        line-height: 50px; 
+        font-size: 40px;
+    }
+    .section_title_white { 
+        font-size: 24px;
+        line-height: 32px; 
+    }
+    .line_img {
+        display: none;
+    }  .line_img {
+        display: none;
+    }
+    .ourjourney_section { 
+        background-size: cover;
+        background-position: bottom center;
+    }
+    .timeline_item:before {
+        display: none ;
+    }
+    .timeline_item:after {
+        display: none ;
+    }
+    .timeline_one, .timeline_two , .timeline_three , .timeline_four   {
+        margin-top: 20px;
+    }
+    .white_paper_area:before {
+        display: none;
+    }
+    .white_paper_area:after {
+        display: none;
+    }
+    .goal_sectio .cline { 
+        padding: 100px 8px !important;
+    }
+
+}
+
+@media only screen and (max-width: 375px) and (max-height: 667px) {
+     .container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    .driving_img img {
+        width: 100% !important; 
+    }
+    .hero_title {
+        font-size: 34px;
+        line-height: 44px;
+        font-family: var(--title_font);
+        margin-bottom: 20px;
+    }
+    .big_text_number span { 
+        font-size: 30px;
+        line-height: 50px; 
+        word-break: break-all;
+    }
+    .white_paper_area { 
+        padding: 30px;
+        border: 0px solid #fff;
+        margin-bottom: 30px;
+    }
+    .tokenomics_area { 
+        padding: 30px;
+        border: 0px solid #fff;
+        margin-bottom: 30px;
+        margin-top: 0px;
+    }
+    
+    .driving_section .cline { 
+        padding: 80px 30px !important;
+    }
+    .papers_token_section .cline:after { 
+        bottom: 16px; 
+    }
+    .footer_section:before { 
+        width: 100%; 
+    }
+    .footer_elements { 
+        margin-left: 30px;
+        margin-right: 30px; 
+    }
+    .social {
+        margin-bottom: 30px;
+    }
+    .copyright p { 
+        margin-bottom: 30px;
+    }
+    .bg_bb { 
+        padding: 30px;
+    }
+    .goal_content p {
+        width: 100%;
+    }
+    .section_title_dark { 
+        font-size: 26px; 
+    }
+    .big_text_number span { 
+        font-size: 40px;
+        line-height: 50px ; 
+    }
+
+    .section_title_white { 
+        font-size: 24px;
+        line-height: 32px; 
+    }
+    .line_img {
+        display: none;
+    }
+    .ourjourney_section { 
+        background-size: cover;
+    }.line_img {
+        display: none;
+    }
+    .ourjourney_section { 
+        background-size: cover;
+    }
+    .timeline_item:before {
+        display: none ;
+    }
+    .timeline_item:after {
+        display: none ;
+    }
+    .timeline_one, .timeline_two , .timeline_three , .timeline_four   {
+        margin-top: 20px;
+    }
+    .white_paper_area:before {
+        display: none;
+    }
+    .white_paper_area:after {
+        display: none;
+    }
+    .goal_sectio .cline { 
+        padding: 100px 8px !important;
+    }
+  
+}
+
+
+
+

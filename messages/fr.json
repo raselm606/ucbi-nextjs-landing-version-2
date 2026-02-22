@@ -1,0 +1,24 @@
+{
+  "advance": {
+    "section": {
+      "title": {
+        "line1": "Faire progresser UCBI grâce à",
+        "line2": "une croissance stratégique"
+      }
+    },
+    "items": {
+      "treasury": {
+        "title": "Investissement de trésorerie",
+        "desc": "Notre cadre de liquidité est conçu pour une gestion stratégique des actifs."
+      },
+      "institutional": {
+        "title": "Renforcement institutionnel",
+        "desc": "Un écosystème évolutif et interopérable pour une croissance durable."
+      },
+      "partnership": {
+        "title": "Partenariats et expansion mondiale",
+        "desc": "Notre stratégie vise une expansion durable sur les marchés clés."
+      }
+    }
+  }
+}
