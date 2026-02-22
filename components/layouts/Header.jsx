@@ -113,7 +113,7 @@ const Header = () => {
                     <Link className="nav-link" href="#">Blockchain</Link>
                     </li>
                     <li className="nav-item">
-                    <Link className="nav-link" href="#">Treasury</Link>
+                    <Link className="nav-link" href="#treasury">Treasury</Link>
                     </li>
                     <li className="nav-item">
                     <Link className="nav-link" data-bs-toggle="modal"   href="#exampleModal">Submit Request</Link>

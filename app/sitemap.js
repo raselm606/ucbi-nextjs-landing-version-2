@@ -11,16 +11,10 @@ export default function sitemap() {
       priority: 1,
     },
     {
-      url: "https://doc.ucbibanking.io/ucbi_whitepaper",
+      url: `${baseUrl}/#treasury`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
-    },
-    {
-      url: "https://doc.ucbibanking.io/tokenomics",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.5,
     },
     {
       url: `${baseUrl}/blockchain`,

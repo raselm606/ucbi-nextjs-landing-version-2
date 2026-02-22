@@ -3,7 +3,7 @@ const Advancing =  () => {
 
   return (
     <>
-    <div className="advancing_section">
+    <div className="advancing_section" id="treasury">
         <div className="container cline line_left line_right">
             <div className="row">
                 <div className="col-lg-4">
