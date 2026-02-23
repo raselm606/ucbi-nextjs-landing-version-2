@@ -199,7 +199,7 @@ const Header = () => {
                   <input type="checkbox" className="form-check-input" id="exampleCheck1" />
                   <label className="form-check-label" htmlFor="exampleCheck1">I agree UCBI Terms and Conditions</label>
                 </div>
-                <button type="submit" className="btn btn-primary">Submit</button>
+                <button type="submit" className="btn btn-primary">Submit Request</button>
                 </div>
               </form>
 
