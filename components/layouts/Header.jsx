@@ -144,22 +144,51 @@ const Header = () => {
     {/* <!-- Modal --> */}
     <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div className="modal-dialog modal-dialog-centered">
-        <div className="modal-content">
+        <div className="modal-content p-4">
         <div className="modal-header">
-            <h4 className="modal-title fs-5" id="exampleModalLabel" style={{color:'#112e50'}}>Want to invest in <strong>UCBI</strong> Ltd? </h4>
+            <p className="modal-title fs-6" id="exampleModalLabel" style={{color:'#112e50'}}>Want to invest in UCBI Banking Ltd?  </p>
             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div className="modal-body" style={{color:'#112e50'}}>
-            <h5 className="mb-4" style={{color:'#112e50'}}>Contact: </h5>
-            <p style={{color:'#112e50'}}> <strong>Phone:</strong> +33 376 876 876 ( FR )</p>
-            <p style={{color:'#112e50'}}> <strong>Phone:</strong> +44 1632 960 123 ( UK )</p>
+            <div className="contact_form_arra">
 
-            <p style={{color:'#112e50'}}> <strong>Email:</strong> contact@ucbibanking.io</p>
+              <form>
+                <div class="mb-3">
+                  <label htmlFor="fullname" class="form-label">Full Name</label>
+                  <input type="text" class="form-control" id="fullname" aria-describedby="emailHelp" /> 
+                </div>
+                <div class="mb-3"> 
+                  <label htmlFor="exampleInputEmail1" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label htmlFor="phone" class="form-label">Phone</label>
+                  <input type="text" class="form-control" id="phone" />
+                  <div id="emailHelp" class="form-text">We'll never share your phone with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label htmlFor="subject" class="form-label">Subject</label>
+                  <input type="text" class="form-control" id="subject" />
+                </div>
+                <div class="mb-3">
+                  <label htmlFor="comment" class="form-label">Your Message</label>
+                  <textarea className="form-control" name="comment" id="comment" rows="5"></textarea>
+                  <div id="emailHelp" class="form-text">Please don't include any website link. Otherwise we won't be able to receive your request.</div>
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                  <label class="form-check-label" htmlFor="exampleCheck1">I agree UCBI Terms and Conditions</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+
+            </div>
         </div>
 
-        <div className="modal-footer">
+        {/* <div className="modal-footer">
         <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button> 
-      </div>
+      </div> */}
          
         </div>
     </div>
