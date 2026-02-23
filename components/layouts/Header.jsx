@@ -143,7 +143,7 @@ const Header = () => {
 
     {/* <!-- Modal --> */}
     <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div className="modal-dialog modal-dialog-centered">
+    <div className="modal-dialog modal-dialog-centered modal-lg">
         <div className="modal-content p-4">
         <div className="modal-header">
             <p className="modal-title fs-6" id="exampleModalLabel" style={{color:'#112e50'}}>Want to invest in UCBI Banking Ltd?  </p>
@@ -153,34 +153,54 @@ const Header = () => {
             <div className="contact_form_arra">
 
               <form>
-                <div class="mb-3">
-                  <label htmlFor="fullname" class="form-label">Full Name</label>
-                  <input type="text" class="form-control" id="fullname" aria-describedby="emailHelp" /> 
+                <div className="row">
+
+                
+                <div className="mb-3 col-lg-6 col-md-6 col-sm-12">
+                  <label htmlFor="fullname" className="form-label">Full Name 
+                    <span style={{color:'#EA3943'}}> * </span>
+                    </label>
+                  <input type="text" className="form-control" id="fullname" aria-describedby="emailHelp" /> 
                 </div>
-                <div class="mb-3"> 
-                  <label htmlFor="exampleInputEmail1" class="form-label">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                <div className="mb-3  col-lg-6 col-md-6 col-sm-12"> 
+                  <label htmlFor="exampleInputEmail1" className="form-label">
+                    Email address  <span style={{color:'#EA3943'}}> * </span>
+                    </label>
+                  <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                  <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
                 </div>
-                <div class="mb-3">
-                  <label htmlFor="phone" class="form-label">Phone</label>
-                  <input type="text" class="form-control" id="phone" />
-                  <div id="emailHelp" class="form-text">We'll never share your phone with anyone else.</div>
+                <div className="mb-3  col-lg-6 col-md-6 col-sm-12">
+                  <label htmlFor="country" className="form-label">
+                    Country  <span style={{color:'#EA3943'}}> * </span>
+                    </label>
+                  <input type="text" className="form-control" id="country" /> 
                 </div>
-                <div class="mb-3">
-                  <label htmlFor="subject" class="form-label">Subject</label>
-                  <input type="text" class="form-control" id="subject" />
+                <div className="mb-3  col-lg-6 col-md-6 col-sm-12">
+                  <label htmlFor="phone" className="form-label">
+                    Phone  <span style={{color:'#EA3943'}}> * </span>
+                    </label>
+                  <input type="text" className="form-control" id="phone" />
+                  <div id="emailHelp" className="form-text">We'll never share your phone with anyone else.</div>
                 </div>
-                <div class="mb-3">
-                  <label htmlFor="comment" class="form-label">Your Message</label>
-                  <textarea className="form-control" name="comment" id="comment" rows="5"></textarea>
-                  <div id="emailHelp" class="form-text">Please don't include any website link. Otherwise we won't be able to receive your request.</div>
+                <div className="mb-3">
+                  <label htmlFor="subject" className="form-label">
+                    Subject  <span style={{color:'#EA3943'}}> * </span>
+                    </label>
+                  <input type="text" className="form-control" id="subject" />
                 </div>
-                <div class="mb-3 form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-                  <label class="form-check-label" htmlFor="exampleCheck1">I agree UCBI Terms and Conditions</label>
+                <div className="mb-3">
+                  <label htmlFor="comment" className="form-label">
+                    Your Message   <span style={{color:'#EA3943'}}> * </span>
+                    </label>
+                  <textarea className="form-control" name="comment" id="comment" rows="4" ></textarea>
+                  <div id="emailHelp" className="form-text">Please don't include any website link. Otherwise we won't be able to receive your request.</div>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <div className="mb-3 form-check">
+                  <input type="checkbox" className="form-check-input" id="exampleCheck1" />
+                  <label className="form-check-label" htmlFor="exampleCheck1">I agree UCBI Terms and Conditions</label>
+                </div>
+                <button type="submit" className="btn btn-primary">Submit</button>
+                </div>
               </form>
 
             </div>
