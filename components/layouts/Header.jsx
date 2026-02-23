@@ -1,9 +1,9 @@
 'use client';
-import { useEffect, useState  } from "react"; 
-import { removeComma } from "@/lib/utils/text";
 import Button from "@/components/ui/Button";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import favicon from '../../public/apple-touch-icon.png';
 import Logo from '../../public/images/logo.svg';
 const Header = () => {
 
@@ -124,7 +124,8 @@ const Header = () => {
                      
                      
                 </ul>
-                <div className="price_arra mx-4">
+                <div className="price_arra d-flex align-item-center mx-4">
+                <Image src={favicon} width={30} height={30} alt="logo" priority/>
                     {err && <p style={{ color: "red", textAlign: "center" }}>{err}</p>}
                 <span className="d-block " style={{ color: isPos ? "#16c784" : "#EA3943", fontSize:'11px', fontWeight:'600' }}> 
                 {price == null ? "--" : `$${price.toFixed(2)}`}  {" UCBI "}

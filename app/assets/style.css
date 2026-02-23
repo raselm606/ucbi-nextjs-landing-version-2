@@ -1227,3 +1227,15 @@ label.form-check-label {
     line-height: 21px; 
     margin-bottom: 15px;
 }
+
+.price_arra {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.price_arra img {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+}
