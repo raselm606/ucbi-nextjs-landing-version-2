@@ -200,7 +200,7 @@ try {
     <div className="modal-dialog modal-dialog-centered modal-lg">
         <div className="modal-content p-4">
         <div className="modal-header">
-            <p className="modal-title fs-6" id="exampleModalLabel" style={{color:'#112e50'}}>Want to invest in UCBI Banking Ltd?  </p>
+            <p className="modal-title fs-6" id="exampleModalLabel" style={{color:'#112e50'}}> Looking to Partner With UCBI Banking Ltd?  </p>
             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div className="modal-body" style={{color:'#112e50'}}>
