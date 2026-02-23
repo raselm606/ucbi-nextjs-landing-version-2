@@ -1,12 +1,63 @@
+'use client';
+import { useState } from "react";
 
-import Image from 'next/image'
-import Link from 'next/link'
-import send from '../../public/images/arrow.svg'
-import cc from '../../public/images/cc.png'
-import FooterLogo from '../../public/images/logo.svg'
-import sms from '../../public/images/sms.svg'
-import linkedin from '../../public/images/social/linkedin.svg'
+import Image from 'next/image';
+import Link from 'next/link';
+import send from '../../public/images/arrow.svg';
+import cc from '../../public/images/cc.png';
+import FooterLogo from '../../public/images/logo.svg';
+import sms from '../../public/images/sms.svg';
+import linkedin from '../../public/images/social/linkedin.svg';
 const Footer = () => {
+
+  //form submit handler
+    const [subscriberForm, setSubscriberForm] = useState({ email: "" });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+  
+    // ui message state
+    const [notice, setNotice] = useState("");
+    const [noticeType, setNoticeType] = useState(""); // "success" | "error"
+
+    const onEmailChange = (e) => {
+    const { name, value } = e.target;
+    setSubscriberForm((prev) => ({ ...prev, [name]: value }));
+    };
+
+    const onSubscribeSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setNotice("");
+    setNoticeType("");
+
+    try {
+      const res = await fetch("https://api.ucbibanking.io/api/ucbi_subscriber", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+        },
+        body: JSON.stringify(subscriberForm),
+      });
+
+      const data = await res.json().catch(() => ({})); // safe parse
+
+      if (!res.ok) {
+        setNoticeType("error");
+        throw new Error(data?.msg || "❌ Failed! Please try again.");
+      }
+
+      setNoticeType("success");
+      setNotice(data?.msg || "✅ Subscribed successfully!");
+      setSubscriberForm({ email: "" });
+    } catch (err) {
+      setNoticeType("error");
+      setNotice(err?.message || "❌ Something went wrong.");
+    } finally {
+      setIsSubmitting(false);
+    }
+
+  };
+
   return (
     <>
     <div className="footer_section">
@@ -16,11 +67,18 @@ const Footer = () => {
             <div className="footer_info">
               <Image  src={FooterLogo} width={120} height={52} alt="Footer Logo"/>
               <p>Receive exclusive UCBI updates <br /> straight to your inbox</p>
-              <form action="#" className="footer_subscriber">
+              <form onSubmit={onSubscribeSubmit} className="footer_subscriber">
+                {notice && (
+                  <p className={noticeType === "success" ? "text-success" : "text-danger"}>
+                    {notice}
+                  </p>
+                )}
                 <div className="input-group from_area">
                   <span className="input-group-text"><Image src={sms} alt="Mail Icon" /></span>
-                  <input type="email" placeholder="Your email address"   className="form-control" />
-                  <button className="send_btn" type="submit" >
+
+                  <input type="email" placeholder="Your email address" name="email" value={subscriberForm.email} onChange={onEmailChange} required  className="form-control" />
+
+                  <button disabled={isSubmitting} className="send_btn" type="submit" >
                     <Image src={send} alt="Send Icon" />
                   </button>
                 </div>

@@ -93,6 +93,60 @@ const Header = () => {
 
   const isPos = typeof change24h === "number" && change24h >= 0;
 
+  //form submit handler
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    country: "",
+    phone: "",
+    subject: "",
+    comments: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+const [msg, setMsg] = useState("");
+const [uc_status, setUcStatus] = useState("");  
+
+const handleChange = (e) => {
+setForm({ ...form, [e.target.name]: e.target.value });
+};
+
+const handleSubmit = async (e) => {
+e.preventDefault();
+setLoading(true);
+setMsg("");
+
+try {
+  const res = await fetch("https://api.ucbibanking.io/api/ucbi_contact", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json",
+    },
+    body: JSON.stringify(form),
+  });
+
+  const data = await res.json();
+
+  if (!res.ok) {
+    setUcStatus("error");
+    throw new Error(data?.msg || "❌ " + "Failed! Please recheck the form and try again.");
+    
+  }
+
+  setUcStatus("success");
+  setMsg(data.msg);
+
+  setForm({ name: "", email: "", country: "", phone: "", subject: "", comments: "" });
+} catch (Errors) {
+   setUcStatus("error");
+  setMsg(   Errors.message);
+} finally {
+  setLoading(false);
+}
+
+};
+
   return (
     <>
     <div className="top_header">
@@ -152,54 +206,61 @@ const Header = () => {
         <div className="modal-body" style={{color:'#112e50'}}>
             <div className="contact_form_arra">
 
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className="row">
+                 {msg && (
+                  <p className={uc_status === "success" ? "text-success" : "text-danger"}>
+                    {msg}
+                  </p>
+                )}
 
                 
                 <div className="mb-3 col-lg-6 col-md-6 col-sm-12">
                   <label htmlFor="fullname" className="form-label">Full Name 
                     <span style={{color:'#EA3943'}}> * </span>
                     </label>
-                  <input type="text" className="form-control" id="fullname" aria-describedby="emailHelp" /> 
+                  <input type="text" name="name" value={form.name} onChange={handleChange} required className="form-control" id="fullname" aria-describedby="emailHelp" /> 
                 </div>
                 <div className="mb-3  col-lg-6 col-md-6 col-sm-12"> 
                   <label htmlFor="exampleInputEmail1" className="form-label">
                     Email address  <span style={{color:'#EA3943'}}> * </span>
                     </label>
-                  <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-                  <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+                  <input type="email" name="email" value={form.email} onChange={handleChange} required className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                  <div id="emailHelp" className="form-text">We will never share your email with anyone else.</div>
                 </div>
                 <div className="mb-3  col-lg-6 col-md-6 col-sm-12">
                   <label htmlFor="country" className="form-label">
                     Country  <span style={{color:'#EA3943'}}> * </span>
                     </label>
-                  <input type="text" className="form-control" id="country" /> 
+                  <input type="text"  name="country" value={form.country} onChange={handleChange} required className="form-control" id="country" /> 
                 </div>
                 <div className="mb-3  col-lg-6 col-md-6 col-sm-12">
                   <label htmlFor="phone" className="form-label">
                     Phone  <span style={{color:'#EA3943'}}> * </span>
                     </label>
-                  <input type="text" className="form-control" id="phone" />
-                  <div id="emailHelp" className="form-text">We'll never share your phone with anyone else.</div>
+                  <input type="text" name="phone" placeholder="+33" value={form.phone} onChange={handleChange} required className="form-control" id="phone" />
+                  <div id="emailHelp" className="form-text">We will never share your phone with anyone else.</div>
                 </div>
                 <div className="mb-3">
                   <label htmlFor="subject" className="form-label">
                     Subject  <span style={{color:'#EA3943'}}> * </span>
                     </label>
-                  <input type="text" className="form-control" id="subject" />
+                  <input type="text" name="subject" value={form.subject} onChange={handleChange} required className="form-control" id="subject" />
                 </div>
                 <div className="mb-3">
                   <label htmlFor="comment" className="form-label">
                     Your Message   <span style={{color:'#EA3943'}}> * </span>
                     </label>
-                  <textarea className="form-control" name="comment" id="comment" rows="4" ></textarea>
-                  <div id="emailHelp" className="form-text">Please don't include any website link. Otherwise we won't be able to receive your request.</div>
+                  <textarea  className="form-control" name="comments" value={form.comments} onChange={handleChange} required id="comments" rows="4" ></textarea>
+                  <div id="emailHelp" className="form-text">Please do not include any website link. Otherwise we could not be able to receive your request.</div>
                 </div>
                 <div className="mb-3 form-check">
                   <input type="checkbox" className="form-check-input" id="exampleCheck1" />
                   <label className="form-check-label" htmlFor="exampleCheck1">I agree UCBI Terms and Conditions</label>
                 </div>
-                <button type="submit" className="btn btn-primary">Submit Request</button>
+                <button disabled={loading} type="submit" className="btn btn-primary">
+                  {loading ? "Sending..." : "Submit Request"}
+                  </button>
                 </div>
               </form>
 
