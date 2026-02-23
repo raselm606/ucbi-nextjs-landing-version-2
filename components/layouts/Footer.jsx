@@ -43,7 +43,7 @@ const Footer = () => {
 
       if (!res.ok) {
         setNoticeType("error");
-        throw new Error(data?.msg || "❌ Failed! Please try again.");
+        throw new Error(data?.msg || "❌ This email is already subscribed.");
       }
 
       setNoticeType("success");
