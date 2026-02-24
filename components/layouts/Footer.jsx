@@ -95,7 +95,7 @@ const Footer = () => {
               <div className="footer_navs">
                 <ul>
                   <li><Link href="#">Blockchain</Link></li>
-                  <li><Link data-bs-toggle="modal"   href="#exampleModal">Submit a Request</Link></li>
+                  <li><Link data-bs-toggle="modal"   href="#submit-a-request">Submit a Request</Link></li>
                   <li><Link href="#">Strategy Advisory</Link></li>
                   <li><Link href="#">Token Launch Support</Link></li>
                 </ul>

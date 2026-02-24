@@ -170,7 +170,7 @@ try {
                     <Link className="nav-link" href="#treasury-management">Treasury</Link>
                     </li>
                     <li className="nav-item">
-                    <Link className="nav-link" data-bs-toggle="modal"   href="#exampleModal">Submit Request</Link>
+                    <Link className="nav-link" data-bs-toggle="modal"   href="#submit-a-request">Submit Request</Link>
                     </li>
                     <li className="nav-item">
                     <Link className="nav-link" href="#contact">Contact</Link>
@@ -196,7 +196,7 @@ try {
     </div>
 
     {/* <!-- Modal --> */}
-    <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div className="modal fade" id="submit-a-request" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div className="modal-dialog modal-dialog-centered modal-lg">
         <div className="modal-content p-4">
         <div className="modal-header">
