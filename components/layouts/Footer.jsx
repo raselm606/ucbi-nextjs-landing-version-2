@@ -60,10 +60,10 @@ const Footer = () => {
 
   return (
     <>
-    <div className="footer_section" id="contact">
+    <div className="footer_section" >
       <div className="container cline">
-        <div className="row">
-          <div className="col-lg-3 mb-3">
+        <div className="row" >
+          <div className="col-lg-3 mb-3" >
             <div className="footer_info">
               <Image  src={FooterLogo} width={120} height={52} alt="Footer Logo"/>
               <p>Receive exclusive UCBI updates <br /> straight to your inbox</p>
@@ -128,7 +128,7 @@ const Footer = () => {
                   
                 </ul>
               </div>
-              <div className="cc_web">
+              <div className="cc_web" id="contact">
                 <Image  src={cc} alt='ucbibanking.io' />
                      
                     <Link href="#"> 

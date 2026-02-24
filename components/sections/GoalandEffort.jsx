@@ -19,14 +19,14 @@ const GoalandEffort = () => {
 
                         <div className="featured_o"  >
                             <p>Market data</p>
-                            <Link href="#" className="fe_link"><Image src={yahoof} alt="featured logos"   /></Link> 
+                            <Link target="_blank" href="https://finance.yahoo.com/quote/UCBI-USD/" className="fe_link"><Image src={yahoof} alt="featured logos"   /></Link> 
                              
                         </div>
                     </div>
                 </div>
                 <div className="col-lg-6 mb-3">
-                    <div className="goal_im" >
-                        <Link target="_blank" href="https://finance.yahoo.com/quote/UCBI-USD/"><Image  src={goalImg} alt="goal image" width={600} height={400} /></Link>
+                    <div className="goal_im" > 
+                        <Image  src={goalImg} alt="goal image" width={600} height={400} /> 
                     </div>
                 </div>
             </div>
