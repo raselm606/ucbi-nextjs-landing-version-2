@@ -161,19 +161,19 @@ try {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav top_nav me-auto mb-2 mb-lg-0">
                     <li className="nav-item">
-                    <Link className="nav-link active" aria-current="page" href="#about">About</Link>
+                    <Link className="nav-link active" aria-current="page" href="/#about">About</Link>
                     </li>
                     <li className="nav-item">
                     <Link className="nav-link" href="#">Blockchain</Link>
                     </li>
                     <li className="nav-item">
-                    <Link className="nav-link" href="#treasury-management">Treasury</Link>
+                    <Link className="nav-link" href="/#treasury-management">Treasury</Link>
                     </li>
                     <li className="nav-item">
                     <Link className="nav-link" data-bs-toggle="modal"   href="#submit-a-request">Submit Request</Link>
                     </li>
                     <li className="nav-item">
-                    <Link className="nav-link" href="#contact">Contact</Link>
+                    <Link className="nav-link" href="/#contact">Contact</Link>
                     </li>
                      
                      
