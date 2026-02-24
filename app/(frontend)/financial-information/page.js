@@ -12,7 +12,7 @@ const FinancialInformtion = () => {
   return (
     <>
       <Header />
-       <Redirect to="https://finance.yahoo.com/quote/UCBI-USD/" delay={2000} />
+       <Redirect to="https://finance.yahoo.com/quote/UCBI-USD/" delay={1000} />
         <div className="contact_page" style={{height:'60vh'}}>
             <div className="container cline" 
             style={{borderLeft:'1px solid #dce0e5', borderRight:'1px solid #dce0e5', height:'100%'}}> 
