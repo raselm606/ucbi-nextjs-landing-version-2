@@ -11,13 +11,25 @@ export default function sitemap() {
       priority: 1,
     },
     {
-      url: `${baseUrl}/#treasury`,
+      url: `${baseUrl}/#treasury-management`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/blockchain`,
+      url: `${baseUrl}/financial-information`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
+      url: `${baseUrl}/submit-request`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
+      url: `${baseUrl}/#contact`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.5,

@@ -60,7 +60,7 @@ const Footer = () => {
 
   return (
     <>
-    <div className="footer_section">
+    <div className="footer_section" id="contact">
       <div className="container cline">
         <div className="row">
           <div className="col-lg-3 mb-3">

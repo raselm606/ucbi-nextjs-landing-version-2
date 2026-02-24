@@ -1,9 +1,9 @@
-import { advanceData } from "@/lib/mock-data/advancing"; 
+import { advanceData } from "@/lib/mock-data/advancing";
 const Advancing =  () => { 
 
   return (
     <>
-    <div className="advancing_section" id="treasury">
+    <div className="advancing_section" id="treasury-management">
         <div className="container cline line_left line_right">
             <div className="row">
                 <div className="col-lg-4">

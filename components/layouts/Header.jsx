@@ -167,13 +167,13 @@ try {
                     <Link className="nav-link" href="#">Blockchain</Link>
                     </li>
                     <li className="nav-item">
-                    <Link className="nav-link" href="#treasury">Treasury</Link>
+                    <Link className="nav-link" href="#treasury-management">Treasury</Link>
                     </li>
                     <li className="nav-item">
                     <Link className="nav-link" data-bs-toggle="modal"   href="#exampleModal">Submit Request</Link>
                     </li>
                     <li className="nav-item">
-                    <Link className="nav-link" href="#">Contact</Link>
+                    <Link className="nav-link" href="#contact">Contact</Link>
                     </li>
                      
                      

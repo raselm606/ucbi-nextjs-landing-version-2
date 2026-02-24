@@ -1,17 +1,8 @@
 'use client';
-import { useEffect, useState, useMemo  } from "react";
-import { drivingData } from "@/lib/mock-data/driving"; 
-import { removeComma } from "@/lib/utils/text";
-import Image from "next/image"; 
-import c7 from "../../public/images/c7.png";
-import c8 from "../../public/images/c8.png";
-import c9 from "../../public/images/c9.png";
-import MarkecapChart from "@/components/sections/MarkecapChart"
-import ChartsUCBI from "@/components/sections/ChartsUCBI"
-import TooltipPrice from "@/components/sections/TooltipPrice";
+import { drivingData } from "@/lib/mock-data/driving";
+import Image from "next/image";
 
 
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
 
 
 
