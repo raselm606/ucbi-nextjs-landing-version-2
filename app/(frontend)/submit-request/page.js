@@ -84,8 +84,8 @@ const SubmitRequest = () => {
         <div className="contact_page" >
             <div className="container cline" 
             style={{borderLeft:'1px solid #dce0e5', borderRight:'1px solid #dce0e5', height:'100%'}}> 
-                <div className="row">
-                    <div className="col-lg-12" style={{marginTop:'180px', marginBottom:'100px'}}>
+                <div className="row justify-content-center">
+                    <div className="col-lg-9" style={{marginTop:'180px', marginBottom:'100px'}}>
                         <div className="contact_page_content mb-5 ">
                             <h5 className="" style={{color:'#112d50'}}>Interested in Becoming a Member of UCBI Group Technologies?</h5>
                             <p style={{color:'#112d50'}}>Submit a request to get in touch with our team and explore partnership opportunities.</p>
