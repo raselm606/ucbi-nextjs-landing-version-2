@@ -1,5 +1,6 @@
 'use client';
 import Button from "@/components/ui/Button";
+import countriesData from "@/lib/mock-data/countriesData";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -96,8 +97,10 @@ const Header = () => {
   //form submit handler
   const [form, setForm] = useState({
     name: "",
+    surname: "",
     email: "",
     country: "",
+    phoneCode: "",
     phone: "",
     subject: "",
     comments: "",
@@ -116,6 +119,13 @@ e.preventDefault();
 setLoading(true);
 setMsg("");
 
+const fullPhone = `${form.phoneCode}${form.phone}`; // or `${form.phoneCode} ${form.phone}`
+
+  const payload = {
+    ...form,
+    phone: fullPhone, // overwrite phone
+  };
+
 try {
   const res = await fetch("https://api.ucbibanking.io/api/ucbi_contact", {
     method: "POST",
@@ -123,7 +133,7 @@ try {
       "Content-Type": "application/json",
       "Accept": "application/json",
     },
-    body: JSON.stringify(form),
+    body: JSON.stringify(payload),
   });
 
   const data = await res.json();
@@ -137,7 +147,7 @@ try {
   setUcStatus("success");
   setMsg(data.msg);
 
-  setForm({ name: "", email: "", country: "", phone: "", subject: "", comments: "" });
+  setForm({ name: "", surname: "", email: "", country: "", phoneCode: "", phone: "", subject: "", comments: "" });
 } catch (Errors) {
    setUcStatus("error");
   setMsg(   Errors.message);
@@ -200,7 +210,7 @@ try {
     <div className="modal-dialog modal-dialog-centered modal-lg">
         <div className="modal-content p-4">
         <div className="modal-header">
-            <p className="modal-title fs-6" id="exampleModalLabel" style={{color:'#112e50'}}> Looking to Partner With UCBI Banking Ltd?  </p>
+            <p className="modal-title fs-6" id="exampleModalLabel" style={{color:'#112e50'}}> Interested in Becoming a Member of UCBI Group Technologies ? </p>
             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div className="modal-body" style={{color:'#112e50'}}>
@@ -216,11 +226,20 @@ try {
 
                 
                 <div className="mb-3 col-lg-6 col-md-6 col-sm-12">
-                  <label htmlFor="fullname" className="form-label">Full Name 
+                  <label htmlFor="name" className="form-label">Name 
                     <span style={{color:'#EA3943'}}> * </span>
                     </label>
-                  <input type="text" name="name" value={form.name} onChange={handleChange} required className="form-control" id="fullname" aria-describedby="emailHelp" /> 
+                  <input type="text" name="name" value={form.name} onChange={handleChange} required className="form-control" id="name" aria-describedby="emailHelp" /> 
                 </div>
+
+                <div className="mb-3 col-lg-6 col-md-6 col-sm-12">
+                    <label htmlFor="surname" className="form-label">Surname 
+                      <span style={{color:'#EA3943'}}> * </span>
+                      </label>
+                    <input type="text" name="surname" value={form.surname} onChange={handleChange} required className="form-control" id="surname" aria-describedby="emailHelp" /> 
+                  </div>
+
+
                 <div className="mb-3  col-lg-6 col-md-6 col-sm-12"> 
                   <label htmlFor="exampleInputEmail1" className="form-label">
                     Email address  <span style={{color:'#EA3943'}}> * </span>
@@ -228,19 +247,76 @@ try {
                   <input type="email" name="email" value={form.email} onChange={handleChange} required className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
                   <div id="emailHelp" className="form-text">We will never share your email with anyone else.</div>
                 </div>
-                <div className="mb-3  col-lg-6 col-md-6 col-sm-12">
-                  <label htmlFor="country" className="form-label">
-                    Country  <span style={{color:'#EA3943'}}> * </span>
-                    </label>
-                  <input type="text"  name="country" value={form.country} onChange={handleChange} required className="form-control" id="country" /> 
-                </div>
-                <div className="mb-3  col-lg-6 col-md-6 col-sm-12">
-                  <label htmlFor="phone" className="form-label">
-                    Phone  <span style={{color:'#EA3943'}}> * </span>
-                    </label>
-                  <input type="text" name="phone" placeholder="+33" value={form.phone} onChange={handleChange} required className="form-control" id="phone" />
-                  <div id="emailHelp" className="form-text">We will never share your phone with anyone else.</div>
-                </div>
+                <div className="mb-3 col-lg-6 col-md-6 col-sm-12">
+                                      <label htmlFor="country" className="form-label">
+                                        Country <span style={{ color: "#EA3943" }}> * </span>
+                                      </label>
+
+                                      <select
+                                        name="country"
+                                        value={form.country}
+                                        onChange={handleChange}
+                                        required
+                                        className="form-control"
+                                        id="country"
+                                      >
+                                        <option value="">Select a country</option>
+
+                                        {countriesData.map((country) => (
+                                          <option key={country.countryCode} value={country.countryNameEn}>
+                                             {country.countryNameEn} 
+                                          </option>
+                                        ))}
+                                      </select>
+                                    </div>
+
+
+                                    <div className="mb-3 col-lg-6 col-md-6 col-sm-12">
+                                      <label className="form-label">
+                                        Phone <span style={{ color: "#EA3943" }}> * </span>
+                                      </label>
+
+                                      <div className="input-group">
+                                        
+                                        {/* Country Code */}
+                                        <select
+                                          className="form-select"
+                                          name="phoneCode"
+                                          value={form.phoneCode}
+                                          onChange={handleChange}
+                                          required
+                                          style={{ maxWidth: "100px" }}
+                                        >
+                                          <option value="">code</option>
+
+                                          {countriesData.map((country) => (
+                                            <option
+                                              key={country.countryCode}
+                                              value={`+${country.countryCallingCode}`}
+                                            >
+                                              +{country.countryCallingCode} {country.flag}
+                                            </option>
+                                          ))}
+                                        </select>
+
+                                        {/* Phone Number */}
+                                        <input
+                                          type="text"
+                                          className="form-control"
+                                          name="phone"
+                                          placeholder="Enter phone number"
+                                          value={form.phone}
+                                          onChange={handleChange}
+                                          required
+                                        />
+                                      </div>
+
+                                      <div className="form-text">
+                                        We will never share your phone with anyone else.
+                                      </div>
+                                    </div>
+
+
                 <div className="mb-3">
                   <label htmlFor="subject" className="form-label">
                     Subject  <span style={{color:'#EA3943'}}> * </span>
@@ -254,9 +330,13 @@ try {
                   <textarea  className="form-control" name="comments" value={form.comments} onChange={handleChange} required id="comments" rows="4" ></textarea>
                   <div id="emailHelp" className="form-text">Please do not include any website link. Otherwise we could not be able to receive your request.</div>
                 </div>
-                <div className="mb-3 form-check">
-                  <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                  <label className="form-check-label" htmlFor="exampleCheck1">I agree UCBI Terms and Conditions</label>
+                <div className="mb-3 d-flex gap-2   form-check ">
+                  <input type="checkbox" style={{width:'20px', height:'20px'}} className="form-check-input mr-2" id="exampleCheck1" />
+                  <label className="form-check-label" for="exampleCheck1">
+  I agree to the UCBI Terms and Conditions. I will download the subscription form and submit it to UCBI for further processing. 
+  {" "}
+  <Link href="#" className="ms-1 text-decoration-underline">Download the subscription file</Link>
+</label>
                 </div>
                 <button disabled={loading} type="submit" className="btn btn-primary">
                   {loading ? "Sending..." : "Submit Request"}
