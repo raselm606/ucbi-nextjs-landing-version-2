@@ -333,7 +333,7 @@ try {
                 <div className="mb-3 d-flex gap-2   form-check ">
                   <input type="checkbox" style={{width:'20px', height:'20px'}} className="form-check-input mr-2" id="exampleCheck1" />
                   <label className="form-check-label" for="exampleCheck1">
-  I agree to the UCBI Terms and Conditions. I will download the subscription form and submit it to UCBI for further processing. 
+  I agree to the UCBI Terms and Conditions. I will download the subscription file and submit it to UCBI for further processing. 
   {" "}
   <Link href="#" className="ms-1 text-decoration-underline">Download the subscription file</Link>
 </label>

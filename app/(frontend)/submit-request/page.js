@@ -212,7 +212,7 @@ const SubmitRequest = () => {
                                       <input type="checkbox" style={{width:'20px', height:'20px'}}  className="form-check-input" id="exampleCheck11" />
 
                                       <label className="form-check-label" for="exampleCheck11">
-                                      I agree to the UCBI Terms and Conditions. I will download the subscription form and submit it to UCBI for further processing. <br />
+                                      I agree to the UCBI Terms and Conditions. I will download the subscription file and submit it to UCBI for further processing. <br />
                                       {" "}
                                       <Link href="#" className="ms-1 text-decoration-underline">Download the subscription file</Link>
                                     </label>
