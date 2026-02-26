@@ -4,6 +4,7 @@ import Header from "@/components/layouts/Header";
 import countriesData from "@/lib/mock-data/countriesData";
 import Link from "next/link";
 import { useState } from "react";
+import Select from "react-select";
 
 
 
@@ -14,6 +15,22 @@ import { useState } from "react";
 // };
 
 const SubmitRequest = () => {
+
+  const countryOptions = countriesData.map((c) => ({
+    value: c.countryNameEn,
+    label: ` ${c.countryNameEn}`,
+  }));
+
+  const codeOptions = countriesData.map((c) => ({
+    value: `+${c.countryCallingCode}`,
+    label: `${c.countryNameEn} (+${c.countryCallingCode})`,
+  }));
+
+  const selectSubjectOptions  = [
+    { value: "membership application", label: "1 - membership application" },
+    { value: "request for information", label: "2 - request for information" },
+    { value: "partnership request", label: "3 - partnership request" },
+  ];
 
   //form submit handler
     const [form, setForm] = useState({
@@ -130,7 +147,7 @@ const SubmitRequest = () => {
                                         Country <span style={{ color: "#EA3943" }}> * </span>
                                       </label>
 
-                                      <select
+                                      {/* <select
                                         name="country"
                                         value={form.country}
                                         onChange={handleChange}
@@ -145,7 +162,19 @@ const SubmitRequest = () => {
                                              {country.countryNameEn} 
                                           </option>
                                         ))}
-                                      </select>
+                                      </select> */}
+
+                                      <Select
+                                        options={countryOptions}
+                                        placeholder="Search country..."
+                                        onChange={(selected) =>
+                                          setForm({ ...form, country: selected.value })
+                                        }
+                                        className="react-select-container from-control"
+                                        classNamePrefix="react-select"
+                                        isSearchable
+                                        isClearable
+                                      />
                                     </div>
 
 
@@ -157,7 +186,7 @@ const SubmitRequest = () => {
                                       <div className="input-group">
                                         
                                         {/* Country Code */}
-                                        <select
+                                        {/* <select
                                           className="form-select"
                                           name="phoneCode"
                                           value={form.phoneCode}
@@ -175,7 +204,20 @@ const SubmitRequest = () => {
                                               +{country.countryCallingCode} {country.flag}
                                             </option>
                                           ))}
-                                        </select>
+                                        </select> */}
+
+                                        <Select
+                                        style={{ width: "50px" }}
+                                        options={codeOptions}
+                                        placeholder="Country code.."
+                                        onChange={(selected) =>
+                                          setForm({ ...form, phoneCode: selected.value })
+                                        }
+                                        className="react-select-container form-input"
+                                        classNamePrefix="react-select"
+                                        isSearchable
+                                        isClearable
+                                      />
 
                                         {/* Phone Number */}
                                         <input
@@ -199,7 +241,21 @@ const SubmitRequest = () => {
                                       <label htmlFor="subject" className="form-label">
                                         Subject  <span style={{color:'#EA3943'}}> * </span>
                                         </label>
-                                      <input type="text" name="subject" value={form.subject} onChange={handleChange} required className="form-control" id="subject" />
+                                      {/* <input type="text" name="subject" value={form.subject} onChange={handleChange} required className="form-control" id="subject" /> */}
+
+                                     
+
+                                      <Select 
+                                        options={selectSubjectOptions}
+                                        placeholder="Select a subject.."
+                                        onChange={(selected) =>
+                                          setForm({ ...form, subject: selected.value })
+                                        }
+                                        className="react-select-container from-control"
+                                        classNamePrefix="react-select"
+                                        isSearchable
+                                        isClearable
+                                      />
                                     </div>
                                     <div className="mb-3">
                                       <label htmlFor="comment" className="form-label">
@@ -232,23 +288,7 @@ const SubmitRequest = () => {
             </div>
         </div>
 
-        {/* <!-- Modal --> */}
-    <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div className="modal-dialog modal-dialog-centered modal-lg">
-        <div className="modal-content p-4">
-        <div className="modal-header">
-            <p className="modal-title fs-6" id="exampleModalLabel" style={{color:'#112e50'}}> Looking to Partner With UCBI Banking Ltd?  </p>
-            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
         
-
-        {/* <div className="modal-footer">
-        <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button> 
-      </div> */}
-         
-        </div>
-    </div>
-    </div>
 
 
       <Footer />
