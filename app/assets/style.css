@@ -1234,3 +1234,6 @@ label.form-check-label {
     height: 22px;
     border-radius: 50%;
 }
+::placeholder, select#country, select.form-select { 
+    font-size: 12px;
+}
