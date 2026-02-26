@@ -1237,3 +1237,7 @@ label.form-check-label {
 ::placeholder, select#country, select.form-select { 
     font-size: 12px;
 }
+.form-control, input.form-control {
+    font-size: 12px;
+    line-height: 24px;
+}
