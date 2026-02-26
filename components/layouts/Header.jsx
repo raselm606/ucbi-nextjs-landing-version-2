@@ -317,7 +317,7 @@ try {
                                     </div>
 
 
-                <div className="mb-3">
+                <div className="mb-3 col-lg-6 col-md-6 col-sm-12">
                   <label htmlFor="subject" className="form-label">
                     Subject  <span style={{color:'#EA3943'}}> * </span>
                     </label>
