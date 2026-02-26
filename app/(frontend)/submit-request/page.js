@@ -5,14 +5,7 @@ import countriesData from "@/lib/mock-data/countriesData";
 import Link from "next/link";
 import { useState } from "react";
 import Select from "react-select";
-
-
-
-// export const metadata = {
-//   title: "Submit a Request - Private Blockchain Data Banking ",
-//   description:
-//     "contact us to submit a request for our private blockchain data banking services, including inquiries about investment opportunities, treasury management solutions, and partnership collaborations. Our team is here to assist you with any questions or specific requests related to our exclusive private equity crypto-finance offerings within the UCBI Holding structure.",
-// };
+ 
 
 const SubmitRequest = () => {
 
@@ -267,7 +260,7 @@ const SubmitRequest = () => {
                                     <div className="mb-3 d-flex gap-2 form-check">
                                       <input type="checkbox" style={{width:'20px', height:'20px'}}  className="form-check-input" id="exampleCheck11" />
 
-                                      <label className="form-check-label" for="exampleCheck11">
+                                      <label style={{fontSize:'12px !important'}} className="form-check-label" for="exampleCheck11">
                                       I agree to the UCBI Terms and Conditions. I will download the subscription file and submit it to UCBI for further processing. <br />
                                       {" "}
                                       <Link href="#" className="ms-1 text-decoration-underline">Download the subscription file</Link>

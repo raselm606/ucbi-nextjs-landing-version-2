@@ -4,8 +4,10 @@ import countriesData from "@/lib/mock-data/countriesData";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Select from "react-select";
 import favicon from '../../public/apple-touch-icon.png';
 import Logo from '../../public/images/logo.svg';
+
 const Header = () => {
 
     const [price, setPrice] = useState(null);
@@ -95,6 +97,23 @@ const Header = () => {
   const isPos = typeof change24h === "number" && change24h >= 0;
 
   //form submit handler
+
+  const countryOptions = countriesData.map((c) => ({
+    value: c.countryNameEn,
+    label: ` ${c.countryNameEn}`,
+  }));
+
+  const codeOptions = countriesData.map((c) => ({
+    value: `+${c.countryCallingCode}`,
+    label: `${c.countryNameEn} (+${c.countryCallingCode})`,
+  }));
+
+  const selectSubjectOptions  = [
+    { value: "membership application", label: "1 - membership application" },
+    { value: "request for information", label: "2 - request for information" },
+    { value: "partnership request", label: "3 - partnership request" },
+  ];
+
   const [form, setForm] = useState({
     name: "",
     surname: "",
@@ -252,22 +271,17 @@ try {
                                         Country <span style={{ color: "#EA3943" }}> * </span>
                                       </label>
 
-                                      <select
-                                        name="country"
-                                        value={form.country}
-                                        onChange={handleChange}
-                                        required
-                                        className="form-control"
-                                        id="country"
-                                      >
-                                        <option value="">Select a country</option>
-
-                                        {countriesData.map((country) => (
-                                          <option key={country.countryCode} value={country.countryNameEn}>
-                                             {country.countryNameEn} 
-                                          </option>
-                                        ))}
-                                      </select>
+                                       <Select
+                                        options={countryOptions}
+                                        placeholder="Search country..."
+                                        onChange={(selected) =>
+                                          setForm({ ...form, country: selected.value })
+                                        }
+                                        className="react-select-container from-control"
+                                        classNamePrefix="react-select"
+                                        isSearchable
+                                        isClearable
+                                      />
                                     </div>
 
 
@@ -279,25 +293,18 @@ try {
                                       <div className="input-group">
                                         
                                         {/* Country Code */}
-                                        <select
-                                          className="form-select"
-                                          name="phoneCode"
-                                          value={form.phoneCode}
-                                          onChange={handleChange}
-                                          required
-                                          style={{ maxWidth: "100px" }}
-                                        >
-                                          <option value="">code</option>
-
-                                          {countriesData.map((country) => (
-                                            <option
-                                              key={country.countryCode}
-                                              value={`+${country.countryCallingCode}`}
-                                            >
-                                              +{country.countryCallingCode} {country.flag}
-                                            </option>
-                                          ))}
-                                        </select>
+                                        <Select
+                                        style={{ width: "50px" }}
+                                        options={codeOptions}
+                                        placeholder="Country code.."
+                                        onChange={(selected) =>
+                                          setForm({ ...form, phoneCode: selected.value })
+                                        }
+                                        className="react-select-container form-input"
+                                        classNamePrefix="react-select"
+                                        isSearchable
+                                        isClearable
+                                      />
 
                                         {/* Phone Number */}
                                         <input
@@ -321,7 +328,17 @@ try {
                   <label htmlFor="subject" className="form-label">
                     Subject  <span style={{color:'#EA3943'}}> * </span>
                     </label>
-                  <input type="text" name="subject" value={form.subject} onChange={handleChange} required className="form-control" id="subject" />
+                  <Select 
+                                        options={selectSubjectOptions}
+                                        placeholder="Select a subject.."
+                                        onChange={(selected) =>
+                                          setForm({ ...form, subject: selected.value })
+                                        }
+                                        className="react-select-container from-control"
+                                        classNamePrefix="react-select"
+                                        isSearchable
+                                        isClearable 
+                                      />
                 </div>
                 <div className="mb-3">
                   <label htmlFor="comment" className="form-label">
@@ -332,7 +349,7 @@ try {
                 </div>
                 <div className="mb-3 d-flex gap-2   form-check ">
                   <input type="checkbox" style={{width:'20px', height:'20px'}} className="form-check-input mr-2" id="exampleCheck1" />
-                  <label className="form-check-label" for="exampleCheck1">
+                  <label style={{fontSize:'12px'}} className="form-check-label" for="exampleCheck1">
   I agree to the UCBI Terms and Conditions. I will download the subscription file and submit it to UCBI for further processing. 
   {" "}
   <Link href="#" className="ms-1 text-decoration-underline">Download the subscription file</Link>
