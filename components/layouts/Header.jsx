@@ -109,9 +109,9 @@ const Header = () => {
   }));
 
   const selectSubjectOptions  = [
-    { value: "membership application", label: "1 - membership application" },
-    { value: "request for information", label: "2 - request for information" },
-    { value: "partnership request", label: "3 - partnership request" },
+    { value: "membership application", label: "Membership application" },
+    { value: "request for information", label: "Request for information" },
+    { value: "partnership request", label: "Partnership request" },
   ];
 
   const [form, setForm] = useState({
