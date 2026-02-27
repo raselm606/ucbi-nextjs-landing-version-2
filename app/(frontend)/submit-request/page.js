@@ -20,9 +20,9 @@ const SubmitRequest = () => {
   }));
 
   const selectSubjectOptions  = [
-    { value: "membership application", label: "1 - membership application" },
-    { value: "request for information", label: "2 - request for information" },
-    { value: "partnership request", label: "3 - partnership request" },
+    { value: "membership application", label: "Membership application" },
+    { value: "request for information", label: "Request for information" },
+    { value: "partnership request", label: "Partnership request" },
   ];
 
   //form submit handler
@@ -98,7 +98,7 @@ const SubmitRequest = () => {
                     <div className="col-lg-9" style={{marginTop:'180px', marginBottom:'100px'}}>
                         <div className="contact_page_content mb-5 ">
                             <h5 className="" style={{color:'#112d50'}}>Interested in Becoming a Member of UCBI Group Technologies?</h5>
-                            <p style={{color:'#112d50'}}>Submit a request to get in touch with our team and explore partnership opportunities.</p>
+                            <p style={{color:'#112d50'}}>Submit a request to get in touch with our team and explore partnership opportunities</p>
                             </div>
 
                             <div className="modal-body" style={{color:'#112e50'}}>
@@ -132,7 +132,7 @@ const SubmitRequest = () => {
                                         Email address  <span style={{color:'#EA3943'}}> * </span>
                                         </label>
                                       <input type="email" name="email" value={form.email} onChange={handleChange} required className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-                                      <div id="emailHelp" className="form-text">We will never share your email with anyone else.</div>
+                                      <div id="emailHelp" className="form-text">We will never share your email with anyone else</div>
                                     </div>
 
                                     <div className="mb-3 col-lg-6 col-md-6 col-sm-12">
@@ -225,7 +225,7 @@ const SubmitRequest = () => {
                                       </div>
 
                                       <div className="form-text">
-                                        We will never share your phone with anyone else.
+                                        We will never share your phone with anyone else
                                       </div>
                                     </div>
 
@@ -255,13 +255,13 @@ const SubmitRequest = () => {
                                         Your Message   <span style={{color:'#EA3943'}}> * </span>
                                         </label>
                                       <textarea  className="form-control" name="comments" value={form.comments} onChange={handleChange} required id="comments" rows="4" ></textarea>
-                                      <div id="emailHelp" className="form-text">Please do not include any website link. Otherwise we could not be able to receive your request.</div>
+                                      <div id="emailHelp" className="form-text">Please do not include any website link Otherwise we could not be able to receive your request</div>
                                     </div>
                                     <div className="mb-3 d-flex gap-2 form-check">
                                       <input type="checkbox" style={{width:'20px', height:'20px'}}  className="form-check-input" id="exampleCheck11" />
 
                                       <label style={{fontSize:'10px !important'}} className="form-check-label" for="exampleCheck11">
-                                      I agree to the UCBI Terms and Conditions. <br /> I will download the subscription file and submit it to UCBI for further processing. 
+                                      I agree to the UCBI Terms and Conditions <br /> I will download the subscription file and submit it to UCBI for further processing 
                                       {" "}
                                       <Link href="#" className="ms-1 text-decoration-underline">Download the subscription file</Link>
                                     </label>
