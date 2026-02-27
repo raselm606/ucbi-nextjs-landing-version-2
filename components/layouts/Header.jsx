@@ -264,7 +264,7 @@ try {
                     Email address  <span style={{color:'#EA3943'}}> * </span>
                     </label>
                   <input type="email" name="email" value={form.email} onChange={handleChange} required className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-                  <div id="emailHelp" className="form-text">We will never share your email with anyone else.</div>
+                  <div id="emailHelp" className="form-text">We will never share your email with anyone else</div>
                 </div>
                 <div className="mb-3 col-lg-6 col-md-6 col-sm-12">
                                       <label htmlFor="country" className="form-label">
@@ -319,7 +319,7 @@ try {
                                       </div>
 
                                       <div className="form-text">
-                                        We will never share your phone with anyone else.
+                                        We will never share your phone with anyone else
                                       </div>
                                     </div>
 
@@ -345,12 +345,12 @@ try {
                     Your Message   <span style={{color:'#EA3943'}}> * </span>
                     </label>
                   <textarea  className="form-control" name="comments" value={form.comments} onChange={handleChange} required id="comments" rows="4" ></textarea>
-                  <div id="emailHelp" className="form-text">Please do not include any website link. Otherwise we could not be able to receive your request.</div>
+                  <div id="emailHelp" className="form-text">Please do not include any website link Otherwise we could not be able to receive your request</div>
                 </div>
                 <div className="mb-3 d-flex gap-2   form-check ">
                   <input type="checkbox" style={{width:'20px', height:'20px'}} className="form-check-input mr-2" id="exampleCheck1" />
                   <label style={{fontSize:'10px'}} className="form-check-label" for="exampleCheck1">
-  I agree to the UCBI Terms and Conditions. <br /> I will download the subscription file and submit it to UCBI for further processing. 
+  I agree to the UCBI Terms and Conditions <br /> I will download the subscription file and submit it to UCBI for further processing
   {" "}
   <Link href="#" className="ms-1 text-decoration-underline">Download the subscription file</Link>
 </label>

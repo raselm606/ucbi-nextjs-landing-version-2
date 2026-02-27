@@ -946,6 +946,7 @@ img {
 .footer_section {
     position: relative;
     z-index: 1;
+    border-top: 1px solid #dce0e5;
 }
 .footer_section:before {
     content: "";
