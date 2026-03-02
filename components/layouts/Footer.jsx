@@ -5,9 +5,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import send from '../../public/images/arrow.svg';
 import cc from '../../public/images/cc.png';
+import fr from '../../public/images/france.png';
 import FooterLogo from '../../public/images/logo.svg';
 import sms from '../../public/images/sms.svg';
 import linkedin from '../../public/images/social/linkedin.svg';
+import uk from '../../public/images/uk.png';
 const Footer = () => {
 
   //form submit handler
@@ -122,8 +124,10 @@ const Footer = () => {
               <div className="footer_navs">
                 <ul > 
                   <li><Link   href="mailto:contact@ucbibanking.io">Contact@ucbibanking.io</Link></li> 
-                  <li><Link href="+33376876876"  >+33 184 160 139 ( FR )</Link></li> 
-                  <li><Link href="+441632960123"  >+44 203 445 63 88 ( UK )</Link></li> 
+                  <li><Link href="+33376876876"  >+33 184 160 139 
+                  <Image style={{width: "13px", height: "13px", marginLeft: "6px"}} src={fr} alt="france"/> </Link></li> 
+                  <li><Link href="+441632960123"  >+44 203 445 63 88 
+                  <Image style={{width:"13px", height: "13px", marginLeft:'6px'}} src={uk} alt="uk"/></Link></li> 
                   <li><Link href="mailto:contact@ucbibanking.io">Monday to Friday at 9am to 6pm</Link></li> 
                   
                 </ul>
