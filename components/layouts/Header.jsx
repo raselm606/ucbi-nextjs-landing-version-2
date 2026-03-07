@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Select from "react-select";
-import favicon from '../../public/apple-touch-icon.png';
 import Logo from '../../public/images/logo.svg';
 
 const Header = () => {
@@ -193,7 +192,7 @@ try {
                     <Link className="nav-link active" aria-current="page" href="/#about">About</Link>
                     </li>
                     <li className="nav-item">
-                    <Link className="nav-link" href="#">Blockchain</Link>
+                    <Link className="nav-link" target="_blank" href="https://etherscan.io/token/0x2adba23cf1252de095aced801e758b369ec10426">Blockchain</Link>
                     </li>
                     <li className="nav-item">
                     <Link className="nav-link" href="/#treasury-management">Treasury</Link>
@@ -207,14 +206,14 @@ try {
                      
                      
                 </ul>
-                <div className="price_arra d-flex align-item-center mx-4">
+                {/* <div className="price_arra d-flex align-item-center mx-4">
                 <Image src={favicon} width={30} height={30} alt="logo" priority/>
                     {err && <p style={{ color: "red", textAlign: "center" }}>{err}</p>}
                 <span className="d-block " style={{ color: isPos ? "#16c784" : "#EA3943", fontSize:'11px', fontWeight:'600' }}> 
-                {price == null ? "--" : `$${price.toFixed(2)}`}  {" UCBI "}
+                {price == null ? "--" : `$${price.toFixed(2)}`}  {" UCBI "} */}
                             {/*(  {change24h == null ? "--" : `${isPos ? "+" : ""}${change24h.toFixed(2)}%`} 24h )*/}
-                            </span>
-                </div>
+                            {/* </span>
+                </div> */}
                 <div className="top_button">
 
                     <Button variant="top_nav_button" href="#" target="_blank"> Dashboard</Button>
@@ -350,7 +349,7 @@ try {
                 <div className="mb-3 d-flex gap-2   form-check ">
                   <input type="checkbox" style={{width:'20px', height:'20px'}} className="form-check-input mr-2" id="exampleCheck1" />
                   <label style={{fontSize:'10px'}} className="form-check-label" for="exampleCheck1">
-  I agree to the UCBI Terms and Conditions <br /> I will download the subscription file and submit it to UCBI for further processing
+  I agree to the UCBI Terms and Conditions <br /> I will download the subscription file and submit it to UCBI for further processing -
   {" "}
   <Link href="#" className="ms-1 text-decoration-underline">Download the subscription file</Link>
 </label>

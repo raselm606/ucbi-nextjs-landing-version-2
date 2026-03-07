@@ -152,7 +152,7 @@ const Driving = () => {
   return (
     <>
         <div className="driving_section ">
-            <div className="container cline">
+            <div className="container cline" id="about">
                 <div className="row align-items-center justify-content-center">
                     <div className="col-lg-4 col-md-4 mb-3">
                         <div className="driving_img text-center">
@@ -161,7 +161,7 @@ const Driving = () => {
                     </div>
                     <div className="offset-lg-2 offset-md-1 col-md-5 col-lg-5">
                         <div className="driving_content">
-                            <h2 className="section_title_dark" >
+                            <h2 className="section_title_dark"  >
                                 <span style={{color:'#0cc0df'}}> Strategic </span> <br/> and Institutional Positioning
                             </h2>
                             <p className="section_paragraph_dark t1_width">
