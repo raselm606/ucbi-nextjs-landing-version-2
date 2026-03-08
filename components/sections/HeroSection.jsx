@@ -28,7 +28,10 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
+         <div id="about" className="pt-5"></div>
+       
       </div>
+      
     </div>
     </>
   )

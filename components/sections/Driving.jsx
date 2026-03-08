@@ -152,7 +152,7 @@ const Driving = () => {
   return (
     <>
         <div className="driving_section ">
-            <div className="container cline" id="about">
+            <div className="container cline" >
                 <div className="row align-items-center justify-content-center">
                     <div className="col-lg-4 col-md-4 mb-3">
                         <div className="driving_img text-center">
