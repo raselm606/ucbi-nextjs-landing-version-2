@@ -10,8 +10,8 @@ const PapersToken = () => {
                        <h2 className="section_title_white" >
                         Whitepaper
                        </h2>
-                       <p className="section_paragraph_white" >
-                        The Whitepaper provides a structured overview of the Ethereum-focused treasury and Private Investment platform It outlines the diversified allocation governance framework and risk principles supporting disciplined multi-asset growth long-term sustainability and institutional alignment
+                       <p className="section_paragraph_white" > 
+                        The Whitepaper provides a well structured overview of the Ethereum focused treasury and Private Investment platform It outlines the diversified allocation governance framework and risk principles supporting disciplined multi asset growth long term sustainability and institutional alignment
                         </p> 
                         <Button variant="primary" href="https://doc.ucbibanking.io/ucbi_whitepaper" target="_blank"> Download</Button> 
                     </div>
