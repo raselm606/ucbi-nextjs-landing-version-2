@@ -11,7 +11,7 @@ const PapersToken = () => {
                         Whitepaper
                        </h2>
                        <p className="section_paragraph_white" >
-                        The UCBI Banking Whitepaper provides a structured overview of UCBI’s blockchain-based data banking ecosystem It outlines the underlying architecture governance considerations and security principles supporting the development of a secure and institutionally aligned digital infrastructure
+                        The Whitepaper provides a structured overview of the Ethereum-focused treasury and Private Investment platform It outlines the diversified allocation governance framework and risk principles supporting disciplined multi-asset growth long-term sustainability and institutional alignment
                         </p> 
                         <Button variant="primary" href="https://doc.ucbibanking.io/ucbi_whitepaper" target="_blank"> Download</Button> 
                     </div>
