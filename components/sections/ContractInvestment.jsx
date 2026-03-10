@@ -1,12 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
-import ripple_icon from '../../public/images/ripple.png';
 import atom_icon from '../../public/images/atom.png';
 import btc_icon from '../../public/images/btc.png';
 import eth_icon from '../../public/images/eth.png';
+import ripple_icon from '../../public/images/ripple.png';
 import ucbi_icon from '../../public/images/ucbi.png';
 
 const ContractInvestment = () => {
@@ -120,7 +120,7 @@ const ContractInvestment = () => {
                            Private access to innovation
                         </h2>
                         <p className="section_paragraph_white"  >
-                           Access is reserved for a restricted circle of associates integrating the capital of the UCBI holding company acting as parent company of the project structures each operation is part of a logic of private equity type private shareholding confidential and not open to the public oriented towards the creation of technological value over the long term
+                           Access is reserved for a restricted circle of private investors integrating capital at holding level acting as parent entity of the structured platform each participation follows a private investment logic based on shareholder alignment confidential structure & long-term value creation through Ethereum accumulation & diversified multi-asset strategy
                         </p>
 
                         <div className="divider_lin ggl"  ></div>

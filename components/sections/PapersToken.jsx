@@ -22,13 +22,13 @@ const PapersToken = () => {
                 <div className="  col-lg-5">
                     <div className="tokenomics_area" >
                         <h2 className="section_title_dark" >
-                            Tokenomics  
+                            Strategy Advisory  
                         </h2>
                         <p className="section_paragraph_dark" >
-                            The UCBI tokenomics framework is presented for informational purposes only and describes the structural principles governing the issuance allocation and lifecycle of digital units within the UCBI ecosystem It outlines governance mechanisms technical constraints and alignment considerations without constituting
+                            The Strategy Advisory framework is presented for informational purposes only and describes structural principles guiding treasury structuring and strategic development It outlines governance standards and alignment considerations without constituting financial solicitation or public offering
                         </p>
                         <Button style={{background:'#112E50 !important'}} variant="primary" 
-                        href="https://doc.ucbibanking.io/ucbi_tokenomics" target="_blank"> Download</Button> 
+                        href="https://calendly.com/ucbibanking" target="_blank"> Take an Appointment</Button> 
                     </div>
                 </div>
             </div>

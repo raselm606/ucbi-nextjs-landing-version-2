@@ -13,7 +13,7 @@ const GoalandEffort = () => {
                         <h2 className="section_title_dark" >
                             Long-term support <br /> for secure digital innovation
                         </h2>
-                        <p   className="section_paragraph_dark">Operating within a private and confidential framework UCBI is structured as a holding company supporting selected digital and blockchain-related projects through private equity-style shareholding</p>
+                        <p   className="section_paragraph_dark">Operating within a private investment framework the holding structure supports Ethereum treasury strategy and diversified multi-asset capital allocation through shareholder participation</p>
 
                         <div className="divider_lin"></div>
 
