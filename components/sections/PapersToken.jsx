@@ -25,10 +25,10 @@ const PapersToken = () => {
                             Strategy Advisory  
                         </h2>
                         <p className="section_paragraph_dark" >
-                            The Strategy Advisory framework is presented for informational purposes only and describes structural principles guiding treasury structuring and strategic development It outlines governance standards and alignment considerations without constituting financial solicitation or public offering
+                            Strategy Advisory services are available through formal appointment and structured engagement The scope covers treasury structuring capital allocation and long-term strategic development delivered within a private confidential and non-public framework without constituting financial solicitation or public offering
                         </p>
                         <Button style={{background:'#112E50 !important'}} variant="primary" 
-                        href="https://calendly.com/ucbibanking" target="_blank"> Take an Appointment</Button> 
+                        href="https://calendly.com/ucbibanking" target="_blank"> Appointment</Button> 
                     </div>
                 </div>
             </div>
