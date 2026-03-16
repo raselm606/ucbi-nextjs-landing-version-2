@@ -2,7 +2,6 @@
 import Footer from "@/components/layouts/Footer";
 import Header from "@/components/layouts/Header";
 import countriesData from "@/lib/mock-data/countriesData";
-import Link from "next/link";
 import { useState } from "react";
 import Select from "react-select";
  
@@ -261,8 +260,9 @@ const SubmitRequest = () => {
                                       <input type="checkbox" style={{width:'20px', height:'20px'}}  className="form-check-input" id="exampleCheck11" />
 
                                       <label style={{fontSize:'10px !important'}} className="form-check-label" for="exampleCheck11">
-                                      I agree to the UCBI Terms and Conditions <br /> I will download the subscription file and submit it to UCBI for further processing -
-                                      <Link href="#" className="ms-1 text-decoration-underline">Download the subscription file</Link>
+                                      I agree to the UCBI Terms and Conditions <br /> 
+                                      {/* I will download the subscription file and submit it to UCBI for further processing -
+                                      <Link href="#" className="ms-1 text-decoration-underline">Download the subscription file</Link> */}
                                     </label>
 
                                     </div>

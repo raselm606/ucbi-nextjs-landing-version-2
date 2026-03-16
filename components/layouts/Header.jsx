@@ -349,7 +349,9 @@ try {
                 <div className="mb-3 d-flex gap-2   form-check ">
                   <input type="checkbox" style={{width:'20px', height:'20px'}} className="form-check-input mr-2" id="exampleCheck1" />
                   <label style={{fontSize:'10px'}} className="form-check-label" for="exampleCheck1">
-  I agree to the UCBI Terms and Conditions <br /> I will download the subscription file and submit it to UCBI for further processing -<Link href="#" className="ms-1 text-decoration-underline">Download the subscription file</Link>
+  I agree to the UCBI Terms and Conditions <br />
+  
+   {/* I will download the subscription file and submit it to UCBI for further processing -<Link href="#" className="ms-1 text-decoration-underline">Download the subscription file</Link> */}
 </label>
                 </div>
                 <button disabled={loading} type="submit" className="btn btn-primary">
