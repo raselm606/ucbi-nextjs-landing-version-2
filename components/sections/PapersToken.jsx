@@ -25,7 +25,7 @@ const PapersToken = () => {
                             Partnership Advisory  
                         </h2>
                         <p className="section_paragraph_dark" >
-                            Partnership Advisory services are available through formal appointment and structured engagement The scope covers treasury structuring blockchain integration corporate finance strategy and long-term strategic development delivered within a private confidential and non-public framework without constituting financial solicitation
+                            Strategy Advisory services are exclusively provided to partners and shareholders through formal appointments and structured engagements our advisory scope covers treasury structuring blockchain integration corporate finance strategy & long-term development delivered within a  private & confidential framework
                         </p>
                         <Button style={{background:'#112E50 !important'}} variant="primary" 
                         href="https://calendly.com/ucbibanking" target="_blank"> Appointment</Button> 
