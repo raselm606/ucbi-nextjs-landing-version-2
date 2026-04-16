@@ -8,7 +8,7 @@ const PapersToken = () => {
                 <div className="col-lg-5 ">
                     <div className="white_paper_area" >
                        <h2 className="section_title_white" >
-                        Whitepaper
+                        Business Model
                        </h2>
                        <p className="section_paragraph_white" > 
                         The Whitepaper provides a well structured overview of the Ethereum focused treasury and Private Investment platform It outlines the diversified allocation governance framework and risk principles supporting disciplined multi asset growth long term sustainability and institutional alignment
