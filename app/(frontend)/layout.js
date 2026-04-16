@@ -31,7 +31,7 @@ const ogImage = "/logo_ucbi.jpg";
   // base URL 
   metadataBase: new URL(siteUrl),
   title: {
-    default: "UCBI Banking - Private Blockchain Data Banking",
+    default: "UCBI Banking - Blockchain Private Equity Holding",
     template: "%s | UCBI",
   },
   description:
@@ -42,7 +42,7 @@ const ogImage = "/logo_ucbi.jpg";
     "coinbase", "jp morgan"],
   
   openGraph: {
-    title: "UCBI Banking - Private Blockchain Data Banking",
+    title: "UCBI Banking - Blockchain Private Equity Holding",
     description:
       "Exclusive private investment platform combining private equity crypto-finance and strategic treasury management to support long-term technological value creation within the UCBI Holding structure reserved for selected partners",
     url: siteUrl,
@@ -61,7 +61,7 @@ const ogImage = "/logo_ucbi.jpg";
   
   twitter: {
     card: "summary",
-    title: "UCBI Banking - Private Blockchain Data Banking ",
+    title: "UCBI Banking - Blockchain Private Equity Holding ",
     description:
       "Exclusive private investment platform combining private equity crypto-finance and strategic treasury management to support long-term technological value creation within the UCBI Holding structure reserved for selected partners",
     images: ["/logo_ucbi.jpg"],
