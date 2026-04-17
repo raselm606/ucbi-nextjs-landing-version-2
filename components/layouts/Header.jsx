@@ -347,8 +347,8 @@ try {
                   <div id="emailHelp" className="form-text">Please do not include any website link Otherwise we could not be able to receive your request</div>
                 </div>
                 <div className="mb-3 d-flex gap-2   form-check ">
-                  <input type="checkbox" style={{width:'20px', height:'20px'}} className="form-check-input mr-2" id="exampleCheck1" />
-                  <label style={{fontSize:'10px', marginTop:'6px'}} className="form-check-label" for="exampleCheck1">
+                  <input type="checkbox" style={{width:'20px', height:'20px'}} className="form-check-input mr-2" id="exampleCheck144" />
+                  <label style={{fontSize:'10px', marginTop:'6px'}} className="form-check-label" for="exampleCheck144">
   I agree to the UCBI Group Technologies LTD Terms and Conditions <br />
   
    {/* I will download the subscription file and submit it to UCBI for further processing -<Link href="#" className="ms-1 text-decoration-underline">Download the subscription file</Link> */}
