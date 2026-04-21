@@ -1084,10 +1084,16 @@ label.form-check-label {
     height: 19px;
     margin-top: 4px;
 }
+
 .img12 {
     width: auto;
     height: 20px;
     margin-top: 4px;
+}
+.img13 {
+    width: 142px;
+    height: auto;
+    margin-top: 5px;
 }
 /* .img1{
   width: 126px;

@@ -8,6 +8,7 @@ import logo12 from "../../public/images/partners/12.jpg";
 // import logo2 from "../../public/images/partners/2.jpg";
 // import logo3 from "../../public/images/partners/3.jpg";
 // import logo3 from "../../public/images/partners/3.jpg";
+import logo13 from "../../public/images/partners/13.png";
 import logo4 from "../../public/images/partners/4.jpg";
 import logo5 from "../../public/images/partners/5.jpg";
 import logo6 from "../../public/images/partners/6.jpg";
@@ -46,6 +47,8 @@ const Partners =  () => {
                         <Image className="img12"  src={logo12} alt="Partner Logo" /></Link>
                         <Link href="https://coinmarketcap.com/currencies/ucbi-banking/" target="_blank">
                         <Image className="img11"  src={logo11} alt="Partner Logo" /></Link>
+                        <Link href="https://www.cyberscope.io/audits/ucbi" target="_blank">
+                        <Image className="img13"  src={logo13} alt="Partner Logo" /></Link>
 
                         
                         <Link href="https://web3.okx.com/fr/token/ethereum/0x2adba23cf1252de095aced801e758b369ec10426" target="_blank">
@@ -77,6 +80,8 @@ const Partners =  () => {
                         <Image className="img12"  src={logo12} alt="Partner Logo" /></Link>
                         <Link href="https://coinmarketcap.com/currencies/ucbi-banking/" target="_blank">
                         <Image className="img11"  src={logo11} alt="Partner Logo" /></Link>
+                        <Link href="https://www.cyberscope.io/audits/ucbi" target="_blank">
+                        <Image className="img13"  src={logo13} alt="Partner Logo" /></Link>   
 
                         
                         <Link href="https://web3.okx.com/fr/token/ethereum/0x2adba23cf1252de095aced801e758b369ec10426" target="_blank">
