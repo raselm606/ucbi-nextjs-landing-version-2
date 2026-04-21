@@ -9,6 +9,7 @@ import logo12 from "../../public/images/partners/12.jpg";
 // import logo3 from "../../public/images/partners/3.jpg";
 // import logo3 from "../../public/images/partners/3.jpg";
 import logo13 from "../../public/images/partners/13.png";
+import logo14 from "../../public/images/partners/14.jpg";
 import logo4 from "../../public/images/partners/4.jpg";
 import logo5 from "../../public/images/partners/5.jpg";
 import logo6 from "../../public/images/partners/6.jpg";
@@ -45,6 +46,8 @@ const Partners =  () => {
                         <Image className="img10"  src={logo10} alt="Partner Logo" /></Link>
                         <Link href="https://intel.arkm.com/" target="_blank">
                         <Image className="img12"  src={logo12} alt="Partner Logo" /></Link>
+                        <Link href="https://github.com/UCBI-Blockchain-Banking" target="_blank">
+                        <Image className="img14"  src={logo14} alt="Partner Logo" /></Link>
                         <Link href="https://coinmarketcap.com/currencies/ucbi-banking/" target="_blank">
                         <Image className="img11"  src={logo11} alt="Partner Logo" /></Link>
                         <Link href="https://www.cyberscope.io/audits/ucbi" target="_blank">
@@ -78,6 +81,9 @@ const Partners =  () => {
                         <Image className="img10"  src={logo10} alt="Partner Logo" /></Link>
                         <Link href="https://intel.arkm.com/" target="_blank">
                         <Image className="img12"  src={logo12} alt="Partner Logo" /></Link>
+                        <Link href="https://github.com/UCBI-Blockchain-Banking" target="_blank">
+                        <Image className="img14"  src={logo14} alt="Partner Logo" />
+                        </Link>
                         <Link href="https://coinmarketcap.com/currencies/ucbi-banking/" target="_blank">
                         <Image className="img11"  src={logo11} alt="Partner Logo" /></Link>
                         <Link href="https://www.cyberscope.io/audits/ucbi" target="_blank">
