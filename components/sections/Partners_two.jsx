@@ -10,6 +10,7 @@ import logo12 from "../../public/images/partners/12.jpg";
 // import logo3 from "../../public/images/partners/3.jpg";
 import logo13 from "../../public/images/partners/13.png";
 import logo14 from "../../public/images/partners/14.jpg";
+import logo15 from "../../public/images/partners/15.png";
 import logo4 from "../../public/images/partners/4.jpg";
 import logo5 from "../../public/images/partners/5.jpg";
 import logo6 from "../../public/images/partners/6.jpg";
@@ -52,6 +53,8 @@ const Partners =  () => {
                         <Image className="img11"  src={logo11} alt="Partner Logo" /></Link>
                         <Link href="https://www.cyberscope.io/audits/ucbi" target="_blank">
                         <Image className="img13"  src={logo13} alt="Partner Logo" /></Link>
+                        <Link href="https://github.com/curvefi/curve-assets" target="_blank">
+                        <Image className="img15"  src={logo15} alt="Partner Logo" /></Link>
 
                         
                         <Link href="https://web3.okx.com/fr/token/ethereum/0x2adba23cf1252de095aced801e758b369ec10426" target="_blank">
@@ -87,13 +90,17 @@ const Partners =  () => {
                         <Link href="https://coinmarketcap.com/currencies/ucbi-banking/" target="_blank">
                         <Image className="img11"  src={logo11} alt="Partner Logo" /></Link>
                         <Link href="https://www.cyberscope.io/audits/ucbi" target="_blank">
-                        <Image className="img13"  src={logo13} alt="Partner Logo" /></Link>   
+                        <Image className="img13"  src={logo13} alt="Partner Logo" /></Link> 
+                        <Link href="https://github.com/curvefi/curve-assets" target="_blank">
+                        <Image className="img15"  src={logo15} alt="Partner Logo" /></Link>  
 
                         
                         <Link href="https://web3.okx.com/fr/token/ethereum/0x2adba23cf1252de095aced801e758b369ec10426" target="_blank">
                         <Image className="img6"  src={logo6} alt="Partner Logo" /></Link>
                         <Link href="https://trustwallet.com/" target="_blank">
                         <Image className="img7"  src={logo7} alt="Partner Logo" /></Link>
+
+                        
                     </div>
 
                     {/* {partnetData.map((item, index) => (
