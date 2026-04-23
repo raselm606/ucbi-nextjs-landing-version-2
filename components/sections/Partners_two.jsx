@@ -53,7 +53,7 @@ const Partners =  () => {
                         <Image className="img11"  src={logo11} alt="Partner Logo" /></Link>
                         <Link href="https://www.cyberscope.io/audits/ucbi" target="_blank">
                         <Image className="img13"  src={logo13} alt="Partner Logo" /></Link>
-                        <Link href="https://github.com/curvefi/curve-assets" target="_blank">
+                        <Link href="https://www.curve.finance/" target="_blank">
                         <Image className="img15"  src={logo15} alt="Partner Logo" /></Link>
 
                         
@@ -91,7 +91,7 @@ const Partners =  () => {
                         <Image className="img11"  src={logo11} alt="Partner Logo" /></Link>
                         <Link href="https://www.cyberscope.io/audits/ucbi" target="_blank">
                         <Image className="img13"  src={logo13} alt="Partner Logo" /></Link> 
-                        <Link href="https://github.com/curvefi/curve-assets" target="_blank">
+                        <Link href="https://www.curve.finance/" target="_blank">
                         <Image className="img15"  src={logo15} alt="Partner Logo" /></Link>  
 
                         
