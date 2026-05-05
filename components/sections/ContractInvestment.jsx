@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
 import atom_icon from '../../public/images/atom.png';
 import btc_icon from '../../public/images/btc.png';
+import dogecoin_icon from '../../public/images/dogecoin.png';
 import eth_icon from '../../public/images/eth.png';
 import ripple_icon from '../../public/images/ripple.png';
 import ucbi_icon from '../../public/images/ucbi.png';
@@ -14,6 +15,7 @@ const ContractInvestment = () => {
     const [eth, setEth] = useState(null);
     const [atom, setAtom] = useState(null);
     const [xrp, setXrp] = useState(null);
+    const [dogecoin, setDogecoin] = useState(null);
     const [err, setErr] = useState(null);
 
     const [ucbiPrice, setUcbiPrice] = useState(null);
@@ -27,8 +29,8 @@ const ContractInvestment = () => {
         const ethRes = await fetch("/api/price/eth", { cache: "no-store" }).then(r => r.json());
         const atomRes = await fetch("/api/price/atom", { cache: "no-store" }).then(r => r.json());
         const xrpRes = await fetch("/api/price/xrp", { cache: "no-store" }).then(r => r.json());
-
-        if (!btcRes.ok || !ethRes.ok || !atomRes.ok || !xrpRes.ok) {
+        const dogecoinRes = await fetch("/api/price/dogecoin", { cache: "no-store" }).then(r => r.json());
+        if (!btcRes.ok || !ethRes.ok || !atomRes.ok || !xrpRes.ok || !dogecoinRes.ok) {
           setErr("Price load failed");
           return;
         }
@@ -37,13 +39,14 @@ const ContractInvestment = () => {
         setEth(ethRes.price);
         setAtom(atomRes.price);
         setXrp(xrpRes.price);
+        setDogecoin(dogecoinRes.price);
       } catch (e) {
         setErr("Network/API error");
       }
     }
 
     load();
-    console.log(btc, eth, atom, xrp, err);
+    console.log(btc, eth, atom, xrp, dogecoin, err);
 
   }, []);
 
@@ -166,6 +169,14 @@ const ContractInvestment = () => {
 
                                 <div className="token_item">
                                     <div className="main_coin">
+                                        <Image src={dogecoin_icon} alt="" width={50} height={50} />
+                                    <span> Dogecoin</span>
+                                    </div>
+                                    <span className="price_t">${dogecoin ?? "--"}      </span>
+                                </div>
+
+                                <div className="token_item">
+                                    <div className="main_coin">
                                         <Image src={ucbi_icon} alt="" width={50} height={50} />
                                     <span> UCBI</span>
                                     </div>
@@ -202,6 +213,14 @@ const ContractInvestment = () => {
                                     <span> Ripple</span>
                                     </div>
                                     <span className="price_t">${xrp ?? "--"}      </span>
+                                </div>
+
+                                <div className="token_item">
+                                    <div className="main_coin">
+                                        <Image src={dogecoin_icon} alt="" width={50} height={50} />
+                                    <span> Dogecoin</span>
+                                    </div>
+                                    <span className="price_t">${dogecoin ?? "--"}      </span>
                                 </div>
 
                                 <div className="token_item">
