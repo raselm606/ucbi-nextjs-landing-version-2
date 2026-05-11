@@ -16,7 +16,7 @@ const HeroSection = () => {
                 </h1>
               <p className="hero_paragraph" >Union of Cryptocurrencies and Blockchain International</p>
               <div className="hero_button" >
-                <Button href="#" target="_blank" variant="primary">Token</Button>
+                <Button style={{ width: '115px !important' }} href="#"   variant="primary">Token</Button>
               </div>
             </div>
           </div>
