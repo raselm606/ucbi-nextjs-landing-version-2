@@ -16,7 +16,7 @@ const HeroSection = () => {
                 </h1>
               <p className="hero_paragraph" >Union of Cryptocurrencies and Blockchain International</p>
               <div className="hero_button" >
-                <Button href="https://tothemoon.com/trading/UCBI_USDC" target="_blank" variant="primary">Trading</Button>
+                <Button href="#" target="_blank" variant="primary">Token</Button>
               </div>
             </div>
           </div>
