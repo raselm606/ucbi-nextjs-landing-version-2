@@ -6,7 +6,7 @@ import Link from 'next/link';
 import send from '../../public/images/arrow.svg';
 import cc from '../../public/images/cc.png';
 import fr from '../../public/images/france.png';
-import FooterLogo from '../../public/images/logo.svg';
+import FooterLogo from '../../public/images/logo.png';
 import sms from '../../public/images/sms.svg';
 import linkedin from '../../public/images/social/linkedin.svg';
 import uk from '../../public/images/uk.png';

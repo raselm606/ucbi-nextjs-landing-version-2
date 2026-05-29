@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Select from "react-select";
-import Logo from '../../public/images/logo.svg';
+import Logo from '../../public/images/logo.png';
 
 const Header = () => {
 
