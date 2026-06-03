@@ -1,5 +1,4 @@
 'use client';
-import Button from "@/components/ui/Button";
 import countriesData from "@/lib/mock-data/countriesData";
 import Image from "next/image";
 import Link from "next/link";
@@ -104,7 +103,7 @@ const Header = () => {
 
   const codeOptions = countriesData.map((c) => ({
     value: `+${c.countryCallingCode}`,
-    label: `${c.countryNameEn} (+${c.countryCallingCode})`,
+    label: `${c.countryCode} (+${c.countryCallingCode})`,
   }));
 
   const selectSubjectOptions  = [
@@ -192,7 +191,7 @@ try {
                     <Link className="nav-link active" aria-current="page" href="/#about">About</Link>
                     </li>
                     <li className="nav-item">
-                    <Link className="nav-link" target="_blank" href="https://etherscan.io/token/0x2adba23cf1252de095aced801e758b369ec10426">Blockchain</Link>
+                    <Link className="nav-link" target="_blank" href="https://etherscan.io/token/0xb42b35deca033a23401a1a89007a39343a510d0a">Blockchain</Link>
                     </li>
                     <li className="nav-item">
                     <Link className="nav-link" href="/#treasury-management">Treasury</Link>
@@ -216,7 +215,7 @@ try {
                 </div> */}
                 <div className="top_button">
 
-                    <Button variant="top_nav_button" href="https://dashboard.ucbibanking.io"> Dashboard</Button>
+                    <Link target="_blank" variant="top_nav_button" href="https://dashboard.ucbibanking.io"> Dashboard</Link>
                 </div>
                 </div>
             </div>

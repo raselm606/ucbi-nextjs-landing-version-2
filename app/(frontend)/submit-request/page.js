@@ -15,7 +15,7 @@ const SubmitRequest = () => {
 
   const codeOptions = countriesData.map((c) => ({
     value: `+${c.countryCallingCode}`,
-    label: `${c.countryNameEn} (+${c.countryCallingCode})`,
+    label: `${c.countryCode} (+${c.countryCallingCode})`,
   }));
 
   const selectSubjectOptions  = [
