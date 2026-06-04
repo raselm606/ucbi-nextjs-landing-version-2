@@ -180,7 +180,8 @@ const ContractInvestment = () => {
                                         <Image src={ucbi_icon} alt="" width={50} height={50} />
                                     <span> UCBI</span>
                                     </div>
-                                    <span className="price_t"> {ucbiPrice == null ? "--" : `$${ucbiPrice.toFixed(3)}`}     </span>
+                                    {/* <span className="price_t"> {ucbiPrice == null ? "--" : `$${ucbiPrice.toFixed(3)}`}     </span> */}
+                                    <span className="price_t"> $3.20     </span>
                                 </div>
 
                                 <div className="token_item">

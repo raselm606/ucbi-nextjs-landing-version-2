@@ -414,7 +414,7 @@ img {
 .white_paper_area {
     background: #112e50c7;
     margin-bottom: 100px;
-    padding: 27px 103px 50px 70px;
+    padding: 16px 103px 50px 70px;
     position: relative;
 }
  .white_paper_area:before {
@@ -459,8 +459,29 @@ img {
     bottom: -160px;
     right: -2px;
 }
+.white_paper_area h2, .tokenomics_area h2{
+    font-size: 15px;
+}
+.tag_ {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  color: #13c6df;
+}
+.tag_:before {
+    content: "";
+    background: currentColor;
+    width: 28px;
+    height: 2px;
+}
 .tokenomics_area { 
-    padding: 27px 72px 50px 70px ;  
+    padding: 16px 72px 50px 70px ;  
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1257,4 +1278,31 @@ label.form-check-label {
 .form-control, input.form-control {
     font-size: 12px;
     line-height: 24px;
+}
+
+.form-control { 
+    background-color: rgb(255 255 255 / 20%) !important; 
+}
+textarea.form-control { 
+    background: rgb(255 255 255 / 20%) !important;
+}
+.modal-body {
+    position: relative;
+    z-index: 1;
+}
+.modal-body:before {
+    content: "";
+    position: absolute;
+    background: url("public/images/logo_ucbi.png");
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: -1;
+    opacity: 0.1;
+}
+.react-select__control.css-13cymwt-control {
+    background: #fff3 !important;
 }

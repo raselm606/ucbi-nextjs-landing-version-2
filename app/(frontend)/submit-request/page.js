@@ -2,6 +2,7 @@
 import Footer from "@/components/layouts/Footer";
 import Header from "@/components/layouts/Header";
 import countriesData from "@/lib/mock-data/countriesData";
+import Link from "next/link";
 import { useState } from "react";
 import Select from "react-select";
  
@@ -260,7 +261,7 @@ const SubmitRequest = () => {
                                       <input type="checkbox" style={{width:'20px', height:'20px'}}  className="form-check-input" id="exampleCheck11" />
 
                                       <label style={{fontSize:'10px !important', marginTop:'6px'}} className="form-check-label" htmlFor="exampleCheck11">
-                                      I agree to theUCBI Group Technologies LTD Terms and Conditions <br /> 
+                                      I agree to theUCBI Group Technologies LTD <Link href="https://doc.ucbibanking.io/ucbi_terms_condition" target="_blank">Terms and Conditions</Link> <br /> 
                                       {/* I will download the subscription file and submit it to UCBI for further processing -
                                       <Link href="#" className="ms-1 text-decoration-underline">Download the subscription file</Link> */}
                                     </label>

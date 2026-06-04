@@ -91,13 +91,23 @@ const fullPhone = `${form.phoneCode}${form.phone}`; // or `${form.phoneCode} ${f
             <div className="row ">
                 <div className="col-lg-5 ">
                     <div className="white_paper_area" >
+                       <span className="tag_">Private Investment Structure</span>
                        <h2 className="section_title_white" >
                         Business Model
                        </h2>
                        <p className="section_paragraph_white" > 
                         UCBI Business Model provides a well structured overview of the Ethereum focused treasury and Private Investment platform It outlines the diversified allocation governance framework and risk principles supporting disciplined multi asset growth long term sustainability and institutional alignment
                         </p> 
-                        <Button variant="primary" href="https://doc.ucbibanking.io/ucbi_whitepaper" target="_blank"> Download</Button> 
+                        <Button variant="primary" href="https://doc.ucbibanking.io/ucbi_whitepaper" target="_blank"> 
+                        <svg width="17" height="16" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 3V14" stroke="currentColor" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M5 20H19" stroke="currentColor" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg> Download</Button> 
                     </div>
                 </div>
                 <div className="col-lg-2">
@@ -105,13 +115,28 @@ const fullPhone = `${form.phoneCode}${form.phone}`; // or `${form.phoneCode} ${f
                 </div>
                 <div className="  col-lg-5">
                     <div className="tokenomics_area" >
+                       <span className="tag_">Strategic Advisory</span>
                         <h2 className="section_title_dark" >
                             Partnership Advisory  
                         </h2>
                         <p className="section_paragraph_dark" >
                             Strategy Advisory services are  provided to partners & shareholders through formal appointments and structured engagements our advisory scope covers treasury structuring blockchain integration corporate finance strategy and long-term development delivered within a strictly  private and confidential framework
                         </p>
-                        <Button style={{background:'#112E50 !important'}}  data-bs-toggle="modal"   href="#submit_a_req"  > Request </Button> 
+                        <Button style={{background:'#112E50 !important'}}  data-bs-toggle="modal"   href="#submit_a_req"  > 
+                          <svg width="20" height="17" viewBox="0 0 24 24" fill="none"
+     xmlns="http://www.w3.org/2000/svg">
+    <path d="M4 18V6C4 4.89543 4.89543 4 6 4H18C19.1046 4 20 4.89543 20 6V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18Z"
+          stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round"/>
+
+    <path d="M8 15L10.5 12.5L13 14.5L16.5 9.5"
+          stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round"/>
+
+    <path d="M15 9.5H16.5V11"
+          stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round"/>
+</svg> Request </Button> 
                     </div>
                 </div>
             </div>

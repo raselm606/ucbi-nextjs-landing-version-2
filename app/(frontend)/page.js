@@ -17,6 +17,7 @@ const Homepage = () => {
       <HeroSection />
       <Partners />
       <Driving />
+      {/* <BusinessAdvisorySection /> */}
       <PapersToken />
       <OurJourney /> 
       <Advancing />

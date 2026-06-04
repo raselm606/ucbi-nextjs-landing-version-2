@@ -1,4 +1,5 @@
 'use client';
+import Button from '@/components/ui/Button';
 import countriesData from "@/lib/mock-data/countriesData";
 import Image from "next/image";
 import Link from "next/link";
@@ -215,7 +216,7 @@ try {
                 </div> */}
                 <div className="top_button">
 
-                    <Link target="_blank" variant="top_nav_button" href="https://dashboard.ucbibanking.io"> Dashboard</Link>
+                    <Button target="_blank" variant="top_nav_button" href="https://dashboard.ucbibanking.io"> Dashboard</Button>
                 </div>
                 </div>
             </div>
@@ -348,7 +349,7 @@ try {
                 <div className="mb-3 d-flex gap-2   form-check ">
                   <input type="checkbox" style={{width:'20px', height:'20px'}} className="form-check-input mr-2" id="exampleCheck144" />
                   <label style={{fontSize:'10px', marginTop:'6px'}} className="form-check-label" for="exampleCheck144">
-  I agree to the UCBI Group Technologies LTD Terms and Conditions <br />
+  I agree to the UCBI Group Technologies LTD <Link href="https://doc.ucbibanking.io/ucbi_terms_condition" target="_blank">Terms and Conditions</Link> <br />
   
    {/* I will download the subscription file and submit it to UCBI for further processing -<Link href="#" className="ms-1 text-decoration-underline">Download the subscription file</Link> */}
 </label>
