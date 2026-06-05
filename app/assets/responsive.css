@@ -72,6 +72,40 @@
 
 }
 
+@media only screen and (width: 1280px) {
+    .hero_image .btc_coin { 
+        margin-left: -39px; 
+        top: 30%;
+        width: 180px;
+        height: 180px;
+    }
+    .hero_image .eth_coin { 
+        width: 200px;
+        height: 200px; 
+        bottom: 23%;
+        right: 30%;
+    }
+    .hero_image .ucbi_coin { 
+    width: 370px;
+    height: 370px; 
+    bottom: 21%;
+    right: 8%;
+}
+.timeline_area img { 
+    display: none;
+}
+.papers_token_section .clinee { 
+    height: 295px; 
+}
+.bg_bb { 
+    padding: 51px 58px 27px;
+}
+.blog_img {
+    width: auto; 
+}
+
+}
+
 @media only screen and  (width: 1024px) {
     .hero_image .btc_coin { 
         margin-left: -98px; 
