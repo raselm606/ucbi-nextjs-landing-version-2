@@ -10,8 +10,272 @@
 }*/
 
 /* Large / Desktop */
-@media only screen and (width: 992px) {
+@media only screen and (min-width: 1850px)  {
+    .hero_image .btc_coin { 
+        margin-left:5px !important; 
+        top: 30%;
+        width: 180px;
+        height: 180px;
+    }
+    .hero_image .eth_coin { 
+        width: 200px;
+        height: 200px; 
+        bottom: 23%;
+        right: 34% ;
+    }
+    .hero_image .ucbi_coin { 
+    width: 370px;
+    height: 370px; 
+    bottom: 21%;
+    right: 19% !important;
+}
+}
+@media only screen and (width: 1800px)  {
+    .hero_image .btc_coin { 
+        margin-left:5px !important; 
+        top: 30%;
+        width: 180px;
+        height: 180px;
+    }
+    .hero_image .eth_coin { 
+        width: 200px;
+        height: 200px; 
+        bottom: 23%;
+        right: 34% ;
+    }
+    .hero_image .ucbi_coin { 
+    width: 370px;
+    height: 370px; 
+    bottom: 21%;
+    right: 15% ;
+}
+}
+@media only screen and (min-width: 1320px) {
+    .hero_image .btc_coin { 
+        margin-left: -39px; 
+        top: 30%;
+        width: 180px;
+        height: 180px;
+    }
+    .hero_image .eth_coin { 
+        width: 200px;
+        height: 200px; 
+        bottom: 23%;
+        right: 34%;
+    }
+    .hero_image .ucbi_coin { 
+    width: 370px;
+    height: 370px; 
+    bottom: 21%;
+    right: 14%;
+}
 
+}
+
+@media only screen and  (width: 1024px) {
+    .hero_image .btc_coin { 
+        margin-left: -98px; 
+        top: 30%;
+        width: 180px;
+        height: 180px;
+    }
+    .hero_image .eth_coin { 
+        width: 200px;
+        height: 200px; 
+        bottom: 23%;
+        right: 34%;
+    }
+    .hero_image .ucbi_coin { 
+    width: 370px;
+    height: 370px; 
+    bottom: 21%;
+    right: 6%;
+}
+.driving_img img {
+    width: 310px; 
+}
+
+.papers_token_section .clinee { 
+    height: 341px !important; 
+}
+.timeline_area img { 
+    display: none;
+}
+.bg_bb { 
+    padding: 11px 50px 9px;
+}
+.goal_content p {
+    width: 100%;
+}
+.blog_img {
+    width: auto; 
+}
+}
+@media only screen and (min-width: 900px) and (max-width: 1000px) {
+    .timeline_area img { 
+        display: none;
+    }
+    .hero_image .btc_coin {
+        width: 100px;
+        height: 100px; 
+        top: 36%;
+        right: 27%;
+    }
+    .hero_image .eth_coin { 
+    width: 100px;
+    height: 100px; 
+    bottom: 39%;
+    right: 26%;
+}
+.hero_image .ucbi_coin { 
+    width: 200px;
+    height: 200px; 
+    bottom: 38%;
+    right: 11%;
+}
+.driving_img img {
+    width: 322px; 
+    margin-top: 42px;
+    margin-left: -170px;
+}
+.papers_token_section .clinee {
+    background: none;
+    height: auto;
+    margin-bottom: 160px;
+    position: unset;
+    overflow: hidden;
+}
+.white_paper_area {
+    background: #112e50; 
+    width: 749px;
+}
+.ourjourney_section { 
+    background-size: cover;
+}
+.timeline_three {
+    margin-top: 109px; 
+}
+.swiper-slide { 
+    display: flex;
+    justify-content: center;
+}
+.footer_section:before { 
+    width: 100%; 
+}
+.driving_content {
+    width: 288px;
+}
+}
+@media only screen and (width: 912px) {
+    .timeline_area img { 
+        display: none;
+    }
+    .hero_image .btc_coin {
+        width: 100px;
+        height: 100px; 
+        top: 36%;
+        right: 27%;
+    }
+    .hero_image .eth_coin { 
+    width: 100px;
+    height: 100px; 
+    bottom: 39%;
+    right: 26%;
+}
+.hero_image .ucbi_coin { 
+    width: 200px;
+    height: 200px; 
+    bottom: 38%;
+    right: 7%;
+}
+.driving_img img {
+    width: 322px; 
+    margin-top: 42px;
+    margin-left: -170px;
+}
+.papers_token_section .clinee {
+    background: none;
+    height: auto;
+    margin-bottom: 160px;
+    position: unset;
+    overflow: hidden;
+}
+.white_paper_area {
+    background: #112e50; 
+    width: 749px;
+}
+.ourjourney_section { 
+    background-size: cover;
+}
+.timeline_three {
+    margin-top: 109px; 
+}
+.swiper-slide { 
+    display: flex;
+    justify-content: center;
+}
+.footer_section:before { 
+    width: 100%; 
+}
+.driving_content {
+    width: 288px;
+}
+}
+
+@media only screen and (width: 820px) {
+    .timeline_area img { 
+        display: none;
+    }
+    .hero_image .btc_coin {
+        width: 100px;
+        height: 100px; 
+        top: 36%;
+        right: 27%;
+    }
+    .hero_image .eth_coin { 
+    width: 100px;
+    height: 100px; 
+    bottom: 39%;
+    right: 26%;
+}
+.hero_image .ucbi_coin { 
+    width: 200px;
+    height: 200px; 
+    bottom: 38%;
+    right: 7%;
+}
+.driving_img img {
+    width: 322px; 
+    margin-top: 42px;
+    margin-left: -170px;
+}
+.papers_token_section .clinee {
+    background: none;
+    height: auto;
+    margin-bottom: 160px;
+    position: unset;
+    overflow: hidden;
+}
+.white_paper_area {
+    background: #112e50; 
+    width: 749px;
+}
+.ourjourney_section { 
+    background-size: cover;
+}
+.timeline_three {
+    margin-top: 109px; 
+}
+.swiper-slide { 
+    display: flex;
+    justify-content: center;
+}
+.footer_section:before { 
+    width: 100%; 
+}
+.driving_content {
+    width: 288px;
+}
 }
 
 /* Medium / Tablet */
@@ -119,6 +383,7 @@
         width: 130px;
         height: 130px; 
         top: 60%;
+        left: 15%;
     }
     .hero_image .eth_coin { 
         width: 150px;
@@ -132,7 +397,7 @@
         width: 300px;
         height: 300px;  
         bottom: 2%;
-        right: 0;
+        right: 42%;
     }
 
     .big_text_number {
@@ -274,8 +539,8 @@
         width: 100% !important; 
     }
     .hero_title {
-        font-size: 34px;
-        line-height: 44px;
+                font-size: 30px;
+        line-height: 33px;
         font-family: var(--title_font);
         margin-bottom: 20px;
     }
@@ -362,6 +627,14 @@
     .goal_sectio .cline { 
         padding: 100px 8px !important;
     }
+    .hero_image .btc_coin { 
+    left: 22%;
+}
+.hero_image .ucbi_coin { 
+    width: 280px;
+    height: 280px;
+    left: 26%;
+}
   
 }
 
