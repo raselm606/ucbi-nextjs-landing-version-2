@@ -1,12 +1,11 @@
 "use client";
  
-import { blogData, blogSectionData } from "@/lib/mock-data/blog";
-import { trimText,trimByWords, dateOnly } from "@/lib/utils/text";
-
-import { useEffect, useState } from "react";
+import { blogSectionData } from "@/lib/mock-data/blog";
+import { dateOnly, trimText } from "@/lib/utils/text";
 
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { Autoplay } from 'swiper/modules';
 import arrow_blog from '../../public/images/arrow_blog.svg';
 import placeholder_blog from '../../public/images/blog3.jpg';
@@ -53,6 +52,7 @@ const BlogSection = () => {
         <div className="container cline"> 
             <div className="row mb-3">
                 <div className="col-lg-12 text-center">
+                    <span className="blog_tag"> Insights & news</span>
                     <h2  className="section_title_dark">
                         {blogSectionData.title}
                     </h2>
@@ -132,15 +132,27 @@ const BlogSection = () => {
                                     unoptimized={typeof thumb === "string"}
                                     width={370} height={200} />
                                     <div className="blog_date">
-                                        <span>{date}</span>
+                                        <span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+         xmlns="http://www.w3.org/2000/svg">
+        <path d="M7 2V5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M17 2V5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M3.5 9H20.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M5 4H19C20.1 4 21 4.9 21 6V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V6C3 4.9 3.9 4 5 4Z"
+              stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        <path d="M8 13H8.01" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M12 13H12.01" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M16 13H16.01" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M8 17H8.01" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M12 17H12.01" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+    </svg> {date}</span>
                                     </div>
                                 </div>
                                 </Link>
                                 <div className="blog_content">
                                     <h4  >{trimText(title,32)}</h4>
-                                    <p  >{trimText(desc,70)}</p>
-                                    {/*<Link href={link} target="_blank">Read more 
-                                    <Image src={arrow_blog} alt="arrow" width={15} height={15} /> </Link>*/}
+                                    {/* <p  >{trimText(desc,65)}</p> */}
+                                    <Link href={link} target="_blank">Read Article 
+                                    <Image src={arrow_blog} alt="arrow" width={15} height={15} /> </Link>
                                 </div>
                             </div>
                                                
