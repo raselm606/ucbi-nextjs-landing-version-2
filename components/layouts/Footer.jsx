@@ -86,7 +86,7 @@ const Footer = () => {
                 </div>
                 <div className="mb-3 mt-3 form-check">
                   <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                  <label className="form-check-label"  >I agree <Link href="#">Terms & Conditions</Link> </label>
+                  <label className="form-check-label"  >I agree <Link href="https://doc.ucbibanking.io/ucbi_terms_condition" target="_blank">Terms & Conditions</Link> </label>
                 </div>
               </form>
             </div>
