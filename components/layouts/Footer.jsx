@@ -98,7 +98,7 @@ const Footer = () => {
                 <ul>
                   <li><Link target="_blank" href="https://etherscan.io/token/0xb42b35deca033a23401a1a89007a39343a510d0a">Blockchain</Link></li>
                   <li><Link data-bs-toggle="modal"   href="#submit-a-request">Submit a Request</Link></li>
-                  <li><Link target="_blank" href="https://calendly.com/ucbibanking">Partnership Advisory</Link></li>
+                  <li><Link data-bs-toggle="modal"   href="#submit-a-request" >Partnership Advisory</Link></li>
                   <li><Link target="_blank" href="https://calendly.com/ucbibanking">Token Launch Support</Link></li>
                 </ul>
               </div>
