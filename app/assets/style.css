@@ -840,7 +840,7 @@ img {
 
 .blog_item:hover {
     transform: translateY(-4px);
-    box-shadow: 0 14px 35px rgba(17, 46, 80, 0.16);
+    /* box-shadow: 0 14px 35px rgba(17, 46, 80, 0.16); */
 }
 .blog_img {
     position: relative;
