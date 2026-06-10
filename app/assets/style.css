@@ -935,14 +935,14 @@ img {
     color: var(--text_dark);
     font-size: 14px;
     font-family: var(--title_font);
-    margin-bottom: 25px;
+    margin-bottom: 50px;
     font-weight: 600;
 }
 .footer_navs ul li a {
     font-size: 12px;
     font-family: var(--paragraph_font);
     color: var(--text_dark);
-    line-height: 28px;
+    line-height: 31px;
 }
 .cc_terms ul li a:hover {
     color: #0cc0df;
