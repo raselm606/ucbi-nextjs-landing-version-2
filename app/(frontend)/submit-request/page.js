@@ -115,21 +115,21 @@ const SubmitRequest = () => {
                                     
                                     <div className="mb-3 col-lg-6 col-md-6 col-sm-12">
                                       <label htmlFor="fullname" className="form-label">Name 
-                                        <span style={{color:'#EA3943'}}> * </span>
+                                        <span style={{color:'#123052'}}> * </span>
                                         </label>
                                       <input type="text" name="name" value={form.name} onChange={handleChange} required className="form-control" id="fullname" aria-describedby="emailHelp" /> 
                                     </div>
 
                                     <div className="mb-3 col-lg-6 col-md-6 col-sm-12">
                                       <label htmlFor="surname" className="form-label">Surname 
-                                        <span style={{color:'#EA3943'}}> * </span>
+                                        <span style={{color:'#123052'}}> * </span>
                                         </label>
                                       <input type="text" name="surname" value={form.surname} onChange={handleChange} required className="form-control" id="surname" aria-describedby="surname" /> 
                                     </div>
 
                                     <div className="mb-3  col-lg-6 col-md-6 col-sm-12"> 
                                       <label htmlFor="exampleInputEmail1" className="form-label">
-                                        Email address  <span style={{color:'#EA3943'}}> * </span>
+                                        Email address  <span style={{color:'#123052'}}> * </span>
                                         </label>
                                       <input type="email" name="email" value={form.email} onChange={handleChange} required className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
                                       <div id="emailHelp" className="form-text">We will never share your email with anyone else</div>
@@ -137,7 +137,7 @@ const SubmitRequest = () => {
 
                                     <div className="mb-3 col-lg-6 col-md-6 col-sm-12">
                                       <label htmlFor="country" className="form-label">
-                                        Country <span style={{ color: "#EA3943" }}> * </span>
+                                        Country <span style={{ color: "#123052" }}> * </span>
                                       </label>
 
                                       {/* <select
@@ -173,7 +173,7 @@ const SubmitRequest = () => {
 
                                     <div className="mb-3 col-lg-6 col-md-6 col-sm-12">
                                       <label className="form-label">
-                                        Phone <span style={{ color: "#EA3943" }}> * </span>
+                                        Phone <span style={{ color: "#123052" }}> * </span>
                                       </label>
 
                                       <div className="input-group">
@@ -232,7 +232,7 @@ const SubmitRequest = () => {
 
                                     <div className="mb-3 col-lg-6 col-md-6 col-sm-12">
                                       <label htmlFor="subject" className="form-label">
-                                        Subject  <span style={{color:'#EA3943'}}> * </span>
+                                        Subject  <span style={{color:'#123052'}}> * </span>
                                         </label>
                                       {/* <input type="text" name="subject" value={form.subject} onChange={handleChange} required className="form-control" id="subject" /> */}
 
@@ -252,7 +252,7 @@ const SubmitRequest = () => {
                                     </div>
                                     <div className="mb-3">
                                       <label htmlFor="comment" className="form-label">
-                                        Your Message   <span style={{color:'#EA3943'}}> * </span>
+                                        Your Message   <span style={{color:'#123052'}}> * </span>
                                         </label>
                                       <textarea  className="form-control" name="comments" value={form.comments} onChange={handleChange} required id="comments" rows="4" ></textarea>
                                       <div id="emailHelp" className="form-text">Please do not include any website link Otherwise we could not be able to receive your request</div>
@@ -261,7 +261,7 @@ const SubmitRequest = () => {
                                       <input type="checkbox" style={{width:'20px', height:'20px'}}  className="form-check-input" id="exampleCheck11" />
 
                                       <label style={{fontSize:'10px !important', marginTop:'6px'}} className="form-check-label" htmlFor="exampleCheck11">
-                                      I agree to theUCBI Group Technologies LTD <Link href="https://doc.ucbibanking.io/ucbi_terms_condition" target="_blank">Terms and Conditions</Link> <br /> 
+                                      I agree to the UCBI Group Technologies LTD <Link href="https://doc.ucbibanking.io/ucbi_terms_condition" target="_blank">Terms and Conditions</Link> <br /> 
                                       {/* I will download the subscription file and submit it to UCBI for further processing -
                                       <Link href="#" className="ms-1 text-decoration-underline">Download the subscription file</Link> */}
                                     </label>

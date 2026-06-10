@@ -801,11 +801,12 @@ img {
 }
 .blog_content h4 {
     color: var(--text_dark);
-    font-size: 14px;
+    font-size: 13px;
     font-family: var(--title_font);
     margin-top: 27px;
     margin-bottom: 20px;
     line-height: 18px;
+    text-transform: uppercase;
 }
 .blog_content p {
     color: var(--paragraph_color);
@@ -830,10 +831,16 @@ img {
 .blog_item {
     background: #fff;
     border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 1px 11px 3px #c8c6c659;
     margin-left: 5px;
     margin-right: 5px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(17, 46, 80, 0.10);
+    transition: all 0.3s ease;
+}
+
+.blog_item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 35px rgba(17, 46, 80, 0.16);
 }
 .blog_img {
     position: relative;
