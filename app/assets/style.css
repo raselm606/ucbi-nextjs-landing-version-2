@@ -935,8 +935,9 @@ img {
     color: var(--text_dark);
     font-size: 14px;
     font-family: var(--title_font);
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     font-weight: 600;
+    margin-top: 30px;
 }
 .footer_navs ul li a {
     font-size: 12px;
