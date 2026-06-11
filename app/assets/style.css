@@ -1355,3 +1355,272 @@ textarea.form-control {
 .react-select__control.css-13cymwt-control {
     background: #fff3 !important;
 }
+
+/*new blog styles*/
+
+/* ========= BLOG CARD FINAL PREMIUM VERSION ========= */
+
+.blog-image-section {
+    background: #f5f7fb;
+}
+
+.blog_item {
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    margin-left: 6px;
+    margin-right: 6px;
+    overflow: visible;
+}
+
+.blog-image-card {
+    display: block;
+    text-decoration: none;
+}
+
+.blog-image-card-inner {
+    position: relative;
+    height: 320px;
+    border-radius: 22px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    /* box-shadow:
+        0 12px 26px rgba(17, 46, 80, 0.16),
+        0 20px 45px rgba(17, 46, 80, 0.14); */
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    isolation: isolate;
+}
+
+/* overall image overlay */
+.blog-card-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+        linear-gradient(180deg, rgba(5, 18, 42, 0.06) 0%, rgba(5, 18, 42, 0.18) 38%, rgba(5, 18, 42, 0.62) 100%),
+        linear-gradient(90deg, rgba(5, 18, 42, 0.34) 0%, rgba(5, 18, 42, 0.08) 42%, rgba(5, 18, 42, 0.18) 100%);
+}
+
+/* ========= TOP LEFT CLIP ========= */
+.blog-card-top {
+    z-index: 3;
+    clip-path: polygon(0 0, 100% 0, -3% 103%, 0 100%);
+    background: linear-gradient(135deg, #061c42f5 0%, #082149e0 58%, #09234cc7 100%);
+    border-top-left-radius: 22px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 68%;
+    height: 152px;
+    padding: 26px 22px;
+    display: flex;
+    position: absolute;
+    top: -4px;
+    left: 0;
+}
+
+/* glossy layer inside top clip */
+.blog-card-top::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.00) 55%);
+    clip-path: inherit;
+    pointer-events: none;
+}
+
+/* diagonal accent line */
+.blog-card-top:after {
+    content: "";
+    transform-origin: center;
+    pointer-events: none;
+    background: linear-gradient(#29d0ff 0%, #18f 100%);
+    border-radius: 30px;
+    width: 2px;
+    height: 362px;
+    position: absolute;
+    top: -82px;
+    left: 33%;
+    transform: rotate(
+50deg);
+    box-shadow: 0 0 14px #26c1ed73;
+}
+
+.blog-card-category {
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.blog-card-category::before {
+    content: "";
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #22cfff;
+    box-shadow: 0 0 14px rgba(34, 207, 255, 0.82);
+    flex: 0 0 auto;
+}
+
+/* ========= BOTTOM GLASS DATE BAR ========= */
+.blog-card-bottom {
+    position: absolute;
+    left: 26px;
+    right: 26px;
+    bottom: 20px;
+    z-index: 3; 
+    padding: 8px 10px 8px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    border-radius: 18px;
+    background: rgba(11, 31, 66, 0.38);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.06),
+        0 8px 22px rgba(0, 0, 0, 0.16);
+}
+
+.blog-card-date {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.blog-card-calendar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    opacity: 0.95;
+}
+
+.blog-card-calendar svg {
+    width: 15px;
+    height: 15px;
+}
+
+.blog-card-arrow {
+    color: #20cfff;
+    background: #ffffff14;
+    border: 1px solid #ffffff1a;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    /* min-width: 29px; */
+    height: 30px;
+    transition: all .35s;
+    display: inline-flex;
+}
+
+.blog-card-arrow svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* ========= HOVER ========= */
+.blog-image-card:hover .blog-image-card-inner {
+    transform: translateY(-6px);
+    box-shadow:
+        0 16px 32px rgba(17, 46, 80, 0.20),
+        0 28px 52px rgba(17, 46, 80, 0.16);
+}
+
+.blog-image-card:hover .blog-card-top {
+    background: linear-gradient(
+        135deg,
+        rgba(7, 31, 72, 0.98) 0%,
+        rgba(8, 36, 80, 0.90) 58%,
+        rgba(10, 39, 84, 0.82) 100%
+    );
+}
+
+.blog-image-card:hover .blog-card-top::after {
+    box-shadow: 0 0 18px rgba(41, 208, 255, 0.55);
+}
+
+.blog-image-card:hover .blog-card-arrow {
+    background: #1ecfff;
+    color: #062044;
+    transform: translateX(3px);
+}
+
+/* ========= RESPONSIVE ========= */
+@media (max-width: 991.98px) {
+    .blog-image-card-inner {
+        height: 320px;
+    }
+
+    .blog-card-top {
+        width: 58%;
+        height: 142px;
+        padding: 24px 20px;
+    }
+
+    .blog-card-top::after {
+        left: 65%;
+        height: 168px;
+    }
+
+    .blog-card-bottom {
+        left: 22px;
+        right: 22px;
+        bottom: 18px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .blog-image-card-inner {
+        height: 300px;
+        border-radius: 18px;
+    }
+
+    .blog-card-top {
+        width: 62%;
+        height: 126px;
+        padding: 22px 18px;
+        border-top-left-radius: 18px;
+        clip-path: polygon(0 0, 79% 0, 49% 100%, 0 100%);
+    }
+
+    .blog-card-top::after {
+        left: 65%;
+        height: 146px;
+        top: -8px;
+    }
+
+    .blog-card-bottom {
+        left: 18px;
+        right: 18px;
+        bottom: 16px;
+        min-height: 54px;
+        border-radius: 16px;
+    }
+
+    .blog-card-arrow {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+    }
+}
+.blog_item {
+    box-shadow: none !important;
+    background: transparent !important;
+}

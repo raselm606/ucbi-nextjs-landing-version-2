@@ -1,13 +1,11 @@
 "use client";
  
 import { blogSectionData } from "@/lib/mock-data/blog";
-import { dateOnly, trimText } from "@/lib/utils/text";
+import { dateOnly } from "@/lib/utils/text";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Autoplay } from 'swiper/modules';
-import arrow_blog from '../../public/images/arrow_blog.svg';
 import placeholder_blog from '../../public/images/blog3.jpg';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -61,7 +59,7 @@ const BlogSection = () => {
              
             <div className="row  drs justify-content-center">
                               
-                <div className="col-lg-9">
+                <div className="col-lg-12">
                     {/* <div className="swiper_nav_btn mb-4 d-flex justify-content-end">
                         <button className="prev-btn">←</button>
                         <button className="next-btn">→</button>
@@ -96,7 +94,7 @@ const BlogSection = () => {
                             spaceBetween: 30,
                         },
                         1024: {
-                            slidesPerView: 3,
+                            slidesPerView: 4,
                             spaceBetween: 20,
                         },
                     }}
@@ -122,7 +120,7 @@ const BlogSection = () => {
 
                 return (
                     <SwiperSlide key={id}>                   
-                            <div className="blog_item" >
+                            {/* <div className="blog_item" >
                                 <Link href={link} target="_blank">
                                 <div className="blog_img" >
                                     <Image 
@@ -133,27 +131,112 @@ const BlogSection = () => {
                                     width={370} height={200} />
                                     <div className="blog_date">
                                         <span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-         xmlns="http://www.w3.org/2000/svg">
-        <path d="M7 2V5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-        <path d="M17 2V5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-        <path d="M3.5 9H20.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-        <path d="M5 4H19C20.1 4 21 4.9 21 6V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V6C3 4.9 3.9 4 5 4Z"
-              stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-        <path d="M8 13H8.01" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
-        <path d="M12 13H12.01" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
-        <path d="M16 13H16.01" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
-        <path d="M8 17H8.01" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
-        <path d="M12 17H12.01" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
-    </svg> {date}</span>
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7 2V5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                                        <path d="M17 2V5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                                        <path d="M3.5 9H20.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                                        <path d="M5 4H19C20.1 4 21 4.9 21 6V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V6C3 4.9 3.9 4 5 4Z"
+                                            stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                                        <path d="M8 13H8.01" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+                                        <path d="M12 13H12.01" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+                                        <path d="M16 13H16.01" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+                                        <path d="M8 17H8.01" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+                                        <path d="M12 17H12.01" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+                                    </svg> {date}</span>
                                     </div>
                                 </div>
                                 </Link>
                                 <div className="blog_content">
-                                    <h4  >{trimText(title,26)}</h4>
-                                    {/* <p  >{trimText(desc,65)}</p> */}
+                                    <h4  >{trimText(title,26)}</h4> 
                                     <Link href={link} target="_blank">Read Article 
                                     <Image src={arrow_blog} alt="arrow" width={15} height={15} /> </Link>
                                 </div>
+                            </div> */}
+
+                            <div className="blog_item" >
+                                 <Link href={link} target="_blank" className="blog-image-card d-block text-decoration-none">
+                                    <div
+                                    className="blog-image-card-inner"
+                                    style={{ backgroundImage: `url(${thumb})` }}
+                                    >
+                                    <div className="blog-card-overlay"></div>
+
+                                    {/* Top-left clipped area content */}
+                                    <div className="blog-card-top">
+                                        <span className="blog-card-category">Business</span>
+                                    </div>
+
+                                    {/* Bottom overlay content */}
+                                    <div className="blog-card-bottom">
+                                        <div className="blog-card-date">
+                                        <span className="blog-card-calendar">
+                                            <svg
+                                            width="18"
+                                            height="18"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                            <path
+                                                d="M8 2V5"
+                                                stroke="currentColor"
+                                                strokeWidth="1.8"
+                                                strokeLinecap="round"
+                                            />
+                                            <path
+                                                d="M16 2V5"
+                                                stroke="currentColor"
+                                                strokeWidth="1.8"
+                                                strokeLinecap="round"
+                                            />
+                                            <path
+                                                d="M3 9H21"
+                                                stroke="currentColor"
+                                                strokeWidth="1.8"
+                                                strokeLinecap="round"
+                                            />
+                                            <rect
+                                                x="3"
+                                                y="4"
+                                                width="18"
+                                                height="17"
+                                                rx="3"
+                                                stroke="currentColor"
+                                                strokeWidth="1.8"
+                                            />
+                                            </svg>
+                                        </span>
+                                        <span>{date}</span>
+                                        </div>
+
+                                        <span className="blog-card-arrow">
+                                        <svg
+                                            width="22"
+                                            height="22"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                            d="M5 12H19"
+                                            stroke="currentColor"
+                                            strokeWidth="1.8"
+                                            strokeLinecap="round"
+                                            />
+                                            <path
+                                            d="M13 6L19 12L13 18"
+                                            stroke="currentColor"
+                                            strokeWidth="1.8"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            />
+                                        </svg>
+                                        </span>
+                                    </div>
+                                    </div>
+                                </Link>
+
+                                
                             </div>
                                                
                     </SwiperSlide>
