@@ -5,6 +5,7 @@ import { useState } from "react";
 import Select from "react-select";
 
 const PapersToken = () => {
+  
  const countryOptions = countriesData.map((c) => ({
     value: c.countryNameEn,
     label: ` ${c.countryNameEn}`,
@@ -19,6 +20,7 @@ const PapersToken = () => {
     { value: "partnership request", label: "Partnership request" },
     { value: "membership application", label: "Membership application" },
     { value: "request for information", label: "Request for information" },
+    { value: "Token launch support", label: "Token launch support" },
   ];
 
   const [form, setForm] = useState({

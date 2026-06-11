@@ -23,6 +23,7 @@ const SubmitRequest = () => {
     { value: "membership application", label: "Membership application" },
     { value: "request for information", label: "Request for information" },
     { value: "partnership request", label: "Partnership request" },
+    { value: "Token launch support", label: "Token launch support" },
   ];
 
   //form submit handler
