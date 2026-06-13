@@ -1,15 +1,12 @@
 "use client";
  
-import { blogSectionData } from "@/lib/mock-data/blog";
 import { dateOnly } from "@/lib/utils/text";
 
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Autoplay } from 'swiper/modules';
-import placeholder_blog from '../../public/images/blog3.jpg';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import placeholder_blog from '../../public/images/blog3.jpg';
+import BlogCard from "./BlogCard";
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/autoplay';
@@ -49,12 +46,28 @@ const BlogSection = () => {
     <div className="blog_section">
         <div className="container cline"> 
             <div className="row mb-3">
-                <div className="col-lg-12 text-center">
+                {/* <div className="col-lg-12 text-center">
                     <span className="blog_tag"> Insights & news</span>
                     <h2  className="section_title_dark">
                         {blogSectionData.title}
                     </h2>
+                </div> */}
+                <div className="col-lg-12">
+                    <div className="ucbi-blog-section-heading">
+                        <span className="ucbi-heading-kicker">
+                            <span className="ucbi-kicker-dot"></span>
+                            Insights & news
+                        </span>
+
+                        <h2>Stay Updated with Latest Articles</h2>
+
+                        {/* <p>
+                            Explore market insights, corporate updates and long-term blockchain
+                            perspectives <br /> from UCBI Group Technologies.
+                        </p> */}
+                    </div>
                 </div>
+
             </div>
              
             <div className="row  drs justify-content-center">
@@ -153,7 +166,7 @@ const BlogSection = () => {
                                 </div>
                             </div> */}
 
-                            <div className="blog_item" >
+                            {/* <div className="blog_item" >
                                  <Link href={link} target="_blank" className="blog-image-card d-block text-decoration-none">
                                     <div
                                     className="blog-image-card-inner"
@@ -161,12 +174,12 @@ const BlogSection = () => {
                                     >
                                     <div className="blog-card-overlay"></div>
 
-                                    {/* Top-left clipped area content */}
+                                     
                                     <div className="blog-card-top">
                                         <span className="blog-card-category">Business</span>
                                     </div>
 
-                                    {/* Bottom overlay content */}
+                                    
                                     <div className="blog-card-bottom">
                                         <div className="blog-card-date">
                                         <span className="blog-card-calendar">
@@ -237,7 +250,16 @@ const BlogSection = () => {
                                 </Link>
 
                                 
-                            </div>
+                            </div> */}
+
+                            <BlogCard
+                          
+                            thumb={thumb}
+                            title={title}
+                            link={link}
+                            desc={desc}
+                            date={date}
+                            />
                                                
                     </SwiperSlide>
                 ); })}

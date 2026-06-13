@@ -98,7 +98,7 @@ const fullPhone = `${form.phoneCode}${form.phone}`; // or `${form.phoneCode} ${f
                         Business Model
                        </h2>
                        <p className="section_paragraph_white" > 
-                        UCBI Business Model provides a well structured overview of the Ethereum focused treasury and Private Investment platform It outlines the diversified allocation governance framework and risk principles supporting disciplined multi asset growth long term sustainability and institutional alignment
+                        UCBI Business Model provides a well overview of the Ethereum focused treasury and Private Investment platform It outlines the diversified allocation governance framework and risk principles supporting disciplined multi asset growth long term sustainability and institutional alignment
                         </p> 
                         <Button variant="primary" href="https://doc.ucbibanking.io/ucbi_whitepaper" target="_blank"> 
                         Download</Button> 

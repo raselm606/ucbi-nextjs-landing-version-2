@@ -1,0 +1,327 @@
+.ucbi-blog-card-wrap {
+  width: 100%;
+  height: 100%;
+}
+
+.ucbi-blog-card {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 22px;
+  background: #ffffff;
+  text-decoration: none;
+  border: 1px solid rgba(17, 46, 80, 0.08);
+  box-shadow:
+    0 16px 38px rgba(17, 46, 80, 0.08),
+    0 5px 14px rgba(17, 46, 80, 0.04);
+  transition: all 0.35s ease;
+}
+
+.ucbi-blog-card:hover {
+  transform: translateY(-8px);
+  /* box-shadow:
+    0 26px 60px rgba(17, 46, 80, 0.15),
+    0 10px 24px rgba(0, 88, 230, 0.08); */
+}
+
+.ucbi-blog-thumb {
+  position: relative;
+  width: 100%;
+  height: 210px;
+  overflow: hidden;
+  background: #112e50;
+}
+
+.ucbi-blog-img {
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.55s ease;
+}
+
+.ucbi-blog-card:hover .ucbi-blog-img {
+  transform: scale(1.07);
+}
+
+.ucbi-blog-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(7, 26, 53, 0.04) 0%,
+      rgba(7, 26, 53, 0.22) 45%,
+      rgba(7, 26, 53, 0.78) 100%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(0, 88, 230, 0.25),
+      rgba(112, 60, 244, 0.14)
+    );
+}
+
+.ucbi-blog-badge {
+  position: absolute;
+  top: 17px;
+  left: 17px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  max-width: calc(100% - 34px);
+  padding: 7px 13px;
+  border-radius: 999px;
+  background: rgba(7, 26, 53, 0.72);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(14px);
+  white-space: nowrap;
+}
+
+.ucbi-blog-badge span {
+  width: 7px;
+  height: 7px;
+  flex: 0 0 7px;
+  border-radius: 50%;
+  background: #29d3ff;
+  box-shadow: 0 0 14px rgba(41, 211, 255, 0.9);
+}
+
+.ucbi-blog-content {
+  position: relative;
+  padding: 22px 20px 20px;
+  background: linear-gradient(180deg, #ffffff 0%, #f7faff 100%);
+}
+
+.ucbi-blog-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 36px;
+  height: 3px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #0cc0df, #703cf4);
+}
+
+/* Title fixed */
+.ucbi-blog-content h3 {
+  margin: 0 0 10px;
+  color: rgb(17 46 80);
+  font-size: 14px;
+  line-height: 1.45;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  transition: color 0.35s ease;
+  text-align: justify;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+
+  height: calc(14px * 1.45 * 3);
+  max-height: calc(14px * 1.45 * 3);
+}
+
+.ucbi-blog-card:hover .ucbi-blog-content h3 {
+  color: #0cc0df;
+}
+
+/* Description fixed */
+.ucbi-blog-content p {
+  margin: 0 0 18px;
+  color: #61708a;
+  font-size: 12px;
+  line-height: 1.65;
+  font-weight: 500;
+  text-align: justify;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+
+  height: calc(12px * 1.65 * 3);
+  max-height: calc(12px * 1.65 * 3);
+}
+
+.ucbi-blog-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 2px;
+}
+
+.ucbi-blog-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-width: 0;
+  color: #64738a;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.ucbi-blog-date svg {
+  flex: 0 0 15px;
+  color: #112e50;
+}
+
+.ucbi-blog-date span {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.ucbi-blog-arrow {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #112e50;
+  background: #ffffff;
+  border: 1px solid rgba(0, 88, 230, 0.18);
+  box-shadow: 0 8px 18px rgba(17, 46, 80, 0.07);
+  transition: all 0.35s ease;
+}
+
+.ucbi-blog-card:hover .ucbi-blog-arrow {
+  color: #ffffff;
+  background: linear-gradient(135deg, #0cc0df, #0cc0df);
+  border-color: transparent;
+  transform: rotate(-35deg);
+}
+
+@media (max-width: 991px) {
+  .ucbi-blog-thumb {
+    height: 230px;
+  }
+}
+
+@media (max-width: 575px) {
+  .ucbi-blog-thumb {
+    height: 220px;
+  }
+
+  .ucbi-blog-content {
+    padding: 21px 18px 19px;
+  }
+
+  .ucbi-blog-content::before {
+    left: 18px;
+  }
+}
+
+/*section title*/
+.ucbi-blog-section-heading {
+  max-width: 680px;
+  margin-bottom: 46px;
+  text-align: left;
+}
+
+.ucbi-heading-kicker {
+    color: #0cc0df;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 1;
+    display: inline-flex;
+}
+
+.ucbi-kicker-dot {
+  width: 9px;
+  height: 9px;
+  flex: 0 0 9px;
+  border-radius: 50%;
+  background: #29d3ff;
+  box-shadow: 0 0 18px rgba(41, 211, 255, 0.9);
+}
+
+.ucbi-heading-kicker::after {
+  content: "";
+  width: 54px;
+  height: 1px;
+  background: linear-gradient(90deg, #0058e6, transparent);
+}
+
+.ucbi-blog-section-heading h2 {
+    color: #112e50;
+    letter-spacing: -.045em;
+    max-width: 620px;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.16;
+    position: relative;
+}
+
+.ucbi-blog-section-heading h2::after {
+  content: "";
+  display: block;
+  width: 74px;
+  height: 4px;
+  margin-top: 18px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #0058e6, #703cf4, #29d3ff);
+}
+
+.ucbi-blog-section-heading p {
+  max-width: 560px;
+  margin: 18px 0 0;
+  color: #61708a;
+  font-size: 12px;
+  line-height: 1.75;
+  font-weight: 500;
+}
+
+@media (max-width: 991px) {
+  .ucbi-blog-section-heading {
+    margin-bottom: 38px;
+  }
+
+  .ucbi-blog-section-heading h2 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 575px) {
+  .ucbi-blog-section-heading {
+    margin-bottom: 32px;
+  }
+
+  .ucbi-heading-kicker {
+    font-size: 12px;
+  }
+
+  .ucbi-heading-kicker::after {
+    width: 38px;
+  }
+
+  .ucbi-blog-section-heading h2 {
+    font-size: 28px;
+  }
+
+  .ucbi-blog-section-heading p {
+    font-size: 15px;
+  }
+}
