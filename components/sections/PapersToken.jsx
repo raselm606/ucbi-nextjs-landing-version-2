@@ -93,7 +93,7 @@ const fullPhone = `${form.phoneCode}${form.phone}`; // or `${form.phoneCode} ${f
             <div className="row ">
                 <div className="col-lg-5 ">
                     <div className="white_paper_area" >
-                       <span className="tag_">Private Investment Structure</span>
+                       <span className="tag_">Private Investment </span>
                        <h2 className="section_title_white" >
                         Business Model
                        </h2>

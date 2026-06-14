@@ -1623,3 +1623,6 @@ textarea.form-control {
     box-shadow: none !important;
     background: transparent !important;
 }
+.swiper-slide { 
+    margin-top: 20px;
+}
