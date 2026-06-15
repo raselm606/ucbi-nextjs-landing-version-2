@@ -110,27 +110,23 @@
 
 /* Title fixed */
 .ucbi-blog-content h3 {
-  margin: 0 0 10px;
-  color: rgb(17 46 80);
-  font-size: 13px;
-  line-height: 1.45;
-  font-weight: 800;
-  letter-spacing: -0.01em;
-  transition: color 0.35s ease;
-  text-align: justify;
-
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-
-  overflow: hidden;
-  text-overflow: ellipsis;
-  word-break: break-word;
-
-  height: calc(14px * 1.45 * 3);
-  max-height: calc(14px * 1.45 * 3);
+    color: #112e50;
+    /* letter-spacing: -.01em; */
+    text-align: justify;
+    -webkit-line-clamp: 3;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    -webkit-box-orient: vertical;
+    height: 60.9px;
+    max-height: 60.9px;
+    margin: 0 0 10px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.45;
+    transition: color .35s;
+    display: -webkit-box;
+    overflow: hidden;
 }
-
 .ucbi-blog-card:hover .ucbi-blog-content h3 {
   color: #0cc0df;
 }
