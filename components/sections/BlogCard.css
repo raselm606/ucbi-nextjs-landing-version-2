@@ -13,9 +13,9 @@
   background: #ffffff;
   text-decoration: none;
   border: 1px solid rgba(17, 46, 80, 0.08);
-  box-shadow:
+  /* box-shadow:
     0 16px 38px rgba(17, 46, 80, 0.08),
-    0 5px 14px rgba(17, 46, 80, 0.04);
+    0 5px 14px rgba(17, 46, 80, 0.04); */
   transition: all 0.35s ease;
 }
 
