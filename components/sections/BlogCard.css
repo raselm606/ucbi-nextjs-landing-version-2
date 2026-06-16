@@ -105,15 +105,15 @@
   width: 36px;
   height: 3px;
   border-radius: 20px;
-  background: linear-gradient(90deg, #0cc0df, #703cf4);
+  background: linear-gradient(90deg, #0cc0df, #1121408c);
 }
 
 /* Title fixed */
 .ucbi-blog-content h3 {
     color: #112e50;
     /* letter-spacing: -.01em; */
-    text-align: justify;
-    -webkit-line-clamp: 3;
+     
+    -webkit-line-clamp: 0;
     text-overflow: ellipsis;
     word-break: break-word;
     -webkit-box-orient: vertical;
@@ -126,6 +126,7 @@
     transition: color .35s;
     display: -webkit-box;
     overflow: hidden;
+    text-transform: uppercase;
 }
 .ucbi-blog-card:hover .ucbi-blog-content h3 {
   color: #0cc0df;
@@ -138,9 +139,9 @@
   font-size: 12px;
   line-height: 1.65;
   font-weight: 500;
-  text-align: justify;
+   
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 0;
   -webkit-box-orient: vertical;
 
   overflow: hidden;
@@ -278,7 +279,7 @@
   height: 4px;
   margin-top: 18px;
   border-radius: 20px;
-  background: linear-gradient(90deg, #0058e6, #703cf4, #29d3ff);
+  background: linear-gradient(90deg, #364d8f, #37cde7, #e8faff);
 }
 
 .ucbi-blog-section-heading p {

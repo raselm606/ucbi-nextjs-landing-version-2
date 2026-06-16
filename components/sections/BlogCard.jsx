@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { cleanText } from "../../lib/utils/text";
 import "./BlogCard.css";
 
 export default function BlogCard({ thumb, title, link, desc, date }) {
@@ -24,9 +25,9 @@ export default function BlogCard({ thumb, title, link, desc, date }) {
         </div>
 
         <div className="ucbi-blog-content">
-          <h3>{title}</h3>
+          <h3>{cleanText(title)}</h3>
 
-          <p>{desc}</p>
+          <p>{cleanText(desc)}</p>
 
           <div className="ucbi-blog-footer">
             <div className="ucbi-blog-date">
