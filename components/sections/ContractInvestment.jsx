@@ -7,6 +7,7 @@ import atom_icon from '../../public/images/atom.png';
 import btc_icon from '../../public/images/btc.png';
 import dogecoin_icon from '../../public/images/dogecoin.png';
 import eth_icon from '../../public/images/eth.png';
+import hype_coin from '../../public/images/hype.png';
 import ripple_icon from '../../public/images/ripple.png';
 import ucbi_icon from '../../public/images/ucbi.png';
 
@@ -16,6 +17,7 @@ const ContractInvestment = () => {
     const [atom, setAtom] = useState(null);
     const [xrp, setXrp] = useState(null);
     const [dogecoin, setDogecoin] = useState(null);
+    const [hype, setHype] = useState(null);
     const [err, setErr] = useState(null);
 
     const [ucbiPrice, setUcbiPrice] = useState(null);
@@ -30,7 +32,10 @@ const ContractInvestment = () => {
         const atomRes = await fetch("/api/price/atom", { cache: "no-store" }).then(r => r.json());
         const xrpRes = await fetch("/api/price/xrp", { cache: "no-store" }).then(r => r.json());
         const dogecoinRes = await fetch("/api/price/dogecoin", { cache: "no-store" }).then(r => r.json());
-        if (!btcRes.ok || !ethRes.ok || !atomRes.ok || !xrpRes.ok || !dogecoinRes.ok) {
+
+        const hypeRes = await fetch("/api/price/hype", { cache: "no-store" }).then(r => r.json());
+
+        if (!btcRes.ok || !ethRes.ok || !atomRes.ok || !xrpRes.ok || !dogecoinRes.ok || !hypeRes.ok) {
           setErr("Price load failed");
           return;
         }
@@ -40,13 +45,14 @@ const ContractInvestment = () => {
         setAtom(atomRes.price);
         setXrp(xrpRes.price);
         setDogecoin(dogecoinRes.price);
+        setHype(hypeRes.price);
       } catch (e) {
         setErr("Network/API error");
       }
     }
 
     load();
-    console.log(btc, eth, atom, xrp, dogecoin, err);
+    console.log(btc, eth, atom, xrp, dogecoin, hype, err);
 
   }, []);
 
@@ -169,6 +175,14 @@ const ContractInvestment = () => {
 
                                 <div className="token_item">
                                     <div className="main_coin">
+                                        <Image src={hype_coin} alt="" width={50} height={50} />
+                                    <span> Hyperliquid</span>
+                                    </div>
+                                    <span className="price_t">${hype ?? "--"}      </span>
+                                </div>
+
+                                <div className="token_item">
+                                    <div className="main_coin">
                                         <Image src={dogecoin_icon} alt="" width={50} height={50} />
                                     <span> Dogecoin</span>
                                     </div>
@@ -211,9 +225,17 @@ const ContractInvestment = () => {
                                 <div className="token_item">
                                     <div className="main_coin">
                                         <Image src={ripple_icon} alt="" width={50} height={50} />
-                                    <span> Ripple</span>
+                                    <span> Ripplee</span>
                                     </div>
                                     <span className="price_t">${xrp ?? "--"}      </span>
+                                </div>
+
+                                <div className="token_item">
+                                    <div className="main_coin">
+                                        <Image src={hype_coin} alt="" width={50} height={50} />
+                                    <span> Hyperliquid</span>
+                                    </div>
+                                    <span className="price_t">${hype ?? "--"}      </span>
                                 </div>
 
                                 <div className="token_item">
