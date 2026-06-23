@@ -1,7 +1,7 @@
 import BootstrapProvider from '@/components/layouts/BootstrapProvider';
 import Script from "next/script";
 
-const GTM_ID = "GTM-K6G7W6MT";
+const GTM_ID = "G-2916M50RJ0"; // Replace with your GTM ID
 
 
 import tasaOrbiter from '@/lib/fonts/tasaOrbiter';
