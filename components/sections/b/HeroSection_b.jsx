@@ -11,7 +11,7 @@ const HeroSection_b = () => {
   return (
     <>
      <section className={styles.heroSection}>
-      <div className="container">
+      <div className="container cline">
         <div className="row align-items-center min-vh-100">
           {/* Left Content */}
           <div className="col-lg-7">

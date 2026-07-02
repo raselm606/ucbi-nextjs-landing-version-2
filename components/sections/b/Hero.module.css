@@ -114,9 +114,16 @@
   backdrop-filter: blur(10px);
 }
 
-.primaryBtn:hover,
+.primaryBtn:hover  {
+  color: #ffffff;
+  background: #112e50 !important;
+  transform: translateY(-2px);
+}
+
+ 
 .secondaryBtn:hover {
   color: #ffffff;
+  background:linear-gradient(135deg, #00c7ff, #0078ff) !important;
   transform: translateY(-2px);
 }
 

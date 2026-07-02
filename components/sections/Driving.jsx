@@ -187,7 +187,7 @@ const Driving = () => {
 
         <div className="white_counter_area_setion">
             <div className="container cline_white">
-                <div className="row gx-4 justify-content-center ptt-90">
+                <div className="row gx-4 justify-content-center pd_white" >
                     {/*{err && <p style={{ color: "red", textAlign: "center" }}>{err}</p>}
                         <div className="tt_area text-center ">
                             <p className="t_tittle">onchain marketcap</p>
