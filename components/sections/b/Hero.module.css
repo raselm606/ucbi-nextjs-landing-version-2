@@ -108,7 +108,7 @@
 }
 
 .secondaryBtn {
-  background: linear-gradient(135deg, #00c7ff,  #00c7ff);
+  background: rgba(255, 255, 255, 0.035);
   color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(10px);

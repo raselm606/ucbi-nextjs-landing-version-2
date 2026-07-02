@@ -222,10 +222,9 @@ img {
     border-radius: 0 !important;
 }
 .top_nav_button:hover {
-  background: linear-gradient(135deg, #00c7ff,  #00c7ff) ;
+  background: linear-gradient(135deg, #112E50,  #112E50) ;
   color: var(--text_white); 
-  transition: var(--transition);
-  transform: translateY(-2px);
+  transition: var(--transition); 
 }
 .top_nav li a {
     margin-left: 12px;
