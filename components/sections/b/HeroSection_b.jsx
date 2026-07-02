@@ -1,3 +1,4 @@
+import Partners from "@/components/sections/Partners_two";
 import Button from "@/components/ui/Button";
 import Image from "next/image";
 import b1 from "../../../public/images/b/b1.png";
@@ -14,7 +15,7 @@ const HeroSection_b = () => {
       <div className="container cline">
         <div className="row align-items-center min-vh-100">
           {/* Left Content */}
-          <div className="col-lg-7">
+          <div className="col-lg-6">
             <div className={styles.heroContent}>
               <span className={styles.heroLabel}>
                 UCBI GROUP TECHNOLOGIES
@@ -95,29 +96,32 @@ const HeroSection_b = () => {
             </div>
           </div> */}
 
-          <div className="col-lg-5">
+          {/* <div className="col-lg-5">
             <div className="styles heroVisual">
-              {/* <div className={styles.visualBg}></div>
+               <div className={styles.visualBg}></div>
               <div className={styles.particleDots}></div>
 
               <div className={styles.orbitOne}></div>
-              <div className={styles.orbitTwo}></div> */}
+              <div className={styles.orbitTwo}></div> 
 
-              {/* <div className={styles.floorGrid}></div> */}
-              {/* <div className={styles.floorGlow}></div>
+               <div className={styles.floorGrid}></div> 
+               <div className={styles.floorGlow}></div>
               <div className={styles.floorRing}></div>
               <div className={styles.floorRingTwo}></div>
-              <div className={styles.floorShadow}></div> */}
+              <div className={styles.floorShadow}></div> 
 
-              {/* <Image
+            <Image
                 src={ucbi_hero}
                 alt="Blockchain Treasury"
                 className={styles.heroImage}
-              /> */}
+              /> 
             </div>
-          </div>
+          </div> */}
+
         </div>
       </div>
+
+      <Partners />
     </section>
     </>
   )

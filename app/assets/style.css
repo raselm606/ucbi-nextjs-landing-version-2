@@ -222,9 +222,10 @@ img {
     border-radius: 0 !important;
 }
 .top_nav_button:hover {
-  background: #112e50 ;
+  background: linear-gradient(135deg, #00c7ff,  #00c7ff) ;
   color: var(--text_white); 
   transition: var(--transition);
+  transform: translateY(-2px);
 }
 .top_nav li a {
     margin-left: 12px;
@@ -306,9 +307,10 @@ img {
 
 /*partners section*/
 .partner_section .cline {
-    border-right: 1px solid rgb(17 46 80 / 15%) !important;
-    border-left: 1px solid rgb(17 46 80 / 15%) !important;
-    padding: 14px 0!important;
+    border-left: 1px solid #263453 !important;
+    border-right: 1px solid #263453 !important;
+    padding: 40px 0 !important;
+    border-top: 1px solid #263453;
 }
 .partner_img img { 
     margin-right: 40px;
@@ -1700,14 +1702,14 @@ textarea.form-control {
 
 .primaryBtn:hover  {
   color: #ffffff;
-  background: #112e50 !important;
+  background: linear-gradient(135deg, #00c7ff,  #00c7ff) !important;
   transform: translateY(-2px);
 }
 
  
 .secondaryBtn:hover {
   color: #ffffff;
-  background:linear-gradient(135deg, #00c7ff, #0078ff) !important;
+  background:linear-gradient(135deg, #00c7ff,  #00c7ff) !important;
   transform: translateY(-2px);
 }
 .pd_white{

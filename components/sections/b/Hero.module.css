@@ -7,8 +7,9 @@
     radial-gradient(circle at 42% 75%, rgba(0, 110, 255, 0.2), transparent 30%),
     linear-gradient(135deg, #031329 0%, #071b38 42%, #0b3f70 100%); */
   color: #ffffff;
-  background: url("../../../public/images/b/hero_bg.png") no-repeat;
+  background: url("../../../public/images/b/hero_bg.png") no-repeat ;
   background-position: center center;
+  background-size: cover;
 }
 
 /* full section subtle grid */
@@ -43,8 +44,7 @@
   position: relative;
   z-index: 2;
   max-width: 520px;
-  padding-top: 80px;
-  padding-bottom: 60px;
+  padding-top: 80px; 
 }
 
 .heroLabel {
@@ -65,7 +65,7 @@
 }
 
 .heroTitle {
-  font-size: 32px;
+  font-size: 28px;
   line-height: 1.42;
   font-weight: 700; 
   color: #ffffff;
@@ -108,7 +108,7 @@
 }
 
 .secondaryBtn {
-  background: rgba(255, 255, 255, 0.035);
+  background: linear-gradient(135deg, #00c7ff,  #00c7ff);
   color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(10px);
@@ -116,7 +116,7 @@
 
 .primaryBtn:hover  {
   color: #ffffff;
-  background: #112e50 !important;
+  background: linear-gradient(135deg, #00c7ff,  #00c7ff) !important;
   transform: translateY(-2px);
 }
 
@@ -519,4 +519,7 @@
     height: 34px;
     bottom: 18px;
   }
+}
+.min-vh-90 {
+    min-height: 90vh !important;
 }

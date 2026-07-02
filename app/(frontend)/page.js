@@ -8,7 +8,6 @@ import Driving from "@/components/sections/Driving";
 import GoalandEffort from "@/components/sections/GoalandEffort";
 import OurJourney from "@/components/sections/OurJourney";
 import PapersToken from "@/components/sections/PapersToken";
-import Partners from "@/components/sections/Partners_two";
 import Scaleable from "@/components/sections/Scaleable";
 const Homepage = () => {
   return (
@@ -16,7 +15,8 @@ const Homepage = () => {
       {/* <Header /> */}
       <Header_b /> 
       <HeroSection_b />
-      <Partners />
+      {/* <HeroSection /> */}
+      
       <Driving />
       {/* <BusinessAdvisorySection /> */}
       <PapersToken />
