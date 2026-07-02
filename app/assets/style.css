@@ -306,10 +306,10 @@ img {
 
 /*partners section*/
 .partner_section .cline {
+    border-top: 1px solid rgb(53 133 195 / 53%);
     border-left: 1px solid #263453 !important;
-    border-right: 1px solid #263453 !important;
+    border-right: 1px solid #2872ac !important;
     padding: 40px 0 !important;
-    border-top: 1px solid #263453;
 }
 .partner_img img { 
     margin-right: 40px;

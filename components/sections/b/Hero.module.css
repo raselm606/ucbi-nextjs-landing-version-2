@@ -7,7 +7,7 @@
     radial-gradient(circle at 42% 75%, rgba(0, 110, 255, 0.2), transparent 30%),
     linear-gradient(135deg, #031329 0%, #071b38 42%, #0b3f70 100%); */
   color: #ffffff;
-  background: url("../../../public/images/b/hero_bg.png") no-repeat ;
+  background: url("../../../public/images/b/hero_bg.jpg") no-repeat ;
   background-position: center center;
   background-size: cover;
 }
