@@ -1,11 +1,11 @@
 import Footer from "@/components/layouts/Footer";
-import Header from "@/components/layouts/Header";
+import Header_b from "@/components/layouts/Header_b";
 import Advancing from "@/components/sections/Advancing";
+import HeroSection_b from "@/components/sections/b/HeroSection_b";
 import BlogSection from "@/components/sections/BlogSection";
 import ContractInvestment from "@/components/sections/ContractInvestment";
 import Driving from "@/components/sections/Driving";
 import GoalandEffort from "@/components/sections/GoalandEffort";
-import HeroSection from "@/components/sections/HeroSection";
 import OurJourney from "@/components/sections/OurJourney";
 import PapersToken from "@/components/sections/PapersToken";
 import Partners from "@/components/sections/Partners_two";
@@ -13,8 +13,9 @@ import Scaleable from "@/components/sections/Scaleable";
 const Homepage = () => {
   return (
     <>
-      <Header />
-      <HeroSection />
+      {/* <Header /> */}
+      <Header_b /> 
+      <HeroSection_b />
       <Partners />
       <Driving />
       {/* <BusinessAdvisorySection /> */}

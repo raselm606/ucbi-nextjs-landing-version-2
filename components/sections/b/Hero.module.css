@@ -1,0 +1,515 @@
+.heroSection {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  /* background:
+    radial-gradient(circle at 78% 35%, rgba(0, 174, 255, 0.38), transparent 28%),
+    radial-gradient(circle at 42% 75%, rgba(0, 110, 255, 0.2), transparent 30%),
+    linear-gradient(135deg, #031329 0%, #071b38 42%, #0b3f70 100%); */
+  color: #ffffff;
+  background: url("../../../public/images/b/hero_bg.png") no-repeat;
+  background-position: center center;
+}
+
+/* full section subtle grid */
+.heroSection::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 42px 42px;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+/* soft glow */
+.heroSection::after {
+  content: "";
+  position: absolute;
+  right: -8%;
+  top: 10%;
+  width: 560px;
+  height: 560px;
+  border-radius: 50%;
+  background: rgba(0, 170, 255, 0.14);
+  filter: blur(95px);
+  pointer-events: none;
+}
+
+/* left side */
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 520px;
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
+
+.heroLabel {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 6px;
+  color: #00d9ff;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.labelLine {
+  width: 72px;
+  height: 1px;
+  background: linear-gradient(90deg, #00d9ff, transparent);
+  margin-bottom: 22px;
+}
+
+.heroTitle {
+  font-size: 32px;
+  line-height: 1.42;
+  font-weight: 700; 
+  color: #ffffff;
+  margin: 0 0 18px;
+  max-width: 480px;
+}
+
+.heroText {
+  font-size: 13px;
+  line-height: 1.85;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.72);
+  margin: 0;
+  max-width: 500px;
+  text-align: justify;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  min-width: 170px;
+  height: 46px;
+  padding: 0 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+  border-radius: 6px !important;
+}
+
+.primaryBtn {
+  background: linear-gradient(135deg, #00c7ff, #0078ff);
+  color: #ffffff;
+  border: 1px solid rgba(0, 199, 255, 0.5);
+  box-shadow: 0 12px 32px rgba(0, 140, 255, 0.25);
+}
+
+.secondaryBtn {
+  background: rgba(255, 255, 255, 0.035);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(10px);
+}
+
+.primaryBtn:hover,
+.secondaryBtn:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.btnIcon {
+  width: 34px;
+  height: 34px;
+  /* border: 1px solid rgba(255, 255, 255, 0.18); */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.featureBox {
+  margin-top: 34px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+  width: 570px;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  background: rgba(255, 255, 255, 0.035);
+  backdrop-filter: blur(14px);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.featureItem {
+  min-height: 58px;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.88);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.featureItem:last-child {
+  border-right: 0;
+}
+
+.featureSvg {
+  width: 26px;
+  height: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.featureSvg img{
+  mix-blend-mode: difference;
+}
+/* right side visual */
+.heroVisual {
+  position: relative;
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  overflow: hidden;
+}
+
+/* right side local background */
+.visualBg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 70% 20%, rgba(31, 168, 255, 0.18), transparent 22%),
+    radial-gradient(circle at 58% 52%, rgba(0, 183, 255, 0.12), transparent 28%),
+    linear-gradient(180deg, rgba(18, 78, 145, 0.10) 0%, rgba(5, 23, 52, 0) 100%);
+  pointer-events: none;
+}
+
+
+/* dotted particles top-right */
+.particleDots {
+  position: absolute;
+  right: 40px;
+  top: 120px;
+  width: 220px;
+  height: 150px;
+  opacity: 0.20;
+  background-image: radial-gradient(#7dd8ff 1.2px, transparent 1.2px);
+  background-size: 12px 12px;
+  pointer-events: none;
+}
+
+/* orbit 1 */
+.orbitOne {
+  position: absolute;
+  width: 500px;
+  height: 190px;
+  border: 1px solid rgba(157, 221, 255, 0.28);
+  border-radius: 50%;
+  transform: rotate(-6deg);
+  top: 150px;
+  left: 60px;
+  pointer-events: none;
+}
+
+.orbitOne::before,
+.orbitOne::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d9f6ff;
+  box-shadow: 0 0 12px rgba(123, 220, 255, 0.85);
+}
+
+.orbitOne::before {
+  top: 35px;
+  left: 70px;
+}
+
+.orbitOne::after {
+  right: 68px;
+  bottom: 30px;
+}
+
+/* orbit 2 */
+.orbitTwo {
+  position: absolute;
+  width: 410px;
+  height: 135px;
+  border: 1px solid rgba(157, 221, 255, 0.16);
+  border-radius: 50%;
+  transform: rotate(8deg);
+  top: 215px;
+  left: 105px;
+  pointer-events: none;
+}
+
+.orbitTwo::before,
+.orbitTwo::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #d9f6ff;
+  box-shadow: 0 0 10px rgba(123, 220, 255, 0.8);
+}
+
+.orbitTwo::before {
+  left: 45px;
+  bottom: 20px;
+}
+
+.orbitTwo::after {
+  right: 42px;
+  top: 24px;
+}
+
+/* tech floor */
+.floorGrid {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  width: 720px;
+  height: 240px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at center, rgba(0, 195, 255, 0.12) 0%, rgba(0, 195, 255, 0.06) 28%, transparent 62%),
+    repeating-radial-gradient(circle at center,
+      rgba(66, 179, 255, 0.16) 0px,
+      rgba(66, 179, 255, 0.16) 2px,
+      transparent 2px,
+      transparent 24px),
+    repeating-conic-gradient(
+      from 0deg,
+      rgba(90, 180, 255, 0.10) 0deg 2deg,
+      transparent 2deg 20deg
+    );
+  filter: blur(0.2px);
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+/* central glow under object */
+.floorGlow {
+  position: absolute;
+  left: 50%;
+  bottom: 95px;
+  transform: translateX(-50%);
+  width: 320px;
+  height: 90px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(56, 225, 255, 0.55) 0%, rgba(56, 225, 255, 0.18) 42%, transparent 78%);
+  filter: blur(12px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* bright ring */
+.floorRing {
+  position: absolute;
+  left: 50%;
+  bottom: 92px;
+  transform: translateX(-50%);
+  width: 270px;
+  height: 54px;
+  border-radius: 50%;
+  border: 2px solid rgba(108, 233, 255, 0.85);
+  box-shadow:
+    0 0 24px rgba(66, 220, 255, 0.45),
+    inset 0 0 18px rgba(66, 220, 255, 0.12);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* larger outer ring */
+.floorRingTwo {
+  position: absolute;
+  left: 50%;
+  bottom: 62px;
+  transform: translateX(-50%);
+  width: 520px;
+  height: 120px;
+  border-radius: 50%;
+  border: 1px solid rgba(90, 185, 255, 0.18);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* object shadow */
+.floorShadow {
+  position: absolute;
+  left: 50%;
+  bottom: 28px;
+  transform: translateX(-50%);
+  width: 360px;
+  height: 56px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.42) 0%, rgba(0, 0, 0, 0.18) 48%, transparent 78%);
+  filter: blur(12px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* main transparent image */
+.heroImage {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 620px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 34px 40px rgba(0, 0, 0, 0.25));
+  /* animation: floatImage 5.5s ease-in-out infinite; */
+  mix-blend-mode: luminosity;
+}
+
+/* animation */
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* tablet */
+@media (max-width: 991px) {
+  .heroVisual {
+    min-height: 460px;
+    margin-top: 10px;
+  }
+
+  .heroImage {
+    max-width: 430px;
+  }
+
+  .particleDots {
+    right: 50%;
+    transform: translateX(50%);
+    top: 60px;
+    width: 160px;
+    height: 100px;
+  }
+
+  .orbitOne {
+    width: 360px;
+    height: 140px;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-6deg);
+  }
+
+  .orbitTwo {
+    width: 300px;
+    height: 96px;
+    top: 170px;
+    left: 50%;
+    transform: translateX(-50%) rotate(8deg);
+  }
+
+  .floorGrid {
+    width: 520px;
+    height: 170px;
+    bottom: 14px;
+  }
+
+  .floorGlow {
+    width: 220px;
+    height: 70px;
+    bottom: 74px;
+  }
+
+  .floorRing {
+    width: 190px;
+    height: 42px;
+    bottom: 74px;
+  }
+
+  .floorRingTwo {
+    width: 360px;
+    height: 90px;
+    bottom: 52px;
+  }
+
+  .floorShadow {
+    width: 250px;
+    height: 46px;
+    bottom: 20px;
+  }
+}
+
+/* mobile */
+@media (max-width: 575px) {
+  .heroVisual {
+    min-height: 340px;
+  }
+
+  .heroImage {
+    max-width: 320px;
+  }
+
+  .particleDots {
+    width: 110px;
+    height: 70px;
+    top: 48px;
+  }
+
+  .orbitOne {
+    width: 250px;
+    height: 88px;
+    top: 110px;
+  }
+
+  .orbitTwo {
+    width: 205px;
+    height: 68px;
+    top: 142px;
+  }
+
+  .floorGrid {
+    width: 350px;
+    height: 110px;
+    bottom: 10px;
+  }
+
+  .floorGlow {
+    width: 160px;
+    height: 52px;
+    bottom: 52px;
+  }
+
+  .floorRing {
+    width: 145px;
+    height: 30px;
+    bottom: 54px;
+  }
+
+  .floorRingTwo {
+    width: 250px;
+    height: 60px;
+    bottom: 40px;
+  }
+
+  .floorShadow {
+    width: 180px;
+    height: 34px;
+    bottom: 18px;
+  }
+}
