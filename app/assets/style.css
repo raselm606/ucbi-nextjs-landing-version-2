@@ -346,6 +346,7 @@ img {
     margin-bottom: 20px;
     font-weight: 700;
 }
+
 .section_paragraph_dark { 
     color: var(--paragraph_color);
     line-height: 24px;
@@ -1716,4 +1717,18 @@ span.dline {
     position: absolute;
     margin-top: 14px;
     margin-left: -4px;
+}
+
+.driving_content .section_title_dark { 
+    margin-bottom: 30px !important; 
+    position: relative;
+}
+.driving_content .section_title_dark:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 50px;
+    background: #0cc0df;
+    left: 0;
+    bottom: -13px;
 }
