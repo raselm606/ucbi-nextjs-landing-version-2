@@ -319,15 +319,10 @@ img {
 /*driving section*/
 .driving_section {
     /* background: #f0f1f5; */
-    background: radial-gradient(circle at 18% 35%, rgba(0, 174, 255, 0.12), transparent 32%),
-    radial-gradient(circle at 80% 50%, rgba(0, 110, 255, 0.08), transparent 35%),
-    linear-gradient(90deg, #eef7ff 0%, #f8fcff 50%, #eef7ff 100%);
+    background: radial-gradient(circle, #f5f8fc 0%, #e4ecf5 100%);
 }
 .driving_section .cline {
-    /* background: #F0F1F5; */
-    background: radial-gradient(circle at 18% 35%, rgba(0, 174, 255, 0.12), transparent 32%),
-    radial-gradient(circle at 80% 50%, rgba(0, 110, 255, 0.08), transparent 35%),
-    linear-gradient(90deg, #eef7ff 0%, #f8fcff 50%, #eef7ff 100%);
+    /* background: #F0F1F5; */ 
     padding: 110px 70px 130px 160px !important;
     border-right: 1px solid rgb(17 46 80 / 15%) !important;
     border-left: 1px solid rgb(17 46 80 / 15%) !important;
@@ -338,7 +333,7 @@ img {
 }
 
 .driving_img img {
-    width: 380px;
+    width: 440px;
     height: auto;
     margin-top: 42px;
 }

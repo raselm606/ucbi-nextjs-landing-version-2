@@ -1,7 +1,7 @@
 'use client';
 import Button from "@/components/ui/Button";
-import { drivingData } from "@/lib/mock-data/driving";
 import Image from "next/image";
+import drive_img from "../../public/images/drive1.png";
 import {
     ArrowIcon
 } from "./b/HeroIcons";
@@ -159,7 +159,7 @@ const Driving = () => {
                 <div className="row align-items-center justify-content-center">
                     <div className="col-lg-4 col-md-4 mb-3">
                         <div className="driving_img text-center">
-                            <Image src={drivingData.img} alt="Driving Image" height={100} width={550} />
+                            <Image src={drive_img} alt="Driving Image" height={100} width={550} />
                         </div>
                     </div>
                     <div className="offset-lg-2 offset-md-1 col-md-5 col-lg-5">
