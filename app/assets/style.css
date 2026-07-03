@@ -222,7 +222,7 @@ img {
     border-radius: 0 !important;
 }
 .top_nav_button:hover {
-  background: linear-gradient(135deg, #112E50,  #112E50) ;
+  background: linear-gradient(135deg, #00c7ff,  #00c7ff) ;
   color: var(--text_white); 
   transition: var(--transition); 
 }
@@ -1151,9 +1151,10 @@ label.form-check-label {
     height: 22px;
     margin-top: 4px;
 }
-.img10{    
+.img10 {
     width: 116px;
     height: 22px;
+    margin-top: 3px;
 }
 .img11 {
     width: 142px;
@@ -1164,7 +1165,7 @@ label.form-check-label {
 .img12 {
     width: auto;
     height: 20px;
-    margin-top: 4px;
+    margin-top: 6px;
 }
 .img13 {
     width: 142px;
