@@ -17,7 +17,7 @@ const Partners =  () => {
   return (
     <>
     <div className="partner_section">
-        <div className="container cline ">
+        <div className="container  ">
           
                  <Marquee speed={60} gradient={false}>
                   <div className="partner_img">

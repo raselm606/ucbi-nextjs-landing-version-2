@@ -117,11 +117,12 @@ const HeroSection_b = () => {
               /> 
             </div>
           </div> */}
+          <Partners />
 
         </div>
       </div>
 
-      <Partners />
+      
     </section>
     </>
   )
