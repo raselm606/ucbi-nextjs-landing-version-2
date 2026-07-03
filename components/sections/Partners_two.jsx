@@ -22,44 +22,44 @@ const Partners =  () => {
                  <Marquee speed={60} gradient={false}>
                   <div className="partner_img">
                     <Link href="https://trustwallet.com/" target="_blank">
-                    <Image className="img7"  src={logo7} alt="Partner Logo" /></Link> |
+                    <Image className="img7"  src={logo7} alt="Partner Logo" /></Link> <span className="dline"> |</span>
                     <Link href="https://etherscan.io/token/0xb42b35deca033a23401a1a89007a39343a510d0a" target="_blank">
-                    <Image className="img9"  src={logo9} alt="Partner Logo" /></Link> |
+                    <Image className="img9"  src={logo9} alt="Partner Logo" /></Link> <span className="dline"> |</span>
                     <Link href="https://www.cyberscope.io/audits/ucbi" target="_blank">
-                        <Image className="img13"  src={logo13} alt="Partner Logo" /></Link> |
+                        <Image className="img13"  src={logo13} alt="Partner Logo" /></Link> <span className="dline"> |</span>
                         <Link href="https://finance.yahoo.com/quote/UCBI-USD/" target="_blank">
-                       <Image className="img5"  src={logo5} alt="Partner Logo" /></Link>  |
+                       <Image className="img5"  src={logo5} alt="Partner Logo" /></Link>  <span className="dline"> |</span>
                        <Link href="https://www.coinbase.com/wallet" target="_blank">
-                        <Image className="img10"  src={logo10} alt="Partner Logo" /></Link> |
+                        <Image className="img10"  src={logo10} alt="Partner Logo" /></Link> <span className="dline"> |</span>
                         <Link href="https://www.kraken.com/" target="_blank">
                         <Image className="img12"  src={kraken} alt="Partner Logo" />
-                        </Link> |
+                        </Link> <span className="dline"> |</span>
                         <Link href="https://intel.arkm.com/" target="_blank">
-                        <Image className="img12"  src={logo12} alt="Partner Logo" /></Link> |
+                        <Image className="img12"  src={logo12} alt="Partner Logo" /></Link> <span className="dline"> |</span>
                        
                         <Link href="https://github.com/UCBI-Blockchain-Banking" target="_blank">
                         <Image className="img14"  src={logo14} alt="Partner Logo" />
-                        </Link> |
+                        </Link> <span className="dline"> |</span>
                         
 
                         <Link href="https://trustwallet.com/" target="_blank">
-                    <Image className="img7"  src={logo7} alt="Partner Logo" /></Link> |
+                    <Image className="img7"  src={logo7} alt="Partner Logo" /></Link> <span className="dline"> |</span>
                     <Link href="https://etherscan.io/token/0xb42b35deca033a23401a1a89007a39343a510d0a" target="_blank">
-                    <Image className="img9"  src={logo9} alt="Partner Logo" /></Link> |
+                    <Image className="img9"  src={logo9} alt="Partner Logo" /></Link> <span className="dline"> |</span>
                     <Link href="https://www.cyberscope.io/audits/ucbi" target="_blank">
-                        <Image className="img13"  src={logo13} alt="Partner Logo" /></Link> |
+                        <Image className="img13"  src={logo13} alt="Partner Logo" /></Link> <span className="dline"> |</span>
                         <Link href="https://finance.yahoo.com/quote/UCBI-USD/" target="_blank">
-                       <Image className="img5"  src={logo5} alt="Partner Logo" /></Link>  |
+                       <Image className="img5"  src={logo5} alt="Partner Logo" /></Link>  <span className="dline"> |</span>
                        <Link href="https://www.coinbase.com/wallet" target="_blank">
-                        <Image className="img10"  src={logo10} alt="Partner Logo" /></Link> |
+                        <Image className="img10"  src={logo10} alt="Partner Logo" /></Link> <span className="dline"> |</span>
                         <Link href="https://www.kraken.com/" target="_blank">
                         <Image className="img12"  src={kraken} alt="Partner Logo" />
-                        </Link> |
+                        </Link> <span className="dline"> |</span>
                         <Link href="https://intel.arkm.com/" target="_blank">
-                        <Image className="img12"  src={logo12} alt="Partner Logo" /></Link> |
+                        <Image className="img12"  src={logo12} alt="Partner Logo" /></Link> <span className="dline"> |</span>
                         <Link href="https://github.com/UCBI-Blockchain-Banking" target="_blank">
                         <Image className="img14"  src={logo14} alt="Partner Logo" />
-                        </Link> |
+                        </Link> <span className="dline"> |</span>
                           
                     </div>
 
