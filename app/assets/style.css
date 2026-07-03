@@ -1718,4 +1718,7 @@ textarea.form-control {
 span.dline {
     margin-top: 1px;
     display: inline-block;
+    position: absolute;
+    margin-top: 14px;
+    margin-left: -4px;
 }
