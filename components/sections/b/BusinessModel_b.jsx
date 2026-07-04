@@ -49,7 +49,7 @@ const BusinessModel_b = () => {
 
                             <p> Through Ethereum based treasury strategies UCBI optimizes capital allocation liquidity and yield generation Our disciplined approach helps institutions and partners build sustainable financial growth in the evolving digital economy </p>
 
-                            <Button href="#about" className={styles.primaryBtn}>
+                            <Button href="#about" className={styles.secondaryBtn}>
                             View More
                             <span className={styles.btnIcon}>
                                 <ArrowIcon />
