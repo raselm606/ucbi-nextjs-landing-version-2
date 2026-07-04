@@ -1,7 +1,4 @@
 import Button from "@/components/ui/Button";
-import Image from "next/image";
-import b1 from "../../../public/images/b1.png";
-import b2 from "../../../public/images/b2.png";
 import styles from "./css/BusinessModel.module.css";
 import {
     ArrowIcon
@@ -12,11 +9,13 @@ const BusinessModel_b = () => {
         <div className="businesarea">
             <div className="container cline">
                 <div className="row">
-                    <div className="col-lg-6">
+                    <div className="col-lg-6 mb-3">
                         <div className={styles.bSectionArea}>
                             <div className={styles.top_b_area}>
                                 <div className={styles.img_area}>
-                                    <Image src={b1} alt="b1"/>
+                                    <span className={styles.btnIcon}>
+                                        <ArrowIcon />
+                                    </span>
                                 </div>
                                 <div className={styles.btext_area}>
                                     <span>Private Holding</span>
@@ -35,11 +34,13 @@ const BusinessModel_b = () => {
                         </div>
                     </div>
 
-                    <div className="col-lg-6">
+                    <div className="col-lg-6 mb-3">
                         <div className={`${styles.bSectionArea} ${styles.bSectionWhite}`}>
                             <div className={styles.top_b_area}>
                                 <div className={styles.img_area}>
-                                    <Image src={b2} alt="b2"/>
+                                    <span className={styles.btnIcon}>
+                                        <ArrowIcon />
+                                    </span>
                                 </div>
                                 <div className={styles.btext_area}>
                                     <span>Ethereum Treasury</span>

@@ -68,9 +68,10 @@
     border-radius: 12px;
     justify-content: center;
     align-items: center;
-    width: 75px;
-    height: 75px;
+    width: 60px;
+    height: 60px;
     display: flex;
+    border: 2px solid #0cc0df;
 }
 .btext_area{
     margin-top: 5px;
