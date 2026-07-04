@@ -1,7 +1,7 @@
 'use client';
 import Button from "@/components/ui/Button";
 import Image from "next/image";
-import drive_img from "../../public/images/drive4.png";
+import drive_img from "../../public/images/drive3.png";
 import {
     ArrowIcon
 } from "./b/HeroIcons";

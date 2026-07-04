@@ -19,7 +19,7 @@ const BusinessModel_b = () => {
                                 </div>
                             </div>
 
-                            <p>UCBI provides secure and regulated private holding solutions for digital assets  We ensure institutional grade custody comprehensive risk management, and full compliance with global standards giving our partners peace of mind and long term confidence</p>
+                            <p>UCBI provides secure and regulated private holding solutions for digital assets  We ensure institutional grade custody comprehensive risk management and full compliance with global standards giving our partners peace of mind & long term confidence</p>
 
                             <Button href="#about" className={styles.primaryBtn}>
                             Learn More
