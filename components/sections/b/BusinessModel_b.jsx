@@ -12,11 +12,7 @@ const BusinessModel_b = () => {
                     <div className="col-lg-6 mb-3">
                         <div className={styles.bSectionArea}>
                             <div className={styles.top_b_area}>
-                                <div className={styles.img_area}>
-                                    <span className={styles.btnIcon}>
-                                        <ArrowIcon />
-                                    </span>
-                                </div>
+                                 
                                 <div className={styles.btext_area}>
                                     <span>Private Holding</span>
                                     <p>Secure Asset Holding</p>
@@ -37,11 +33,7 @@ const BusinessModel_b = () => {
                     <div className="col-lg-6 mb-3">
                         <div className={`${styles.bSectionArea} ${styles.bSectionWhite}`}>
                             <div className={styles.top_b_area}>
-                                <div className={styles.img_area}>
-                                    <span className={styles.btnIcon}>
-                                        <ArrowIcon />
-                                    </span>
-                                </div>
+                                 
                                 <div className={styles.btext_area}>
                                     <span>Ethereum Treasury</span>
                                     <p>Strategic Treasury Management</p>
