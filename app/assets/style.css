@@ -1732,3 +1732,10 @@ span.dline {
     left: 0;
     bottom: -13px;
 }
+.businesarea .cline {
+    border-left: 1px solid #dce0e5;
+    border-right: 1px solid #dce0e5;
+    padding-left: 70px !important;
+    padding-right: 70px !important; 
+    padding-bottom: 130px;
+}

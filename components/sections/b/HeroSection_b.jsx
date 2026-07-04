@@ -4,7 +4,7 @@ import Image from "next/image";
 import b1 from "../../../public/images/b/b1.png";
 import b2 from "../../../public/images/b/b2.png";
 import b3 from "../../../public/images/b/b3.png";
-import styles from "./Hero.module.css";
+import styles from "./css/Hero.module.css";
 import {
   ArrowIcon
 } from "./HeroIcons";
