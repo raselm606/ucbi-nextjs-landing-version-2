@@ -1,5 +1,12 @@
 import Image from "next/image";
 import timelineImage from '../../public/images/timeline_line.png';
+import {
+  BankIcon,
+  ChartIcon,
+  FlagIcon,
+  RocketIcon
+} from "./b/HeroIcons";
+
 const OurJourney = () => {
   return (
     <>
@@ -8,8 +15,9 @@ const OurJourney = () => {
           <div className="row">
             <div className="col-lg-4">
               <div className="journey_content"  >
-                <h2 className="section_title_white">Our journey over the years 
-                   <br /> reflects long-term vision  <br /> and progress</h2> 
+                <span>Our Journey</span> 
+                <h2>Building the Future  of <br /> Digital Finance</h2> 
+                <p>Our journey is driven by a clear vision and a commitment to innovation and long term impact</p>
                 </div>
             </div>
           </div>
@@ -19,29 +27,41 @@ const OurJourney = () => {
             <div className="row justify-content-center  mt-5">
               <div className="col-lg-2">
                   <div className="timeline_item timeline_one"  >
+                    <div className="icon_ara">
+                      <BankIcon />
+                    </div>
                     <h4>Founding Year</h4>
-                    <p>Laying the foundation 2019</p>
+                    <p>Laying the foundation <br /> for a decentralized future</p>
                   </div>
               </div>
 
               <div className="offset-lg-1 col-lg-2">
                   <div className="timeline_item timeline_two"  >
-                    <h4>Year 3</h4>
-                    <p>Building the Ecosystem</p>
+                    <div className="icon_ara">
+                      <RocketIcon />
+                    </div>
+                    <h4>Year 1</h4>
+                    <p>Building the ecosystem <br /> and core infrastructure</p>
                   </div>
               </div>
 
               <div className="offset-lg-1 col-lg-2">
                   <div className="timeline_item timeline_three"  >
-                    <h4>Year 5</h4>
-                    <p>Expansion & Market Validation</p>
+                    <div className="icon_ara">
+                      <ChartIcon />
+                    </div>
+                    <h4>Year 3</h4>
+                    <p>Expansion & strategic <br /> collaborations </p>
                   </div>
               </div>
 
-              <div className="offset-lg-1 col-lg-2"> 
+              <div className=" col-lg-2"> 
                   <div className="timeline_item timeline_four"  >
+                    <div className="icon_ara">
+                      <FlagIcon />
+                    </div>
                     <h4>Today</h4>
-                    <p>Focused on private expansion</p>
+                    <p>Focused on global impact <br /> and sustainable growth</p>
                   </div> 
               </div>
 

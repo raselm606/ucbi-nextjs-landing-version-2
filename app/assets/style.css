@@ -527,7 +527,7 @@ img {
 }
 /*Journey section*/
 .ourjourney_section{
-    background: url("../../public/images/journey_bg.jpg"); 
+    background: url("../../public/images/journey_bg4.jpg"); 
 }
 .ourjourney_section .cline { 
     padding: 100px 70px;
@@ -538,101 +538,119 @@ img {
 }
 .timeline_one:before {
     content: "";
-    position: absolute;
-    left: 0;
-    top: -113px;
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
     background: var(--primary_color);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -63px;
+    left: 15px;    
+    box-shadow: 0 0 8px rgb(16 220 255), 0 0 18px rgba(12, 192, 223, 0.75), 
+    0 0 36px rgba(12, 192, 223, 0.45);
 }
 .timeline_one:after {
     content: "";
-    position: absolute;
-    left: 9px;
-    top: -101px;
-    height: 93px;
+    background: #0cc0df;
     width: 1px;
-    background: rgb(255 255 255 / 20%);
+    height: 63px;
+    position: absolute;
+    top: -62px;
+    left: 24px;
+    box-shadow: 0 0 8px rgb(16 220 255), 0 0 18px rgba(12, 192, 223, 0.75), 
+    0 0 36px rgba(12, 192, 223, 0.45);
 }
-.timeline_two{
-    margin-top: 127px;
+.timeline_two {
+    margin-top: 136px;
     position: relative;
 }
 .timeline_two:before {
     content: "";
-    position: absolute;
-    left: 0;
-    top: -80px;
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
     background: var(--primary_color);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -52px;
+    left: 14px;
+    box-shadow: 0 0 8px rgb(16 220 255), 0 0 18px rgba(12, 192, 223, 0.75), 
+    0 0 36px rgba(12, 192, 223, 0.45);
 }
 .timeline_two:after {
     content: "";
-    background: #fff3;
+    background: #0cc0df;
     width: 1px;
-    height: 52px;
+    height: 36px;
     position: absolute;
-    top: -64px;
-    left: 9px;
+    top: -35px;
+    left: 24px;
+    box-shadow: 0 0 8px rgb(16 220 255), 0 0 18px rgba(12, 192, 223, 0.75), 
+    0 0 36px rgba(12, 192, 223, 0.45);
 }
 .timeline_three{
-    margin-top: 60px;
+    margin-top: 48px;
     position: relative;
 }
 .timeline_three:before {
     content: "";
-    position: absolute;
-    left: 0;
-    top: -82px;
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
     background: var(--primary_color);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -64px;
+    left: 14px;
+    box-shadow: 0 0 8px rgb(16 220 255), 0 0 18px rgba(12, 192, 223, 0.75), 
+    0 0 36px rgba(12, 192, 223, 0.45);
 }
 .timeline_three:after {
     content: "";
-    background: #fff3;
+    background: #0cc0df;
     width: 1px;
-    height: 63px;
+    height: 54px;
     position: absolute;
-    top: -69px;
-    left: 10px;
+    top: -53px;
+    left: 24px;
+    box-shadow: 0 0 8px rgb(16 220 255), 0 0 18px rgba(12, 192, 223, 0.75), 
+    0 0 36px rgba(12, 192, 223, 0.45);
 }
 .timeline_four {
     position: relative;
-    margin-top: -64px;
+    margin-top: -42px;
 }
 .timeline_four:before {
     content: "";
-    position: absolute;
-    left: 0;
-    top: -103px;
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
     background: var(--primary_color);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -92px;
+    left: 15px;
+    box-shadow: 0 0 8px rgb(16 220 255), 0 0 18px rgba(12, 192, 223, 0.75), 
+    0 0 36px rgba(12, 192, 223, 0.45);
 }
 .timeline_four:after {
     content: "";
-    background: #fff3;
+    background: #0cc0df;
     width: 1px;
-    height: 87px;
+    height: 81px;
     position: absolute;
-    top: -94px;
-    left: 9px;
+    top: -80px;
+    left: 24px;
+    box-shadow: 0 0 8px rgb(16 220 255), 0 0 18px rgba(12, 192, 223, 0.75), 
+    0 0 36px rgba(12, 192, 223, 0.45);
 }
 .timeline_item h4 {
     font-size: 20px;
     line-height: 34px;
+    margin-top: 5px;
 } 
 .timeline_item p {
-    font-size: 12px;
-    line-height: 48px;
+    font-size: 13px;
+    /* line-height: 48px; */
     font-family: var(--paragraph_font);
-    color: var(--text_gray);
+    color: rgb(255 255 255 / 82%);
+    margin-top: 5px;
 }
 .timeline_area{
     position: relative;
@@ -1738,4 +1756,47 @@ span.dline {
     padding-left: 70px !important;
     padding-right: 70px !important; 
     padding-bottom: 130px;
+}
+.journey_content span {
+    font-size: 13px;
+    font-weight: 600;
+    color: #0cc0df;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    display: inline-block;
+    position: relative;
+}
+.journey_content span:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 40px;
+    background: #0cc0df;
+    left: 0;
+    bottom: -13px;
+}
+.journey_content h2 {
+    font-size: 22px;
+    font-family: 'Inter';
+    margin-bottom: 14px;
+    line-height: 30px;
+}
+.journey_content p {
+    font-size: 13px;
+    width: 62%;
+    text-align: justify;
+}
+.icon_ara {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid #0cc0df;
+    text-align: center;
+    line-height: 50px;
+    color: #0cc0df;
+}
+.icon_ara svg {
+    width: 33px; 
+    margin-left: 3px;
 }
