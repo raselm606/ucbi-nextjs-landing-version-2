@@ -11,7 +11,7 @@ const OurJourney = () => {
   return (
     <>
     <div className="ourjourney_section">
-        <div className="container cline left_100">
+        <div className="container cline left_1000">
           <div className="row">
             <div className="col-lg-4">
               <div className="journey_content"  >
