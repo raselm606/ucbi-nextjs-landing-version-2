@@ -661,8 +661,9 @@ img {
 }
 /*advancin section*/
 .advancing_section .cline {
-    padding-top: 200px;
+    padding-top: 150px;
     padding-bottom: 80px;
+    /* margin-bottom: 54px; */
 }
 .advancing_para p {
     color: var(--paragraph_color);
@@ -686,19 +687,20 @@ img {
     border-bottom: 1px solid transparent;
 }
 .advancing_section {
+    background: radial-gradient(circle, #f5f8fc 0%, #e4ecf5 100%);
     border-top: 1px solid #dce0e5;
     border-bottom: 1px solid #dce0e5;
     position: relative;
-    background: radial-gradient(circle, #f5f8fc 0%, #e4ecf5 100%);
+    margin-top: 100px;
 }
 .advancing_section:before {
     content: "";
-    position: absolute;
-    top: 100px;
-    left: 0;
-    height: 1px;
+    /* background: #dce0ef; */
     width: 100%;
-    background: #dce0ef;
+    height: 1px;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 /*contract Investment*/
 .contract_in{
@@ -814,7 +816,7 @@ img {
 .blog_section:after {
     content: "";
     position: absolute;
-    bottom: 100px;
+    bottom: 0px;
     left: 0;
     height: 1px;
     width: 100%;
@@ -824,7 +826,8 @@ img {
 .blog_section .cline {
     border-left: 1px solid #dce0e5;
     border-right: 1px solid #dce0e5;
-    padding: 100px 70px 150px 70px;
+    padding: 100px 70px 50px;
+    margin-bottom: 110px;
 }
 .blog_content h4 {
     color: var(--text_dark);
@@ -1958,4 +1961,46 @@ span.dline {
 
 .price_change.neutral {
   color: #9aa8bd;
+}
+.top_left_l{
+    position: relative;
+}
+.top_left_l:after {
+    content: "";
+    position: absolute;
+    left: -1px;
+    height: 109px;
+    width: 1px;
+    background: #c9d3de;
+    top: -101px;
+}
+.top_left_l:before {
+    content: "";
+    position: absolute;
+    right: -1px;
+    height: 109px;
+    width: 1px;
+    background: #c9d3de;
+    top: -101px;
+}
+.blog_extra_l{
+    position: relative;
+}
+.blog_extra_l:after {
+    content: "";
+    position: absolute;
+    left: -1px;
+    height: 110px;
+    width: 1px;
+    background: #c9d3de;
+    bottom: -110px;
+}
+.blog_extra_l:before {
+    content: "";
+    position: absolute;
+    right: -1px;
+    height: 110px;
+    width: 1px;
+    background: #c9d3de;
+    bottom: -110px;
 }

@@ -7,7 +7,7 @@ const Advancing =  () => {
   return (
     <>
     <div className="advancing_section" id="treasury-management">
-        <div className="container cline line_left line_right">
+        <div className="container cline line_left line_right top_left_l">
             <div className="row">
                 <div className="col-lg-4">
                     <div className="advancing_content">

@@ -44,7 +44,7 @@ const BlogSection = () => {
   return (
     <>
     <div className="blog_section">
-        <div className="container cline"> 
+        <div className="container cline blog_extra_l"> 
             <div className="row mb-3">
                 {/* <div className="col-lg-12 text-center">
                     <span className="blog_tag"> Insights & news</span>
