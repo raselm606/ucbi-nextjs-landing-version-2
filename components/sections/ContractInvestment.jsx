@@ -153,9 +153,17 @@ const ContractInvestment = () => {
                                 <div className="token_item">
                                     <div className="main_coin">
                                         <Image src={btc_icon} alt="#" width={50} height={50} />
-                                    <span>Bitcoin</span> 
+
+                                        <div className="middle_txt"> 
+                                            <p>Bitcoin</p> <span> BTC</span> 
+                                        </div>
+                                        
                                     </div>
-                                    <span className="price_t">${btc ?? "--"}  </span>
+                                    
+                                    <div className="price_at">
+                                        <span className="price_t">${btc ?? "--"}  </span>
+                                        <span>+1.82%</span>
+                                    </div>
                                 </div>
 
                                 <div className="token_item">

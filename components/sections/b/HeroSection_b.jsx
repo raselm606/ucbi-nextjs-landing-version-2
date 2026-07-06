@@ -41,7 +41,7 @@ const HeroSection_b = () => {
                   </span>
                 </Button>
 
-                <Button href="#request" className={styles.secondaryBtn}>
+                <Button data-bs-toggle="modal"   href="#submit-a-request" className={styles.secondaryBtn}>
                   Submit Private Request
                   <span className={styles.btnIcon}>
                     <ArrowIcon />
