@@ -21,7 +21,7 @@ const BusinessModel_b = () => {
 
                             <p>UCBI provides secure and regulated private holding solutions for digital assets  We ensure institutional grade custody comprehensive risk management and full compliance with global standards giving our partners peace of mind & long term confidence</p>
 
-                            <Button href="#about" className={styles.primaryBtn}>
+                            <Button  data-bs-toggle="modal"   href="#submit-a-request"   className={styles.primaryBtn}>
                             Learn More
                             <span className={styles.btnIcon}>
                                 <ArrowIcon />
@@ -42,7 +42,7 @@ const BusinessModel_b = () => {
 
                             <p> Through Ethereum based treasury strategies UCBI optimizes capital allocation liquidity and yield generation Our disciplined approach helps institutions and partners build sustainable financial growth in the evolving digital economy </p>
 
-                            <Button href="#about" className={styles.secondaryBtn}>
+                            <Button data-bs-toggle="modal"   href="#submit-a-request" className={styles.secondaryBtn}>
                             View More
                             <span className={styles.btnIcon}>
                                 <ArrowIcon />
