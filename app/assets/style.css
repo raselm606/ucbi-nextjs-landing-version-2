@@ -518,7 +518,7 @@ img {
     font-weight: 500;
 }
 .section_paragraph_white {
-    color: var(--text_gray);
+    color: rgb(255 255 255 / 70%);
     font-size: 12px;
     line-height: 21px;
     font-family: var(--paragraph_font);
@@ -733,8 +733,8 @@ img {
     align-items: center;
 }
 .main_coin img {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     margin-right: 10px;
 }
 .main_coin span {
@@ -749,18 +749,22 @@ img {
 }
 .token_item {
     background: #133459;
-    border: 1px solid rgb(255 255 255 / 15%);
-    border-radius: 30px;
+    border: 1px solid #ffffff26;
+    border-radius: 10px;
+    justify-content: space-between;
     align-items: center;
-    width: 260px;
+    width: 200px;
+    height: 50px;
+    margin-right: 20px;
     padding: 5px 10px;
     display: flex;
-    justify-content: space-between;
-    margin-right: 20px;
 }
 .token_info p {
-    margin-left: 70px;
     margin-bottom: 30px;
+    margin-left: 70px;
+    font-weight: 600;
+    font-family: inherit;
+    font-size: 13px;
 }
 .token_info {
     padding-bottom: 40px;
@@ -781,8 +785,12 @@ img {
     margin-bottom: 20px;
 }
 .bg_bb {
-    background: #F0F1F5;
-    padding: 63px 70px 70px 70px;
+    background: radial-gradient(circle, #f5f8fc 0%, #e4ecf5 100%);
+    padding: 45px 68px 37px;
+    border-radius: 8px;
+}
+.goal_im img {
+    border-radius: 8px;
 }
 .divider_lin {
     background: rgb(220, 224, 229);
@@ -1844,4 +1852,61 @@ span.dline {
 .img_ara img {
     height: 110px;
     width: 110px;
+}
+.contract_in span {
+    color: #37cae9;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    display: inline-block;
+    position: relative;
+    font-family: 'Inter';
+}
+.contract_in span:after {
+    content: "";
+    background: #0cc0df;
+    width: 40px;
+    height: 2px;
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+}
+
+.contract_in h2 {
+    color: #fff;
+    font-size: 22px; 
+    font-weight: 700; 
+    margin-bottom: 20px;  
+    font-family: 'Inter';
+}
+
+.ggland span{
+    color: #0cc0df;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    display: inline-block;
+    position: relative;
+    font-family: 'Inter';
+
+}
+.ggland span:after {
+    content: "";
+    background: #0cc0df;
+    width: 40px;
+    height: 2px;
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+}
+.ggland h2 {
+    color: #112e50;
+    font-size: 22px; 
+    font-weight: 700; 
+    margin-bottom: 20px;  
+    font-family: 'Inter';
 }

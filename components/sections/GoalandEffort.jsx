@@ -7,11 +7,12 @@ const GoalandEffort = () => {
     <>
     <div className="goal_sectio line_top">
         <div className="container cline">
-            <div className="row g-0">
+            <div className="row g-2">
                 <div className="col-lg-6 mb-3 ">
-                    <div className="goal_content bg_bb">
-                        <h2 className="section_title_dark" >
-                            Long-term support <br /> for secure digital innovation
+                    <div className="goal_content ggland bg_bb">
+                        <span>Long-Term Support</span>
+                        <h2>
+                            Committed to building <br /> sustainable digital growth
                         </h2>
                         <p   className="section_paragraph_dark">Operating within a private investment framework the holding structure supports Ethereum treasury strategy and diversified multi-asset capital allocation through shareholder participation</p>
 

@@ -125,7 +125,8 @@ const ContractInvestment = () => {
             <div className="row g-0 cont_bg align-items-center">
                 <div className="col-lg-6 mb-3 ">
                     <div className="goal_content contract_in">
-                        <h2 className="section_title_white"  >
+                        <span>Innovation</span> 
+                        <h2 >
                            Private access to innovation
                         </h2>
                         <p className="section_paragraph_white"  >
@@ -152,7 +153,7 @@ const ContractInvestment = () => {
                                 <div className="token_item">
                                     <div className="main_coin">
                                         <Image src={btc_icon} alt="#" width={50} height={50} />
-                                    <span>Bitcoin</span>
+                                    <span>Bitcoin</span> 
                                     </div>
                                     <span className="price_t">${btc ?? "--"}  </span>
                                 </div>
