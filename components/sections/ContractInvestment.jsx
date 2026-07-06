@@ -3,58 +3,93 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
-import atom_icon from '../../public/images/atom.png';
 import btc_icon from '../../public/images/btc.png';
-import dogecoin_icon from '../../public/images/dogecoin.png';
-import eth_icon from '../../public/images/eth.png';
-import hype_coin from '../../public/images/hype.png';
-import ripple_icon from '../../public/images/ripple.png';
 import ucbi_icon from '../../public/images/ucbi.png';
 
 const ContractInvestment = () => {
-    const [btc, setBtc] = useState(null);
-    const [eth, setEth] = useState(null);
-    const [atom, setAtom] = useState(null);
-    const [xrp, setXrp] = useState(null);
-    const [dogecoin, setDogecoin] = useState(null);
-    const [hype, setHype] = useState(null);
-    const [err, setErr] = useState(null);
+const [btc, setBtc] = useState(null);
+const [eth, setEth] = useState(null);
+const [atom, setAtom] = useState(null);
+const [xrp, setXrp] = useState(null);
+const [dogecoin, setDogecoin] = useState(null);
+const [hype, setHype] = useState(null);
+const [err, setErr] = useState(null);
 
-    const [ucbiPrice, setUcbiPrice] = useState(null);
-    const [ucbiError, setUcbiError] = useState(null);
+const [ucbiPrice, setUcbiPrice] = useState(null);
+const [ucbiError, setUcbiError] = useState(null);
 
+const [btcChange, setBtcChange] = useState(null);
+const [ethChange, setEthChange] = useState(null);
+const [atomChange, setAtomChange] = useState(null);
+const [xrpChange, setXrpChange] = useState(null);
+const [dogecoinChange, setDogecoinChange] = useState(null);
+const [hypeChange, setHypeChange] = useState(null);
 
-    useEffect(() => {
-    async function load() {
-      try {
-        const btcRes = await fetch("/api/price/btc", { cache: "no-store" }).then(r => r.json());
-        const ethRes = await fetch("/api/price/eth", { cache: "no-store" }).then(r => r.json());
-        const atomRes = await fetch("/api/price/atom", { cache: "no-store" }).then(r => r.json());
-        const xrpRes = await fetch("/api/price/xrp", { cache: "no-store" }).then(r => r.json());
-        const dogecoinRes = await fetch("/api/price/dogecoin", { cache: "no-store" }).then(r => r.json());
+useEffect(() => {
+  async function load() {
+    try {
+      const [
+        btcRes,
+        ethRes,
+        atomRes,
+        xrpRes,
+        dogecoinRes,
+        hypeRes,
+      ] = await Promise.all([
+        fetch("/api/price/btc", { cache: "no-store" }).then((r) => r.json()),
+        fetch("/api/price/eth", { cache: "no-store" }).then((r) => r.json()),
+        fetch("/api/price/atom", { cache: "no-store" }).then((r) => r.json()),
+        fetch("/api/price/xrp", { cache: "no-store" }).then((r) => r.json()),
+        fetch("/api/price/dogecoin", { cache: "no-store" }).then((r) => r.json()),
+        fetch("/api/price/hype", { cache: "no-store" }).then((r) => r.json()),
+      ]);
 
-        const hypeRes = await fetch("/api/price/hype", { cache: "no-store" }).then(r => r.json());
-
-        if (!btcRes.ok || !ethRes.ok || !atomRes.ok || !xrpRes.ok || !dogecoinRes.ok || !hypeRes.ok) {
-          setErr("Price load failed");
-          return;
-        }
-
-        setBtc(btcRes.price);
-        setEth(ethRes.price);
-        setAtom(atomRes.price);
-        setXrp(xrpRes.price);
-        setDogecoin(dogecoinRes.price);
-        setHype(hypeRes.price);
-      } catch (e) {
-        setErr("Network/API error");
+      if (
+        !btcRes.ok ||
+        !ethRes.ok ||
+        !atomRes.ok ||
+        !xrpRes.ok ||
+        !dogecoinRes.ok ||
+        !hypeRes.ok
+      ) {
+        setErr("Price load failed");
+        return;
       }
+
+      setBtc(btcRes.price);
+      setEth(ethRes.price);
+      setAtom(atomRes.price);
+      setXrp(xrpRes.price);
+      setDogecoin(dogecoinRes.price);
+      setHype(hypeRes.price);
+
+      setBtcChange(btcRes.change24h);
+      setEthChange(ethRes.change24h);
+      setAtomChange(atomRes.change24h);
+      setXrpChange(xrpRes.change24h);
+      setDogecoinChange(dogecoinRes.change24h);
+      setHypeChange(hypeRes.change24h);
+    } catch (e) {
+      setErr("Network/API error");
     }
+  }
 
-    load();
-    console.log(btc, eth, atom, xrp, dogecoin, hype, err);
+  load();
+}, []);
 
-  }, []);
+
+const formatChange = (value) => {
+  if (value === null || value === undefined) return "--";
+
+  const sign = value > 0 ? "+" : "";
+  return `${sign}${value.toFixed(2)}%`;
+};
+
+const changeClass = (value) => {
+  if (value > 0) return "price_change up";
+  if (value < 0) return "price_change down";
+  return "price_change neutral";
+};
 
     //ucbi price
     useEffect(() => {
@@ -162,120 +197,218 @@ const ContractInvestment = () => {
                                     
                                     <div className="price_at">
                                         <span className="price_t">${btc ?? "--"}  </span>
+                                        <span className={changeClass(btcChange)} >{formatChange(btcChange)}</span>
+                                    </div>
+                                </div>
+
+                                 
+
+                                <div className="token_item">
+                                    <div className="main_coin">
+                                        <Image src={btc_icon} alt="#" width={50} height={50} />
+
+                                        <div className="middle_txt"> 
+                                            <p>Ethereum</p> <span> ETH</span> 
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div className="price_at">
+                                        <span className="price_t">${eth ?? "--"}  </span>
+                                        <span className={changeClass(ethChange)} >{formatChange(ethChange)}</span>
+                                    </div>
+                                </div>
+
+                                <div className="token_item">
+                                    <div className="main_coin">
+                                        <Image src={btc_icon} alt="#" width={50} height={50} />
+
+                                        <div className="middle_txt"> 
+                                            <p>Ripple</p> <span> XRP</span> 
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div className="price_at">
+                                        <span className="price_t">${xrp ?? "--"}  </span>
+                                        <span className={changeClass(xrpChange)} >{formatChange(xrpChange)}</span>
+                                    </div>
+                                </div>
+
+                                <div className="token_item">
+                                    <div className="main_coin">
+                                        <Image src={btc_icon} alt="#" width={50} height={50} />
+
+                                        <div className="middle_txt"> 
+                                            <p>Hyperliquid</p> <span> HYPE</span> 
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div className="price_at">
+                                        <span className="price_t">${hype ?? "--"}  </span>
+                                        <span className={changeClass(hypeChange)} >{formatChange(hypeChange)}</span>
+                                    </div>
+                                </div>
+
+                                <div className="token_item">
+                                    <div className="main_coin">
+                                        <Image src={btc_icon} alt="#" width={50} height={50} />
+
+                                        <div className="middle_txt"> 
+                                            <p>Dogecoin</p> <span> DOGE</span> 
+                                        </div> 
+                                    </div>
+                                    
+                                    <div className="price_at">
+                                        <span className="price_t">${dogecoin ?? "--"}  </span>
+                                        <span className={changeClass(dogecoinChange)} >{formatChange(dogecoinChange)}</span>
+                                    </div>
+                                </div>
+ 
+
+                                <div className="token_item">
+                                    <div className="main_coin">
+                                        <Image src={ucbi_icon} alt="" width={50} height={50} />
+                                        <div className="middle_txt"> 
+                                                <p>UCBI Holding</p> <span> UCBI</span> 
+                                            </div>
+                                        </div>
+                                    {/* <span className="price_t"> {ucbiPrice == null ? "--" : `$${ucbiPrice.toFixed(3)}`}     </span> */}
+                                    <div className="price_at">
+                                        <span className="price_t">$3.20  </span>
                                         <span>+1.82%</span>
                                     </div>
                                 </div>
 
                                 <div className="token_item">
                                     <div className="main_coin">
-                                        <Image src={eth_icon} alt="" width={50} height={50} />
-                                    <span> Ethereum</span>
+                                        <Image src={btc_icon} alt="#" width={50} height={50} />
+
+                                        <div className="middle_txt"> 
+                                            <p>Cosmos</p> <span> Atom</span> 
+                                        </div> 
                                     </div>
-                                    <span className="price_t">${eth ?? "--"}  </span>
+                                    
+                                    <div className="price_at">
+                                        <span className="price_t">${atom ?? "--"}  </span>
+                                        <span className={changeClass(atomChange)} >{formatChange(atomChange)}</span>
+                                    </div>
+                                </div>
+
+                                {/* repeat token */}
+
+                                <div className="token_item">
+                                    <div className="main_coin">
+                                        <Image src={btc_icon} alt="#" width={50} height={50} />
+
+                                        <div className="middle_txt"> 
+                                            <p>Bitcoin</p> <span> BTC</span> 
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div className="price_at">
+                                        <span className="price_t">${btc ?? "--"}  </span>
+                                        <span className={changeClass(btcChange)} >{formatChange(btcChange)}</span>
+                                    </div>
+                                </div>
+
+                                 
+
+                                <div className="token_item">
+                                    <div className="main_coin">
+                                        <Image src={btc_icon} alt="#" width={50} height={50} />
+
+                                        <div className="middle_txt"> 
+                                            <p>Ethereum</p> <span> ETH</span> 
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div className="price_at">
+                                        <span className="price_t">${eth ?? "--"}  </span>
+                                        <span className={changeClass(ethChange)} >{formatChange(ethChange)}</span>
+                                    </div>
                                 </div>
 
                                 <div className="token_item">
                                     <div className="main_coin">
-                                        <Image src={ripple_icon} alt="" width={50} height={50} />
-                                    <span> Ripple</span>
+                                        <Image src={btc_icon} alt="#" width={50} height={50} />
+
+                                        <div className="middle_txt"> 
+                                            <p>Ripple</p> <span> XRP</span> 
+                                        </div>
+                                        
                                     </div>
-                                    <span className="price_t">${xrp ?? "--"}      </span>
+                                    
+                                    <div className="price_at">
+                                        <span className="price_t">${xrp ?? "--"}  </span>
+                                        <span className={changeClass(xrpChange)} >{formatChange(xrpChange)}</span>
+                                    </div>
                                 </div>
 
                                 <div className="token_item">
                                     <div className="main_coin">
-                                        <Image src={hype_coin} alt="" width={50} height={50} />
-                                    <span> Hyperliquid</span>
+                                        <Image src={btc_icon} alt="#" width={50} height={50} />
+
+                                        <div className="middle_txt"> 
+                                            <p>Hyperliquid</p> <span> HYPE</span> 
+                                        </div>
+                                        
                                     </div>
-                                    <span className="price_t">${hype ?? "--"}      </span>
+                                    
+                                    <div className="price_at">
+                                        <span className="price_t">${hype ?? "--"}  </span>
+                                        <span className={changeClass(hypeChange)} >{formatChange(hypeChange)}</span>
+                                    </div>
                                 </div>
 
                                 <div className="token_item">
                                     <div className="main_coin">
-                                        <Image src={dogecoin_icon} alt="" width={50} height={50} />
-                                    <span> Dogecoin</span>
+                                        <Image src={btc_icon} alt="#" width={50} height={50} />
+
+                                        <div className="middle_txt"> 
+                                            <p>Dogecoin</p> <span> DOGE</span> 
+                                        </div> 
                                     </div>
-                                    <span className="price_t">${dogecoin ?? "--"}      </span>
+                                    
+                                    <div className="price_at">
+                                        <span className="price_t">${dogecoin ?? "--"}  </span>
+                                        <span className={changeClass(dogecoinChange)} >{formatChange(dogecoinChange)}</span>
+                                    </div>
                                 </div>
+ 
 
                                 <div className="token_item">
                                     <div className="main_coin">
                                         <Image src={ucbi_icon} alt="" width={50} height={50} />
-                                    <span> UCBI</span>
-                                    </div>
+                                        <div className="middle_txt"> 
+                                                <p>UCBI Holding</p> <span> UCBI</span> 
+                                            </div>
+                                        </div>
                                     {/* <span className="price_t"> {ucbiPrice == null ? "--" : `$${ucbiPrice.toFixed(3)}`}     </span> */}
-                                    <span className="price_t"> $3.20     </span>
+                                    <div className="price_at">
+                                        <span className="price_t">$3.20  </span>
+                                        <span>+1.82%</span>
+                                    </div>
                                 </div>
 
                                 <div className="token_item">
                                     <div className="main_coin">
-                                        <Image src={atom_icon} alt="" width={50} height={50} />
-                                    <span>Atom</span>
-                                    </div>
-                                    <span className="price_t">${atom ?? "--"}  </span>
-                                </div>
-                            
-                                <div className="token_item">
-                                    <div className="main_coin">
-                                        <Image src={btc_icon} alt="" width={50} height={50} />
-                                    <span>Bitcoin</span>
-                                    </div>
-                                    <span className="price_t">${btc ?? "--"}  </span>
-                                </div>
+                                        <Image src={btc_icon} alt="#" width={50} height={50} />
 
-                                <div className="token_item">
-                                    <div className="main_coin">
-                                        <Image src={eth_icon} alt="" width={50} height={50} />
-                                    <span> Ethereum</span>
+                                        <div className="middle_txt"> 
+                                            <p>Cosmos</p> <span> Atom</span> 
+                                        </div> 
                                     </div>
-                                    <span className="price_t">${eth ?? "--"}  </span>
-                                </div>
-
-                                <div className="token_item">
-                                    <div className="main_coin">
-                                        <Image src={ripple_icon} alt="" width={50} height={50} />
-                                    <span> Ripplee</span>
+                                    
+                                    <div className="price_at">
+                                        <span className="price_t">${atom ?? "--"}  </span>
+                                        <span className={changeClass(atomChange)} >{formatChange(atomChange)}</span>
                                     </div>
-                                    <span className="price_t">${xrp ?? "--"}      </span>
                                 </div>
-
-                                <div className="token_item">
-                                    <div className="main_coin">
-                                        <Image src={hype_coin} alt="" width={50} height={50} />
-                                    <span> Hyperliquid</span>
-                                    </div>
-                                    <span className="price_t">${hype ?? "--"}      </span>
-                                </div>
-
-                                <div className="token_item">
-                                    <div className="main_coin">
-                                        <Image src={dogecoin_icon} alt="" width={50} height={50} />
-                                    <span> Dogecoin</span>
-                                    </div>
-                                    <span className="price_t">${dogecoin ?? "--"}      </span>
-                                </div>
-
-                                <div className="token_item">
-                                    <div className="main_coin">
-                                        <Image src={ucbi_icon} alt="" width={50} height={50} />
-                                    <span> UCBI</span>
-                                    </div>
-                                    <span className="price_t"> 
-                                        {/* {ucbiPrice == null ? "--" : `$${ucbiPrice.toFixed(3)}`}      */}
-                                        $3.20
-                                        </span>
-                                </div>
-
-                                <div className="token_item">
-                                    <div className="main_coin">
-                                        <Image src={atom_icon} alt="" width={50} height={50} />
-                                    <span>Atom</span>
-                                    </div>
-                                    <span className="price_t">${atom ?? "--"}  </span>
-                                </div>
-                            
-                                
-                                
+                                 
 
                             </Marquee>
 

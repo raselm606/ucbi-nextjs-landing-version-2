@@ -16,11 +16,12 @@ export async function simplePrice(coinId, vs = "usd") {
     `https://api.coingecko.com/api/v3/simple/price` +
     `?ids=${encodeURIComponent(id)}` +
     `&vs_currencies=${encodeURIComponent(currency)}` +
-    `&include_last_updated_at=true`;
+    `&include_last_updated_at=true` +
+    `&include_24hr_change=true`;
 
   try {
     const res = await fetch(url, {
-      next: { revalidate: 30 }, // 2 minutes cache
+      next: { revalidate: 30 },
       headers: {
         accept: "application/json",
       },
@@ -39,6 +40,7 @@ export async function simplePrice(coinId, vs = "usd") {
     const data = await res.json();
 
     const price = data?.[id]?.[currency];
+    const change24h = data?.[id]?.[`${currency}_24h_change`];
     const last_updated_at = data?.[id]?.last_updated_at ?? null;
 
     if (typeof price !== "number") {
@@ -58,6 +60,7 @@ export async function simplePrice(coinId, vs = "usd") {
         coinId: id,
         vs: currency,
         price,
+        change24h: typeof change24h === "number" ? change24h : null,
         last_updated_at,
       },
       {
