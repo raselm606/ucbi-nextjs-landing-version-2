@@ -121,7 +121,7 @@ export function BlockIcon() {
 
 export function BankIcon() {
   return (
-    <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg style={{marginLeft:'2px', marginTop:'-4px !important', lineHeight:'47px'}} width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M21 7L8 14H34L21 7Z" stroke="#0cc0df" stroke-width="2.2" stroke-linejoin="round"/>
   <path d="M11 17H31" stroke="#0cc0df" stroke-width="2.2" stroke-linecap="round"/>
   <path d="M13 17V29" stroke="#0cc0df" stroke-width="2.2" stroke-linecap="round"/>
@@ -136,7 +136,7 @@ export function BankIcon() {
 
   export function RocketIcon() {
   return (
-    <svg
+    <svg style={{marginLeft:'0px', marginTop:'-3px',   lineHeight:'47px'}}
       width="42"
       height="42"
       viewBox="0 0 42 42"
@@ -184,7 +184,7 @@ export function BankIcon() {
 
   export function ChartIcon() { 
     return (
-      <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg style={{marginLeft:'0px', marginTop:'-5px',   lineHeight:'44px'}} width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M9 32H34" stroke="#0cc0df" stroke-width="2.2" stroke-linecap="round"/>
   <path d="M11 32V25" stroke="#0cc0df" stroke-width="2.2" stroke-linecap="round"/>
   <path d="M18 32V21" stroke="#0cc0df" stroke-width="2.2" stroke-linecap="round"/>
@@ -199,7 +199,7 @@ export function BankIcon() {
 
   export function FlagIcon() {
   return (
-    <svg
+    <svg style={{marginLeft:'2px',   lineHeight:'49px'}}
       width="42"
       height="42"
       viewBox="0 0 42 42"

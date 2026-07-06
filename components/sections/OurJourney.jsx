@@ -28,7 +28,7 @@ const OurJourney = () => {
               <div className="col-lg-2">
                   <div className="timeline_item timeline_one"  >
                     <div className="icon_ara">
-                      <BankIcon />
+                      <BankIcon  />
                     </div>
                     <h4>Founding Year</h4>
                     <p>Laying the foundation <br /> for a decentralized future</p>
