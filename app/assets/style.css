@@ -803,13 +803,14 @@ img {
     width: 80%;
 }
 /*blog section*/
-.blog_section { 
+.blog_section {
     position: relative;
+    background: radial-gradient(circle,#f5f8fc 0%,#e4ecf5 100%);
 }
 .blog_section:before {
     content: "";
     position: absolute;
-    top: 4px;
+    top: 0px;
     left: 0;
     height: 1px;
     width: 100%;
