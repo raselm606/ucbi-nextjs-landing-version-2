@@ -80,7 +80,7 @@
 }
 .btext_area span {
     color: #0cc0df;
-    font-size: 11px;
+    font-size: 10px;
     display: inline-block;
     font-weight: 600;
     font-family: inter;
@@ -103,9 +103,9 @@
 }
 .btext_area p {
     font-family: Inter;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 700;
-    line-height: 21px;
+    line-height: 19px;
     text-align: left !important;
     width: 90% !important;
 }

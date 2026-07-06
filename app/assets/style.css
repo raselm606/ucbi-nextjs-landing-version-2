@@ -340,19 +340,21 @@ img {
  
 .section_title_dark {
     color: var(--text_dark);
-    font-size: 18px;
+    font-size: 17px;
     line-height: 20px;
     font-family: var(--title_font);
-    margin-bottom: 20px;
+    margin-bottom: 19px;
     font-weight: 700;
 }
 
-.section_paragraph_dark { 
+.section_paragraph_dark {
     color: var(--paragraph_color);
     line-height: 24px;
-    margin-bottom: 30px;
     font-family: var(--paragraph_font);
     text-align: justify;
+    margin-bottom: 30px;
+    font-size: 12px;
+    font-family: "inter";
 }
 .big_text_number span {
     text-align: center;
@@ -761,7 +763,7 @@ img {
     margin-left: 70px;
     font-weight: 600;
     font-family: inherit;
-    font-size: 12px;
+    font-size: 11px;
 }
 .token_info {
     padding-bottom: 40px;
@@ -778,7 +780,7 @@ img {
 }
 .featured_o p {
     color: var(--dark_color);
-    font-size: 12px;
+    font-size: 11px;
     margin-bottom: 20px;
 }
 .bg_bb {
@@ -1769,7 +1771,7 @@ span.dline {
     padding-right: 0px !important;
 }
 .journey_content span {
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 600;
     color: #0cc0df;
     text-transform: uppercase;
@@ -1789,14 +1791,14 @@ span.dline {
 }
 .journey_content h2 {
     margin-bottom: 14px;
-    font-family: Inter;
-    font-size: 18px;
+    font-family: "Inter";
+    font-size: 17px;
     font-weight: 700;
-    line-height: 24px;
+    line-height: 22px;
 }
 .journey_content p {
     font-size: 12px;
-    width: 62%;
+    width: 57%;
     text-align: justify;
 }
 .icon_ara {
@@ -1817,7 +1819,7 @@ span.dline {
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 10px;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 600;
     display: inline-block;
     position: relative;
@@ -1835,8 +1837,8 @@ span.dline {
     color: #112e50;
     margin-top: 20px;
     margin-bottom: 20px;
-    font-family: Inter;
-    font-size: 18px;
+    font-family: "Inter";
+    font-size: 17px;
     font-weight: 700;
 }
 .advancing_content p {
@@ -1856,7 +1858,7 @@ span.dline {
 }
 .contract_in span {
     color: #37cae9;
-    font-size: 11px;
+    font-size: 10px;
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 1px;
@@ -1878,14 +1880,14 @@ span.dline {
 .contract_in h2 {
     color: #fff;
     margin-bottom: 18px;
-    font-family: Inter;
-    font-size: 18px;
+    font-family: "Inter";
+    font-size: 17px;
     font-weight: 700;
 }
 
 .ggland span{
     color: #0cc0df;
-    font-size: 11px;
+    font-size: 10px;
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 1px;
@@ -1906,15 +1908,15 @@ span.dline {
 }
 .ggland h2 {
     color: #112e50;
-    font-size: 18px; 
+    font-size: 17px; 
     font-weight: 700; 
-    margin-bottom: 20px;  
+    margin-bottom: 19px;  
     font-family: 'Inter';
 }
 .scaleable_content h2 {
     margin-bottom: 20px;
     font-family: "Inter";
-    font-size: 18px;
+    font-size: 17px;
     line-height: 24px;
 }
 .scaleable_content p {
