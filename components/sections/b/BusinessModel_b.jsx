@@ -15,7 +15,7 @@ const BusinessModel_b = () => {
                                  
                                 <div className={styles.btext_area}>
                                     <span>Private Holding</span>
-                                    <p>Secure Asset Holding</p>
+                                    <p style={{width:'100% !important'}}>Business Model</p>
                                 </div>
                             </div>
 
@@ -36,7 +36,7 @@ const BusinessModel_b = () => {
                                  
                                 <div className={styles.btext_area}>
                                     <span>Ethereum Treasury</span>
-                                    <p>Strategic Treasury Management</p>
+                                    <p style={{width:'100% !important'}}>Strategic Treasury </p>
                                 </div>
                             </div>
 
