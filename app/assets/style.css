@@ -1940,7 +1940,7 @@ span.dline {
 }
 .middle_txt p {
     margin-left: 0 !important;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
 }
 .price_at span { 
 }
