@@ -3,7 +3,12 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
+import atom_icon from '../../public/images/atom.png';
 import btc_icon from '../../public/images/btc.png';
+import dogecoin_icon from '../../public/images/dogecoin.png';
+import eth_icon from '../../public/images/eth.png';
+import hype_icon from '../../public/images/hype.png';
+import xrp_icon from '../../public/images/ripple.png';
 import ucbi_icon from '../../public/images/ucbi.png';
 
 const ContractInvestment = () => {
@@ -205,7 +210,7 @@ const changeClass = (value) => {
 
                                 <div className="token_item">
                                     <div className="main_coin">
-                                        <Image src={btc_icon} alt="#" width={50} height={50} />
+                                        <Image src={eth_icon} alt="#" width={50} height={50} />
 
                                         <div className="middle_txt"> 
                                             <p>Ethereum</p> <span> ETH</span> 
@@ -221,7 +226,7 @@ const changeClass = (value) => {
 
                                 <div className="token_item">
                                     <div className="main_coin">
-                                        <Image src={btc_icon} alt="#" width={50} height={50} />
+                                        <Image src={xrp_icon} alt="#" width={50} height={50} />
 
                                         <div className="middle_txt"> 
                                             <p>Ripple</p> <span> XRP</span> 
@@ -237,7 +242,7 @@ const changeClass = (value) => {
 
                                 <div className="token_item">
                                     <div className="main_coin">
-                                        <Image src={btc_icon} alt="#" width={50} height={50} />
+                                        <Image src={hype_icon} alt="#" width={50} height={50} />
 
                                         <div className="middle_txt"> 
                                             <p>Hyperliquid</p> <span> HYPE</span> 
@@ -253,7 +258,7 @@ const changeClass = (value) => {
 
                                 <div className="token_item">
                                     <div className="main_coin">
-                                        <Image src={btc_icon} alt="#" width={50} height={50} />
+                                        <Image src={dogecoin_icon} alt="#" width={50} height={50} />
 
                                         <div className="middle_txt"> 
                                             <p>Dogecoin</p> <span> DOGE</span> 
@@ -283,7 +288,7 @@ const changeClass = (value) => {
 
                                 <div className="token_item">
                                     <div className="main_coin">
-                                        <Image src={btc_icon} alt="#" width={50} height={50} />
+                                        <Image src={atom_icon} alt="#" width={50} height={50} />
 
                                         <div className="middle_txt"> 
                                             <p>Cosmos</p> <span> Atom</span> 
@@ -318,7 +323,7 @@ const changeClass = (value) => {
 
                                 <div className="token_item">
                                     <div className="main_coin">
-                                        <Image src={btc_icon} alt="#" width={50} height={50} />
+                                        <Image src={eth_icon} alt="#" width={50} height={50} />
 
                                         <div className="middle_txt"> 
                                             <p>Ethereum</p> <span> ETH</span> 
@@ -334,7 +339,7 @@ const changeClass = (value) => {
 
                                 <div className="token_item">
                                     <div className="main_coin">
-                                        <Image src={btc_icon} alt="#" width={50} height={50} />
+                                        <Image src={xrp_icon} alt="#" width={50} height={50} />
 
                                         <div className="middle_txt"> 
                                             <p>Ripple</p> <span> XRP</span> 
@@ -350,7 +355,7 @@ const changeClass = (value) => {
 
                                 <div className="token_item">
                                     <div className="main_coin">
-                                        <Image src={btc_icon} alt="#" width={50} height={50} />
+                                        <Image src={hype_icon} alt="#" width={50} height={50} />
 
                                         <div className="middle_txt"> 
                                             <p>Hyperliquid</p> <span> HYPE</span> 
@@ -366,7 +371,7 @@ const changeClass = (value) => {
 
                                 <div className="token_item">
                                     <div className="main_coin">
-                                        <Image src={btc_icon} alt="#" width={50} height={50} />
+                                        <Image src={dogecoin_icon} alt="#" width={50} height={50} />
 
                                         <div className="middle_txt"> 
                                             <p>Dogecoin</p> <span> DOGE</span> 
@@ -396,7 +401,7 @@ const changeClass = (value) => {
 
                                 <div className="token_item">
                                     <div className="main_coin">
-                                        <Image src={btc_icon} alt="#" width={50} height={50} />
+                                        <Image src={atom_icon} alt="#" width={50} height={50} />
 
                                         <div className="middle_txt"> 
                                             <p>Cosmos</p> <span> Atom</span> 
