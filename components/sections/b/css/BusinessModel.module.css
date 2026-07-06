@@ -21,6 +21,7 @@
   color: #ffffff;
   border: 1px solid rgba(0, 199, 255, 0.5);
   box-shadow: 0 12px 32px rgba(0, 140, 255, 0.25);
+  font-size: 11px;
 }
 
 .secondaryBtn {
@@ -28,6 +29,7 @@
   color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(10px);
+  font-size: 11px;
 }
 
 .primaryBtn:hover  {
@@ -57,7 +59,7 @@
 .bSectionArea {
     background: url('../../../../public/images/holding.png') no-repeat center center;
     border-radius: 6px;
-    padding: 25px;
+    padding: 30px;
     background-size: cover;
 }
 .top_b_area {
@@ -78,7 +80,7 @@
 }
 .btext_area span {
     color: #0cc0df;
-    font-size: 12px;
+    font-size: 11px;
     display: inline-block;
     font-weight: 600;
     font-family: inter;
@@ -87,7 +89,7 @@
 }
 
 .bSectionArea p {
-    width: 60%;
+    width: 53%;
     text-align: justify;    
     margin-bottom: 20px;
 }
@@ -100,10 +102,10 @@
     color: #113150 !important;
 }
 .btext_area p {
-    font-size: 20px;
+    font-family: Inter;
+    font-size: 18px;
     font-weight: 700;
+    line-height: 21px;
     text-align: left !important;
     width: 90% !important;
-    line-height: 25px;
-    font-family: 'Inter';
 }

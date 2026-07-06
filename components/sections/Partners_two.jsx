@@ -19,7 +19,7 @@ const Partners =  () => {
     <div className="partner_section">
         <div className="container  ">
           
-                 <Marquee speed={60} gradient={false}>
+                 <Marquee speed={60} gradient={false} pauseOnHover={true}>
                   <div className="partner_img">
                     <Link href="https://trustwallet.com/" target="_blank">
                     <Image className="img7"  src={logo7} alt="Partner Logo" /></Link> <span className="dline"> |</span>

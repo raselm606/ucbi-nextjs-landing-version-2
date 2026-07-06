@@ -164,7 +164,7 @@ const Driving = () => {
                     </div>
                     <div className="offset-lg-2 offset-md-1 col-md-5 col-lg-5">
                         <div className="driving_content">
-                            <span style={{color:'#0cc0df', letterSpacing: '2px', fontWeight: '500', display: 'inline-block'}}> STRATEGIC </span>
+                            <span style={{color:'#0cc0df', fontSize: '11px', letterSpacing: '2px', fontWeight: '500', display: 'inline-block'}}> STRATEGIC </span>
                             <h2 className="section_title_dark"  >
                                  Strategic and <br/> Institutional Positioning
                             </h2>

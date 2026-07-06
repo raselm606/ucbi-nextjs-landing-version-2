@@ -340,9 +340,9 @@ img {
  
 .section_title_dark {
     color: var(--text_dark);
-    font-size: 22px;
-    line-height: 26px;
-    font-family: var(--title_font); 
+    font-size: 18px;
+    line-height: 20px;
+    font-family: var(--title_font);
     margin-bottom: 20px;
     font-weight: 700;
 }
@@ -543,10 +543,9 @@ img {
     width: 20px;
     height: 20px;
     position: absolute;
-    top: -63px;
-    left: 15px;    
-    box-shadow: 0 0 8px rgb(16 220 255), 0 0 18px rgba(12, 192, 223, 0.75), 
-    0 0 36px rgba(12, 192, 223, 0.45);
+    top: -70px;
+    left: 15px;
+    box-shadow: 0 0 8px #10dcff, 0 0 18px #0cc0dfbf, 0 0 36px #0cc0df73;
 }
 .timeline_one:after {
     content: "";
@@ -570,21 +569,19 @@ img {
     width: 20px;
     height: 20px;
     position: absolute;
-    top: -52px;
+    top: -61px;
     left: 14px;
-    box-shadow: 0 0 8px rgb(16 220 255), 0 0 18px rgba(12, 192, 223, 0.75), 
-    0 0 36px rgba(12, 192, 223, 0.45);
+    box-shadow: 0 0 8px #10dcff, 0 0 18px #0cc0dfbf, 0 0 36px #0cc0df73;
 }
 .timeline_two:after {
     content: "";
     background: #0cc0df;
     width: 1px;
-    height: 36px;
+    height: 44px;
     position: absolute;
-    top: -35px;
+    top: -44px;
     left: 24px;
-    box-shadow: 0 0 8px rgb(16 220 255), 0 0 18px rgba(12, 192, 223, 0.75), 
-    0 0 36px rgba(12, 192, 223, 0.45);
+    box-shadow: 0 0 8px #10dcff, 0 0 18px #0cc0dfbf, 0 0 36px #0cc0df73;
 }
 .timeline_three{
     margin-top: 48px;
@@ -597,10 +594,9 @@ img {
     width: 20px;
     height: 20px;
     position: absolute;
-    top: -64px;
+    top: -70px;
     left: 14px;
-    box-shadow: 0 0 8px rgb(16 220 255), 0 0 18px rgba(12, 192, 223, 0.75), 
-    0 0 36px rgba(12, 192, 223, 0.45);
+    box-shadow: 0 0 8px #10dcff, 0 0 18px #0cc0dfbf, 0 0 36px #0cc0df73;
 }
 .timeline_three:after {
     content: "";
@@ -641,15 +637,14 @@ img {
     0 0 36px rgba(12, 192, 223, 0.45);
 }
 .timeline_item h4 {
-    font-size: 20px;
-    line-height: 34px;
     margin-top: 5px;
-} 
+    font-size: 17px;
+    line-height: 25px;
+}
 .timeline_item p {
-    font-size: 13px;
-    /* line-height: 48px; */
+    font-size: 12px;
     font-family: var(--paragraph_font);
-    color: rgb(255 255 255 / 82%);
+    color: #ffffffd1;
     margin-top: 5px;
 }
 .timeline_area{
@@ -678,8 +673,8 @@ img {
 }
 .advancing_para h5 {
     color: var(--text_dark);
-    margin-bottom: 15px;
-    font-size: 18px;
+    margin-bottom: 12px;
+    font-size: 16px;
     font-family: 'Inter';
     font-weight: 700;
 }
@@ -764,7 +759,7 @@ img {
     margin-left: 70px;
     font-weight: 600;
     font-family: inherit;
-    font-size: 13px;
+    font-size: 12px;
 }
 .token_info {
     padding-bottom: 40px;
@@ -786,7 +781,7 @@ img {
 }
 .bg_bb {
     background: radial-gradient(circle, #f5f8fc 0%, #e4ecf5 100%);
-    padding: 45px 68px 37px;
+    padding: 50px 68px 45px;
     border-radius: 8px;
 }
 .goal_im img {
@@ -1665,7 +1660,7 @@ textarea.form-control {
     color: #0f317c !important; 
 }
 .top_nav_button {
-    background: linear-gradient(135deg, #00c7ff, #0078ff); 
+    background: linear-gradient(135deg, #8ee6ff, #1080fe); 
     font-size: 12px;
     font-weight: 600;
     line-height: 42px; 
@@ -1716,6 +1711,7 @@ textarea.form-control {
   color: #ffffff;
   border: 1px solid rgba(0, 199, 255, 0.5);
   box-shadow: 0 12px 32px rgba(0, 140, 255, 0.25);
+  font-size: 11px;
 }
 
 .secondaryBtn {
@@ -1723,6 +1719,7 @@ textarea.form-control {
   color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(10px);
+  font-size: 11px;
 }
 
 .primaryBtn:hover  {
@@ -1764,12 +1761,12 @@ span.dline {
 .businesarea .cline {
     border-left: 1px solid #dce0e5;
     border-right: 1px solid #dce0e5;
-    padding-left: 70px !important;
-    padding-right: 70px !important; 
     padding-bottom: 130px;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
 }
 .journey_content span {
-    font-size: 13px;
+    font-size: 11px;
     font-weight: 600;
     color: #0cc0df;
     text-transform: uppercase;
@@ -1790,12 +1787,12 @@ span.dline {
 .journey_content h2 {
     margin-bottom: 14px;
     font-family: Inter;
-    font-size: 22px;
-    line-height: 30px;
+    font-size: 18px;
     font-weight: 700;
+    line-height: 24px;
 }
 .journey_content p {
-    font-size: 13px;
+    font-size: 12px;
     width: 62%;
     text-align: justify;
 }
@@ -1816,11 +1813,11 @@ span.dline {
     color: #0cc0df;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: 13px;
-    font-weight: 600;
-    position: relative;
     margin-bottom: 10px;
+    font-size: 11px;
+    font-weight: 600;
     display: inline-block;
+    position: relative;
 }
 .advancing_content span:after {
     content: "";
@@ -1832,18 +1829,18 @@ span.dline {
     left: 0;
 }
 .advancing_content h2 {
-    font-size: 22px;
-    font-weight: 700;
-    font-family: 'Inter';
     color: #112e50;
     margin-top: 20px;
     margin-bottom: 20px;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 700;
 }
 .advancing_content p {
     color: #515a73;
-    font-size: 13px;
     text-align: justify;
-    width: 94%;
+    width: 86%;
+    font-size: 12px;
 }
 .adsec_area {
     display: flex;
@@ -1851,12 +1848,12 @@ span.dline {
     gap: 20px;
 }
 .img_ara img {
-    height: 110px;
-    width: 110px;
+    width: 95px;
+    height: 95px;
 }
 .contract_in span {
     color: #37cae9;
-    font-size: 13px;
+    font-size: 11px;
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 1px;
@@ -1877,15 +1874,15 @@ span.dline {
 
 .contract_in h2 {
     color: #fff;
-    font-size: 22px; 
-    font-weight: 700; 
-    margin-bottom: 20px;  
-    font-family: 'Inter';
+    margin-bottom: 18px;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 700;
 }
 
 .ggland span{
     color: #0cc0df;
-    font-size: 13px;
+    font-size: 11px;
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 1px;
@@ -1906,16 +1903,16 @@ span.dline {
 }
 .ggland h2 {
     color: #112e50;
-    font-size: 22px; 
+    font-size: 18px; 
     font-weight: 700; 
     margin-bottom: 20px;  
     font-family: 'Inter';
 }
 .scaleable_content h2 {
-    font-size: 22px;
-    font-family: 'Inter';
-    line-height: 28px;
     margin-bottom: 20px;
+    font-family: "Inter";
+    font-size: 18px;
+    line-height: 24px;
 }
 .scaleable_content p {
     margin-bottom: 20px;

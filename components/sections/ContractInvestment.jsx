@@ -188,7 +188,7 @@ const changeClass = (value) => {
                         </p>
                         <div className="token_slide"  >
 
-                            <Marquee speed={60} gradient={false}>
+                            <Marquee speed={60} gradient={false} pauseOnHover={true}>
                             
                                 <div className="token_item">
                                     <div className="main_coin">
@@ -282,7 +282,7 @@ const changeClass = (value) => {
                                     {/* <span className="price_t"> {ucbiPrice == null ? "--" : `$${ucbiPrice.toFixed(3)}`}     </span> */}
                                     <div className="price_at">
                                         <span className="price_t">$3.20  </span>
-                                        <span>+1.82%</span>
+                                        <span style={{ color: '#00e09d' }}>+1.82%</span>
                                     </div>
                                 </div>
 
@@ -395,7 +395,7 @@ const changeClass = (value) => {
                                     {/* <span className="price_t"> {ucbiPrice == null ? "--" : `$${ucbiPrice.toFixed(3)}`}     </span> */}
                                     <div className="price_at">
                                         <span className="price_t">$3.20  </span>
-                                        <span>+1.82%</span>
+                                        <span style={{ color: '#00e09d' }}>+1.82%</span>
                                     </div>
                                 </div>
 
