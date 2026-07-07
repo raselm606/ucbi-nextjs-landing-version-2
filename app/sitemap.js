@@ -1,7 +1,7 @@
 // app/sitemap.js
 
 export default function sitemap() {
-  const baseUrl = "https://ucbibanking.io"; // তোমার ডোমেইন দাও
+  const baseUrl = "https://ucbibanking.io";  
 
   return [
     {
@@ -10,28 +10,30 @@ export default function sitemap() {
       changeFrequency: "daily",
       priority: 1,
     },
+    
     {
-      url: `${baseUrl}/treasury-management`,
+      url: `${baseUrl}/become-member`,
       lastModified: new Date(),
-      changeFrequency: "monthly",
+      changeFrequency: "daily",
+      priority: 0.9,
+    },
+
+    {
+      url: "https://doc.ucbibanking.io/ucbi_terms_condition",
+      lastModified: new Date(),
+      changeFrequency: "daily",
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/financial-information`,
+      url: "https://doc.ucbibanking.io/ucbi_whitepaper",
       lastModified: new Date(),
-      changeFrequency: "monthly",
+      changeFrequency: "daily",
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/submit-request`,
+      url: "https://doc.ucbibanking.io/ucbi_coinmarketcap",
       lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/contact`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
+      changeFrequency: "daily",
       priority: 0.5,
     },
   ];
