@@ -4,6 +4,10 @@ import Image from "next/image";
 import b1 from "../../../public/images/b/b1.png";
 import b2 from "../../../public/images/b/b2.png";
 import b3 from "../../../public/images/b/b3.png";
+
+import btc_coin from '../../../public/images/btc_coin.png';
+import eth_coin from '../../../public/images/eth_coin.png';
+import ucbi_coin from '../../../public/images/ucbi_coin.svg';
 import styles from "./css/Hero.module.css";
 import {
   ArrowIcon
@@ -82,6 +86,14 @@ const HeroSection_b = () => {
               </div>
             </div>
           </div>
+
+          <div className="offset-lg-1 col-lg-5"  >
+                      <div className="hero_image" >
+                        <Image className="ucbi_coin" src={ucbi_coin}  alt="hero_image" priority/>
+                        <Image className="eth_coin" src={eth_coin}  alt="hero_image" priority/>
+                        <Image className="btc_coin" src={btc_coin}  alt="hero_image" priority/>
+                      </div>
+                    </div>
 
           {/* Right Image */}
           {/* <div className="col-lg-6">
