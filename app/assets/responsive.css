@@ -11,12 +11,12 @@
 
 /* Large / Desktop */
 @media only screen and (min-width: 1850px)  {
-    .hero_image .btc_coin { 
-        margin-left:5px !important; 
-        top: 30%;
-        width: 180px;
-        height: 180px;
-    }
+    .hero_image .btc_coin {
+    width: 180px;
+    height: 180px;
+    top: 30%;
+    margin-left: -3px !important;
+}
     .hero_image .eth_coin { 
         width: 200px;
         height: 200px; 
@@ -24,10 +24,10 @@
         right: 34% ;
     }
     .hero_image .ucbi_coin { 
-    width: 350px;
-    height: 350px; 
+    width: 360px;
+    height: 360px; 
     bottom: 21%;
-    right: 20% !important;
+    right: 22% !important;
 }
 }
 @media only screen and (width: 1800px)  {
@@ -44,10 +44,10 @@
         right: 34% ;
     }
     .hero_image .ucbi_coin { 
-    width: 370px;
-    height: 370px; 
+    width: 360px;
+    height: 360px; 
     bottom: 21%;
-    right: 15% ;
+    right: 22% !important;
 }
 }
 /* Large / Desktop */
@@ -81,13 +81,13 @@
     .hero_image .eth_coin {
     width: 150px !important;
     height: 150px !important;
-    bottom: 23%;
+    bottom: 32% !important;
     right: 34%;
 }
     .hero_image .ucbi_coin { 
     width: 300px !important;
     height: 300px !important; 
-    bottom: 21%;
+    bottom: 30% !important;
     right: 19% !important;
 }
 }
@@ -101,7 +101,7 @@
     .hero_image .eth_coin {
     width: 150px !important;
     height: 150px !important;
-    bottom: 23%;
+    bottom: 32%;
     right: 34%;
 }
     .hero_image .ucbi_coin { 
@@ -121,7 +121,7 @@
     .hero_image .eth_coin {
     width: 150px !important;
     height: 150px !important;
-    bottom: 23%;
+    bottom: 32%;
     right: 34%;
 }
     .hero_image .ucbi_coin { 
@@ -132,22 +132,22 @@
 }
 }
 @media only screen and (min-width: 1320px) {
-    .hero_image .btc_coin { 
-        margin-left: -39px; 
-        top: 30%;
-        width: 180px;
-        height: 180px;
-    }
-    .hero_image .eth_coin { 
-        width: 200px;
-        height: 200px; 
-        bottom: 31%;
-        right: 34%;
-    }
+    .hero_image .btc_coin {
+    width: 160px;
+    height: 160px;
+    margin-left: -39px;
+    top: 26%;
+}
+    .hero_image .eth_coin {
+    width: 170px;
+    height: 170px;
+    bottom: 40%;
+    right: 35%;
+}
     .hero_image .ucbi_coin {
-    width: 350px;
-    height: 350px;
-    bottom: 29%;
+    width: 330px;
+    height: 330px;
+    bottom: 39%;
     right: 14%;
 }
 
