@@ -262,7 +262,7 @@ img {
     height: 820px;
 }
 .hero_image .ucbi_coin {
-    mix-blend-mode: luminosity;
+    /* mix-blend-mode: luminosity; */
     width: 400px;
     height: 400px;
     animation: 4s linear infinite top_bottom_bounce;
