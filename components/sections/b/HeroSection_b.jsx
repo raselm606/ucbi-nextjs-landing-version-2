@@ -7,7 +7,7 @@ import b3 from "../../../public/images/b/b3.png";
 
 import btc_coin from '../../../public/images/btc_coin.png';
 import eth_coin from '../../../public/images/eth_coin.png';
-import ucbi_coin from '../../../public/images/ucbi_coin.svg';
+import ucbi_coin from '../../../public/images/ucbi_coin.png';
 import styles from "./css/Hero.module.css";
 import {
   ArrowIcon
