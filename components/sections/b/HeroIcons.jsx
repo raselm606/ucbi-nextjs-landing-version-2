@@ -222,3 +222,128 @@ export function BankIcon() {
     </svg>
   );
 }
+
+export function ShieldIcon2() {
+  return (
+    <svg
+      width="42"
+      height="42"
+      viewBox="0 0 42 42"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M21 6L30.5 10V18.8C30.5 25.6 26.2 31.1 21 33.5C15.8 31.1 11.5 25.6 11.5 18.8V10L21 6Z"
+        stroke="#3D63DD"
+        strokeWidth="2.2"
+        strokeLinejoin="round"
+      />
+
+      <path
+        d="M21 6V33.5"
+        stroke="#3D63DD"
+        strokeWidth="2.2"
+        opacity="0.15"
+      />
+    </svg>
+  );
+}
+
+export function ChartIcon2() {
+  return (
+    <svg
+      width="42"
+      height="42"
+      viewBox="0 0 42 42"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M9 31H33"
+        stroke="#3D63DD"
+        strokeWidth="2.2"
+        strokeLinecap="round"
+      />
+
+      <rect
+        x="11"
+        y="22"
+        width="4"
+        height="9"
+        rx="1"
+        stroke="#3D63DD"
+        strokeWidth="2"
+      />
+
+      <rect
+        x="18"
+        y="17"
+        width="4"
+        height="14"
+        rx="1"
+        stroke="#3D63DD"
+        strokeWidth="2"
+      />
+
+      <rect
+        x="25"
+        y="11"
+        width="4"
+        height="20"
+        rx="1"
+        stroke="#3D63DD"
+        strokeWidth="2"
+      />
+
+      <path
+        d="M10 14L16 11L22 14L29 8"
+        stroke="#3D63DD"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+export function LockIcon() {
+  return (
+    <svg
+      width="42"
+      height="42"
+      viewBox="0 0 42 42"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect
+        x="12"
+        y="18"
+        width="18"
+        height="14"
+        rx="2"
+        stroke="#3D63DD"
+        strokeWidth="2.2"
+      />
+
+      <path
+        d="M16 18V14.5C16 11.5 18.2 9 21 9C23.8 9 26 11.5 26 14.5V18"
+        stroke="#3D63DD"
+        strokeWidth="2.2"
+        strokeLinecap="round"
+      />
+
+      <circle
+        cx="21"
+        cy="24"
+        r="1.6"
+        fill="#3D63DD"
+      />
+
+      <path
+        d="M21 25.6V28"
+        stroke="#3D63DD"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}

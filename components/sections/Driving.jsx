@@ -3,9 +3,10 @@ import Button from "@/components/ui/Button";
 import Image from "next/image";
 import drive_img from "../../public/images/drive3.png";
 import {
-    ArrowIcon
+    ArrowIcon,
+    ChartIcon2, LockIcon,
+    ShieldIcon2
 } from "./b/HeroIcons";
-
 
 
 
@@ -162,7 +163,7 @@ const Driving = () => {
                             <Image src={drive_img} alt="Driving Image" height={100} width={550} />
                         </div>
                     </div>
-                    <div className="offset-lg-2 offset-md-1 col-md-5 col-lg-5">
+                    <div className="offset-lg-1 offset-md-1 col-md-6 col-lg-6">
                         <div className="driving_content">
                             <span style={{color:'#0cc0df', fontSize: '10px', fontFamily:'inter', letterSpacing: '2px', fontWeight: '500', display: 'inline-block'}}> STRATEGIC </span>
                             <h2 className="section_title_dark"  >
@@ -171,6 +172,37 @@ const Driving = () => {
                             <p className="section_paragraph_dark t1_width">
                                 <strong>UCBI</strong>’s mission is to support disciplined and sustainable treasury development through a long-term strategy grounded in strong governance principles operating as a strategic holding structure the platform focuses on Ethereum accumulation and diversified multi-asset capital allocation within robust organizational frameworks this ensures alignment with regulatory standards operational resilience and institutional discipline through prudent capital structuring structured private investment and comprehensive risk management the framework seeks sustainable growth while maintaining a controlled confidential environment enabling innovation stability compliance and long-term shareholder confidence
                             </p>
+                            <div className="deatureBox">
+                                <div className="deatureItem">
+                                    <div className="deatureIcon">
+                                        <div className="deatureSvg">
+                                    <ShieldIcon2 />
+                                    {/* <Image src={b1} alt="b1"/>  */}
+                                    </div>
+                                    </div>
+                                    <span>Institutional Governance</span>
+                                </div>
+                
+                                <div className="deatureItem">
+                                    <div className="deatureIcon">
+                                        <div className="deatureSvg">
+                                    <ChartIcon2 />
+                                        {/* <Image src={b2} alt="b2"/> */}
+                                    </div>
+                                    </div>
+                                    <span>Prudent Capital Structuring</span>
+                                </div>
+                
+                                <div className="deatureItem">
+                                    <div className="deatureIcon">
+                                        <div className="deatureSvg">
+                                    <LockIcon />
+                                        {/* <Image src={b3} alt="b3"/> */}
+                                    </div>
+                                    </div>
+                                    <span>Riks Management</span>
+                                </div>
+                            </div>
                              <Button href="#" className="primaryBtn">
                                 Learn More
                                 <span className="btnIcon">

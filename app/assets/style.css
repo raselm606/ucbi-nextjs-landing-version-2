@@ -2006,3 +2006,44 @@ span.dline {
     background: #c9d3de;
     bottom: -110px;
 }
+
+.deatureBox {
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    background: #ffffff54;
+    border: 1px solid #ffffff1c;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0; 
+    margin-top: 34px;
+    display: flex;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.deatureItem {
+    color: #ffffffe0;
+    border-right: 1px solid #ffffff14;
+    align-items: center;
+    gap:5px;
+    min-height: 58px;
+    padding: 2px;
+    font-size: 12px;
+    font-weight: 500;
+    display: flex;
+}
+.deatureSvg {
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center; 
+    display: inline-flex;
+}
+.deatureSvg svg {
+    width: 40px;
+    height: 40px;
+}
+.deatureItem span {
+    color: #000d32;
+    width: 46%;
+    font-size: 11px;
+}
