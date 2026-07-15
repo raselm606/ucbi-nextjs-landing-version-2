@@ -323,7 +323,7 @@ img {
 }
 .driving_section .cline {
     /* background: #F0F1F5; */ 
-    padding: 110px 70px 130px 160px !important;
+    padding: 110px 70px 130px 70px !important;
     border-right: 1px solid rgb(17 46 80 / 15%) !important;
     border-left: 1px solid rgb(17 46 80 / 15%) !important;
 }
@@ -333,7 +333,7 @@ img {
 }
 
 .driving_img img {
-    width: 400px;
+    /* width: 400px; */
     height: auto; 
 }
  

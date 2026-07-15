@@ -159,12 +159,12 @@ const Driving = () => {
         <div className="driving_section ">
             <div className="container cline" >
                 <div className="row align-items-center justify-content-center">
-                    <div className="col-lg-4 col-md-4 mb-3">
+                    <div className="col-lg-6 col-md-6 mb-3">
                         <div className="driving_img text-center">
                             <Image src={drive_img} alt="Driving Image" height={100} width={550} />
                         </div>
                     </div>
-                    <div className="offset-lg-1 offset-md-1 col-md-6 col-lg-6">
+                    <div className=" col-md-6 col-lg-6">
                         <div className="driving_content">
                             <span style={{color:'#0cc0df', fontSize: '10px', fontFamily:'inter', letterSpacing: '2px', fontWeight: '500', display: 'inline-block'}}> STRATEGIC </span>
                             <h2 className="section_title_dark"  >
