@@ -1,11 +1,12 @@
 'use client';
 import Button from "@/components/ui/Button";
 import Image from "next/image";
+import s1 from "../../public/images/b/s11.png";
+import s2 from "../../public/images/b/s22.png";
+import s3 from "../../public/images/b/s33.png";
 import drive_img from "../../public/images/drive3.png";
 import {
-    ArrowIcon,
-    ChartIcon2, LockIcon,
-    ShieldIcon2
+    ArrowIcon
 } from "./b/HeroIcons";
 
 
@@ -173,21 +174,21 @@ const Driving = () => {
                                 <strong>UCBI</strong>’s mission is to support disciplined and sustainable treasury development through a long-term strategy grounded in strong governance principles operating as a strategic holding structure the platform focuses on Ethereum accumulation and diversified multi-asset capital allocation within robust organizational frameworks this ensures alignment with regulatory standards operational resilience and institutional discipline through prudent capital structuring structured private investment and comprehensive risk management the framework seeks sustainable growth while maintaining a controlled confidential environment enabling innovation stability compliance and long-term shareholder confidence
                             </p>
                             <div className="deatureBox">
-                                <div className="deatureItem">
+                                <div className="deatureItem itemLines ">
                                     <div className="deatureIcon">
                                         <div className="deatureSvg">
-                                    <ShieldIcon2 />
-                                    {/* <Image src={b1} alt="b1"/>  */}
+                                    {/* <ShieldIcon2 /> */}
+                                    <Image src={s1} alt="s1"/> 
                                     </div>
                                     </div>
                                     <span>Institutional Governance</span>
                                 </div>
                 
-                                <div className="deatureItem">
+                                <div className="deatureItem itemLines">
                                     <div className="deatureIcon">
                                         <div className="deatureSvg">
-                                    <ChartIcon2 />
-                                        {/* <Image src={b2} alt="b2"/> */}
+                                    {/* <ChartIcon2 /> */}
+                                        <Image src={s2} alt="s2"/>
                                     </div>
                                     </div>
                                     <span>Prudent Capital Structuring</span>
@@ -196,8 +197,8 @@ const Driving = () => {
                                 <div className="deatureItem">
                                     <div className="deatureIcon">
                                         <div className="deatureSvg">
-                                    <LockIcon />
-                                        {/* <Image src={b3} alt="b3"/> */}
+                                    {/* <LockIcon /> */}
+                                        <Image src={s3} alt="s3"/>
                                     </div>
                                     </div>
                                     <span>Riks Management</span>

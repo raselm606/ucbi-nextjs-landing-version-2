@@ -333,9 +333,8 @@ img {
 }
 
 .driving_img img {
-    width: 380px;
-    height: auto;
-    margin-top: 42px;
+    width: 400px;
+    height: auto; 
 }
  
 .section_title_dark {
@@ -2046,4 +2045,19 @@ span.dline {
     color: #000d32;
     width: 46%;
     font-size: 11px;
+}
+.itemLines { 
+    position: relative;
+}
+.itemLines::after {
+    content: "";
+    height: 28px;
+    width: 1px;
+    background: #cccbd2;
+    position: absolute;
+    right: 19px;
+}
+.deatureSvg img {
+    width: 38px;
+    height: 38px;
 }
