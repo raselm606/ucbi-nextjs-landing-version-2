@@ -347,3 +347,184 @@ export function LockIcon() {
     </svg>
   );
 }
+
+export function ShieldIconPlus() {
+  return (
+    <svg
+      width="42"
+      height="42"
+      viewBox="0 0 42 42"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M21 6L31 10V19.5C31 26.2 26.8 31.5 21 34C15.2 31.5 11 26.2 11 19.5V10L21 6Z"
+        stroke="#0cc0df"
+        strokeWidth="2.2"
+        strokeLinejoin="round"
+      />
+
+      <path
+        d="M17.2 20.8L20 23.6L25 18.6"
+        stroke="#0cc0df"
+        strokeWidth="2.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function LockIconPlus() {
+  return (
+    <svg
+      width="42"
+      height="42"
+      viewBox="0 0 42 42"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect
+        x="12"
+        y="18"
+        width="18"
+        height="14"
+        rx="2"
+        stroke="#0cc0df"
+        strokeWidth="2.2"
+      />
+
+      <path
+        d="M16 18V14.5C16 11.5 18.2 9 21 9C23.8 9 26 11.5 26 14.5V18"
+        stroke="#0cc0df"
+        strokeWidth="2.2"
+        strokeLinecap="round"
+      />
+
+      <circle
+        cx="21"
+        cy="24"
+        r="1.6"
+        fill="#0cc0df"
+      />
+
+      <path
+        d="M21 25.6V28"
+        stroke="#0cc0df"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+export function LiquidityIcon() {
+  return (
+    <svg
+      width="42"
+      height="42"
+      viewBox="0 0 42 42"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {/* Axis */}
+      <path
+        d="M11 30H31"
+        stroke="#3D63DD"
+        strokeWidth="2.2"
+        strokeLinecap="round"
+      />
+
+      <path
+        d="M11 30V12"
+        stroke="#3D63DD"
+        strokeWidth="2.2"
+        strokeLinecap="round"
+      />
+
+      {/* Bars */}
+      <rect
+        x="15"
+        y="23"
+        width="2.6"
+        height="7"
+        rx="1.3"
+        fill="#3D63DD"
+      />
+
+      <rect
+        x="20"
+        y="18"
+        width="2.6"
+        height="12"
+        rx="1.3"
+        fill="#3D63DD"
+      />
+
+      <rect
+        x="25"
+        y="13"
+        width="2.6"
+        height="17"
+        rx="1.3"
+        fill="#3D63DD"
+      />
+
+      {/* Trend */}
+      <path
+        d="M14 19L19 15L23 17L28 11"
+        stroke="#3D63DD"
+        strokeWidth="2.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+
+      <path
+        d="M25.7 11H28V13.3"
+        stroke="#3D63DD"
+        strokeWidth="2.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+export function YieldIcon() {
+  return (
+    <svg
+      width="42"
+      height="42"
+      viewBox="0 0 42 42"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {/* Outer Circle */}
+      <circle
+        cx="21"
+        cy="21"
+        r="12"
+        stroke="#3D63DD"
+        strokeWidth="2.2"
+      />
+
+      {/* Pie Section */}
+      <path
+        d="M21 9
+           V21
+           H33"
+        stroke="#3D63DD"
+        strokeWidth="2.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+
+      {/* Divider */}
+      <path
+        d="M21 21L29.5 12.5"
+        stroke="#3D63DD"
+        strokeWidth="2.2"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}

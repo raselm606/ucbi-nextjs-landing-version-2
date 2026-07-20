@@ -21,6 +21,22 @@ const BusinessModel_b = () => {
 
                             <p>UCBI provides secure and regulated private holding solutions for digital assets  We ensure institutional grade custody comprehensive risk management and full compliance with global standards giving our partners peace of mind & long term confidence</p>
 
+                            <div className="dif_items">
+                                    <div className="difs_col">
+                                    {/* <ShieldIconPlus /> */}
+                                    <h6>Private & Regulated</h6>
+                                    <p>Operated under strict legal and  compliance framework  </p>
+                                </div>
+
+                                <div className="difs_col">
+                                    {/* <LockIconPlus /> */}
+                                    <h6>Private & Regulated</h6>
+                                    <p>Operated under strict legal and  compliance framework  </p>
+                                </div>
+
+                                 
+                            </div>
+
                             <Button  data-bs-toggle="modal"   href="#submit-a-request"   className={styles.primaryBtn}>
                             Learn More
                             <span className={styles.btnIcon}>
@@ -41,6 +57,19 @@ const BusinessModel_b = () => {
                             </div>
 
                             <p> Through Ethereum based treasury strategies UCBI optimizes capital allocation liquidity and yield generation Our disciplined approach helps institutions and partners build sustainable financial growth in the evolving digital economy </p>
+
+                            <div className="w_dif_items">
+                          <div className="w_difs_col">
+                            {/* <LiquidityIcon /> */}
+                            <h6>Liquidity Management</h6>
+                            <p>Optimizing liqudity across digital assets and markets </p>
+                          </div>
+                          <div className="w_difs_col">
+                            {/* <YieldIcon /> */}
+                            <h6>Yield Generation</h6>
+                            <p>Maximizing returns through diversified strategies </p>
+                          </div>
+                        </div>
 
                             <Button data-bs-toggle="modal"   href="#submit-a-request" className={styles.secondaryBtn}>
                             View More

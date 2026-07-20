@@ -101,6 +101,7 @@ const fullPhone = `${form.phoneCode}${form.phone}`; // or `${form.phoneCode} ${f
                        <p className="section_paragraph_white" > 
                         UCBI Business Model provides a well overview of the Ethereum focused treasury and Private Investment platform It outlines the diversified allocation governance framework and risk principles supporting disciplined multi asset growth long term sustainability and institutional alignment
                         </p> 
+                        
                         <Button variant="primary" href="https://doc.ucbibanking.io/ucbi_whitepaper" target="_blank"> 
                         Download</Button> 
                     </div>
@@ -117,6 +118,8 @@ const fullPhone = `${form.phoneCode}${form.phone}`; // or `${form.phoneCode} ${f
                         <p className="section_paragraph_dark" >
                             Strategy Advisory services are  provided to partners & shareholders through formal appointments and structured engagements our advisory scope covers treasury structuring blockchain integration corporate finance strategy and long-term development delivered within a strictly  private and confidential framework
                         </p>
+
+                        
                         <Button style={{background:'#112E50 !important'}}  data-bs-toggle="modal"   href="#submit_a_req"  > 
                           Request </Button> 
                     </div>
