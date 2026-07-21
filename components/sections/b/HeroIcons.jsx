@@ -122,13 +122,13 @@ export function BlockIcon() {
 export function BankIcon() {
   return (
     <svg style={{marginLeft:'2px', marginTop:'-4px !important', lineHeight:'47px'}} width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M21 7L8 14H34L21 7Z" stroke="#0cc0df" stroke-width="2.2" stroke-linejoin="round"/>
-  <path d="M11 17H31" stroke="#0cc0df" stroke-width="2.2" stroke-linecap="round"/>
-  <path d="M13 17V29" stroke="#0cc0df" stroke-width="2.2" stroke-linecap="round"/>
-  <path d="M21 17V29" stroke="#0cc0df" stroke-width="2.2" stroke-linecap="round"/>
-  <path d="M29 17V29" stroke="#0cc0df" stroke-width="2.2" stroke-linecap="round"/>
-  <path d="M9 32H33" stroke="#0cc0df" stroke-width="2.2" stroke-linecap="round"/>
-  <path d="M12 29H30" stroke="#0cc0df" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M21 7L8 14H34L21 7Z" stroke="#1690ed" stroke-width="2.2" stroke-linejoin="round"/>
+  <path d="M11 17H31" stroke="#1690ed" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M13 17V29" stroke="#1690ed" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M21 17V29" stroke="#1690ed" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M29 17V29" stroke="#1690ed" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M9 32H33" stroke="#1690ed" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M12 29H30" stroke="#1690ed" stroke-width="2.2" stroke-linecap="round"/>
 </svg>
 
   );    
@@ -145,36 +145,36 @@ export function BankIcon() {
     >
       <path
         d="M26.8 7.5C20.6 9.2 16.5 13.2 14.5 19.3L22.7 27.5C28.8 25.5 32.8 21.4 34.5 15.2C35.1 13 35 10.5 34.2 7.8C31.5 7 29 6.9 26.8 7.5Z"
-        stroke="#0cc0df"
+        stroke="#1690ed"
         strokeWidth="2.2"
         strokeLinejoin="round"
       />
       <path
         d="M24.3 13.8C25.4 12.7 27.2 12.7 28.3 13.8C29.4 14.9 29.4 16.7 28.3 17.8C27.2 18.9 25.4 18.9 24.3 17.8C23.2 16.7 23.2 14.9 24.3 13.8Z"
-        stroke="#0cc0df"
+        stroke="#1690ed"
         strokeWidth="2.2"
       />
       <path
         d="M14.5 19.3L9.6 20.8L7.5 27.2L16.8 25.7"
-        stroke="#0cc0df"
+        stroke="#1690ed"
         strokeWidth="2.2"
         strokeLinejoin="round"
       />
       <path
         d="M22.7 27.5L21.2 34.5L27.6 32.4L29.1 27.5"
-        stroke="#0cc0df"
+        stroke="#1690ed"
         strokeWidth="2.2"
         strokeLinejoin="round"
       />
       <path
         d="M15.4 28.1L10.2 33.3"
-        stroke="#0cc0df"
+        stroke="#1690ed"
         strokeWidth="2.2"
         strokeLinecap="round"
       />
       <path
         d="M18.7 31.4L15.4 34.7"
-        stroke="#0cc0df"
+        stroke="#1690ed"
         strokeWidth="2.2"
         strokeLinecap="round"
       />
@@ -185,13 +185,13 @@ export function BankIcon() {
   export function ChartIcon() { 
     return (
       <svg style={{marginLeft:'0px', marginTop:'-5px',   lineHeight:'44px'}} width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M9 32H34" stroke="#0cc0df" stroke-width="2.2" stroke-linecap="round"/>
-  <path d="M11 32V25" stroke="#0cc0df" stroke-width="2.2" stroke-linecap="round"/>
-  <path d="M18 32V21" stroke="#0cc0df" stroke-width="2.2" stroke-linecap="round"/>
-  <path d="M25 32V16" stroke="#0cc0df" stroke-width="2.2" stroke-linecap="round"/>
-  <path d="M32 32V11" stroke="#0cc0df" stroke-width="2.2" stroke-linecap="round"/>
-  <path d="M10 22L17 18L23 20L33 10" stroke="#0cc0df" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M27.5 10H33V15.5" stroke="#0cc0df" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M9 32H34" stroke="#1690ed" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M11 32V25" stroke="#1690ed" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M18 32V21" stroke="#1690ed" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M25 32V16" stroke="#1690ed" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M32 32V11" stroke="#1690ed" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M10 22L17 18L23 20L33 10" stroke="#1690ed" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M27.5 10H33V15.5" stroke="#1690ed" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 
     );
@@ -208,14 +208,14 @@ export function BankIcon() {
     >
       <path
         d="M14 33V8"
-        stroke="#0cc0df"
+        stroke="#1690ed"
         strokeWidth="2.2"
         strokeLinecap="round"
       />
 
       <path
         d="M15 9H29.5L26.8 15L29.5 21H15V9Z"
-        stroke="#0cc0df"
+        stroke="#1690ed"
         strokeWidth="2.2"
         strokeLinejoin="round"
       />

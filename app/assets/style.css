@@ -539,25 +539,25 @@ img {
 }
 .timeline_one:before {
     content: "";
-    background: var(--primary_color);
+    background: #ffffff;
     border-radius: 50%;
     width: 20px;
     height: 20px;
     position: absolute;
     top: -70px;
     left: 15px;
-    box-shadow: 0 0 8px #10dcff, 0 0 18px #0cc0dfbf, 0 0 36px #0cc0df73;
+    box-shadow: 0 0 8px #1690ed, 0 0 18px #0cc0dfbf, 0 0 36px #0cc0df73;
+    border: 2px solid #1690ed;
 }
 .timeline_one:after {
     content: "";
-    background: #0cc0df;
+    background: #1075b5;
     width: 1px;
-    height: 63px;
+    height: 50px;
     position: absolute;
-    top: -62px;
+    top: -50px;
     left: 24px;
-    box-shadow: 0 0 8px rgb(16 220 255), 0 0 18px rgba(12, 192, 223, 0.75), 
-    0 0 36px rgba(12, 192, 223, 0.45);
+    box-shadow: 0 0 8px #10dcff, 0 0 18px #0cc0dfbf, 0 0 36px #0cc0df73;
 }
 .timeline_two {
     margin-top: 136px;
@@ -565,7 +565,7 @@ img {
 }
 .timeline_two:before {
     content: "";
-    background: var(--primary_color);
+    background: #ffffff;
     border-radius: 50%;
     width: 20px;
     height: 20px;
@@ -573,14 +573,15 @@ img {
     top: -61px;
     left: 14px;
     box-shadow: 0 0 8px #10dcff, 0 0 18px #0cc0dfbf, 0 0 36px #0cc0df73;
+    border: 2px solid #1690ed;
 }
 .timeline_two:after {
     content: "";
-    background: #0cc0df;
+    background: #1075b5;
     width: 1px;
-    height: 44px;
+    height: 41px;
     position: absolute;
-    top: -44px;
+    top: -40px;
     left: 24px;
     box-shadow: 0 0 8px #10dcff, 0 0 18px #0cc0dfbf, 0 0 36px #0cc0df73;
 }
@@ -590,7 +591,7 @@ img {
 }
 .timeline_three:before {
     content: "";
-    background: var(--primary_color);
+    background: #ffffff;
     border-radius: 50%;
     width: 20px;
     height: 20px;
@@ -598,17 +599,17 @@ img {
     top: -70px;
     left: 14px;
     box-shadow: 0 0 8px #10dcff, 0 0 18px #0cc0dfbf, 0 0 36px #0cc0df73;
+    border: 2px solid #1690ed;
 }
 .timeline_three:after {
     content: "";
-    background: #0cc0df;
+    background: #1075b5;
     width: 1px;
-    height: 54px;
+    height: 51px;
     position: absolute;
-    top: -53px;
+    top: -50px;
     left: 24px;
-    box-shadow: 0 0 8px rgb(16 220 255), 0 0 18px rgba(12, 192, 223, 0.75), 
-    0 0 36px rgba(12, 192, 223, 0.45);
+    box-shadow: 0 0 8px #10dcff, 0 0 18px #0cc0dfbf, 0 0 36px #0cc0df73;
 }
 .timeline_four {
     position: relative;
@@ -616,26 +617,25 @@ img {
 }
 .timeline_four:before {
     content: "";
-    background: var(--primary_color);
+    background: #ffffff;
     border-radius: 50%;
     width: 20px;
     height: 20px;
     position: absolute;
     top: -92px;
     left: 15px;
-    box-shadow: 0 0 8px rgb(16 220 255), 0 0 18px rgba(12, 192, 223, 0.75), 
-    0 0 36px rgba(12, 192, 223, 0.45);
+    box-shadow: 0 0 8px #10dcff, 0 0 18px #0cc0dfbf, 0 0 36px #0cc0df73;
+    border: 2px solid #1690ed;
 }
 .timeline_four:after {
     content: "";
-    background: #0cc0df;
+    background: #1075b5;
     width: 1px;
-    height: 81px;
+    height: 73px;
     position: absolute;
-    top: -80px;
+    top: -72px;
     left: 24px;
-    box-shadow: 0 0 8px rgb(16 220 255), 0 0 18px rgba(12, 192, 223, 0.75), 
-    0 0 36px rgba(12, 192, 223, 0.45);
+    box-shadow: 0 0 8px #10dcff, 0 0 18px #0cc0dfbf, 0 0 36px #0cc0df73;
 }
 .timeline_item h4 {
     margin-top: 5px;
@@ -653,7 +653,7 @@ img {
 }
 .timeline_area img {
     width: 1000px;
-    margin-top: 68px;
+    margin-top: 70px;
 }
 .line_img {
     position: absolute;
@@ -1801,13 +1801,13 @@ span.dline {
     text-align: justify;
 }
 .icon_ara {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    border: 1px solid #0cc0df;
     text-align: center;
+    color: #1075b5;
+    border: 1px solid #1075b5;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
     line-height: 50px;
-    color: #0cc0df;
 }
 .icon_ara svg {
     width: 33px; 
