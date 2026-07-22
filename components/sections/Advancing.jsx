@@ -22,7 +22,7 @@ const Advancing =  () => {
                     
                 </div>
 
-                <div className="offset-lg-1 col-lg-7">
+                <div className="offset-lg-2 col-lg-6">
 
                     <div className="adsec_area">
                         <div className="img_ara">
