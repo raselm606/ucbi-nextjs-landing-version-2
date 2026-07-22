@@ -2,6 +2,7 @@ import Image from "next/image"
 import ad1 from "../../public/images/ad1.png"
 import ad2 from "../../public/images/ad2.png"
 import ad3 from "../../public/images/ad3.png"
+import adv from "../../public/images/adv_logo.png"
 const Advancing =  () => { 
 
   return (
@@ -17,10 +18,12 @@ const Advancing =  () => {
                           Through  <br /> Structured Growth
                         </h2>
                         <p>We are committed to building a solid foundation and driving sustainable growth through a clear stategy strong partnerships and institutional excellence</p>
-                    </div>   
+                         <Image src={adv} alt="adv" height={100} width={100}/>  
+                    </div>
+                    
                 </div>
 
-                <div className="offset-lg-2 col-lg-6">
+                <div className="offset-lg-1 col-lg-7">
 
                     <div className="adsec_area">
                         <div className="img_ara">

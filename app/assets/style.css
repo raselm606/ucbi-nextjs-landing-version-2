@@ -669,20 +669,42 @@ img {
 .advancing_para p {
     color: var(--paragraph_color);
     text-align: justify;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     font-size: 12px;
     line-height: 24px;
 }
 .advancing_para h5 {
     color: var(--text_dark);
     margin-bottom: 12px;
+    font-family: Inter;
     font-size: 16px;
-    font-family: 'Inter';
     font-weight: 700;
+    margin-top: 10px;
 }
 .advancing_para {
     border-bottom: 1px solid #dce0e5;
     margin-bottom: 30px;
+    position: relative;
+}
+.advancing_para:before {
+    content: "";
+    background: #bcd1ee;
+    width: 2px;
+    height: 118px;
+    position: absolute;
+    top: 15px;
+    left: -26px;
+}
+.advancing_para:after {
+    content: "";
+    background: #fff;
+    border: 4px solid #2994fe;
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 69px;
+    left: -32px;
 }
 .advancing_para:last-child {
     border-bottom: 1px solid transparent;
@@ -691,8 +713,14 @@ img {
     background: radial-gradient(circle, #f5f8fc 0%, #e4ecf5 100%);
     border-top: 1px solid #dce0e5;
     border-bottom: 1px solid #dce0e5;
-    position: relative;
     margin-top: 100px;
+    position: relative;
+    background: url("../../public/images/adv.png");
+    background-size: cover;
+}
+.advancing_content img {
+    width: 80%;
+    margin-top: 50px;
 }
 .advancing_section:before {
     content: "";
@@ -1847,14 +1875,66 @@ span.dline {
     font-size: 12px;
 }
 .adsec_area {
-    display: flex;
+    background: #fff;
+    border-radius: 10px;
+    flex-wrap: nowrap;
     justify-content: space-between;
-    gap: 20px;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 10px;
+    padding: 15px;
+    display: flex;
+    box-shadow: 0 8px 30px rgba(25, 75, 130, .06),
+        0 1px 3px rgba(25, 75, 130, .04);
+    /* background: linear-gradient(        180deg,        #ffffff 0%,        #f8fbff 45%,        #f2f7fd 100%    ); */
+     background:
+        radial-gradient(
+            circle at top right,
+            rgba(115,180,255,.18) 0%,
+            transparent 35%
+        ),
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #f7fbff 55%,
+            #f2f7fd 100%
+        );
+    border: 1px solid rgba(90, 145, 220, .08);
+    position: relative;
+}
+.adsec_area::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:3px;
+
+    background:linear-gradient(
+        90deg,
+        transparent 0%,
+        #4aa3ff 25%,
+        #2b73ff 70%,
+        transparent 100%
+    );
+}
+.img_ara {
+    border: 1px solid #91b3e3;
+    border-radius: 50%;
+    padding: 14px;
+    overflow: hidden;
+    width: 344px !important;
+    height: 129px !important;
 }
 .img_ara img {
-    width: 95px;
-    height: 95px;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid #91b3e3; */
+    /* border-radius: 50%; */
+    /* padding: 10px; */
 }
+
 .contract_in span {
     color: #37cae9;
     font-size: 10px;
