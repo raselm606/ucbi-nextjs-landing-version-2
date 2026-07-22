@@ -25,7 +25,7 @@ const InterSans = Inter({
 
 
 const siteUrl = "https://ucbibanking.io";
-const ogImage = "/logo_ucbi.jpg";
+const ogImage = "/bg_fav.jpg";
 
  export const metadata = {
   // base URL 
@@ -64,7 +64,7 @@ const ogImage = "/logo_ucbi.jpg";
     title: "UCBI Banking - Blockchain Private Equity Holding ",
     description:
       "Exclusive private investment platform combining private equity crypto-finance and strategic treasury management to support long-term technological value creation within the UCBI Holding structure reserved for selected partners",
-    images: ["/logo_ucbi.jpg"],
+    images: ["/bg_fav.jpg"],
     creator: "@ucbi_banking",
   },
   alternates: {
