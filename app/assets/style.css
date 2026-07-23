@@ -693,7 +693,7 @@ img {
     height: 125px;
     position: absolute;
     top: 15px;
-    left: -26px;
+    left: -22px;
 }
 .advancing_para:after {
     content: "";
@@ -1881,7 +1881,7 @@ span.dline {
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    gap: 50px;
+    gap: 35px;
     margin-bottom: 10px;
     padding: 15px 15px 0;
     display: flex;
