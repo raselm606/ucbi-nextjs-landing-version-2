@@ -10,6 +10,7 @@ import eth_icon from '../../public/images/eth.png';
 import hype_icon from '../../public/images/hype.png';
 import xrp_icon from '../../public/images/ripple.png';
 import ucbi_icon from '../../public/images/ucbi.png';
+import worldcoin_icon from '../../public/images/worldcoin.png';
 
 const ContractInvestment = () => {
 const [btc, setBtc] = useState(null);
@@ -30,6 +31,10 @@ const [xrpChange, setXrpChange] = useState(null);
 const [dogecoinChange, setDogecoinChange] = useState(null);
 const [hypeChange, setHypeChange] = useState(null);
 
+//world coin 
+const [worldcoin, setWorldcoin] = useState(null);
+const [worldcoinChange, setWorldcoinChange] = useState(null);
+
 useEffect(() => {
   async function load() {
     try {
@@ -40,6 +45,7 @@ useEffect(() => {
         xrpRes,
         dogecoinRes,
         hypeRes,
+        worldcoinRes,
       ] = await Promise.all([
         fetch("/api/price/btc", { cache: "no-store" }).then((r) => r.json()),
         fetch("/api/price/eth", { cache: "no-store" }).then((r) => r.json()),
@@ -47,6 +53,7 @@ useEffect(() => {
         fetch("/api/price/xrp", { cache: "no-store" }).then((r) => r.json()),
         fetch("/api/price/dogecoin", { cache: "no-store" }).then((r) => r.json()),
         fetch("/api/price/hype", { cache: "no-store" }).then((r) => r.json()),
+        fetch("/api/price/worldcoin", { cache: "no-store" }).then((r) => r.json()),
       ]);
 
       if (
@@ -55,7 +62,8 @@ useEffect(() => {
         !atomRes.ok ||
         !xrpRes.ok ||
         !dogecoinRes.ok ||
-        !hypeRes.ok
+        !hypeRes.ok ||
+        !worldcoinRes.ok
       ) {
         setErr("Price load failed");
         return;
@@ -66,6 +74,7 @@ useEffect(() => {
       setAtom(atomRes.price);
       setXrp(xrpRes.price);
       setDogecoin(dogecoinRes.price);
+      setWorldcoin(worldcoinRes.price);
       setHype(hypeRes.price);
 
       setBtcChange(btcRes.change24h);
@@ -74,6 +83,7 @@ useEffect(() => {
       setXrpChange(xrpRes.change24h);
       setDogecoinChange(dogecoinRes.change24h);
       setHypeChange(hypeRes.change24h);
+      setWorldcoinChange(worldcoinRes.change24h);
     } catch (e) {
       setErr("Network/API error");
     }
@@ -189,6 +199,22 @@ const changeClass = (value) => {
                         <div className="token_slide"  >
 
                             <Marquee speed={60} gradient={false} pauseOnHover={true}>
+
+                                <div className="token_item">
+                                    <div className="main_coin">
+                                        <Image src={worldcoin_icon} alt="#" width={50} height={50} />
+
+                                        <div className="middle_txt"> 
+                                            <p>Worldcoin</p> <span> WLD</span> 
+                                        </div>
+                                        
+                                    </div> 
+                                    
+                                    <div className="price_at">
+                                        <span className="price_t">${worldcoin ?? "--"}  </span>
+                                        <span className={changeClass(worldcoinChange)} >{formatChange(worldcoinChange)}</span>
+                                    </div>
+                                </div>
                             
                                 <div className="token_item">
                                     <div className="main_coin">
@@ -198,13 +224,15 @@ const changeClass = (value) => {
                                             <p>Bitcoin</p> <span> BTC</span> 
                                         </div>
                                         
-                                    </div>
+                                    </div> 
                                     
                                     <div className="price_at">
                                         <span className="price_t">${btc ?? "--"}  </span>
                                         <span className={changeClass(btcChange)} >{formatChange(btcChange)}</span>
                                     </div>
                                 </div>
+
+                                
 
                                  
 
@@ -302,6 +330,22 @@ const changeClass = (value) => {
                                 </div>
 
                                 {/* repeat token */}
+
+                                <div className="token_item">
+                                    <div className="main_coin">
+                                        <Image src={worldcoin_icon} alt="#" width={50} height={50} />
+
+                                        <div className="middle_txt"> 
+                                            <p>Worldcoin</p> <span> WLD</span> 
+                                        </div>
+                                        
+                                    </div> 
+                                    
+                                    <div className="price_at">
+                                        <span className="price_t">${worldcoin ?? "--"}  </span>
+                                        <span className={changeClass(worldcoinChange)} >{formatChange(worldcoinChange)}</span>
+                                    </div>
+                                </div>
 
                                 <div className="token_item">
                                     <div className="main_coin">
