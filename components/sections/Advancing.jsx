@@ -31,7 +31,7 @@ const Advancing =  () => {
 
                         <div className="advancing_para">
                             <h5 >Treasury Management</h5>
-                            <p >Treasury management focuses on diversified capital allocation and liquidity strategies to optimization risk adjusted returns to institutional frameworks amd discipline driven  ensure resilient performance and shareholder value creation in dynamic market conditions</p>
+                            <p >Treasury management focuses on diversified capital allocation and liquidity strategies to optimization risk adjusted returns to institutional frameworks and discipline driven  ensure resilient performance and shareholder value creation in dynamic market conditions</p>
                         </div>
 
                     </div>
