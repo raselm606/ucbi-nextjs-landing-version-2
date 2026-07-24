@@ -100,6 +100,8 @@ const formatChange = (value) => {
   return `${sign}${value.toFixed(2)}%`;
 };
 
+
+
 const changeClass = (value) => {
   if (value > 0) return "price_change up";
   if (value < 0) return "price_change down";

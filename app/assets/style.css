@@ -811,15 +811,16 @@ img {
     margin-bottom: 20px;
 }
 .bg_bb {
-    background: radial-gradient(circle, #f5f8fc 0%, #e4ecf5 100%);
-    padding: 50px 68px 45px;
-    border-radius: 8px;
+    /* background: radial-gradient(circle, #f5f8fc 0%, #e4ecf5 100%); */
+    padding: 55px 68px 45px;
+    /* border-radius: 8px; */
+    /* background: #0b1c3c; */
 }
 .goal_im img {
-    border-radius: 8px;
+    /* border-radius: 8px; */
 }
 .divider_lin {
-    background: rgb(220, 224, 229);
+    background: rgb(210 210 210 / 42%);
     width: 80%;
     height: 1px;
     margin-top: 40px;
@@ -827,6 +828,7 @@ img {
 }
 .goal_content p {
     width: 80%;
+    color: #c6c6c6 !important;
 }
 /*blog section*/
 .blog_section {
@@ -1985,7 +1987,7 @@ span.dline {
     left: 0;
 }
 .ggland h2 {
-    color: #112e50;
+    color: #ffffff;
     font-size: 17px; 
     font-weight: 700; 
     margin-bottom: 19px;  
@@ -2181,4 +2183,9 @@ span.dline {
 }
  .w_difs_col svg { 
     margin-bottom: 5px;
+}
+
+.goal_big {
+    background: url("../../public/images/goal_big.jpg");
+    background-size: cover; 
 }

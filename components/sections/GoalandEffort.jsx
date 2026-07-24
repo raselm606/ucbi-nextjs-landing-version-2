@@ -1,15 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
-import goalImg from '../../public/images/goal3.jpg';
 import yahoof from '../../public/images/yahoo1.png';
 const GoalandEffort = () => {
   return (
     <>
     <div className="goal_sectio line_top">
         <div className="container cline">
-            <div className="row g-2">
-                <div className="col-lg-6 mb-3 ">
-                    <div className="goal_content ggland bg_bb">
+            <div className="row g-0 goal_big">
+                <div className="col-lg-12 mb-3 ">
+                    <div className="row">
+                        <div className="col-lg-6">
+                            <div className="goal_content ggland bg_bb">
                         <span>Long-Term Support</span>
                         <h2>
                             Committed to building <br /> sustainable digital growth
@@ -24,12 +25,14 @@ const GoalandEffort = () => {
                              
                         </div>
                     </div>
+                        </div>
+                    </div>
                 </div>
-                <div className="col-lg-6 mb-3">
+                {/* <div className="col-lg-6 mb-3">
                     <div className="goal_im" > 
                         <Image  src={goalImg} alt="goal image" width={600} height={400} /> 
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     </div>
