@@ -59,12 +59,11 @@ const BlogSection = () => {
                             Insights & news
                         </span>
 
-                        <h2>Stay Updated with Latest Articles</h2>
+                        <h2>Stay Updated with <br />Latest Articles</h2>
 
-                        {/* <p>
-                            Explore market insights, corporate updates and long-term blockchain
-                            perspectives <br /> from UCBI Group Technologies.
-                        </p> */}
+                        <p>
+                            Expert analysis, industry trends, and market insights <br /> to keep you informed and ahead
+                        </p>
                     </div>
                 </div>
 

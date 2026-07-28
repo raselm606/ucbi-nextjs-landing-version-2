@@ -833,7 +833,10 @@ img {
 /*blog section*/
 .blog_section {
     position: relative;
-    background: radial-gradient(circle,#f5f8fc 0%,#e4ecf5 100%);
+    /* background: radial-gradient(circle,#f5f8fc 0%,#e4ecf5 100%); */
+    background: url("../../public/images/blog_bg.jpg");
+    background-size: cover;
+
 }
 .blog_section:before {
     content: "";
@@ -2189,3 +2192,22 @@ span.dline {
     background: url("../../public/images/goal_big.jpg");
     background-size: cover; 
 }
+
+.swiper-slide.swiper-slide-active{
+    border: 6px solid #fff !important; 
+    width: 380px !important;
+    border-radius: 22px;
+    background:#fff;
+
+} 
+
+.swiper-slide.swiper-slide-active:hover{
+    transform: translateY(-6px);
+
+} 
+
+.swiper-slide { 
+    height: auto !important; 
+}
+
+    

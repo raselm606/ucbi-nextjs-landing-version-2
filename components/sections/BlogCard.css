@@ -12,7 +12,7 @@
   border-radius: 22px;
   background: #ffffff;
   text-decoration: none;
-  border: 1px solid rgba(17, 46, 80, 0.08);
+  /* border: 1px solid rgba(17, 46, 80, 0.08); */
   /* box-shadow:
     0 16px 38px rgba(17, 46, 80, 0.08),
     0 5px 14px rgba(17, 46, 80, 0.04); */
@@ -94,7 +94,8 @@
 .ucbi-blog-content {
   position: relative;
   padding: 22px 20px 20px;
-  background: linear-gradient(180deg, #ffffff 0%, #f7faff 100%);
+  /* background: linear-gradient(180deg, #ffffff 0%, #f7faff 100%); */
+  background: #fff;
 }
 
 .ucbi-blog-content::before {
@@ -225,9 +226,28 @@
 
 /*section title*/
 .ucbi-blog-section-heading {
-  max-width: 680px;
-  margin-bottom: 46px;
-  text-align: left;
+    text-align: left;
+    max-width: 680px;
+    margin-bottom: 46px;
+    padding-left: 40px;
+    position: relative;
+}
+.ucbi-blog-section-heading:before {
+    content: "";
+    background: #37c1df;
+    width: 2px;
+    height: 153px;
+    position: absolute;
+    left: 4px;
+}
+.ucbi-blog-section-heading:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background: #37c1df;
 }
 
 .ucbi-heading-kicker {
