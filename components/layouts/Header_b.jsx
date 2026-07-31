@@ -9,6 +9,8 @@ import Logo from '../../public/images/logo.png';
 
 const Header_b = () => {
 
+  
+
     const [price, setPrice] = useState(null);
     const [change24h, setChange24h] = useState(null);
     const [fdv, setFdv] = useState(null);
@@ -271,7 +273,9 @@ try {
                                         Country <span style={{ color: "#123052" }}> * </span>
                                       </label>
 
-                                       <Select
+                                       <Select 
+                                       instanceId="country"
+                                       inputId="country"
                                         options={countryOptions}
                                         placeholder="Search country..."
                                         onChange={(selected) =>
@@ -294,6 +298,8 @@ try {
                                         
                                         {/* Country Code */}
                                         <Select
+                                        instanceId="phoneCode"
+                                        inputId="phoneCode"
                                         style={{ width: "50px" }}
                                         options={codeOptions}
                                         placeholder="Country code.."
@@ -329,6 +335,8 @@ try {
                     Subject  <span style={{color:'#123052'}}> * </span>
                     </label>
                   <Select 
+                                        instanceId="subject"
+                                        inputId="subject"
                                         options={selectSubjectOptions}
                                         placeholder="Select a subject.."
                                         onChange={(selected) =>

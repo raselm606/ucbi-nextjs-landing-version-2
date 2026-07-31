@@ -3,7 +3,7 @@ import Header_b from "@/components/layouts/Header_b";
 import Advancing from "@/components/sections/Advancing";
 import BusinessModel_b from "@/components/sections/b/BusinessModel_b";
 import HeroSection_b from "@/components/sections/b/HeroSection_b";
-import BlogSection from "@/components/sections/BlogSection";
+import BlogTwo from "@/components/sections/blogs/BlogTwo";
 import ContractInvestment from "@/components/sections/ContractInvestment";
 import Driving from "@/components/sections/Driving";
 import GoalandEffort from "@/components/sections/GoalandEffort";
@@ -20,7 +20,7 @@ const Homepage = () => {
       <Advancing />
       <ContractInvestment />
       <GoalandEffort />
-      <BlogSection />
+      <BlogTwo />
       <Scaleable />
       <Footer />
     </>

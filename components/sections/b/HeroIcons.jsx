@@ -122,13 +122,13 @@ export function BlockIcon() {
 export function BankIcon() {
   return (
     <svg style={{marginLeft:'2px', marginTop:'-4px !important', lineHeight:'47px'}} width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M21 7L8 14H34L21 7Z" stroke="#1690ed" stroke-width="2.2" stroke-linejoin="round"/>
-  <path d="M11 17H31" stroke="#1690ed" stroke-width="2.2" stroke-linecap="round"/>
-  <path d="M13 17V29" stroke="#1690ed" stroke-width="2.2" stroke-linecap="round"/>
-  <path d="M21 17V29" stroke="#1690ed" stroke-width="2.2" stroke-linecap="round"/>
-  <path d="M29 17V29" stroke="#1690ed" stroke-width="2.2" stroke-linecap="round"/>
-  <path d="M9 32H33" stroke="#1690ed" stroke-width="2.2" stroke-linecap="round"/>
-  <path d="M12 29H30" stroke="#1690ed" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M21 7L8 14H34L21 7Z" stroke="#1690ed" strokeWidth="2.2" strokeLinejoin="round"/>
+  <path d="M11 17H31" stroke="#1690ed" strokeWidth="2.2" strokeLinecap="round"/>
+  <path d="M13 17V29" stroke="#1690ed" strokeWidth="2.2" strokeLinecap="round"/>
+  <path d="M21 17V29" stroke="#1690ed" strokeWidth="2.2" strokeLinecap="round"/>
+  <path d="M29 17V29" stroke="#1690ed" strokeWidth="2.2" strokeLinecap="round"/>
+  <path d="M9 32H33" stroke="#1690ed" strokeWidth="2.2" strokeLinecap="round"/>
+  <path d="M12 29H30" stroke="#1690ed" strokeWidth="2.2" strokeLinecap="round"/>
 </svg>
 
   );    
@@ -185,13 +185,13 @@ export function BankIcon() {
   export function ChartIcon() { 
     return (
       <svg style={{marginLeft:'0px', marginTop:'-5px',   lineHeight:'44px'}} width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M9 32H34" stroke="#1690ed" stroke-width="2.2" stroke-linecap="round"/>
-  <path d="M11 32V25" stroke="#1690ed" stroke-width="2.2" stroke-linecap="round"/>
-  <path d="M18 32V21" stroke="#1690ed" stroke-width="2.2" stroke-linecap="round"/>
-  <path d="M25 32V16" stroke="#1690ed" stroke-width="2.2" stroke-linecap="round"/>
-  <path d="M32 32V11" stroke="#1690ed" stroke-width="2.2" stroke-linecap="round"/>
-  <path d="M10 22L17 18L23 20L33 10" stroke="#1690ed" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M27.5 10H33V15.5" stroke="#1690ed" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M9 32H34" stroke="#1690ed" strokeWidth="2.2" strokeLinecap="round"/>
+  <path d="M11 32V25" stroke="#1690ed" strokeWidth="2.2" strokeLinecap="round"/>
+  <path d="M18 32V21" stroke="#1690ed" strokeWidth="2.2" strokeLinecap="round"/>
+  <path d="M25 32V16" stroke="#1690ed" strokeWidth="2.2" strokeLinecap="round"/>
+  <path d="M32 32V11" stroke="#1690ed" strokeWidth="2.2" strokeLinecap="round"/>
+  <path d="M10 22L17 18L23 20L33 10" stroke="#1690ed" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
+  <path d="M27.5 10H33V15.5" stroke="#1690ed" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>
 
     );
