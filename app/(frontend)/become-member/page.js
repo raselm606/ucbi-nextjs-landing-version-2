@@ -10,6 +10,7 @@ import { FaRegCommentDots, FaRegUser } from "react-icons/fa6";
 import { FiGlobe } from "react-icons/fi";
 import { HiOutlineMail } from "react-icons/hi";
 import { HiUsers } from "react-icons/hi2";
+import { IoShieldCheckmarkSharp } from "react-icons/io5";
 import { MdLocalPhone } from "react-icons/md";
 import Select from "react-select";
  
@@ -292,6 +293,9 @@ const SubmitRequest = () => {
                                       </button>
                                     </div>
                                   </form>
+
+                                  <p style={{color: '#132f51', marginTop: '20px'}} className="text-center">
+                                    <i style={{fontSize: '20px'}}><IoShieldCheckmarkSharp /></i> Your information is secure and will be used to respond to your request</p>
 
                                 </div>
                             </div>
