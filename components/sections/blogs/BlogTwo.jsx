@@ -31,7 +31,7 @@ const BlogTwo = () => {
       }, []);
 
       
-    const latestPosts = posts.slice(3, 6);
+    const latestPosts = posts.slice(2, 5);
 
       const featuredPost = posts[1];
 

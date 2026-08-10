@@ -1,7 +1,6 @@
 import BootstrapProvider from '@/components/layouts/BootstrapProvider';
 import Script from "next/script";
-
-const GTM_ID = "G-2916M50RJ0"; // Replace with your GTM ID
+ 
 
 
 import tasaOrbiter from '@/lib/fonts/tasaOrbiter';
@@ -85,31 +84,25 @@ export default async function RootLayout({ children } ) {
   return (
     <html lang="en">
     <head>
-      {/* GTM script */}
-        <Script
-          id="gtm"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','${GTM_ID}');
-            `,
-          }}
-        />
+       
     </head>
       <body className={`${InterSans.variable} ${tasaOrbiter.variable}`}>
-        {/* GTM noscript */}
-        <noscript>
-          <iframe
-            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          />
-        </noscript>
+         
+         {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-2916M50RJ0"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-2916M50RJ0');
+          `}
+        </Script>
         
         <BootstrapProvider> 
           {children} 

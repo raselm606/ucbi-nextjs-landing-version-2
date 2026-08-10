@@ -41,13 +41,7 @@ const BlogSection = () => {
     <>
     <div className="blog_section">
         <div className="container cline blog_extra_l"> 
-            <div className="row mb-3">
-                {/* <div className="col-lg-12 text-center">
-                    <span className="blog_tag"> Insights & news</span>
-                    <h2  className="section_title_dark">
-                        {blogSectionData.title}
-                    </h2>
-                </div> */}
+            <div className="row mb-3"> 
                 <div className="col-lg-12">
                     <div className="ucbi-blog-section-heading">
                         <span className="ucbi-heading-kicker">
