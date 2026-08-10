@@ -1457,7 +1457,7 @@ textarea.form-control {
     background: linear-gradient(135deg, #00c7ff, #0078ff);
     border: 1px solid #00c7ff80;
     font-size: 11px;
-    box-shadow: 0 12px 32px #008cff40;
+    /* box-shadow: 0 12px 32px #008cff40; */
 }
 button.btnModal i {
     font-size: 16px;

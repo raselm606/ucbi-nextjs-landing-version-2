@@ -294,7 +294,7 @@ const SubmitRequest = () => {
                                     </div>
                                   </form>
 
-                                  <p style={{color: '#132f51', marginTop: '20px'}} className="text-center">
+                                  <p style={{color: '#132f51', marginTop: '10px'}} className="text-center">
                                     <i style={{fontSize: '20px'}}><IoShieldCheckmarkSharp /></i> Your information is secure and will be used to respond to your request</p>
 
                                 </div>
