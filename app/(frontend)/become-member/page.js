@@ -4,6 +4,13 @@ import Header from "@/components/layouts/Header";
 import countriesData from "@/lib/mock-data/countriesData";
 import Link from "next/link";
 import { useState } from "react";
+import { CgNotes } from "react-icons/cg";
+import { FaRegPaperPlane } from "react-icons/fa";
+import { FaRegCommentDots, FaRegUser } from "react-icons/fa6";
+import { FiGlobe } from "react-icons/fi";
+import { HiOutlineMail } from "react-icons/hi";
+import { HiUsers } from "react-icons/hi2";
+import { MdLocalPhone } from "react-icons/md";
 import Select from "react-select";
  
 
@@ -78,6 +85,16 @@ const SubmitRequest = () => {
   
     setUcStatus("success");
     setMsg(data.msg);
+
+    // Google Analytics
+  window.gtag("event", "generate_lead", {
+    form_name: "UCBI Group Technologies LTD Contact Form",
+    name: form.name,
+    surname: form.surname,
+    subject: form.subject,
+    country: form.country,
+  });
+
   
     setForm({ name: "", surname:"", email: "", country: "", phoneCode: "", phone: "", subject: "", comments: "" });
   } catch (Errors) {
@@ -98,8 +115,14 @@ const SubmitRequest = () => {
                 <div className="row justify-content-center">
                     <div className="col-lg-9" style={{marginTop:'180px', marginBottom:'100px'}}>
                         <div className="contact_page_content mb-5 ">
-                            <h5 className="" style={{color:'#112d50'}}>Interested in Becoming a Member of UCBI Group Technologies?</h5>
-                            <p style={{color:'#112d50'}}>Submit a request to get in touch with our team and explore partnership opportunities</p>
+                          <div className="top_header">
+                            <i><HiUsers /></i>
+                            <div className="head_titl">
+                              <h5 className="" style={{color:'#112d50'}}>Become a Member of <br /> <span style={{color:'#1e6cba'}}>UCBI Group Technologies</span></h5>
+                            <p style={{color:'#112d50'}}>Join our exclusive network and be part of a global technology echosystem driving innovation and growth</p>
+                            </div>
+                          </div>
+                            
                             </div>
 
                             <div className="modal-body" style={{color:'#112e50'}}>
@@ -118,21 +141,38 @@ const SubmitRequest = () => {
                                       <label htmlFor="fullname" className="form-label">Name 
                                         <span style={{color:'#123052'}}> * </span>
                                         </label>
-                                      <input type="text" name="name" value={form.name} onChange={handleChange} required className="form-control" id="fullname" aria-describedby="emailHelp" /> 
+
+                                        <div className="form_name">
+                                          <i className="icon_name"><FaRegUser /> </i>
+                                          <input type="text" name="name" value={form.name} onChange={handleChange} required className="form-control" id="fullname" aria-describedby="emailHelp" />
+                                        </div>
+                                        
+                                      
                                     </div>
 
                                     <div className="mb-3 col-lg-6 col-md-6 col-sm-12">
-                                      <label htmlFor="surname" className="form-label">Surname 
+                                      <label htmlFor="surname" className="form-label">Surname  
                                         <span style={{color:'#123052'}}> * </span>
                                         </label>
+                                        <div className="form_name">
+                                          <i className="icon_name"><FaRegUser /> </i>
                                       <input type="text" name="surname" value={form.surname} onChange={handleChange} required className="form-control" id="surname" aria-describedby="surname" /> 
+                                        </div>
                                     </div>
 
                                     <div className="mb-3  col-lg-6 col-md-6 col-sm-12"> 
                                       <label htmlFor="exampleInputEmail1" className="form-label">
                                         Email address  <span style={{color:'#123052'}}> * </span>
                                         </label>
-                                      <input type="email" name="email" value={form.email} onChange={handleChange} required className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+
+                                        <div className="form_name">
+                                          <i><HiOutlineMail /></i>
+
+                                           <input type="email" name="email" value={form.email} onChange={handleChange} required className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                                        </div>
+
+                                      
+
                                       <div id="emailHelp" className="form-text">We will never share your email with anyone else</div>
                                     </div>
 
@@ -140,23 +180,10 @@ const SubmitRequest = () => {
                                       <label htmlFor="country" className="form-label">
                                         Country <span style={{ color: "#123052" }}> * </span>
                                       </label>
+ 
 
-                                      {/* <select
-                                        name="country"
-                                        value={form.country}
-                                        onChange={handleChange}
-                                        required
-                                        className="form-control"
-                                        id="country"
-                                      >
-                                        <option value="">Select a country</option>
-
-                                        {countriesData.map((country) => (
-                                          <option key={country.countryCode} value={country.countryNameEn}>
-                                             {country.countryNameEn} 
-                                          </option>
-                                        ))}
-                                      </select> */}
+                                      <div className="form_name">
+                                          <i> <FiGlobe /> </i>
 
                                       <Select
                                         options={countryOptions}
@@ -169,6 +196,7 @@ const SubmitRequest = () => {
                                         isSearchable
                                         isClearable
                                       />
+                                      </div>
                                     </div>
 
 
@@ -179,26 +207,10 @@ const SubmitRequest = () => {
 
                                       <div className="input-group">
                                         
-                                        {/* Country Code */}
-                                        {/* <select
-                                          className="form-select"
-                                          name="phoneCode"
-                                          value={form.phoneCode}
-                                          onChange={handleChange}
-                                          required
-                                          style={{ maxWidth: "100px" }}
-                                        >
-                                          <option value="">code</option>
+                                         
 
-                                          {countriesData.map((country) => (
-                                            <option
-                                              key={country.countryCode}
-                                              value={`+${country.countryCallingCode}`}
-                                            >
-                                              +{country.countryCallingCode} {country.flag}
-                                            </option>
-                                          ))}
-                                        </select> */}
+                                        <div className="form_name">
+                                          <i><MdLocalPhone /></i>
 
                                         <Select
                                         style={{ width: "50px" }}
@@ -212,6 +224,7 @@ const SubmitRequest = () => {
                                         isSearchable
                                         isClearable
                                       />
+                                      </div>
 
                                         {/* Phone Number */}
                                         <input
@@ -234,8 +247,10 @@ const SubmitRequest = () => {
                                     <div className="mb-3 col-lg-6 col-md-6 col-sm-12">
                                       <label htmlFor="subject" className="form-label">
                                         Subject  <span style={{color:'#123052'}}> * </span>
-                                        </label>
-                                      {/* <input type="text" name="subject" value={form.subject} onChange={handleChange} required className="form-control" id="subject" /> */}
+                                        </label> 
+
+                                      <div className="form_name">
+                                          <i> <CgNotes /></i>
 
                                      
 
@@ -250,12 +265,16 @@ const SubmitRequest = () => {
                                         isSearchable
                                         isClearable
                                       />
+                                      </div>
                                     </div>
                                     <div className="mb-3">
                                       <label htmlFor="comment" className="form-label">
                                         Your Message   <span style={{color:'#123052'}}> * </span>
                                         </label>
+                                        <div className="form_name">
+                                          <i> <FaRegCommentDots /> </i>
                                       <textarea  className="form-control" name="comments" value={form.comments} onChange={handleChange} required id="comments" rows="4" ></textarea>
+                                      </div>
                                       <div id="emailHelp" className="form-text">Please do not include any website link Otherwise we could not be able to receive your request</div>
                                     </div>
                                     <div className="mb-3 d-flex gap-2 form-check">
@@ -268,8 +287,8 @@ const SubmitRequest = () => {
                                     </label>
 
                                     </div>
-                                    <button disabled={loading} type="submit" className="btn btn-primary">
-                                      {loading ? "Sending..." : "Submit Request"}
+                                    <button disabled={loading} type="submit" className=" btnModal">
+                                     <i><FaRegPaperPlane /></i> {loading ? "Sending..." : "Submit Request"}
                                       </button>
                                     </div>
                                   </form>

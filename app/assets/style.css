@@ -1398,8 +1398,21 @@ label.form-check-label {
 .form-control, input.form-control {
     font-size: 12px;
     line-height: 24px;
+    padding-left: 30px;
 }
-
+.form_name {
+    position: relative;
+}
+.form_name i {
+    color: #296cb3;
+    font-size: 16px;
+    position: absolute;
+    top: 7px;
+    left: 9px;
+}
+.icon_name { 
+    font-size: 14px !important; 
+}
 .form-control { 
     background-color: rgb(255 255 255 / 20%) !important; 
 }
@@ -1410,23 +1423,61 @@ textarea.form-control {
     position: relative;
     z-index: 1;
 }
+ 
 .modal-body:before {
     content: "";
-    position: absolute;
-    background: url("public/images/logo_ucbi.png");
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center center;
     z-index: -1;
-    opacity: 0.1;
+    opacity: .09;
+    background: url("public/images/logo_ucbi.png") center no-repeat;
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: -90px;
+    right: -81px;
+    background-size: contain;
 }
 .react-select__control.css-13cymwt-control {
     background: #fff3 !important;
+    padding-left: 25px;
 }
-
+.btnModal {
+    border-radius: 6px;  
+    min-width: 170px;
+    height: 46px;
+    padding: 0 18px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all .3s; 
+    text-align: center;
+    border-radius: 6px !important;
+}
+.btnModal {
+    color: #fff;
+    background: linear-gradient(135deg, #00c7ff, #0078ff);
+    border: 1px solid #00c7ff80;
+    font-size: 11px;
+    box-shadow: 0 12px 32px #008cff40;
+}
+button.btnModal i {
+    font-size: 16px;
+    margin-right: 8px;
+}
+.top_header i {
+    font-size: 25px;
+    color: #1e6cba;
+    border: 1px solid #1e6cba;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 43px;
+    border-radius: 50%;
+    padding-left: 4px;
+}
+.top_header {
+    display: flex;
+    gap: 20px;
+}
 /*new blog styles*/
 
 /* ========= BLOG CARD FINAL PREMIUM VERSION ========= */
