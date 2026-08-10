@@ -249,7 +249,7 @@ try {
           <div className="modal-header" style={{zIndex:'99999'}}>
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-           <div className="contact_page_content mb-5 ">
+           <div className="contact_page_content mb-3 ">
                                     <div className="top_header">
                                       <i><HiUsers /></i>
                                       <div className="head_titl">

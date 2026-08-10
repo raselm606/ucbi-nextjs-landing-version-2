@@ -115,7 +115,7 @@ const SubmitRequest = () => {
             style={{borderLeft:'1px solid #dce0e5', borderRight:'1px solid #dce0e5', height:'100%'}}> 
                 <div className="row justify-content-center">
                     <div className="col-lg-9" style={{marginTop:'180px', marginBottom:'100px'}}>
-                        <div className="contact_page_content mb-5 ">
+                        <div className="contact_page_content mb-3 ">
                           <div className="top_header">
                             <i><HiUsers /></i>
                             <div className="head_titl">
