@@ -133,6 +133,15 @@ const fullPhone = `${form.phoneCode}${form.phone}`; // or `${form.phoneCode} ${f
   setUcStatus("success");
   setMsg(data.msg);
 
+   // Google Analytics
+  window.gtag("event", "generate_lead", {
+    form_name: "UCBI Group Technologies LTD Contact Form",
+    name: form.name,
+    surname: form.surname,
+    subject: form.subject,
+    country: form.country,
+  });
+
   setForm({ name: "", surname: "", email: "", country: "", phoneCode: "", phone: "", subject: "", comments: "" });
 } catch (Errors) {
    setUcStatus("error");
