@@ -1459,6 +1459,9 @@ textarea.form-control {
     font-size: 11px;
     /* box-shadow: 0 12px 32px #008cff40; */
 }
+.modal-header {
+    border-bottom: none !important; 
+}
 button.btnModal i {
     font-size: 16px;
     margin-right: 8px;

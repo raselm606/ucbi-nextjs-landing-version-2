@@ -12,6 +12,7 @@ import { FaRegPaperPlane } from "react-icons/fa";
 import { FaRegCommentDots, FaRegUser } from "react-icons/fa6";
 import { FiGlobe } from "react-icons/fi";
 import { HiOutlineMail } from "react-icons/hi";
+import { HiUsers } from "react-icons/hi2";
 import { IoShieldCheckmarkSharp } from "react-icons/io5";
 import { MdLocalPhone } from "react-icons/md";
 
@@ -246,9 +247,18 @@ try {
       <div className="modal-dialog modal-dialog-centered modal-lg">
           <div className="modal-content p-4">
           <div className="modal-header" style={{zIndex:'99999'}}>
-              <p className="modal-title fs-6" id="exampleModalLabel" style={{color:'#112e50'}}> Interested in Becoming a Member of UCBI Group Technologies ? </p>
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
+           <div className="contact_page_content mb-5 ">
+                                    <div className="top_header">
+                                      <i><HiUsers /></i>
+                                      <div className="head_titl">
+                                        <h5 className="" style={{color:'#112d50'}}>Become a Member of <br /> <span style={{color:'#1e6cba'}}>UCBI Group Technologies</span></h5>
+                                      <p style={{color:'#112d50'}}>Join our exclusive network and be part of a global technology echosystem <br/> driving innovation and growth</p>
+                                      </div>
+                                    </div>
+                                      
+                                      </div>
           <div className="modal-body" style={{color:'#112e50'}}>
                                           <div className="contact_form_arra">
           

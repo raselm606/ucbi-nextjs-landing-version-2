@@ -120,7 +120,7 @@ const SubmitRequest = () => {
                             <i><HiUsers /></i>
                             <div className="head_titl">
                               <h5 className="" style={{color:'#112d50'}}>Become a Member of <br /> <span style={{color:'#1e6cba'}}>UCBI Group Technologies</span></h5>
-                            <p style={{color:'#112d50'}}>Join our exclusive network and be part of a global technology echosystem driving innovation and growth</p>
+                            <p style={{color:'#112d50'}}>Join our exclusive network and be part of a global technology echosystem <br/> driving innovation and growth</p>
                             </div>
                           </div>
                             
