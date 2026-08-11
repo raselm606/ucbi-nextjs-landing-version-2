@@ -118,7 +118,9 @@ const Header_b = () => {
 
   const selectSubjectOptions  = [
     { value: "membership application", label: "Membership application" },
+    { value: "Blockchain Consulting", label: "Blockchain Consulting" },
     { value: "request for information", label: "Request for information" },
+    { value: "Private Investment", label: "Private Investment" },
     { value: "partnership request", label: "Partnership request" },
     { value: "Token launch support", label: "Token launch support" },
   ];

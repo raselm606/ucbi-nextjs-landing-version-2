@@ -84,6 +84,7 @@ const HeroSection_b = () => {
                   <span>Blockchain Infrastructure</span>
                 </div>
               </div>
+              <p className="mt-3" style={{color: 'rgb(255 255 255 / 72%)', fontSize:'12px'}}>Private Capital - Up to 10% potential dividends </p>
             </div>
           </div>
 

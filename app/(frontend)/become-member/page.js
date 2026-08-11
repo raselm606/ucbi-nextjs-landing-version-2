@@ -46,7 +46,7 @@ const SubmitRequest = () => {
       comments: "",
     });
   
-    const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [msg, setMsg] = useState("");
   const [uc_status, setUcStatus] = useState("");  
   

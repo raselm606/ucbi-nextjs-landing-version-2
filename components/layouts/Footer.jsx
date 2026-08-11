@@ -76,7 +76,9 @@ const Footer = () => {
 
   const selectSubjectOptions  = [
     { value: "Token launch support", label: "Token launch support" },
+    { value: "Blockchain Consulting", label: "Blockchain Consulting" },
     { value: "partnership request", label: "Partnership request" },
+    { value: "Private Investment", label: "Private Investment" },
     { value: "membership application", label: "Membership application" },
     { value: "request for information", label: "Request for information" },
   ];

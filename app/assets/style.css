@@ -1423,19 +1423,19 @@ textarea.form-control {
     position: relative;
     z-index: 1;
 }
- 
 .modal-body:before {
     content: "";
     z-index: -1;
     opacity: .09;
     background: url("public/images/logo_ucbi.png") center no-repeat;
-    width: 50%;
-    height: 50%;
+    width: 35%;
+    height: 41%;
     position: absolute;
     top: -90px;
-    right: -81px;
-    background-size: contain;
+    right: -13px;
+    background-size: cover;
 }
+ 
 .react-select__control.css-13cymwt-control {
     background: #fff3 !important;
     padding-left: 25px;
