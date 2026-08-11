@@ -12,28 +12,37 @@ const BlogTwo = () => {
     const [posts, setPosts] = useState([]); 
     
       useEffect(() => {
-        async function loadPosts() {
-          try {
-            const res = await fetch("/api/coindex");
-            const data = await res.json();
-    
-            const latest15 = (data?.Data || [])
-              .sort((a, b) => (b.PUBLISHED_ON || 0) - (a.PUBLISHED_ON || 0))
-              .slice(0, 15);
-    
-            setPosts(latest15); 
-          } catch (err) {
-            console.error("Failed to load posts", err);
-          }
-        }
-    
-        loadPosts();
-      }, []);
+  async function loadPosts() {
+    try {
+      const res = await fetch("/api/coindex");
+
+      console.log("API status:", res.status);
+
+      const data = await res.json();
+
+      console.log("API response:", data);
+      console.log("Posts:", data?.Data);
+
+      const latest15 = (data?.Data || [])
+        .sort(
+          (a, b) =>
+            (b.PUBLISHED_ON || 0) - (a.PUBLISHED_ON || 0)
+        )
+        .slice(0, 15);
+
+      setPosts(latest15);
+    } catch (err) {
+      console.error("Failed to load posts:", err);
+    }
+  }
+
+  loadPosts();
+}, []);
 
       
-    const latestPosts = posts.slice(2, 5);
+    const latestPosts = posts.slice(2, 5) ||posts.slice(1, 4) || posts.slice(0, 3) || [];
 
-      const featuredPost = posts[1];
+      const featuredPost = posts[0] || posts[1] || null;
 
     const id = featuredPost?.ID || featuredPost?.URL;
 const title = featuredPost?.TITLE || "UCBI Blogs";
