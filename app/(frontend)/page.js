@@ -6,9 +6,9 @@ import HeroSection_b from "@/components/sections/b/HeroSection_b";
 import BlogTwo from "@/components/sections/blogs/BlogTwo";
 import ContractInvestment from "@/components/sections/ContractInvestment";
 import Driving from "@/components/sections/Driving";
-import GoalandEffort from "@/components/sections/GoalandEffort";
 import OurJourney from "@/components/sections/OurJourney";
 import Scaleable from "@/components/sections/Scaleable";
+import GrowthVideoSection from "@/components/sections/video/GrowthVideoSection";
 const Homepage = () => {
   return (
     <> 
@@ -18,8 +18,8 @@ const Homepage = () => {
       <BusinessModel_b /> 
       <OurJourney /> 
       <Advancing />
-      <ContractInvestment />
-      <GoalandEffort />
+      <ContractInvestment /> 
+      <GrowthVideoSection /> 
       <BlogTwo />
       <Scaleable />
       <Footer />
