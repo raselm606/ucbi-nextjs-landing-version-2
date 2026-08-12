@@ -80,8 +80,7 @@ export default function GrowthVideoSection() {
                       src={videoUrl}
                       controls={isPlaying}
                       playsInline
-                      loop
-                      muted
+                      loop 
                       className={styles.videoElement}
                       poster="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
                     >
