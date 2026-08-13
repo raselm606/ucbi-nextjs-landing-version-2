@@ -43,7 +43,8 @@
     font-weight: 700;
     line-height: 1.3;
     margin-bottom: 12px;
-    font-family: Inter, sans-serif;
+    font-family: "Inter", sans-serif;
+    text-align: justify !important;
 }
 .desc {
     color: #64748b;
@@ -51,7 +52,8 @@
     margin-bottom: 40px;
     border-bottom: 1px solid #eeeeeecc;
     padding-bottom: 45px;
-    font-family: Inter, sans-serif;
+    font-family: "Inter", sans-serif;
+    text-align: justify !important;
 }
 .date {
     display: flex;

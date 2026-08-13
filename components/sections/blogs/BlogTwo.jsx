@@ -101,11 +101,11 @@ const BlogTwo = async () => {
                                             </div>
 
                                             <h2 className="title">
-                                                {title}
+                                                {trimText(title, 140)}
                                             </h2>
 
                                             <p className="desc">
-                                                {desc}
+                                                {trimText(desc, 210)}
                                             </p>
 
                                             <div className="date mt-4">
