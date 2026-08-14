@@ -675,7 +675,7 @@ img {
 }
 .advancing_para h5 {
     color: var(--text_dark);
-    margin-bottom: 12px;
+    margin-bottom: 4px;
     font-family: Inter;
     font-size: 16px;
     font-weight: 700;
