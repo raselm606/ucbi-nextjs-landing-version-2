@@ -8,6 +8,8 @@ import Select from "react-select";
 import send from '../../public/images/arrow.svg';
 import cc from '../../public/images/cc.png';
 import fr from '../../public/images/france.png';
+import ifel from '../../public/images/ifel.png';
+import ifeluk from '../../public/images/ifeluk.png';
 import FooterLogo from '../../public/images/logo.png';
 import sms from '../../public/images/sms.svg';
 import linkedin from '../../public/images/social/linkedin.svg';
@@ -218,24 +220,59 @@ const fullPhone = `${form.phoneCode}${form.phone}`; // or `${form.phoneCode} ${f
               <div className="footer_navs">
                 <ul > 
                   <li><Link   href="mailto:contact@ucbibanking.io">Contact@ucbibanking.io</Link></li> 
-                  <li><Link  href="+33376876876"  >+33 184 160 139 
+                  <li><Link  href="tel:+33376876876"  >+33 184 160 139 
                   <Image style={{width: "12px", height: "13px", marginTop:'-3px', marginLeft: "6px"}} src={fr} alt="france"/> </Link></li> 
-                  <li><Link href="+441632960123"  >+44 203 445 63 88 
+                  <li><Link href="tel:+441632960123"  >+44 203 445 63 88 
                   <Image style={{width:"12px", height: "13px", marginTop:'-3px', marginLeft:'6px'}} src={uk} alt="uk"/></Link></li> 
                   <li><Link href="mailto:contact@ucbibanking.io">Monday to Friday at 9am to 6pm</Link></li> 
                   
                 </ul>
               </div>
-              <div className="cc_web" id="contact">
+              {/* <div className="cc_web" id="contact">
                 <Image  src={cc} alt='ucbibanking.io' />
                      
                     <Link href="#"> 
                        ucbibanking.io
                     </Link>
-              </div>
+              </div> */}
             </div>
           </div>
 
+        </div>
+        <div className="row align-items-center top_footer_line">
+          <div className="col-lg-4 mb-3">
+            <div className="address_areaa">
+              <Image style={{marginTop:'26px'}} className="mt-3"  src={ifeluk} alt='ucbibanking.io' />
+              <div className="addrs">
+                <h6>United Kingdom</h6>
+                <p className="mb-1"><Link href="tel:+441632960123"  >+44 203 445 63 88 
+                  <Image style={{width:"12px", height: "13px", marginTop:'-3px', marginLeft:'6px'}} src={uk} alt="uk"/></Link></p>
+                <p>20 Wenlock Road <br /> London England N1 7GU </p>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-4 mb-3">
+            <div className="address_areaa">
+              <Image  style={{marginTop:'26px'}}  src={ifel} alt='ucbibanking.io' />
+              <div className="addrs">
+                <h6>France</h6>
+                <p  className="mb-1"><Link  href="tel:+33376876876"  >+33 184 160 139 
+                  <Image style={{width: "12px", height: "13px", marginTop:'-3px', marginLeft: "6px"}} src={fr} alt="france"/> </Link></p>
+               <p>138 Avenue Victor Hugo <br /> 75016 Paris </p>
+
+              </div>
+              
+            </div>
+          </div>
+          <div className="col-lg-4 mb-3">
+            <div className="address_areaa ftxx">
+              <Image  src={cc} alt='ucbibanking.io' />
+                     
+                    <Link href="#"> 
+                       ucbibanking.io
+                    </Link>
+            </div>
+          </div>
         </div>
 
       </div>

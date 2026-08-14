@@ -21,7 +21,7 @@ export async function simplePrice(coinId, vs = "usd") {
 
   try {
     const res = await fetch(url, {
-      next: { revalidate: 30 },
+      next: { revalidate: 120 },
       headers: {
         accept: "application/json",
       },
