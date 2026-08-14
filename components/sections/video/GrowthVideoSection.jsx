@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState } from 'react';
+import imgcover from '../../../public/images/video_cover.jpg';
 import yahoof from '../../../public/images/yahoo1.png';
 import styles from './GrowthVideoSection.module.css';
 
@@ -82,7 +83,7 @@ export default function GrowthVideoSection() {
                       playsInline
                       loop 
                       className={styles.videoElement}
-                      poster="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
+                      poster={imgcover}
                     >
                       Your browser does not support video playback.
                     </video>
