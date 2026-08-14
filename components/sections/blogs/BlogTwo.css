@@ -30,7 +30,7 @@
 }
 .keyw:after {
     content: "";
-    background: linear-gradient(90deg, #27a3c2, #37cde7, #e8faff);
+    /* background: linear-gradient(90deg, #27a3c2, #37cde7, #e8faff); */
     height: 3px;
     width: 22px;
     position: absolute;
