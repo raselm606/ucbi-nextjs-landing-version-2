@@ -204,8 +204,8 @@ const fullPhone = `${form.phoneCode}${form.phone}`; // or `${form.phoneCode} ${f
             <div className="footer_nav_menus">
               <h6>Resources</h6>
               <div className="footer_navs">
-                <ul>
-                  <li><Link href="#">Arkham Intel</Link></li>
+                <ul  style={{marginTop:'50px !important'}}>
+                   
                   <li><Link target="_blank" href="https://finance.yahoo.com/quote/UCBI-USD/">Yahoo Finance</Link></li>
                   <li><Link target="_blank" href="https://coinmarketcap.com/currencies/ucbi-banking/">Coinmarketcap</Link></li>
                   <li><Link target="_blank" href="https://etherscan.io/token/0xb42b35deca033a23401a1a89007a39343a510d0a">Blockchain Explorer</Link></li> 
@@ -218,12 +218,12 @@ const fullPhone = `${form.phoneCode}${form.phone}`; // or `${form.phoneCode} ${f
             <div className="footer_nav_menus">
               <h6>Contact</h6>
               <div className="footer_navs">
-                <ul > 
+                <ul style={{marginTop:'80px !important'}} > 
                   <li><Link   href="mailto:contact@ucbibanking.io">Contact@ucbibanking.io</Link></li> 
-                  <li><Link  href="tel:+33376876876"  >+33 184 160 139 
+                  {/* <li><Link  href="tel:+33376876876"  >+33 184 160 139 
                   <Image style={{width: "12px", height: "13px", marginTop:'-3px', marginLeft: "6px"}} src={fr} alt="france"/> </Link></li> 
                   <li><Link href="tel:+441632960123"  >+44 203 445 63 88 
-                  <Image style={{width:"12px", height: "13px", marginTop:'-3px', marginLeft:'6px'}} src={uk} alt="uk"/></Link></li> 
+                  <Image style={{width:"12px", height: "13px", marginTop:'-3px', marginLeft:'6px'}} src={uk} alt="uk"/></Link></li>  */}
                   <li><Link href="mailto:contact@ucbibanking.io">Monday to Friday at 9am to 6pm</Link></li> 
                   
                 </ul>
