@@ -47,7 +47,7 @@ const BlogTwo = async () => {
                             </h2>
 
                             <p>
-                                Expert analysis, industry trends, and market insights <br />
+                                Expert analysis industry trends and market insights <br />
                                 to keep you informed and ahead
                             </p>
 

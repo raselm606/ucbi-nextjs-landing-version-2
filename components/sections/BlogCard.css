@@ -236,18 +236,19 @@
     content: "";
     background: #37c1df;
     width: 2px;
-    height: 153px;
+    height: 141px;
     position: absolute;
     left: 4px;
 }
 .ucbi-blog-section-heading:after {
     content: "";
-    position: absolute;
-    left: 0;
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
     background: #37c1df;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    left: -1px;
+    bottom: 1px;
 }
 
 .ucbi-heading-kicker {
