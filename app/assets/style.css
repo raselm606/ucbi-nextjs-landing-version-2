@@ -683,7 +683,7 @@ img {
 }
 .advancing_para {
     border-bottom: 1px solid #dce0e5;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     position: relative;
 }
 .advancing_para:before {
@@ -1950,7 +1950,7 @@ span.dline {
     align-items: center;
     gap: 35px;
     margin-bottom: 10px;
-    padding: 15px 15px 0;
+    padding: 4px 15px 0px;
     display: flex;
     position: relative;
     box-shadow: 0 8px 30px #194b820f, 0 1px 3px #194b820a;

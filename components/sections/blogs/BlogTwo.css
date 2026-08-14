@@ -89,12 +89,12 @@
 }
 .latest-box .kamaj:after {
     content: "";
-    background: linear-gradient(90deg, #27a3c2, #37cde7, #e8faff);
+    background: #29d3ff;
+    width: 40px;
     height: 3px;
-    width: 22px;
     position: absolute;
-    left: 128px;
     bottom: 9px;
+    left: 128px;
 }
 .latest-item:last-child {
     border-bottom: none;
