@@ -690,9 +690,9 @@ img {
     content: "";
     background: #ddeafb;
     width: 1px;
-    height: 104px;
+    height: 115px;
     position: absolute;
-    top: 17px;
+    top: 11px;
     left: -22px;
 }
 .advancing_para:after {
@@ -837,6 +837,18 @@ img {
     background: url("../../public/images/blog_bg.jpg");
     background-size: cover;
 
+} 
+.blx_one {
+    background: url("../../public/images/blg1.jpg") !important;
+    background-size: cover !important;
+    background-position: center center;
+    background-repeat: no-repeat;
+} 
+.blx_two {
+    background: url("../../public/images/blg2.jpg") !important;
+    background-size: cover !important;
+    background-position: center center;
+    background-repeat: no-repeat !important;
 }
 .blog_section:before {
     content: "";

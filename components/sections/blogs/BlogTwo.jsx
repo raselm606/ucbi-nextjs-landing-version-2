@@ -66,7 +66,7 @@ const BlogTwo = async () => {
 
                     <div className="col-lg-7">
 
-                        <div className="card-box p-4">
+                        <div className="card-box p-4 blx_one">
 
                             <div className="row align-items-center g-4">
 
@@ -166,7 +166,7 @@ const BlogTwo = async () => {
 
                     <div className="col-lg-5">
 
-                        <div className="latest-box p-4 h-100">
+                        <div className="latest-box blx_two p-4 h-100">
 
                             <h3 className="fw-bold mb-4 kamaj">
                                 LATEST NEWS
