@@ -245,7 +245,7 @@ const fullPhone = `${form.phoneCode}${form.phone}`; // or `${form.phoneCode} ${f
               <Image style={{marginTop:'26px !important;'}} className="mt-3"  src={ifeluk} alt='ucbibanking.io' />
               <div className="addrs">
                 <h6>United Kingdom</h6>
-                <p className="mb-1"><Link href="tel:+441632960123"  >+44 203 445 63 88 
+                <p className="mb-1"><Link href="tel:+442034456388"  >+44 203 445 63 88 
                   <Image style={{width:"12px", height: "13px", marginTop:'-3px', marginLeft:'6px'}} src={uk} alt="uk"/></Link></p>
                 <p>20 Wenlock Road <br /> London England N1 7GU </p>
               </div>
@@ -256,7 +256,7 @@ const fullPhone = `${form.phoneCode}${form.phone}`; // or `${form.phoneCode} ${f
               <Image  style={{marginTop:'26px !important;'}}  src={ifel} alt='ucbibanking.io' />
               <div className="addrs">
                 <h6>France</h6>
-                <p  className="mb-1"><Link  href="tel:+33376876876"  >+33 184 160 139 
+                <p  className="mb-1"><Link  href="tel:+33184160139"  >+33 184 160 139 
                   <Image style={{width: "12px", height: "13px", marginTop:'-3px', marginLeft: "6px"}} src={fr} alt="france"/> </Link></p>
                <p>138 Avenue Victor Hugo <br /> 75016 Paris </p>
 
