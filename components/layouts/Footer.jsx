@@ -242,7 +242,7 @@ const fullPhone = `${form.phoneCode}${form.phone}`; // or `${form.phoneCode} ${f
         <div className="row align-items-center top_footer_line">
           <div className="col-lg-4 mb-3">
             <div className="address_areaa">
-              <Image style={{marginTop:'26px'}} className="mt-3"  src={ifeluk} alt='ucbibanking.io' />
+              <Image style={{marginTop:'26px !important;'}} className="mt-3"  src={ifeluk} alt='ucbibanking.io' />
               <div className="addrs">
                 <h6>United Kingdom</h6>
                 <p className="mb-1"><Link href="tel:+441632960123"  >+44 203 445 63 88 
@@ -253,7 +253,7 @@ const fullPhone = `${form.phoneCode}${form.phone}`; // or `${form.phoneCode} ${f
           </div>
           <div className="col-lg-4 mb-3">
             <div className="address_areaa">
-              <Image  style={{marginTop:'26px'}}  src={ifel} alt='ucbibanking.io' />
+              <Image  style={{marginTop:'26px !important;'}}  src={ifel} alt='ucbibanking.io' />
               <div className="addrs">
                 <h6>France</h6>
                 <p  className="mb-1"><Link  href="tel:+33376876876"  >+33 184 160 139 
