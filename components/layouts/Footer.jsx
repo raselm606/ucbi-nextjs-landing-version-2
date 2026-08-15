@@ -267,7 +267,7 @@ const fullPhone = `${form.phoneCode}${form.phone}`; // or `${form.phoneCode} ${f
                   <Image style={{width: "12px", height: "13px", marginTop:'-3px', marginLeft: "6px"}} src={fr} alt="france"/> </Link></li> 
                   <li><Link href="tel:+441632960123"  >+44 203 445 63 88 
                   <Image style={{width:"12px", height: "13px", marginTop:'-3px', marginLeft:'6px'}} src={uk} alt="uk"/></Link></li>  */}
-                  <li><Link href="#"  onClick={(e) => e.preventDefault()}  style={{ cursor: "default" }}>Monday to Friday at 9am to 6pm</Link></li> 
+                  <li style={{color:'#112e50', fontFamily:'Inter', lineHeight:'31px', fontSize:'12px'}}>Monday to Friday at 9am to 6pm</li> 
                   
                 </ul>
               </div>

@@ -95,7 +95,7 @@ export async function POST(request) {
                     line-height:1.5;
                 ">
                     A new contact or membership request has been received
-                    from the UCBI Group Technologies website.
+                    from the UCBI Group Technologies LTD 
                 </p>
 
             </div>
