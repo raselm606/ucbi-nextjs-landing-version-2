@@ -17,6 +17,13 @@ export default function sitemap() {
       changeFrequency: "daily",
       priority: 0.9,
     },
+    
+    {
+      url: `${baseUrl}/contact-office`,
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.9,
+    },
 
     
     {
