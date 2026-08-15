@@ -83,6 +83,49 @@ const SubmitRequest = () => {
       throw new Error(data?.msg || "❌ " + "Failed! Please recheck the form and try again.");
       
     }
+
+    // 2. Send email from Next.js SMTP
+   const emailRes = await fetch("/api/contact-email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+      },
+      body: JSON.stringify(payload),
+    });
+
+    const emailText = await emailRes.text();
+
+    console.log("EMAIL API STATUS:", emailRes.status);
+    console.log("EMAIL API RESPONSE:", emailText);
+
+    let emailData = {};
+
+    try {
+      emailData = emailText ? JSON.parse(emailText) : {};
+    } catch (error) {
+      console.error("Invalid JSON from email API:", emailText);
+    }
+
+    if (!emailRes.ok) {
+      throw new Error(
+        emailData?.message ||
+        `Email API failed with status ${emailRes.status}`
+      );
+    }
+
+    if (!emailData.success) {
+      throw new Error(
+        emailData?.message || "Email could not be sent."
+      );
+    }
+
+    if (!emailRes.ok) {
+      throw new Error(
+        emailData?.message ||
+        "Form submitted but email could not be sent."
+      );
+    }
   
     setUcStatus("success");
     setMsg(data.msg);

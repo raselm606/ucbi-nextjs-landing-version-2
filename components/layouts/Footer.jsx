@@ -134,6 +134,49 @@ const fullPhone = `${form.phoneCode}${form.phone}`; // or `${form.phoneCode} ${f
     
   }
 
+  // 2. Send email from Next.js SMTP
+   const emailRes = await fetch("/api/contact-email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+      },
+      body: JSON.stringify(payload),
+    });
+
+    const emailText = await emailRes.text();
+
+    console.log("EMAIL API STATUS:", emailRes.status);
+    console.log("EMAIL API RESPONSE:", emailText);
+
+    let emailData = {};
+
+    try {
+      emailData = emailText ? JSON.parse(emailText) : {};
+    } catch (error) {
+      console.error("Invalid JSON from email API:", emailText);
+    }
+
+    if (!emailRes.ok) {
+      throw new Error(
+        emailData?.message ||
+        `Email API failed with status ${emailRes.status}`
+      );
+    }
+
+    if (!emailData.success) {
+      throw new Error(
+        emailData?.message || "Email could not be sent."
+      );
+    }
+
+    if (!emailRes.ok) {
+      throw new Error(
+        emailData?.message ||
+        "Form submitted but email could not be sent."
+      );
+    }
+
   setUcStatus("success");
   setMsg(data.msg);
 
@@ -239,7 +282,7 @@ const fullPhone = `${form.phoneCode}${form.phone}`; // or `${form.phoneCode} ${f
           </div>
 
         </div>
-        <div className="row align-items-center top_footer_line">
+        <div className="row align-items-center top_footer_line" id="contact">
           <div className="col-lg-4 mb-3">
             <div className="address_areaa">
               <Image style={{marginTop:'26px !important;'}} className="mt-3"  src={ifeluk} alt='ucbibanking.io' />
