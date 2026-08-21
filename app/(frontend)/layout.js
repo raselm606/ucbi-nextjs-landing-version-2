@@ -1,7 +1,5 @@
 import BootstrapProvider from '@/components/layouts/BootstrapProvider';
 import Script from "next/script";
- 
-
 
 import tasaOrbiter from '@/lib/fonts/tasaOrbiter';
 import { Inter } from "next/font/google";

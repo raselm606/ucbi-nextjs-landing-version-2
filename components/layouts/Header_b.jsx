@@ -212,7 +212,7 @@ try {
     }
 
 
-    //if error
+   
 
     if (!emailRes.ok) {
       throw new Error(
@@ -258,6 +258,9 @@ try {
                 <ul className="navbar-nav top_nav mx-auto mb-2 mb-lg-0">
                     <li className="nav-item">
                     <Link className="nav-link active" aria-current="page" href="/#about">About</Link>
+                    </li>
+                    <li className="nav-item">
+                    <Link className="nav-link active" aria-current="page" href="https://advisory.ucbibanking.io">Advisory</Link>
                     </li>
                     <li className="nav-item">
                     <Link className="nav-link" target="_blank" href="https://etherscan.io/token/0xb42b35deca033a23401a1a89007a39343a510d0a">Blockchain</Link>
