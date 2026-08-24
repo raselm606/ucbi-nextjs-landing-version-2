@@ -22,8 +22,8 @@ const Scaleable = () => {
 
                         
                     </div>
-                    <Button data-bs-toggle="modal"   href="#submit-a-request" className="primaryBtn">
-                                                         Get in Touch
+                    <Button    href="tel:+33184160139" className="primaryBtn">
+                                                        Call us
                             <span className="btnIcon">
                                 <ArrowIcon />
                             </span>

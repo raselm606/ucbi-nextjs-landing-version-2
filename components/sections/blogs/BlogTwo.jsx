@@ -1,5 +1,5 @@
 import { getCoinDeskNews } from "@/lib/coindesk/coindesk";
-import { cleanText, trimText } from "@/lib/utils/text";
+import { cleanText, trimWords } from "@/lib/utils/text";
 import Image from "next/image";
 import Link from "next/link";
 import "../BlogCard.css";
@@ -101,11 +101,11 @@ const BlogTwo = async () => {
                                             </div>
 
                                             <h2 className="title">
-                                                {trimText(cleanText(title), 140)}
+                                                {trimWords(cleanText(title), 20)}
                                             </h2>
 
                                             <p className="desc">
-                                                {trimText(cleanText(desc), 210)}
+                                                {trimWords(cleanText(desc), 21)}
                                             </p>
 
                                             <div className="date mt-4">
@@ -234,7 +234,7 @@ const BlogTwo = async () => {
                                                     rel="noopener noreferrer"
                                                     href={link}
                                                 >
-                                                    {trimText(cleanText(title), 45)}
+                                                    {trimWords(cleanText(title), 8)}
                                                 </Link>
 
                                             </h5>

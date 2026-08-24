@@ -156,7 +156,7 @@ const Driving = () => {
 // ];
   return (
     <>
-        <div className="driving_section ">
+        <div className="driving_section " id="about">
             <div className="container cline" >
                 <div className="row align-items-center justify-content-center">
                     <div className="col-lg-6 col-md-6 mb-3">
@@ -204,7 +204,7 @@ const Driving = () => {
                                     <span>Riks Management</span>
                                 </div>
                             </div>
-                             <Button href="#" className="primaryBtn">
+                             <Button href="https://advisory.ucbibanking.io/" className="primaryBtn">
                                 Learn More
                                 <span className="btnIcon">
                                     <ArrowIcon />

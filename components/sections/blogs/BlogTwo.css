@@ -22,7 +22,7 @@
 .category {
     color: #369dfe;
     font-weight: 700;
-    font-size: 13px;
+    font-size: 11px;
     text-transform: uppercase; 
 }
 .keyw{
@@ -100,10 +100,13 @@
     border-bottom: none;
 }
 .latest-item img {
-    width: 150px;
-    height: 95px;
     object-fit: cover;
     border-radius: 12px;
+    width: 150px;
+    height: 95px;
+    max-width: 150px;
+    flex: 0 0 150px;
+    min-width: 150px;
 }
 .arrow svg {
     width: 22px;

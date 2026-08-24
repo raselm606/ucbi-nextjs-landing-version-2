@@ -238,7 +238,7 @@ const fullPhone = `${form.phoneCode}${form.phone}`; // or `${form.phoneCode} ${f
                   <li><Link target="_blank" href="https://etherscan.io/token/0xb42b35deca033a23401a1a89007a39343a510d0a">Blockchain</Link></li>
                   <li><Link data-bs-toggle="modal"   href="#submit-a-request">Submit a Request</Link></li>
                   <li><Link data-bs-toggle="modal"   href="#submit-a-request" >Partnership Advisory</Link></li>
-                  <li><Link target="_blank" data-bs-toggle="modal"   href="#token_launch_support" >Token Launch Support</Link></li>
+                  <li><Link target="_blank"     href="https://advisory.ucbibanking.io" >UCBI Advisory Services</Link></li>
                 </ul>
               </div>
             </div>
@@ -331,7 +331,7 @@ const fullPhone = `${form.phoneCode}${form.phone}`; // or `${form.phoneCode} ${f
                 </ul>
               </div>
               <div className="copyright text-center">
-                <p>UCBI Group Technologies LTD Copyright © 2026 All rights reserved</p>
+                <p>UCBI Group Technologies LTD — Copyright © 2026 — A member of UCBI Capital Holding</p>
               </div>
               <div className="cc_terms">
                 <ul>
