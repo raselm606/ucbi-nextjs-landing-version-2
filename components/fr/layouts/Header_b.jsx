@@ -4,9 +4,6 @@ import countriesData from "@/lib/mock-data/countriesData";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import Select from "react-select";
-import Logo from '../../public/images/logo.png';
-
 import { CgNotes } from "react-icons/cg";
 import { FaRegPaperPlane } from "react-icons/fa";
 import { FaRegCommentDots, FaRegUser } from "react-icons/fa6";
@@ -15,7 +12,9 @@ import { HiOutlineMail } from "react-icons/hi";
 import { HiUsers } from "react-icons/hi2";
 import { IoShieldCheckmarkSharp } from "react-icons/io5";
 import { MdLocalPhone } from "react-icons/md";
-import fr from '../../public/images/france.png';
+import Select from "react-select";
+import Logo from '../../../public/images/logo.png';
+import uk from '../../../public/images/uk.png';
 
 const Header_b = () => {
 
@@ -286,10 +285,9 @@ try {
                             {/*(  {change24h == null ? "--" : `${isPos ? "+" : ""}${change24h.toFixed(2)}%`} 24h )*/}
                             {/* </span>
                 </div> */}
-
                 <div className="flag_top">
-                                  <Link href="https://ucbibanking.io/fr"><Image src={fr} width={10} height={10} alt="logo" priority/></Link>
-                                </div>
+                  <Link href="https://ucbibanking.io"><Image src={uk} width={10} height={10} alt="logo" priority/></Link>
+                </div>
                 <div className="top_button">
 
                     <Button target="_blank" variant="top_nav_button" href="https://dashboard.ucbibanking.io"> Dashboard</Button>

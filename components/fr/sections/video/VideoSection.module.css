@@ -1,0 +1,250 @@
+/* ============================================================
+   UCBI BANKING - OUR JOURNEY THEME MATCHED VIDEO SECTION
+============================================================ */
+
+.videoSection {
+  position: relative;
+  padding: 85px 0 80px 0;
+  background-color: #030712; /* Exact dark space navy from screenshot */
+  overflow: hidden;
+}
+
+/* 🌌 Exact Background Gradient & Dot Grid Mesh (Matching screenshot) */
+.videoSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(rgba(12, 192, 223, 0.12) 1px, transparent 1px),
+    radial-gradient(ellipse at 50% 35%, rgba(12, 192, 223, 0.14) 0%, rgba(22, 144, 237, 0.04) 50%, #030712 80%);
+  background-size: 32px 32px, 100% 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 📐 Left & Right Container Vertical Grid Lines (Exact .cline match) */
+.videoSection::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1320px;
+  height: 100%;
+  border-left: 1px solid rgba(12, 192, 223, 0.08);
+  border-right: 1px solid rgba(12, 192, 223, 0.08);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 🎯 CENTER ALIGNED HEADER BLOCK (EXACT SCREENSHOT SIZES) */
+.headerBlock {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 40px auto;
+  position: relative;
+  z-index: 1;
+}
+
+.kickerBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #0cc0df;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  background: rgba(12, 192, 223, 0.08);
+  border: 1px solid rgba(12, 192, 223, 0.22);
+  padding: 5px 14px;
+  border-radius: 30px;
+}
+
+.kickerDot {
+  width: 6px;
+  height: 6px;
+  background-color: #0cc0df;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #0cc0df;
+}
+
+/* 🎯 Title Font Size (28px - Exactly matching screenshot) */
+.sectionTitle {
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 28px !important; /* Matches screenshot heading size */
+  line-height: 1.28 !important;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.3px;
+}
+
+/* Subtle Centered Underline */
+.titleDivider {
+  width: 45px;
+  height: 2px;
+  background: linear-gradient(90deg, #0cc0df, #1690ed);
+  border-radius: 2px;
+  margin: 0 auto 14px auto;
+  box-shadow: 0 0 10px rgba(12, 192, 223, 0.6);
+}
+
+/* 🎯 Subtitle Size (14px - Exactly matching screenshot) */
+.sectionSubtitle {
+  color: #8a99ad !important;
+  font-size: 14px !important;
+  line-height: 1.55 !important;
+  font-weight: 400;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+/* Video Card Styling */
+.videoCard {
+  position: relative;
+  border-radius: 18px;
+  background: rgba(5, 15, 30, 0.7);
+  border: 1px solid rgba(12, 192, 223, 0.22);
+  backdrop-filter: blur(16px);
+  padding: 12px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 35px rgba(12, 192, 223, 0.1);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1;
+}
+
+.videoCard:hover {
+  border-color: rgba(12, 192, 223, 0.45);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.7), 0 0 50px rgba(12, 192, 223, 0.2);
+  transform: translateY(-3px);
+}
+
+.videoContainer {
+  position: relative;
+  width: 100%;
+  padding-top: 52.25%; /* 16:9 Aspect Ratio */
+  border-radius: 12px;
+  overflow: hidden;
+  background: #020610;
+}
+
+.iframeVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  object-fit: cover;
+}
+
+/* Thumbnail Play Overlay with Tech Backdrop */
+.videoOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(3, 7, 18, 0.4) 0%, rgba(3, 7, 18, 0.88) 100%), 
+              url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.videoOverlay:hover {
+  background: linear-gradient(180deg, rgba(3, 7, 18, 0.25) 0%, rgba(3, 7, 18, 0.78) 100%), 
+              url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop') center/cover no-repeat;
+}
+
+.playBtn {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0cc0df 0%, #1690ed 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  box-shadow: 0 0 32px rgba(12, 192, 223, 0.6);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.playBtn::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid #0cc0df;
+  animation: playPulse 2s infinite ease-out;
+}
+
+.videoOverlay:hover .playBtn {
+  transform: scale(1.08);
+  box-shadow: 0 0 45px rgba(12, 192, 223, 0.9);
+}
+
+.playBtn svg {
+  margin-left: 3px;
+}
+
+.videoTagline {
+  margin-top: 16px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+@keyframes playPulse {
+  0% { transform: scale(1); opacity: 0.85; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+/* Info Bar */
+.videoInfoBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px 4px 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.videoBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(12, 192, 223, 0.08);
+  border: 1px solid rgba(12, 192, 223, 0.22);
+  color: #0cc0df;
+  font-size: 12px;
+  padding: 5px 14px;
+  border-radius: 30px;
+  font-weight: 500;
+}
+
+.videoStats {
+  color: #8a99ad;
+  font-size: 13px;
+}
+
+/* 📱 Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 22px !important;
+  }
+  .sectionSubtitle {
+    font-size: 13px !important;
+  }
+}

@@ -2343,3 +2343,8 @@ span.dline {
     padding-top: 40px;
     margin-top: 10px;
 }
+
+.flag_top img {
+    width: 22px !important;
+    margin-right: 10px;
+}

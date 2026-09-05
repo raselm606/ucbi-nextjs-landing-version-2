@@ -1,0 +1,104 @@
+/* 👉 ডানপাশের ভিডিও কার্ড (বামপাশের গোল্ডেন বক্সের সাথে জিরো-গ্যাপ ফ্লাশ ফিট) */
+.videoCardRight {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 440px;
+  background: #030a16; 
+  overflow: hidden;
+  display: flex;
+}
+
+.videoContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 440px;
+  background: #020610;
+}
+
+.videoElement {
+  width: 100%;
+  height: 100%;
+  min-height: 440px;
+  object-fit: cover;
+}
+
+/* কাস্টম প্লে প্লেয়ার ওভারলে */
+.videoOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(3, 10, 22, 0.3) 0%, rgba(3, 10, 22, 0.85) 100%), 
+              url("../../../../public/images/video_cover.jpg") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.videoOverlay:hover {
+  background: linear-gradient(180deg, rgba(3, 10, 22, 0.15) 0%, rgba(3, 10, 22, 0.75) 100%), 
+              url("../../../../public/images/video_cover.jpg") center/cover no-repeat;
+}
+
+.playBtn {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0cc0df 0%, #1690ed 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  box-shadow: 0 0 32px rgba(12, 192, 223, 0.65);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.playBtn::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid #0cc0df;
+  animation: playPulse 2s infinite ease-out;
+}
+
+.videoOverlay:hover .playBtn {
+  transform: scale(1.08);
+  box-shadow: 0 0 45px rgba(12, 192, 223, 0.95);
+}
+
+.playBtn svg {
+  margin-left: 3px;
+}
+
+.videoTagline {
+  margin-top: 16px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+@keyframes playPulse {
+  0% { transform: scale(1); opacity: 0.85; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+@media (max-width: 991px) {
+  .videoCardRight {
+    border-radius: 0 0 20px 20px;
+    min-height: 350px;
+  }
+  .videoContainer, .videoElement {
+    min-height: 350px;
+  }
+}
