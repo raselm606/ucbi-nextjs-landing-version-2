@@ -14,12 +14,12 @@ const BusinessModel_b = () => {
                             <div className={styles.top_b_area}>
                                  
                                 <div className={styles.btext_area}>
-                                    <span>Private Holding</span>
-                                    <p style={{width:'100% !important'}}>Business Model</p>
+                                    <span>Holding Privée</span>
+                                    <p style={{width:'100% !important'}}>Modèle économique</p>
                                 </div>
                             </div>
 
-                            <p>UCBI provides secure private holding and strategic treasury solutions for the digital assets and combining institutional grade asset management comprehensive risk controls and compliance focused governance  with structured solutions  
+                            <p>UCBI propose des solutions sécurisées de holding privée et de gestion stratégique de trésorerie pour les actifs numériques en combinant une gestion d’actifs de niveau institutionnel des dispositifs complets de contrôle des risques et une gouvernance axée sur la conformité avec des solutions structurées  
 </p>
 
                             {/* <div className="dif_items">
@@ -39,7 +39,7 @@ const BusinessModel_b = () => {
                             </div> */}
 
                             <Button  data-bs-toggle="modal"   href="#submit-a-request"   className={styles.primaryBtn}>
-                            Whitepaper
+                            Livre blanc
                             <span className={styles.btnIcon}>
                                 <ArrowIcon />
                             </span>
@@ -52,12 +52,12 @@ const BusinessModel_b = () => {
                             <div className={styles.top_b_area}>
                                  
                                 <div className={styles.btext_area}>
-                                    <span>Ethereum Treasury</span>
-                                    <p style={{width:'100% !important'}}>Strategic Treasury </p>
+                                    <span>Trésorerie Ethereum</span>
+                                    <p style={{width:'100% !important'}}>Trésorerie stratégique </p>
                                 </div>
                             </div>
 
-                            <p> Through Ethereum based treasury strategies and the UCBI optimizes capital allocation liquidity and yield generation our disciplined approach helps institutions and partners build sustainable financial growth in the evolving digital economy </p>
+                            <p> Grâce à des stratégies de trésorerie fondées sur Ethereum UCBI optimise l’allocation du capital la liquidité et la génération de rendement notre approche disciplinée aide les institutions et les partenaires à construire une croissance financière durable dans une économie numérique en pleine évolution </p>
 
                             {/* <div className="w_dif_items">
                           <div className="w_difs_col">
@@ -73,7 +73,7 @@ const BusinessModel_b = () => {
                         </div> */}
 
                             <Button data-bs-toggle="modal"   href="#submit-a-request" className={styles.secondaryBtn}>
-                            Become Member
+                            Devenir membre
                             <span className={styles.btnIcon}>
                                 <ArrowIcon />
                             </span>

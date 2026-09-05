@@ -32,7 +32,7 @@ const HeroSection_b = () => {
               </h1>
 
               <p className={styles.heroText}>
-                Infrastructure blockchain privée, stratégie de trésorerie Ethereum et solutions institutionnelles en actifs numériques destinées à des partenaires sélectionnés et à des actionnaires engagés sur le long terme.
+                Infrastructure blockchain privée stratégie de trésorerie Ethereum et solutions institutionnelles en actifs numériques destinées à des partenaires sélectionnés et à des actionnaires engagés sur le long terme
               </p>
 
               <div className="d-flex align-items-center gap-3 flex-wrap mt-4">

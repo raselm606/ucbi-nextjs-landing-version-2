@@ -38,17 +38,17 @@ const BlogTwo = async () => {
 
                             <span className="ucbi-heading-kicker">
                                 <span className="ucbi-kicker-dot"></span>
-                                Insights & news
+                                ANALYSES ET ACTUALITÉS
                             </span>
 
                             <h2>
-                                Stay Updated with <br />
-                                Latest Articles
+                                Restez informé grâce  <br />
+                                à nos derniers articles
                             </h2>
 
                             <p>
-                                Expert analysis industry trends and market insights <br />
-                                to keep you informed and ahead
+                                Analyses d’experts tendances du secteur et informations sur les marchés <br />
+                                pour vous tenir informé et garder une longueur d’avance
                             </p>
 
                         </div>
@@ -77,7 +77,7 @@ const BlogTwo = async () => {
                                         <div className="col-lg-6">
 
                                             <span className="badge badge-custom">
-                                                ★ FEATURED
+                                                ★ À LA UNE
                                             </span>
 
                                             {thumb && (
@@ -121,7 +121,7 @@ const BlogTwo = async () => {
                                             >
 
                                                 <span>
-                                                    Read Full Article
+                                                    Lire l’article complet
                                                 </span>
 
                                                 <span className="arrow">
@@ -169,7 +169,7 @@ const BlogTwo = async () => {
                         <div className="latest-box blx_two p-4 h-100">
 
                             <h3 className="fw-bold mb-4 kamaj">
-                                LATEST NEWS
+                                DERNIÈRES ACTUALITÉS
                             </h3>
 
 

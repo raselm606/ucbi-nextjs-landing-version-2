@@ -34,16 +34,16 @@ export default function GrowthVideoSection() {
               {/* 👈 বাম পাশের অংশ */}
               <div className="col-lg-6">
                 <div className="goal_content ggland bg_bb h-100">
-                  <span>LONG-TERM SUPPORT</span>
+                  <span>SOUTIEN À LONG TERME</span>
                   <h2>
-                    Committed to building <br /> sustainable digital growth
+                    Engagé à construire <br /> une croissance digitale durable
                   </h2>
                   <p className="section_paragraph_dark">
-                    Operating within a private investment framework the holding structure supports Ethereum treasury strategy and diversified multi-asset capital allocation through shareholder participation
+                    Opérant dans le cadre d’une structure d’investissement privée la holding soutient une stratégie de trésorerie Ethereum et une allocation diversifiée du capital multi actifs grâce à la participation des actionnaires
                   </p>
                   <div className="divider_lin"></div>
                   <div className="featured_o">
-                    <p>Market data</p>
+                    <p>Données de marché</p>
                     <Link target="_blank" href="https://finance.yahoo.com/quote/UCBI-USD/" className="fe_link">
                       <Image src={yahoof} alt="featured logos" />
                     </Link> 

@@ -15,9 +15,9 @@ const OurJourney = () => {
           <div className="row">
             <div className="col-lg-4">
               <div className="journey_content"  >
-                <span>Our Journey</span> 
-                <h2>Building the Future  of <br /> Digital Finance</h2> 
-                <p>Our journey is driven by a clear vision and a commitment to innovation and long term impact</p>
+                <span>Notre parcours</span> 
+                <h2>Construire l’avenir  <br /> de la finance numérique</h2> 
+                <p>Notre parcours est guidé par une vision claire et un engagement envers l'innovation et l'impact à long terme</p>
                 </div>
             </div>
           </div>
@@ -30,8 +30,8 @@ const OurJourney = () => {
                     <div className="icon_ara">
                       <BankIcon  />
                     </div>
-                    <h4>Founding Year</h4>
-                    <p>Laying the foundation <br /> for a decentralized future</p>
+                    <h4>Année de création</h4>
+                    <p>Poser les fondements <br /> d'un avenir décentralisé</p>
                   </div>
               </div>
 
@@ -40,8 +40,8 @@ const OurJourney = () => {
                     <div className="icon_ara">
                       <RocketIcon />
                     </div>
-                    <h4>Year 1</h4>
-                    <p>Building the ecosystem <br /> and core infrastructure</p>
+                    <h4>Année 1</h4>
+                    <p> Développer l’écosystème <br /> et les infrastructures essentielles</p>
                   </div>
               </div>
 
@@ -50,8 +50,8 @@ const OurJourney = () => {
                     <div className="icon_ara">
                       <ChartIcon />
                     </div>
-                    <h4>Year 3</h4>
-                    <p>Expansion & strategic <br /> collaborations </p>
+                    <h4>Année 3</h4>
+                    <p>Expansion et  collaborations stratégiques </p>
                   </div>
               </div>
 
@@ -60,8 +60,8 @@ const OurJourney = () => {
                     <div className="icon_ara">
                       <FlagIcon />
                     </div>
-                    <h4>Today</h4>
-                    <p>Focused on global impact <br /> and sustainable growth</p>
+                    <h4>Aujourd’hui</h4>
+                    <p>Une vision tournée vers un impact    mondial et une croissance durable</p>
                   </div> 
               </div>
 

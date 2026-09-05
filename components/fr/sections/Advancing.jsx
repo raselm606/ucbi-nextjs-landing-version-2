@@ -11,12 +11,11 @@ const Advancing =  () => {
             <div className="row">
                 <div className="col-lg-4">
                     <div className="advancing_content">
-                        <span>Our Focus</span>
+                        <span>Notre orientation</span>
                         <h2>
-                           Advancing 
-                          Through  <br /> Structured Growth
+                           Progresser grâce à <br/> une croissance structurée
                         </h2>
-                        <p>We are committed to building a solid foundation and driving sustainable growth through a clear stategy strong partnerships and institutional excellence</p>
+                        <p>Nous nous engageons à construire des bases solides et à favoriser une croissance durable grâce à une stratégie claire des partenariats solides et une excellence institutionnelle</p>
                          {/* <Image src={adv} alt="adv" height={100} width={100}/>   */}
                     </div>
                     
@@ -30,8 +29,8 @@ const Advancing =  () => {
                         </div>
 
                         <div className="advancing_para">
-                            <h5 >Treasury Management</h5>
-                            <p >Treasury management focuses on diversified capital allocation and liquidity strategies to optimization risk adjusted returns to institutional frameworks and discipline driven  ensure resilient performance and shareholder value creation in dynamic market conditions</p>
+                            <h5 >Gestion de trésorerie</h5>
+                            <p >La gestion de trésorerie repose sur une allocation diversifiée du capital et des stratégies de liquidité visant à optimiser les rendements ajustés au risque dans un cadre institutionnel fondé sur la discipline afin de favoriser une performance résiliente et la création de valeur pour les actionnaires dans des conditions de marché dynamiques</p>
                         </div>
 
                     </div>
@@ -42,8 +41,8 @@ const Advancing =  () => {
                         </div>
                    
                         <div className="advancing_para">
-                            <h5 >Strengthening Institutional</h5>
-                            <p >Strengthening the institutional framework focuses on governance excellence and operational consistency by building the robust risk controls compliance culture and strategic alignment we ensure long term resilience stakeholder trust and sustainable value creation</p>
+                            <h5 >Renforcement institutionnel</h5>
+                            <p >Le renforcement du cadre institutionnel repose sur l’excellence de la gouvernance et la cohérence opérationnelle grâce à la mise en place de contrôles robustes des risques d’une culture de conformité et d’un alignement stratégique nous favorisons la résilience à long terme la confiance des parties prenantes et la création de valeur durable</p>
                         </div>
                     </div>
 
@@ -53,8 +52,8 @@ const Advancing =  () => {
                         </div>
                    
                         <div className="advancing_para">
-                            <h5 >Partnerships Global Expansion</h5>
-                            <p >Global partnerships provide the scale to develop innovative solutions and expand our ecosystem we invest in strategic collaborations support sustainable real world growth and accelerate the adoption of blockchain solutions within a transformative framework</p>
+                            <h5 >Partenariats et expansion mondiale</h5>
+                            <p >Les partenariats internationaux offrent l’échelle nécessaire pour développer des solutions innovantes et étendre notre écosystème nous investissons dans des collaborations stratégiques soutenons une croissance durable dans le monde réel et accélérons l’adoption des solutions blockchain dans un cadre en constante transformation</p>
                         </div>
                     </div>
                   

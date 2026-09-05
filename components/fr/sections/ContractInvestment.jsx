@@ -179,10 +179,10 @@ const changeClass = (value) => {
                     <div className="goal_content contract_in">
                         <span>Innovation</span> 
                         <h2 >
-                           Private access to innovation
+                           Accès privé à l’innovation
                         </h2>
                         <p className="section_paragraph_white"  >
-                           Access is reserved for a restricted circle of private investors integrating capital at holding level acting as parent entity of the structured platform each participation follows a private investment logic based on shareholder alignment confidential structure & long-term value creation through Ethereum accumulation & diversified multi-asset strategy
+                           L’accès est réservé à un cercle restreint d’investisseurs privés apportant leur capital au niveau de la holding qui agit comme entité mère de la plateforme structurée chaque participation s’inscrit dans une logique d’investissement privé fondée sur l’alignement des actionnaires une structure confidentielle et la création de valeur à long terme grâce à l’accumulation d’Ethereum et à une stratégie diversifiée multi actifs
                         </p>
 
                         <div className="divider_lin ggl"  ></div>
@@ -195,7 +195,7 @@ const changeClass = (value) => {
 
                 <div className="col-lg-12">
                     <div className="token_info" >
-                        <p>Our assets
+                        <p> Nos actifs
        
                         </p>
                         <div className="token_slide"  >
