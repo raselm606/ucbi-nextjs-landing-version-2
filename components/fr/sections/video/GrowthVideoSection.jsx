@@ -70,7 +70,7 @@ export default function GrowthVideoSection() {
                           </svg>
                         </div>
                         <span className={styles.videoTagline}>
-                          Watch Institutional Presentation
+                          Regarder la présentation institutionnelle
                         </span>
                       </div>
                     )}

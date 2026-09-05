@@ -207,7 +207,8 @@ const fullPhone = `${form.phoneCode}${form.phone}`; // or `${form.phoneCode} ${f
           <div className="col-lg-3 mb-3" >
             <div className="footer_info">
               <Image  src={FooterLogo} width={120} height={52} alt="Footer Logo"/>
-              <p>Receive exclusive UCBI updates <br /> straight to your inbox</p>
+              <p>Recevez les actualités exclusives d’UCBI <br />
+directement dans votre boîte de réception</p>
               <form onSubmit={onSubscribeSubmit} className="footer_subscriber">
                 {notice && (
                   <p className={noticeType === "success" ? "text-success" : "text-danger"}>
@@ -217,7 +218,7 @@ const fullPhone = `${form.phoneCode}${form.phone}`; // or `${form.phoneCode} ${f
                 <div className="input-group from_area">
                   <span className="input-group-text"><Image src={sms} alt="Mail Icon" /></span>
 
-                  <input type="email" placeholder="Your email address" name="email" value={subscriberForm.email} onChange={onEmailChange} required  className="form-control" />
+                  <input type="email" placeholder="Votre adresse email" name="email" value={subscriberForm.email} onChange={onEmailChange} required  className="form-control" />
 
                   <button disabled={isSubmitting} className="send_btn" type="submit" >
                     <Image src={send} alt="Send Icon" />
@@ -225,27 +226,27 @@ const fullPhone = `${form.phoneCode}${form.phone}`; // or `${form.phoneCode} ${f
                 </div>
                 <div className="mb-3 mt-3 form-check">
                   <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                  <label className="form-check-label"  >I agree <Link href="https://doc.ucbibanking.io/ucbi_terms_condition" target="_blank">Terms & Conditions</Link> </label>
+                  <label className="form-check-label"  >J’accepte les <Link href="https://doc.ucbibanking.io/ucbi_terms_condition" target="_blank">Conditions générales</Link> </label>
                 </div>
               </form>
             </div>
           </div>
           <div className=" offset-lg-2  col-lg-2 mb-3">
             <div className="footer_nav_menus">
-              <h6>Company</h6>
+              <h6>Entreprise</h6>
               <div className="footer_navs">
                 <ul>
                   <li><Link target="_blank" href="https://etherscan.io/token/0xb42b35deca033a23401a1a89007a39343a510d0a">Blockchain</Link></li>
-                  <li><Link data-bs-toggle="modal"   href="#submit-a-request">Submit a Request</Link></li>
-                  <li><Link data-bs-toggle="modal"   href="#submit-a-request" >Partnership Advisory</Link></li>
-                  <li><Link target="_blank"     href="https://advisory.ucbibanking.io" >UCBI Advisory Services</Link></li>
+                  <li><Link data-bs-toggle="modal"   href="#submit-a-request">Soumettre une demande</Link></li>
+                  <li><Link data-bs-toggle="modal"   href="#submit-a-request" >Conseil en partenariat</Link></li>
+                  <li><Link target="_blank"     href="https://advisory.ucbibanking.io" >Services de conseil UCBI</Link></li>
                 </ul>
               </div>
             </div>
           </div>
           <div className="  col-lg-2 mb-3">
             <div className="footer_nav_menus">
-              <h6>Resources</h6>
+              <h6>Ressources</h6>
               <div className="footer_navs">
                 <ul  style={{marginTop:'50px !important'}}>
                    
@@ -331,12 +332,12 @@ const fullPhone = `${form.phoneCode}${form.phone}`; // or `${form.phoneCode} ${f
                 </ul>
               </div>
               <div className="copyright text-center">
-                <p>UCBI Group Technologies LTD — Copyright © 2026 — A member of UCBI Capital Holding</p>
+                <p>UCBI Group Technologies LTD — Copyright © 2026 — Membre de UCBI Capital Holding</p>
               </div>
               <div className="cc_terms">
                 <ul>
-                  <li><Link href="https://doc.ucbibanking.io/ucbi_terms_condition" target="_blank">Terms & Conditions</Link></li>
-                  <li><Link href="https://doc.ucbibanking.io/ucbi_terms_condition" target="_blank">Privacy Policy</Link></li>
+                  <li><Link href="https://doc.ucbibanking.io/ucbi_terms_condition" target="_blank">Conditions générales</Link></li>
+                  <li><Link href="https://doc.ucbibanking.io/ucbi_terms_condition" target="_blank">Politique de confidentialité</Link></li>
                 </ul>
               </div>
             </div>

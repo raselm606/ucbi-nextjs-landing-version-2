@@ -308,8 +308,8 @@ try {
                                     <div className="top_header">
                                       <i><HiUsers /></i>
                                       <div className="head_titl">
-                                        <h5 className="" style={{color:'#112d50'}}>Become a Member of <br /> <span style={{color:'#1e6cba'}}>UCBI Group Technologies</span></h5>
-                                      <p style={{color:'#112d50'}}>Join our exclusive network and be part of a global technology echosystem <br/> driving innovation and growth</p>
+                                        <h5 className="" style={{color:'#112d50'}}>Devenir membre de   <br /> <span style={{color:'#1e6cba'}}>UCBI Group Technologies</span></h5>
+                                      <p style={{color:'#112d50'}}>Rejoignez notre réseau exclusif et participez à un écosystème <br /> technologique mondial dédié  à l’innovation et à la croissance</p>
                                       </div>
                                     </div>
                                       
@@ -327,7 +327,7 @@ try {
           
                                               
                                               <div className="mb-3 col-lg-6 col-md-6 col-sm-12">
-                                                <label htmlFor="fullname" className="form-label">Name 
+                                                <label htmlFor="fullname" className="form-label">Nom 
                                                   <span style={{color:'#123052'}}> * </span>
                                                   </label>
           
@@ -340,7 +340,7 @@ try {
                                               </div>
           
                                               <div className="mb-3 col-lg-6 col-md-6 col-sm-12">
-                                                <label htmlFor="surname" className="form-label">Surname  
+                                                <label htmlFor="surname" className="form-label">Prénom  
                                                   <span style={{color:'#123052'}}> * </span>
                                                   </label>
                                                   <div className="form_name">
@@ -351,7 +351,7 @@ try {
           
                                               <div className="mb-3  col-lg-6 col-md-6 col-sm-12"> 
                                                 <label htmlFor="exampleInputEmail1" className="form-label">
-                                                  Email address  <span style={{color:'#123052'}}> * </span>
+                                                 Adresse Email   <span style={{color:'#123052'}}> * </span>
                                                   </label>
           
                                                   <div className="form_name">
@@ -362,12 +362,13 @@ try {
           
                                                 
           
-                                                <div id="emailHelp" className="form-text">We will never share your email with anyone else</div>
+                                                <div id="emailHelp" className="form-text">
+                                                  Nous ne partagerons jamais votre adresse e-mail avec des tiers</div>
                                               </div>
           
                                               <div className="mb-3 col-lg-6 col-md-6 col-sm-12">
                                                 <label htmlFor="country" className="form-label">
-                                                  Country <span style={{ color: "#123052" }}> * </span>
+                                                  Pays <span style={{ color: "#123052" }}> * </span>
                                                 </label>
            
           
@@ -376,7 +377,7 @@ try {
           
                                                 <Select
                                                   options={countryOptions}
-                                                  placeholder="Search country..."
+                                                  placeholder="Rechercher un pays..."
                                                   onChange={(selected) =>
                                                     setForm({ ...form, country: selected.value })
                                                   }
@@ -391,7 +392,7 @@ try {
           
                                               <div className="mb-3 col-lg-6 col-md-6 col-sm-12">
                                                 <label className="form-label">
-                                                  Phone <span style={{ color: "#123052" }}> * </span>
+                                                  Téléphone <span style={{ color: "#123052" }}> * </span>
                                                 </label>
           
                                                 <div className="input-group">
@@ -404,7 +405,7 @@ try {
                                                   <Select
                                                   style={{ width: "50px" }}
                                                   options={codeOptions}
-                                                  placeholder="Country code.."
+                                                  placeholder="Indicatif pays..."
                                                   onChange={(selected) =>
                                                     setForm({ ...form, phoneCode: selected.value })
                                                   }
@@ -420,7 +421,7 @@ try {
                                                     type="text"
                                                     className="form-control"
                                                     name="phone"
-                                                    placeholder="Enter phone number"
+                                                    placeholder="Entrez le numéro de téléphone"
                                                     value={form.phone}
                                                     onChange={handleChange}
                                                     required
@@ -428,14 +429,14 @@ try {
                                                 </div>
           
                                                 <div className="form-text">
-                                                  We will never share your phone with anyone else
+                                                  Nous ne partagerons jamais votre numéro de téléphone avec des tiers
                                                 </div>
                                               </div>
           
           
                                               <div className="mb-3 col-lg-6 col-md-6 col-sm-12">
                                                 <label htmlFor="subject" className="form-label">
-                                                  Subject  <span style={{color:'#123052'}}> * </span>
+                                                  Sujet  <span style={{color:'#123052'}}> * </span>
                                                   </label> 
           
                                                 <div className="form_name">
@@ -445,7 +446,7 @@ try {
           
                                                 <Select 
                                                   options={selectSubjectOptions}
-                                                  placeholder="Select a subject.."
+                                                  placeholder="Sélectionner un sujet..."
                                                   onChange={(selected) =>
                                                     setForm({ ...form, subject: selected.value })
                                                   }
@@ -458,32 +459,32 @@ try {
                                               </div>
                                               <div className="mb-3">
                                                 <label htmlFor="comment" className="form-label">
-                                                  Your Message   <span style={{color:'#123052'}}> * </span>
+                                                  Votre message   <span style={{color:'#123052'}}> * </span>
                                                   </label>
                                                   <div className="form_name">
                                                     <i> <FaRegCommentDots /> </i>
                                                 <textarea  className="form-control" name="comments" value={form.comments} onChange={handleChange} required id="comments" rows="4" ></textarea>
                                                 </div>
-                                                <div id="emailHelp" className="form-text">Please do not include any website link Otherwise we could not be able to receive your request</div>
+                                                <div id="emailHelp" className="form-text">Veuillez ne pas inclure de lien vers un site web sinon nous ne pourrons pas recevoir votre demande</div>
                                               </div>
                                               <div className="mb-3 d-flex gap-2 form-check">
                                                 <input type="checkbox" style={{width:'20px', height:'20px'}}  className="form-check-input" id="exampleCheck11" />
           
                                                 <label style={{fontSize:'10px !important', marginTop:'6px'}} className="form-check-label" htmlFor="exampleCheck11">
-                                                I agree to the UCBI Group Technologies LTD <Link href="https://doc.ucbibanking.io/ucbi_terms_condition" target="_blank">Terms and Conditions</Link> <br /> 
+                                                J’accepte les   <Link href="https://doc.ucbibanking.io/ucbi_terms_condition" target="_blank">Conditions générales</Link> de UCBI Group Technologies LTD<br /> 
                                                 {/* I will download the subscription file and submit it to UCBI for further processing -
                                                 <Link href="#" className="ms-1 text-decoration-underline">Download the subscription file</Link> */}
                                               </label>
           
                                               </div>
                                               <button disabled={loading} type="submit" className=" btnModal">
-                                               <i><FaRegPaperPlane /></i> {loading ? "Sending..." : "Submit Request"}
+                                               <i><FaRegPaperPlane /></i> {loading ? "Sending..." : "Soumettre la demande"}
                                                 </button>
                                               </div>
                                             </form>
           
                                             <p style={{color: '#132f51', marginTop: '10px'}} className="text-center">
-                                              <i style={{fontSize: '20px'}}><IoShieldCheckmarkSharp /></i> Your information is secure and will be used to respond to your request</p>
+                                              <i style={{fontSize: '20px'}}><IoShieldCheckmarkSharp /></i> Vos informations sont sécurisées et seront utilisées pour répondre à votre demande</p>
           
                                           </div>
                                       </div>

@@ -10,12 +10,12 @@ const Scaleable = () => {
             <div className="row">
                 <div className="col-lg-6 mb-3 ">
                     <div className="scaleable_content">
-                        <span>Trusted Infrastructure Enduring value</span> 
+                        <span>Infrastructure de confiance Valeur durable</span> 
                         <h2 >
-                           Secure & scalable digital infrastructure <br /> Built for long-term institutional use
+                           Une infrastructure numérique sécurisée et évolutive conçue <br />     pour une utilisation institutionnelle à long terme
                         </h2>
                         <p className="section_paragraph_white"  >
-                          Partner with UCBI and gain exclusive access to innovative investment opportunites strategic insights and long-term value creation
+                          Rejoignez UCBI et bénéficiez d’un accès exclusif à des opportunités d’investissement innovantes à des perspectives stratégiques et à une création de valeur à long terme
                         </p>
 
                         
@@ -23,7 +23,7 @@ const Scaleable = () => {
                         
                     </div>
                     <Button    href="tel:+33184160139" className="primaryBtn">
-                                                        Call Our Team
+                                                       Appeler notre équipe
                             <span className="btnIcon">
                                 <ArrowIcon />
                             </span>
