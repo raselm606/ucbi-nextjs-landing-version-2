@@ -12,6 +12,13 @@ export default function sitemap() {
     },
     
     {
+      url: "https://advisory.ucbibanking.io",
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.9,
+    },
+    
+    {
       url: `${baseUrl}/become-member`,
       lastModified: new Date(),
       changeFrequency: "daily",
