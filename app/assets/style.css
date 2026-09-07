@@ -2352,16 +2352,17 @@ span.dline {
   max-height: 500px !important; /* Par défaut ~590px */
   width: 320px !important;      /* Par défaut ~370px */
 }
-.woot-widget-bubble svg {
-    all: revert;
-    height: 21px!important;
-    margin: 14px 12px!important;
-    padding: 0!important;
-    width: 24px!important;
-}
+
 .woot-widget-bubble.woot-elements--right {
     right: 20px !important;
     bottom: 3px !important;
     height: 50px !important;
     width: 50px !important;
+}
+#woot-widget-bubble-icon {
+    all: revert;
+    height: 21px!important;
+    margin: 14px 12px!important;
+    padding: 0!important;
+    width: 24px!important;
 }
