@@ -41,7 +41,7 @@ const OurJourney = () => {
                       <RocketIcon />
                     </div>
                     <h4>Année 1</h4>
-                    <p> Développer l’écosystème <br /> et les infrastructures essentielles</p>
+                    <p> Développer l’écosystème <br /> et les infrastructures </p>
                   </div>
               </div>
 
@@ -61,7 +61,7 @@ const OurJourney = () => {
                       <FlagIcon />
                     </div>
                     <h4>Aujourd’hui</h4>
-                    <p>Une vision tournée vers un impact    mondial et une croissance durable</p>
+                    <p>Une vision mondiale pour une croissance durable</p>
                   </div> 
               </div>
 

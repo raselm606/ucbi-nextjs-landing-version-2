@@ -103,6 +103,37 @@ export default async function RootLayout({ children } ) {
           {children} 
         </BootstrapProvider>
 
+        <Script
+              id="chatwoot"
+              strategy="afterInteractive"
+          >
+              {`
+                  window.chatwootSettings = {
+                      position: "right",
+                      type: "standard",
+                      launcherTitle: ""
+                  };
+
+                  (function(d,t) {
+                      var BASE_URL = "https://app.chatwoot.com";
+                      var g = d.createElement(t);
+                      var s = d.getElementsByTagName(t)[0];
+
+                      g.src = BASE_URL + "/packs/js/sdk.js";
+                      g.async = true;
+
+                      s.parentNode.insertBefore(g,s);
+
+                      g.onload = function() {
+                          window.chatwootSDK.run({
+                              websiteToken: "jNc81Yrte1Th8H5SoUC8s5Ze",
+                              baseUrl: BASE_URL
+                          });
+                      };
+                  })(document,"script");
+              `}
+          </Script>
+
       
       </body>
     </html>

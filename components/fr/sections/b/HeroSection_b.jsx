@@ -28,7 +28,7 @@ const HeroSection_b = () => {
               <div className={styles.labelLine}></div>
 
               <h1 className={styles.heroTitle}>
-                Infrastructure Blockchain &  <br/> Trésorerie d’Actifs Numériques
+                Infrastructure Blockchain &  <br/> Trésorerie Actifs Numériques
               </h1>
 
               <p className={styles.heroText}>

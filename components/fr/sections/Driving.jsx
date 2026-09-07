@@ -197,7 +197,7 @@ Le cadre mis en place vise une croissance durable tout en préservant un environ
                                         <Image src={s2} alt="s2"/>
                                     </div>
                                     </div>
-                                    <span>Structuration du capital prudente</span>
+                                    <span>Structuration prudente du capital</span>
                                 </div>
                 
                                 <div className="deatureItem">
