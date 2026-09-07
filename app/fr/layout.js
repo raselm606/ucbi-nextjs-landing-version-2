@@ -28,18 +28,15 @@ const ogImage = "/bg_fav.jpg";
   // base URL 
   metadataBase: new URL(siteUrl),
   title: {
-    default: "UCBI Banking — Private Equity Blockchain & Finance",
+    default: "UCBI Banking – Holding Privée de Trésorerie Blockchain",
     template: "%s | UCBI",
   },
   description:
     "UCBI Banking est une structure privée dédiée au Private Equity à la gestion stratégique de trésorerie blockchain et aux investissements réservés à un cercle sélectionné de partenaires et actionnaires",
-  keywords: ["ucbi", "ucbi banking", "private equity", "crypto finance", "crypto treasury", 
-    "microstrategy", "blackrock", "treasury management", "private investors", "fidelity", 
-    "coinshare", "ethereum", "bitmine", "staking", "coinmarketcap", "yahoo finance", 
-    "coinbase", "jp morgan"],
+  keywords: ["investissement blockchain", "investissement blockchain France", "conseil blockchain", "consultant blockchain", "blockchain consulting", "stratégie blockchain", "investissement digital", "actifs numériques", "investissement privé", "private equity", "capital-investissement", "finance digitale", "innovation financière", "stratégie d’investissement", "gestion d’actifs numériques", "investissement institutionnel", "transformation financière", "technologie blockchain", "solutions blockchain", "infrastructure financière", "stratégie financière", "conseil en investissement", "finance numérique", "actifs digitaux", "Web3 finance", "blockchain finance", "investissement Web3", "conseil Web3", "stratégie d’actifs numériques"],
   
   openGraph: {
-    title: "fr UCBI Banking - Holding de Private Equity Blockchain",
+    title: "UCBI Banking – Holding Privée de Trésorerie Blockchain",
     description:
       "UCBI Banking est une structure privée dédiée au Private Equity à la gestion stratégique de trésorerie blockchain et aux investissements réservés à un cercle sélectionné de partenaires et actionnaires",
     url: siteUrl,
@@ -58,7 +55,7 @@ const ogImage = "/bg_fav.jpg";
   
   twitter: {
     card: "summary",
-    title: "UCBI Banking — Private Equity Blockchain & Finance",
+    title: "UCBI Banking – Holding Privée de Trésorerie Blockchain",
     description:
       "UCBI Banking est une structure privée dédiée au Private Equity à la gestion stratégique de trésorerie blockchain et aux investissements réservés à un cercle sélectionné de partenaires et actionnaires",
     images: ["/bg_fav.jpg"],

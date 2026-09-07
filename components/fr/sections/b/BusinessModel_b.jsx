@@ -38,7 +38,7 @@ const BusinessModel_b = () => {
                                  
                             </div> */}
 
-                            <Button  data-bs-toggle="modal"   href="#submit-a-request"   className={styles.primaryBtn}>
+                            <Button     href="https://doc.ucbibanking.io/ucbi_whitepaper"   className={styles.primaryBtn}>
                             Livre blanc
                             <span className={styles.btnIcon}>
                                 <ArrowIcon />

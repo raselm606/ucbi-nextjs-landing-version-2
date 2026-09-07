@@ -28,18 +28,15 @@ const ogImage = "/bg_fav.jpg";
   // base URL 
   metadataBase: new URL(siteUrl),
   title: {
-    default: "UCBI Banking - Blockchain Private Equity Holding",
+    default: "UCBI Banking - Blockchain Private Equity Treasury Holding",
     template: "%s | UCBI",
   },
   description:
     "Exclusive private investment platform combining private equity crypto-finance and strategic treasury management to support long-term technological value creation within the UCBI Holding structure reserved for selected partners",
-  keywords: ["ucbi", "ucbi banking", "private equity", "crypto finance", "crypto treasury", 
-    "microstrategy", "blackrock", "treasury management", "private investors", "fidelity", 
-    "coinshare", "ethereum", "bitmine", "staking", "coinmarketcap", "yahoo finance", 
-    "coinbase", "jp morgan"],
+  keywords: ["investissement blockchain", "investissement blockchain France", "conseil blockchain", "consultant blockchain", "blockchain consulting", "stratégie blockchain", "investissement digital", "actifs numériques", "investissement privé", "private equity", "capital-investissement", "finance digitale", "innovation financière", "stratégie d’investissement", "gestion d’actifs numériques", "investissement institutionnel", "transformation financière", "technologie blockchain", "solutions blockchain", "infrastructure financière", "stratégie financière", "conseil en investissement", "finance numérique", "actifs digitaux", "Web3 finance", "blockchain finance", "investissement Web3", "conseil Web3", "stratégie d’actifs numériques"],
   
   openGraph: {
-    title: "UCBI Banking - Blockchain Private Equity Holding",
+    title: "UCBI Banking - Blockchain Private Equity Treasury Holding",
     description:
       "Exclusive private investment platform combining private equity crypto-finance and strategic treasury management to support long-term technological value creation within the UCBI Holding structure reserved for selected partners",
     url: siteUrl,
@@ -58,7 +55,7 @@ const ogImage = "/bg_fav.jpg";
   
   twitter: {
     card: "summary",
-    title: "UCBI Banking - Blockchain Private Equity Holding ",
+    title: "UCBI Banking - Blockchain Private Equity Treasury Holding",
     description:
       "Exclusive private investment platform combining private equity crypto-finance and strategic treasury management to support long-term technological value creation within the UCBI Holding structure reserved for selected partners",
     images: ["/bg_fav.jpg"],
