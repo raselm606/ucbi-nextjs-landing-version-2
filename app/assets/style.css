@@ -2348,3 +2348,7 @@ span.dline {
     width: 14px !important;
     margin-right: 10px;
 }
+.woot-widget-holder {
+  max-height: 500px !important; /* Par défaut ~590px */
+  width: 320px !important;      /* Par défaut ~370px */
+}
