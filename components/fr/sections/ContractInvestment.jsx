@@ -182,7 +182,7 @@ const changeClass = (value) => {
                            Accès privé à l’innovation
                         </h2>
                         <p className="section_paragraph_white"  >
-                           L’accès est réservé à un cercle restreint d’investisseurs privés apportant leur capital au niveau de la holding qui agit comme entité mère de la plateforme structurée chaque participation s’inscrit dans une logique d’investissement privé fondée sur l’alignement des actionnaires une structure confidentielle et la création de valeur à long terme grâce à l’accumulation d’Ethereum et à une stratégie diversifiée multi actifs
+                           L’accès est réservé à un cercle restreint d’investisseurs privés apportant leur capital au niveau de la holding qui agit comme entité mère de la plateforme structurée chaque participation s’inscrit dans une logique d’investissement privé fondée sur l’alignement des actionnaires une structure confidentielle et la création de valeur à long terme grâce
                         </p>
 
                         <div className="divider_lin ggl"  ></div>

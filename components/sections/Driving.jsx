@@ -204,7 +204,7 @@ const Driving = () => {
                                     <span>Riks Management</span>
                                 </div>
                             </div>
-                             <Button href="https://advisory.ucbibanking.io/" className="primaryBtn">
+                             <Button target="_blank" href="https://advisory.ucbibanking.io/" className="primaryBtn">
                                 Learn More
                                 <span className="btnIcon">
                                     <ArrowIcon />

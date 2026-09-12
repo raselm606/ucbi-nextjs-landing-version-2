@@ -15,7 +15,8 @@ import { HiOutlineMail } from "react-icons/hi";
 import { HiUsers } from "react-icons/hi2";
 import { IoShieldCheckmarkSharp } from "react-icons/io5";
 import { MdLocalPhone } from "react-icons/md";
-import fr from '../../public/images/france.png';
+import fr from '../../public/images/france_flag.png';
+import uk from '../../public/images/uk_flag.png';
 
 const Header_b = () => {
 
@@ -119,11 +120,10 @@ const Header_b = () => {
 
   const selectSubjectOptions  = [
     { value: "membership application", label: "Membership application" },
-    { value: "Blockchain Consulting", label: "Blockchain Consulting" },
+    { value: "Blockchain Advisory", label: "Blockchain Advisory" },
     { value: "request for information", label: "Request for information" },
     { value: "Private Investment", label: "Private Investment" },
     { value: "partnership request", label: "Partnership request" },
-    { value: "Token launch support", label: "Token launch support" },
   ];
 
   const [form, setForm] = useState({
@@ -261,7 +261,7 @@ try {
                     <Link className="nav-link active" aria-current="page" href="/#about">About</Link>
                     </li>
                     <li className="nav-item">
-                    <Link className="nav-link active" aria-current="page" href="https://advisory.ucbibanking.io">Advisory</Link>
+                    <Link className="nav-link active" target="_blank"  href="https://advisory.ucbibanking.io">Advisory</Link>
                     </li>
                     <li className="nav-item">
                     <Link className="nav-link" target="_blank" href="https://etherscan.io/token/0xb42b35deca033a23401a1a89007a39343a510d0a">Blockchain</Link>
@@ -288,8 +288,9 @@ try {
                 </div> */}
 
                 <div className="flag_top">
-                                  <Link href="https://ucbibanking.io/fr"><Image src={fr} width={10} height={10} alt="logo" priority/></Link>
-                                </div>
+                  <Link href="https://ucbibanking.io/"><Image src={uk} width={10} height={10} alt="logo" priority/></Link> | 
+                  <Link href="https://ucbibanking.io/fr"><Image src={fr} width={10} height={10} alt="logo" priority/></Link>
+                </div>
                 <div className="top_button">
 
                     <Button target="_blank" variant="top_nav_button" href="https://dashboard.ucbibanking.io"> Dashboard</Button>

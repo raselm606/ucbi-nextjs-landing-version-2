@@ -13,8 +13,9 @@ import { HiUsers } from "react-icons/hi2";
 import { IoShieldCheckmarkSharp } from "react-icons/io5";
 import { MdLocalPhone } from "react-icons/md";
 import Select from "react-select";
+import fr from '../../../public/images/france_flag.png';
 import Logo from '../../../public/images/logo.png';
-import uk from '../../../public/images/uk.png';
+import uk from '../../../public/images/uk_flag.png';
 
 const Header_b = () => {
 
@@ -248,7 +249,7 @@ try {
     <div className="top_header">
         <nav className="navbar fixed-top navbar-expand-lg bg-body-tertiary">
             <div className="container">
-                <Link className="navbar-brand" href="#" >
+                <Link className="navbar-brand" href="/fr" >
                 <Image src={Logo} width={130} height={44} alt="logo" priority/>
                 </Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -257,7 +258,7 @@ try {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav top_nav mx-auto mb-2 mb-lg-0">
                     <li className="nav-item">
-                    <Link className="nav-link active" aria-current="page" href="/#about">About</Link>
+                    <Link className="nav-link active" aria-current="page" href="/fr/#about">About</Link>
                     </li>
                     <li className="nav-item">
                     <Link className="nav-link active" aria-current="page" href="https://advisory.ucbibanking.io">Advisory</Link>
@@ -272,7 +273,7 @@ try {
                     <Link className="nav-link" data-bs-toggle="modal"   href="#submit-a-request">Submit Request</Link>
                     </li>
                     <li className="nav-item">
-                    <Link className="nav-link" href="/#contact">Contact</Link>
+                    <Link className="nav-link" href="/fr/#contact">Contact</Link>
                     </li>
                      
                      
@@ -286,7 +287,8 @@ try {
                             {/* </span>
                 </div> */}
                 <div className="flag_top">
-                  <Link href="https://ucbibanking.io"><Image src={uk} width={10} height={10} alt="logo" priority/></Link>
+                  <Link href="https://ucbibanking.io/"><Image src={uk} width={10} height={10} alt="logo" priority/></Link> | 
+                  <Link href="https://ucbibanking.io/fr"><Image src={fr} width={10} height={10} alt="logo" priority/></Link>
                 </div>
                 <div className="top_button">
 

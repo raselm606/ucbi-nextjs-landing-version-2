@@ -11,11 +11,11 @@ const Scaleable = () => {
                 <div className="col-lg-6 mb-3 ">
                     <div className="scaleable_content">
                         <span>Infrastructure de confiance Valeur durable</span> 
-                        <h2 >
-                           Une infrastructure numérique sécurisée et évolutive conçue <br />     pour une utilisation institutionnelle à long terme
+                        <h2 > 
+Une infrastructure numérique sécurisée <br/> et évolutive conçue pour les institutions
                         </h2>
                         <p className="section_paragraph_white"  >
-                          Rejoignez UCBI et bénéficiez d’un accès exclusif à des opportunités d’investissement innovantes à des perspectives stratégiques et à une création de valeur à long terme
+                         Rejoignez UCBI pour bénéficier de toutes nos opportunités innovantes et perspectives stratégiques pour créer une valeur à long terme
                         </p>
 
                         

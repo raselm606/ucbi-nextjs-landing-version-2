@@ -332,7 +332,7 @@ directement dans votre boîte de réception</p>
                 </ul>
               </div>
               <div className="copyright text-center">
-                <p>UCBI Group Technologies LTD — Copyright © 2026 — Membre de UCBI Capital Holding</p>
+                <p>UCBI Group Technologies LTD — Copyright © 2026 — Membre de <Link style={{color:'#0cc0df !important'}} target="_blank" href="https://ucbicapital.com"> UCBI Capital Holding</Link></p>
               </div>
               <div className="cc_terms">
                 <ul>

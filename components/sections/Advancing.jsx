@@ -36,7 +36,7 @@ const Advancing =  () => {
 
                     </div>
                    
-                   <div className="adsec_area">
+                   <div className="adsec_area dli">
                         <div className="img_ara">
                             <Image src={ad2} alt="" />
                         </div>

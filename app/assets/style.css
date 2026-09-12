@@ -677,7 +677,7 @@ img {
     color: var(--text_dark);
     margin-bottom: 4px;
     font-family: Inter;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
     margin-top: 10px;
 }
@@ -2343,10 +2343,11 @@ span.dline {
     padding-top: 40px;
     margin-top: 10px;
 }
-
 .flag_top img {
-    width: 14px !important;
-    margin-right: 10px;
+    margin-right: 6px;
+    width: 16px !important;
+    margin-left: 6px;
+    border-radius: 2px;
 }
 .woot-widget-holder {
   max-height: 500px !important; /* Par défaut ~590px */
@@ -2365,4 +2366,7 @@ span.dline {
     margin: 14px 12px!important;
     padding: 0!important;
     width: 24px!important;
+}
+.dli {
+    border-right: 4px solid #263e91 !important;
 }

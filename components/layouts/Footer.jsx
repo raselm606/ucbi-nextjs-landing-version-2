@@ -77,12 +77,11 @@ const Footer = () => {
   }));
 
   const selectSubjectOptions  = [
-    { value: "Token launch support", label: "Token launch support" },
-    { value: "Blockchain Consulting", label: "Blockchain Consulting" },
-    { value: "partnership request", label: "Partnership request" },
-    { value: "Private Investment", label: "Private Investment" },
     { value: "membership application", label: "Membership application" },
+    { value: "Blockchain Advisory", label: "Blockchain Advisory" },
     { value: "request for information", label: "Request for information" },
+    { value: "Private Investment", label: "Private Investment" },
+    { value: "partnership request", label: "Partnership request" },
   ];
 
   const [form, setForm] = useState({
@@ -237,8 +236,8 @@ const fullPhone = `${form.phoneCode}${form.phone}`; // or `${form.phoneCode} ${f
                 <ul>
                   <li><Link target="_blank" href="https://etherscan.io/token/0xb42b35deca033a23401a1a89007a39343a510d0a">Blockchain</Link></li>
                   <li><Link data-bs-toggle="modal"   href="#submit-a-request">Submit a Request</Link></li>
-                  <li><Link data-bs-toggle="modal"   href="#submit-a-request" >Partnership Advisory</Link></li>
-                  <li><Link target="_blank"     href="https://advisory.ucbibanking.io" >UCBI Advisory Services</Link></li>
+                  <li><Link data-bs-toggle="modal"   href="#submit-a-request" >Advisory Services</Link></li>
+                  <li><Link target="_blank"     href="https://advisory.ucbibanking.io" >UCBI Become a Member</Link></li>
                 </ul>
               </div>
             </div>
@@ -331,7 +330,7 @@ const fullPhone = `${form.phoneCode}${form.phone}`; // or `${form.phoneCode} ${f
                 </ul>
               </div>
               <div className="copyright text-center">
-                <p>UCBI Group Technologies LTD — Copyright © 2026 — A member of UCBI Capital Holding</p>
+                <p>UCBI Group Technologies LTD — Copyright © 2026 — A member of <Link style={{color:'#0cc0df !important'}} target="_blank" href="https://ucbicapital.com"> UCBI Capital Holding</Link> </p>
               </div>
               <div className="cc_terms">
                 <ul>

@@ -33,6 +33,7 @@ const ogImage = "/bg_fav.jpg";
   },
   description:
     "UCBI Banking est une structure privée dédiée au Private Equity à la gestion stratégique de trésorerie blockchain et aux investissements réservés à un cercle sélectionné de partenaires et actionnaires",
+    
   keywords: ["investissement blockchain", "investissement blockchain France", "conseil blockchain", "consultant blockchain", "blockchain consulting", "stratégie blockchain", "investissement digital", "actifs numériques", "investissement privé", "private equity", "capital-investissement", "finance digitale", "innovation financière", "stratégie d’investissement", "gestion d’actifs numériques", "investissement institutionnel", "transformation financière", "technologie blockchain", "solutions blockchain", "infrastructure financière", "stratégie financière", "conseil en investissement", "finance numérique", "actifs digitaux", "Web3 finance", "blockchain finance", "investissement Web3", "conseil Web3", "stratégie d’actifs numériques"],
   
   openGraph: {
