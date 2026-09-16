@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState } from 'react';
-import imgcover from '../../../public/images/video_cover.jpg';
+import imgcover from '../../../public/images/vcover_en.png';
 import yahoof from '../../../public/images/yahoo1.png';
 import styles from './GrowthVideoSection.module.css';
 
@@ -39,7 +39,7 @@ export default function GrowthVideoSection() {
                     Committed to building <br /> sustainable digital growth
                   </h2>
                   <p className="section_paragraph_dark">
-                    Operating within a private investment framework the holding structure supports Ethereum treasury strategy and diversified multi-asset capital allocation through shareholder participation
+                    Operating within our private investment framework the holding structure supports the advanced Ethereum treasury strategy and diversified multi-asset capital allocation through shareholder participation
                   </p>
                   <div className="divider_lin"></div>
                   <div className="featured_o">

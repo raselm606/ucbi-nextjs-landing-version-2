@@ -19,7 +19,7 @@ const BusinessModel_b = () => {
                                 </div>
                             </div>
 
-                            <p>UCBI provides secure private holding and strategic treasury solutions for the digital assets and combining institutional grade asset management comprehensive risk controls and compliance focused governance  with structured solutions  
+                            <p>UCBI provides a secure private holding and strategic treasury solutions for the digital assets and combining institutional grade asset management comprehensive risk controls and compliance focused governance  with structured solutions  
 </p>
 
                             {/* <div className="dif_items">

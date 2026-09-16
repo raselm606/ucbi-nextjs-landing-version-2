@@ -118,12 +118,11 @@ const Header_b = () => {
   }));
 
   const selectSubjectOptions  = [
-    { value: "membership application", label: "Membership application" },
-    { value: "Blockchain Consulting", label: "Blockchain Consulting" },
-    { value: "request for information", label: "Request for information" },
-    { value: "Private Investment", label: "Private Investment" },
-    { value: "partnership request", label: "Partnership request" },
-    { value: "Token launch support", label: "Token launch support" },
+    { value: "Demande d’adhésion", label: "Demande d’adhésion" },
+    { value: "Conseil en blockchain", label: "Conseil en blockchain" },
+    { value: "Demande d’information", label: "Demande d’information" },
+    { value: "Investissement privé", label: "Investissement privé" },
+    { value: "Demande de partenariat", label: "Demande de partenariat" }, 
   ];
 
   const [form, setForm] = useState({

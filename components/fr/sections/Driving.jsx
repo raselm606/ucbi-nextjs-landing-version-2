@@ -171,13 +171,7 @@ const Driving = () => {
                                  Positionnement  <br/> stratégique et institutionnel
                             </h2>
                             <p className="section_paragraph_dark t1_width">
-                                La mission d’<strong>UCBI</strong> est de soutenir un développement discipliné et durable de la trésorerie à travers une stratégie à long terme fondée sur de solides principes de gouvernance
-
-Opérant comme une structure de holding stratégique la plateforme se concentre sur l’accumulation d’Ethereum et sur une allocation diversifiée du capital multi actifs au sein de cadres organisationnels robustes
-
-Cette approche vise à assurer la conformité aux standards réglementaires la résilience opérationnelle et une discipline institutionnelle rigoureuse grâce à une structuration prudente du capital des investissements privés structurés et une gestion globale des risques
-
-Le cadre mis en place vise une croissance durable tout en préservant un environnement contrôlé et confidentiel favorisant l’innovation la stabilité la conformité et la confiance des actionnaires à long terme
+                                La mission d’<strong>UCBI</strong> est de soutenir un développement discipliné et durable de la trésorerie à travers une stratégie à long terme fondée sur de solides principes de gouvernance Opérant comme une structure de holding stratégique la plateforme se concentre sur l’accumulation d’Ethereum et sur une allocation diversifiée du capital multi actifs au sein de cadres organisationnels robustes Cette approche vise à assurer la conformité aux standards réglementaires la résilience opérationnelle et une discipline institutionnelle rigoureuse grâce à une structuration prudente du capital des investissements privés structurés et une gestion globale des risques Le cadre mis en place vise une croissance durable tout en préservant un environnement contrôlé et confidentiel favorisant l’innovation la stabilité la conformité et la confiance des actionnaires à long terme
                             </p>
                             <div className="deatureBox">
                                 <div className="deatureItem itemLines ">

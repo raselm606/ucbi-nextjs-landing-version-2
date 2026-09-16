@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState } from 'react';
-import imgcover from '../../../../public/images/video_cover.jpg';
+import imgcover from '../../../../public/images/vcover_fr.png';
 import yahoof from '../../../../public/images/yahoo1.png';
 import styles from './GrowthVideoSection.module.css';
 

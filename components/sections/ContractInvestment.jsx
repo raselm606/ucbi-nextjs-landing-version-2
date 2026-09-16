@@ -182,7 +182,7 @@ const changeClass = (value) => {
                            Private access to innovation
                         </h2>
                         <p className="section_paragraph_white"  >
-                           Access is reserved for a restricted circle of private investors integrating capital at holding level acting as parent entity of the structured platform each participation follows a private investment logic based on shareholder alignment confidential structure & long-term value creation through Ethereum accumulation & diversified multi-asset strategy
+                           Access is reserved for a restricted circle of private investors integrating capital at holding level acting as parent entity of the structured platform each participation follows our own private investment logic and based on shareholder alignment confidential structure & long-term value creation through Ethereum accumulation & diversified multi-asset strategy
                         </p>
 
                         <div className="divider_lin ggl"  ></div>

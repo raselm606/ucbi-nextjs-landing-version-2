@@ -17,7 +17,7 @@ const OurJourney = () => {
               <div className="journey_content"  >
                 <span>Our Journey</span> 
                 <h2>Building the Future  of <br /> Digital Finance</h2> 
-                <p>Our journey is driven by a clear vision and a commitment to innovation and long term impact</p>
+                <p> Our journey is driven by a clear vision and a commitment to innovation and long term impact </p>
                 </div>
             </div>
           </div>

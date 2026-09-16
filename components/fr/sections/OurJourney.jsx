@@ -17,7 +17,7 @@ const OurJourney = () => {
               <div className="journey_content"  >
                 <span>Notre parcours</span> 
                 <h2>Construire l’avenir  <br /> de la finance numérique</h2> 
-                <p>Notre parcours est guidé par une vision claire et un engagement envers l'innovation et l'impact à long terme</p>
+                <p>Notre parcours repose sur une vision claire et un engagement institutionnel durable envers l’innovation et l’impact positif à long terme</p>
                 </div>
             </div>
           </div>
