@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState } from 'react';
-import imgcover from '../../../../public/images/vcover_fr.png';
 import yahoof from '../../../../public/images/yahoo1.png';
 import styles from './GrowthVideoSection.module.css';
 
@@ -14,14 +13,14 @@ export default function GrowthVideoSection() {
   const videoRef = useRef(null);
 
   // 🌐 public/video.mp4 ফাইলের জন্য Next.js রুট পাথ
-  const videoUrl = "/video1.mp4";
+  const videoUrl = "https://www.youtube.com/embed/greZmIAclzk?autoplay=1&rel=0&modestbranding=1&iv_load_policy=3&controls=0";
 
   // ⚡ ১ ক্লিকেই সরাসরি প্লে করার ফাংশন
   const handlePlayVideo = () => {
     setIsPlaying(true);
-    if (videoRef.current) {
-      videoRef.current.play();
-    }
+    // if (videoRef.current) {
+    //   videoRef.current.play();
+    // }
   };
 
   return (
@@ -75,18 +74,16 @@ export default function GrowthVideoSection() {
                       </div>
                     )}
 
-                    {/* HTML5 Video Element */}
-                    <video
-                      ref={videoRef}
-                      src={videoUrl}
-                      controls={isPlaying}
-                      playsInline
-                      loop 
-                      className={styles.videoElement}
-                      poster={imgcover}
-                    >
-                      Your browser does not support video playback.
-                    </video>
+                    {/* youtube video */}
+                    {isPlaying && (
+                      <iframe
+                        src={videoUrl}
+                        title="Institutional Presentation"
+                        className={styles.videoElement}
+                        allow="autoplay; encrypted-media; picture-in-picture"
+                        allowFullScreen
+                      />
+                    )}
 
                   </div>
                 </div>
