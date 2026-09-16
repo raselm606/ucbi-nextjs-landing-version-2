@@ -23,7 +23,7 @@ const BusinessModel_b = () => {
 
                              
 
-                            <Button     href="https://doc.ucbibanking.io/ucbi_whitepaper"   className={styles.primaryBtn}>
+                            <Button  target="_blank"    href="https://doc.ucbibanking.io/ucbi_whitepaper_fr"   className={styles.primaryBtn}>
                             Livre blanc
                             <span className={styles.btnIcon}>
                                 <ArrowIcon />

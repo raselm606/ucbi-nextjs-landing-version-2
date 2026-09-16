@@ -336,8 +336,8 @@ directement dans votre boîte de réception</p>
               </div>
               <div className="cc_terms">
                 <ul>
-                  <li><Link href="https://doc.ucbibanking.io/ucbi_terms_condition" target="_blank">Conditions générales</Link></li>
-                  <li><Link href="https://doc.ucbibanking.io/ucbi_terms_condition" target="_blank">Politique de confidentialité</Link></li>
+                  <li><Link href="https://doc.ucbibanking.io/ucbi_terms_condition_fr" target="_blank">Conditions générales</Link></li>
+                  <li><Link href="https://doc.ucbibanking.io/ucbi_terms_condition_fr" target="_blank">Politique de confidentialité</Link></li>
                 </ul>
               </div>
             </div>
