@@ -6,9 +6,6 @@ import HeroSection_b from "@/components/sections/b/HeroSection_b";
 import BlogTwo from "@/components/sections/blogs/BlogTwo";
 import ContractInvestment from "@/components/sections/ContractInvestment";
 import Driving from "@/components/sections/Driving";
-import EtfFlow from "@/components/sections/EtfFlow";
-import SpotEtf from "@/components/sections/SpotEtf";
-import EtfOverview from "@/components/sections/EtfOverview";
 import OurJourney from "@/components/sections/OurJourney";
 import Scaleable from "@/components/sections/Scaleable";
 import GrowthVideoSection from "@/components/sections/video/GrowthVideoSection";
@@ -17,10 +14,7 @@ const Homepage = () => {
     <> 
       <Header_b /> 
       <HeroSection_b /> 
-      <Driving /> 
-      <EtfFlow />
-      <SpotEtf />
-      <EtfOverview />
+      <Driving />  
       <BusinessModel_b /> 
       <OurJourney /> 
       <Advancing />

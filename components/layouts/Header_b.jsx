@@ -249,7 +249,7 @@ try {
     <div className="top_header">
         <nav className="navbar fixed-top navbar-expand-lg bg-body-tertiary">
             <div className="container">
-                <Link className="navbar-brand" href="#" >
+                <Link className="navbar-brand" href="/" >
                 <Image src={Logo} width={130} height={44} alt="logo" priority/>
                 </Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -271,6 +271,9 @@ try {
                     </li>
                     <li className="nav-item">
                     <Link className="nav-link" data-bs-toggle="modal"   href="#submit-a-request">Submit Request</Link>
+                    </li>
+                    <li className="nav-item">
+                    <Link className="nav-link" href="/etf">ETF</Link>
                     </li>
                     <li className="nav-item">
                     <Link className="nav-link" href="/#contact">Contact</Link>
