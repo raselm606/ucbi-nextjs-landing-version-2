@@ -178,8 +178,19 @@
   justify-content: center;
   flex-shrink: 0;
 }
-.featureSvg img{
-  mix-blend-mode: difference;
+.featureSvg svg {
+  width: 22px;
+  height: 22px;
+  stroke-width: 1.8;
+  /* filter: drop-shadow(0 0 6px currentColor); */
+}
+
+.featureGlyphCyan {
+  color: #0cc0df;
+}
+
+.featureGlyphBlue {
+  color: #0cc0df;
 }
 /* right side visual */
 .heroVisual {

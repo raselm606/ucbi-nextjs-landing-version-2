@@ -19,6 +19,13 @@ export default function sitemap() {
     },
     
     {
+      url: "https://ucbibanking.io/etf",
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.9,
+    },
+    
+    {
       url: `${baseUrl}/become-member`,
       lastModified: new Date(),
       changeFrequency: "daily",

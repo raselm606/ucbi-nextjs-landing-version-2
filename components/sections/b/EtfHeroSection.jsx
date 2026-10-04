@@ -1,10 +1,6 @@
 import Partners from "@/components/sections/Partners_two";
 import Button from "@/components/ui/Button";
 import Image from "next/image";
-import b1 from "../../../public/images/b/b1.png";
-import b2 from "../../../public/images/b/b2.png";
-import b3 from "../../../public/images/b/b3.png";
-
 import btc_coin from '../../../public/images/btc_coin.png';
 import eth_coin from '../../../public/images/eth_coin.png';
 import ucbi_coin from '../../../public/images/ucbi_coin.png';
@@ -12,6 +8,11 @@ import styles from "./css/Hero.module.css";
 import {
   ArrowIcon
 } from "./HeroIcons";
+import {
+  LuBadgeDollarSign,
+  LuChartNoAxesColumnIncreasing,
+  LuLandmark,
+} from "react-icons/lu";
 
 const EtfHeroSection = () => {
   return (
@@ -57,8 +58,8 @@ const EtfHeroSection = () => {
                 <div className={styles.featureBox}>
                   <div className={styles.featureItem}>
                     <span className={styles.featureIcon}>
-                      <span className={styles.featureSvg}>
-                        <Image src={b1} alt="b1"/>
+                      <span className={styles.featureSvg} aria-hidden="true">
+                        <LuBadgeDollarSign className={styles.featureGlyphCyan} />
                       </span>
                     </span>
                     <span>Ethereum Spot ETFs</span>
@@ -66,8 +67,8 @@ const EtfHeroSection = () => {
 
                   <div className={styles.featureItem}>
                     <span className={styles.featureIcon}>
-                      <span className={styles.featureSvg}>
-                        <Image src={b2} alt="b2"/>
+                      <span className={styles.featureSvg} aria-hidden="true">
+                        <LuChartNoAxesColumnIncreasing className={styles.featureGlyphBlue} />
                       </span>
                     </span>
                     <span>Real-Time Inflows</span>
@@ -75,8 +76,8 @@ const EtfHeroSection = () => {
 
                   <div className={styles.featureItem}>
                     <span className={styles.featureIcon}>
-                      <span className={styles.featureSvg}>
-                        <Image src={b3} alt="b3"/>
+                      <span className={styles.featureSvg} aria-hidden="true">
+                        <LuLandmark className={styles.featureGlyphCyan} />
                       </span>
                     </span>
                     <span>Institutional Analytics</span>
