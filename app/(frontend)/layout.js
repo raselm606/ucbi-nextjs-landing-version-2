@@ -103,7 +103,7 @@ export default async function RootLayout({ children } ) {
           {children} 
         </BootstrapProvider>
 
-        <Script
+        {/* <Script
               id="chatwoot"
               strategy="afterInteractive"
           >
@@ -132,7 +132,7 @@ export default async function RootLayout({ children } ) {
                       };
                   })(document,"script");
               `}
-          </Script>
+          </Script> */}
 
       
       </body>
