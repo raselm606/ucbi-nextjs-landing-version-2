@@ -5,15 +5,18 @@ import EtfFlow from "@/components/sections/EtfFlow";
 import EtfOverview from "@/components/sections/EtfOverview";
 import Scaleable from "@/components/sections/Scaleable";
 import SpotEtf from "@/components/sections/SpotEtf";
+import CryptoEtfDataProvider from "@/components/sections/CryptoEtfDataProvider";
 
 const EtfPage = () => {
   return (
     <> 
       <Header_b /> 
       <EtfHeroSection />  
-      <EtfFlow />
-      <SpotEtf />
-      <EtfOverview />
+      <CryptoEtfDataProvider>
+        <EtfFlow />
+        <SpotEtf />
+        <EtfOverview />
+      </CryptoEtfDataProvider>
       <Scaleable />
       <Footer />
     </>

@@ -1,413 +1,222 @@
 'use client';
-import { useState, useEffect } from 'react';
+
+import { useMemo, useState } from 'react';
 import styles from './SpotEtf.module.css';
+import { useCryptoEtfData } from './CryptoEtfDataProvider';
 import {
-  ResponsiveContainer,
-  BarChart,
-  Bar,
-  ComposedChart,
-  Line,
-  XAxis,
-  YAxis,
-  Tooltip,
-  CartesianGrid,
-  Cell,
+  ResponsiveContainer, BarChart, Bar, ComposedChart, Line, XAxis, YAxis,
+  Tooltip, CartesianGrid, Cell,
 } from 'recharts';
 
-// SVG Icons for clean, 100% reliable rendering
 const CalendarIcon = () => (
-  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0cc0df" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-    <line x1="16" y1="2" x2="16" y2="6"></line>
-    <line x1="8" y1="2" x2="8" y2="6"></line>
-    <line x1="3" y1="10" x2="21" y2="10"></line>
+  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0cc0df" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <rect x="3" y="4" width="18" height="18" rx="2" />
+    <line x1="16" y1="2" x2="16" y2="6" />
+    <line x1="8" y1="2" x2="8" y2="6" />
+    <line x1="3" y1="10" x2="21" y2="10" />
   </svg>
 );
 
 const EthereumIcon = () => (
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M11.944 17.97L4.58 13.62 11.943 24l7.37-10.38-7.372 4.35zm.056-17.97l-7.37 12.25 7.37 4.36 7.37-4.36L12 0z"/>
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M11.944 17.97L4.58 13.62 11.943 24l7.37-10.38-7.372 4.35zm.056-17.97l-7.37 12.25 7.37 4.36 7.37-4.36L12 0z" />
   </svg>
 );
 
 const LineChartIcon = () => (
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
   </svg>
 );
 
 const ChartBarIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <line x1="18" y1="20" x2="18" y2="10"></line>
-    <line x1="12" y1="20" x2="12" y2="4"></line>
-    <line x1="6" y1="20" x2="6" y2="14"></line>
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <line x1="18" y1="20" x2="18" y2="10" />
+    <line x1="12" y1="20" x2="12" y2="4" />
+    <line x1="6" y1="20" x2="6" y2="14" />
   </svg>
 );
 
-const DiamondIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <polygon points="12 2 2 9 12 22 22 9 12 2"></polygon>
-  </svg>
-);
+const asEthThousands = (amountUsdM, priceUsd) =>
+  priceUsd > 0 ? Number(amountUsdM || 0) * 1000 / priceUsd : Number(amountUsdM || 0);
+const asDisplayFlow = (amount, priceUsd, currency) =>
+  currency === 'ETH' ? asEthThousands(amount, priceUsd) : Number(amount || 0);
+const axisLabel = (value, currency) => currency === 'ETH'
+  ? value.toLocaleString('en-US', { maximumFractionDigits: 1 }) + 'K'
+  : (value < 0 ? '−' : '') + '$' + Math.abs(value).toLocaleString('en-US', { maximumFractionDigits: 0 }) + 'M';
+const formatDate = (date) => new Date(date + 'T00:00:00Z').toLocaleDateString('en-US', {
+  month: 'short', day: 'numeric', timeZone: 'UTC',
+});
 
-const ShieldIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-  </svg>
-);
+function FlowChartTooltip({ active, payload, currency = 'USD' }) {
+  if (!active || !payload?.length) return null;
 
-const ArrowRightIcon = () => (
-  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <line x1="5" y1="12" x2="19" y2="12"></line>
-    <polyline points="12 5 19 12 12 19"></polyline>
-  </svg>
-);
+  const date = payload[0]?.payload?.date ?? payload[0]?.payload?.label ?? '';
 
-const SpotEtf = () => {
-  const [isMounted, setIsMounted] = useState(false);
+  return (
+    <div style={{ background: '#081830', border: '1px solid #0cc0df', borderRadius: 8, padding: '10px 12px' }}>
+      <div style={{ color: '#fff', marginBottom: 6 }}>{date}</div>
+      {payload.map((entry) => {
+        const isPrice = entry.dataKey === 'price';
+        const label = isPrice ? 'ETH price' : 'Net inflow';
+        const value = isPrice
+          ? '$' + Number(entry.value).toLocaleString('en-US', { maximumFractionDigits: 2 })
+          : axisLabel(Number(entry.value), currency) + (currency === 'ETH' ? ' ETH' : '');
+
+        return (
+          <div key={entry.dataKey} style={{ color: '#fff' }}>
+            {label}: <span style={{ color: isPrice ? '#fff' : '#0cc0df' }}>{value}</span>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+export default function SpotEtf() {
   const [currencyLeft, setCurrencyLeft] = useState('ETH');
   const [currencyRight, setCurrencyRight] = useState('ETH');
+  const { data, error, loading } = useCryptoEtfData();
+  const issuerFlows = data?.issuerFlows;
+  const latestDate = issuerFlows?.at(-1)?.date ?? data?.flows?.at(-1)?.date;
 
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
+  const dailyData = useMemo(() => {
+    const rows = issuerFlows?.length ? issuerFlows : (data?.flows ?? []);
+    return rows.map((row) => ({
+      date: row.date,
+      label: formatDate(row.date),
+      value: asDisplayFlow(
+        row.total ?? row.netFlowUsdM,
+        row.ethPrice ?? row.priceUsd,
+        currencyLeft,
+      ),
+    }));
+  }, [data, issuerFlows, currencyLeft]);
 
-  // Left Chart Data (Daily Ethereum Spot ETF Net Inflow)
-  const dailyData = [
-    { name: 'ETHA', value: 0 },
-    { name: 'ETHB', value: 0 },
-    { name: 'ETHW', value: 0 },
-    { name: 'ETHV', value: 0 },
-    { name: 'EZET', value: 0 },
-    { name: 'TETH', value: 0 },
-    { name: 'QETH', value: 0 },
-    { name: 'ETHE', value: -2.80 },
-    { name: 'ETH', value: -9.53 },
-    { name: 'FETH', value: -9.94 },
-  ];
+  const trendData = useMemo(() => {
+    const rows = issuerFlows?.length ? issuerFlows : (data?.flows ?? []);
+    return rows.map((row) => ({
+      date: row.date,
+      inflow: asDisplayFlow(row.total ?? row.netFlowUsdM, row.ethPrice ?? row.priceUsd, currencyRight),
+      price: row.ethPrice ?? row.priceUsd ?? null,
+    }));
+  }, [data, issuerFlows, currencyRight]);
 
-  // Right Chart Data (Total Ethereum Spot ETF Net Inflow & Price Trend)
-  const totalTrendData = [
-    { date: '2024-07-23', inflow: 120, price: 3400 },
-    { date: '2024-09-15', inflow: -50, price: 2700 },
-    { date: '2024-11-21', inflow: 180, price: 3900 },
-    { date: '2025-01-10', inflow: -110, price: 2200 },
-    { date: '2025-03-24', inflow: 80, price: 2900 },
-    { date: '2025-05-15', inflow: -80, price: 2600 },
-    { date: '2025-07-23', inflow: 260, price: 4750 },
-    { date: '2025-09-10', inflow: -140, price: 3100 },
-    { date: '2025-11-24', inflow: 90, price: 3300 },
-    { date: '2026-02-01', inflow: 50, price: 3200 },
-    { date: '2026-04-01', inflow: -60, price: 2800 },
-    { date: '2026-06-15', inflow: 110, price: 3600 },
-    { date: '2026-08-06', inflow: -75, price: 2900 },
-  ];
+  const priceText = data?.price
+    ? 'ETH spot: $' + data.price.priceUsd.toLocaleString('en-US', { maximumFractionDigits: 2 }) +
+      (data.price.change24hPct == null ? '' : ' (' + (data.price.change24hPct >= 0 ? '+' : '') + data.price.change24hPct + '% / 24h)')
+    : error || (loading ? 'Loading ETH spot price…' : 'ETH spot price unavailable.');
+  const hasHistoricalPrice = trendData.some((point) => point.price != null);
 
   return (
     <section className={styles.spot_etf_section}>
-      <div className={`container cline ${styles.section_padding_custom}`}>
-        {/* Header Row */}
+      <div className={'container cline ' + styles.section_padding_custom}>
         <div className="row align-items-start mb-4">
           <div className="col-lg-8">
             <span className={styles.sub_title}>MARKET INSIGHTS</span>
-            <h2 className={styles.main_title}>
-              Ethereum <span className={styles.cyan_text}>Spot ETF Net Inflow</span>
-            </h2>
-            <p className={styles.description}>
-              Track real-time inflows and outflows across major Ethereum ETFs. <br />
-              Stay informed with institutional capital trends and market momentum.
-            </p>
+            <h2 className={styles.main_title}>Ethereum <span className={styles.cyan_text}>Spot ETF Net Inflow</span></h2>
+            <p className={styles.description}>Compare daily fund flows and follow the relationship between Ethereum ETF activity and ETH price.</p>
           </div>
-
           <div className="col-lg-4 d-none d-lg-block">
             <div className={styles.tagline_box}>
-              <div className={styles.tagline_line}></div>
+              <div className={styles.tagline_line} />
               <p className={styles.tagline_item}>INSTITUTIONAL FLOWS</p>
-              <p className={styles.tagline_item}>DRIVE A STRONGER</p>
+              <p className={styles.tagline_item}>FUND-LEVEL ACTIVITY</p>
               <p className={styles.tagline_item}>ETHEREUM ECOSYSTEM</p>
             </div>
           </div>
         </div>
 
-        {/* Charts Row */}
         <div className="row gy-4 mb-4">
-          {/* Left Chart Box */}
           <div className="col-lg-6">
             <div className={styles.chart_card}>
               <div className={styles.card_header}>
                 <div className={styles.header_left}>
-                  <div className={styles.icon_badge}>
-                    <EthereumIcon />
-                  </div>
+                  <div className={styles.icon_badge}><EthereumIcon /></div>
                   <div>
-                    <h3 className={styles.header_title}>
-                      Daily Ethereum Spot ETF Net Inflow
-                    </h3>
-                    <p className={styles.header_subtitle}>
-                      <CalendarIcon /> Last update(UTC) : 2026-09-30
-                    </p>
+                    <h3 className={styles.header_title}>Daily Ethereum Spot ETF Net Inflow</h3>
+                    <p className={styles.header_subtitle}><CalendarIcon /> {latestDate ? 'Latest update (UTC): ' + latestDate + ' · ' + dailyData.length + ' days' : 'Daily net flow'}</p>
                   </div>
                 </div>
-
                 <div className={styles.header_controls}>
                   <div className={styles.currency_switcher}>
-                    <button
-                      onClick={() => setCurrencyLeft('ETH')}
-                      className={`${styles.switch_btn} ${
-                        currencyLeft === 'ETH' ? styles.switch_active : ''
-                      }`}
-                    >
-                      ETH
-                    </button>
-                    <button
-                      onClick={() => setCurrencyLeft('USD')}
-                      className={`${styles.switch_btn} ${
-                        currencyLeft === 'USD' ? styles.switch_active : ''
-                      }`}
-                    >
-                      USD
-                    </button>
+                    {['ETH', 'USD'].map((unit) => (
+                      <button key={unit} onClick={() => setCurrencyLeft(unit)} className={styles.switch_btn + ' ' + (currencyLeft === unit ? styles.switch_active : '')} aria-pressed={currencyLeft === unit}>{unit}</button>
+                    ))}
                   </div>
                 </div>
               </div>
-
-              {/* Bar Chart Container */}
               <div className={styles.chart_wrapper}>
-                {isMounted && (
+                {dailyData.length ? (
                   <ResponsiveContainer width="100%" height="100%">
-                    <BarChart
-                      data={dailyData}
-                      margin={{ top: 20, right: 10, left: -20, bottom: 20 }}
-                    >
-                      <CartesianGrid
-                        strokeDasharray="3 3"
-                        stroke="rgba(255, 255, 255, 0.05)"
-                        vertical={false}
-                      />
-                      <XAxis
-                        dataKey="name"
-                        stroke="#64748B"
-                        tick={{ fill: '#94A3B8', fontSize: 11 }}
-                        tickLine={false}
-                        axisLine={{ stroke: 'rgba(255, 255, 255, 0.1)' }}
-                      />
-                      <YAxis
-                        stroke="#64748B"
-                        tick={{ fill: '#94A3B8', fontSize: 11 }}
-                        tickLine={false}
-                        axisLine={false}
-                        tickFormatter={(val) => `${val === 0 ? '0' : val + 'K'}`}
-                        domain={[-10, 0]}
-                      />
-                      <Tooltip
-                        cursor={{ fill: 'rgba(12, 192, 223, 0.05)' }}
-                        contentStyle={{
-                          background: '#081830',
-                          border: '1px solid #0cc0df',
-                          borderRadius: '8px',
-                          color: '#fff',
-                        }}
-                        formatter={(val) => [`${val}K ETH`, 'Net Inflow']}
-                      />
-                      <Bar dataKey="value" maxBarSize={36} radius={[0, 0, 4, 4]}>
-                        {dailyData.map((entry, index) => (
-                          <Cell
-                            key={`cell-${index}`}
-                            fill={entry.value < 0 ? '#ff4d4d' : '#0cc0df'}
-                          />
-                        ))}
+                    <BarChart data={dailyData} margin={{ top: 20, right: 10, left: -20, bottom: 20 }}>
+                      <CartesianGrid strokeDasharray="3 3" stroke="rgba(255, 255, 255, 0.05)" vertical={false} />
+                      <XAxis dataKey="label" stroke="#64748B" tick={{ fill: '#94A3B8', fontSize: 10 }} tickLine={false} axisLine={{ stroke: 'rgba(255, 255, 255, 0.1)' }} minTickGap={14} />
+                      <YAxis stroke="#64748B" tick={{ fill: '#94A3B8', fontSize: 11 }} tickLine={false} axisLine={false} tickFormatter={(value) => axisLabel(value, currencyLeft)} />
+                      <Tooltip content={<FlowChartTooltip currency={currencyLeft} />} cursor={{ fill: 'rgba(12, 192, 223, 0.05)' }} />
+                      <Bar dataKey="value" maxBarSize={18} radius={[3, 3, 0, 0]}>
+                        {dailyData.map((entry) => <Cell key={entry.date} fill={entry.value >= 0 ? '#00e676' : '#ff4d4d'} />)}
                       </Bar>
                     </BarChart>
                   </ResponsiveContainer>
-                )}
+                ) : <div className={styles.header_subtitle} style={{ padding: '24px' }}>{error || (loading ? 'Loading ETF flows…' : 'No ETF flow data is available yet.')}</div>}
               </div>
             </div>
           </div>
 
-          {/* Right Chart Box */}
           <div className="col-lg-6">
             <div className={styles.chart_card}>
               <div className={styles.card_header}>
                 <div className={styles.header_left}>
-                  <div className={styles.icon_badge}>
-                    <LineChartIcon />
-                  </div>
+                  <div className={styles.icon_badge}><LineChartIcon /></div>
                   <div>
-                    <h3 className={styles.header_title}>
-                      Total Ethereum Spot ETF Net Inflow
-                    </h3>
-                    <p className={styles.header_subtitle}>
-                      <CalendarIcon /> Last update(UTC) : 2026-09-30
-                    </p>
+                    <h3 className={styles.header_title}>Total Ethereum Spot ETF Net Inflow</h3>
+                    <p className={styles.header_subtitle}><CalendarIcon /> {data ? data.windowDays + '-day history · ' + priceText : priceText}</p>
                   </div>
                 </div>
-
                 <div className={styles.header_controls}>
                   <div className={styles.currency_switcher}>
-                    <button
-                      onClick={() => setCurrencyRight('ETH')}
-                      className={`${styles.switch_btn} ${
-                        currencyRight === 'ETH' ? styles.switch_active : ''
-                      }`}
-                    >
-                      ETH
-                    </button>
-                    <button
-                      onClick={() => setCurrencyRight('USD')}
-                      className={`${styles.switch_btn} ${
-                        currencyRight === 'USD' ? styles.switch_active : ''
-                      }`}
-                    >
-                      USD
-                    </button>
+                    {['ETH', 'USD'].map((unit) => (
+                      <button key={unit} onClick={() => setCurrencyRight(unit)} className={styles.switch_btn + ' ' + (currencyRight === unit ? styles.switch_active : '')} aria-pressed={currencyRight === unit}>{unit}</button>
+                    ))}
                   </div>
-
-                  <select className={styles.filter_dropdown}>
-                    <option value="all">All</option>
-                    <option value="1y">1Y</option>
-                    <option value="6m">6M</option>
-                  </select>
                 </div>
               </div>
-
-              {/* Legend Bar */}
               <div className="d-flex justify-content-end mb-2">
                 <div className={styles.legend_box}>
-                  <div className={styles.legend_item}>
-                    <span className={styles.legend_square_cyan}></span>
-                    <span>Net Inflow</span>
-                  </div>
-                  <div className={styles.legend_item}>
-                    <span className={styles.legend_square_yellow}></span>
-                    <span>ETH Price</span>
-                  </div>
+                  <div className={styles.legend_item}><span className={styles.legend_square_cyan} /><span>Net inflow</span></div>
+                  {hasHistoricalPrice && <div className={styles.legend_item}><span className={styles.legend_square_yellow} /><span>ETH price</span></div>}
                 </div>
               </div>
-
-              {/* Dual Composed Chart Container */}
               <div className={styles.chart_wrapper}>
-                {isMounted && (
+                {trendData.length ? (
                   <ResponsiveContainer width="100%" height="100%">
-                    <ComposedChart
-                      data={totalTrendData}
-                      margin={{ top: 20, right: 10, left: -10, bottom: 20 }}
-                    >
-                      <CartesianGrid
-                        strokeDasharray="3 3"
-                        stroke="rgba(255, 255, 255, 0.05)"
-                        vertical={false}
-                      />
-                      <XAxis
-                        dataKey="date"
-                        stroke="#64748B"
-                        tick={{ fill: '#94A3B8', fontSize: 10 }}
-                        tickLine={false}
-                        axisLine={{ stroke: 'rgba(255, 255, 255, 0.1)' }}
-                      />
-                      <YAxis
-                        yAxisId="left"
-                        stroke="#64748B"
-                        tick={{ fill: '#94A3B8', fontSize: 10 }}
-                        tickLine={false}
-                        axisLine={false}
-                        tickFormatter={(val) => `${val}K`}
-                      />
-                      <YAxis
-                        yAxisId="right"
-                        orientation="right"
-                        stroke="#64748B"
-                        tick={{ fill: '#94A3B8', fontSize: 10 }}
-                        tickLine={false}
-                        axisLine={false}
-                        tickFormatter={(val) => `$${val}`}
-                      />
-                      <Tooltip
-                        contentStyle={{
-                          background: '#081830',
-                          border: '1px solid #0cc0df',
-                          borderRadius: '8px',
-                          color: '#fff',
-                        }}
-                      />
-                      <Bar yAxisId="left" dataKey="inflow" maxBarSize={12}>
-                        {totalTrendData.map((entry, index) => (
-                          <Cell
-                            key={`cell-${index}`}
-                            fill={entry.inflow >= 0 ? '#00e676' : '#ff4d4d'}
-                          />
-                        ))}
+                    <ComposedChart data={trendData} margin={{ top: 20, right: 10, left: -10, bottom: 20 }}>
+                      <CartesianGrid strokeDasharray="3 3" stroke="rgba(255, 255, 255, 0.05)" vertical={false} />
+                      <XAxis dataKey="date" stroke="#64748B" tick={{ fill: '#94A3B8', fontSize: 10 }} tickLine={false} axisLine={{ stroke: 'rgba(255, 255, 255, 0.1)' }} minTickGap={20} />
+                      <YAxis yAxisId="left" stroke="#64748B" tick={{ fill: '#94A3B8', fontSize: 10 }} tickLine={false} axisLine={false} tickFormatter={(value) => axisLabel(value, currencyRight)} />
+                      {hasHistoricalPrice && <YAxis yAxisId="right" orientation="right" stroke="#64748B" tick={{ fill: '#94A3B8', fontSize: 10 }} tickLine={false} axisLine={false} tickFormatter={(value) => '$' + value} />}
+                      <Tooltip content={<FlowChartTooltip currency={currencyRight} />} />
+                      <Bar yAxisId="left" dataKey="inflow" maxBarSize={14}>
+                        {trendData.map((entry) => <Cell key={entry.date} fill={entry.inflow >= 0 ? '#00e676' : '#ff4d4d'} />)}
                       </Bar>
-                      <Line
-                        yAxisId="right"
-                        type="monotone"
-                        dataKey="price"
-                        stroke="#f59e0b"
-                        strokeWidth={2}
-                        dot={false}
-                      />
+                      {hasHistoricalPrice && <Line yAxisId="right" type="monotone" dataKey="price" stroke="#f59e0b" strokeWidth={2} dot={false} connectNulls />}
                     </ComposedChart>
                   </ResponsiveContainer>
-                )}
+                ) : <div className={styles.header_subtitle} style={{ padding: '24px' }}>{error || (loading ? 'Loading flow history…' : 'No flow history is available yet.')}</div>}
               </div>
             </div>
           </div>
         </div>
 
-        {/* Bottom Feature Items Card */}
         <div className={styles.bottom_card}>
           <div className="row align-items-center gy-4">
-            <div className="col-lg-3 col-md-6">
-              <div className={styles.feature_item}>
-                <div className={styles.feature_icon}>
-                  <ChartBarIcon />
-                </div>
-                <div>
-                  <h4 className={styles.feature_title}>Institutional Capital</h4>
-                  <p className={styles.feature_desc}>
-                    ETF inflows signal growing institutional interest in Ethereum and its ecosystem.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6">
-              <div className={styles.feature_item}>
-                <div className={styles.feature_icon}>
-                  <DiamondIcon />
-                </div>
-                <div>
-                  <h4 className={styles.feature_title}>Market Momentum</h4>
-                  <p className={styles.feature_desc}>
-                    Consistent inflows support long-term price stability and ecosystem growth.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6">
-              <div className={styles.feature_item}>
-                <div className={styles.feature_icon}>
-                  <ShieldIcon />
-                </div>
-                <div>
-                  <h4 className={styles.feature_title}>Data Transparency</h4>
-                  <p className={styles.feature_desc}>
-                    Real-time data from leading ETF providers for informed decision making.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-6 text-lg-end text-start">
-              <a href="#etf-analytics" className={styles.analytics_btn}>
-                View Full ETF Analytics <ArrowRightIcon />
-              </a>
-            </div>
+            <div className="col-lg-4 col-md-6"><div className={styles.feature_item}><div className={styles.feature_icon}><ChartBarIcon /></div><div><h4 className={styles.feature_title}>Institutional Capital</h4><p className={styles.feature_desc}>Track each issuer’s daily net creations and redemptions.</p></div></div></div>
+            <div className="col-lg-4 col-md-6"><div className={styles.feature_item}><div className={styles.feature_icon}><EthereumIcon /></div><div><h4 className={styles.feature_title}>ETH Spot Price</h4><p className={styles.feature_desc}>{priceText}</p></div></div></div>
+            <div className="col-lg-4 col-md-6"><div className={styles.feature_item}><div className={styles.feature_icon}><CalendarIcon /></div><div><h4 className={styles.feature_title}>Recent History</h4><p className={styles.feature_desc}>Daily ETF flows and ETH prices over the latest available month.</p></div></div></div>
           </div>
         </div>
       </div>
     </section>
   );
-};
-
-export default SpotEtf;
+}
