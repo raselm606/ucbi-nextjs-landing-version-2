@@ -7,6 +7,28 @@ import Scaleable from "@/components/sections/Scaleable";
 import SpotEtf from "@/components/sections/SpotEtf";
 import CryptoEtfDataProvider from "@/components/sections/CryptoEtfDataProvider";
 
+export const metadata = {
+  title: "UCBI Banking - Ethereum ETF Market Data & Market Trends",
+  description:
+    "UCBI Banking tracks Ethereum ETFs with market data inflows and outflows trading volumes and trends to monitor the evolution of Ethereum investments",
+  keywords: [
+    "UCBI Banking",
+    "Ethereum ETFs",
+    "Ethereum ETF data",
+    "Ethereum ETF market data",
+    "Ethereum ETF flows",
+    "Ethereum ETF inflows",
+    "Ethereum ETF outflows",
+    "Ethereum ETF trends",
+    "Ethereum market trends",
+    "Ethereum market data",
+    "Ethereum investments",
+    "ETF capital flows",
+    "Ethereum investment flows",
+    "Ethereum",
+  ],
+};
+
 const EtfPage = () => {
   return (
     <> 
