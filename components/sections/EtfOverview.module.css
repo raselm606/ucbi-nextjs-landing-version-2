@@ -1,8 +1,8 @@
 .etf_overview_section {
   position: relative;
   margin-bottom: 100px;
-  background-color: #040c1a;
-  background-image: linear-gradient(180deg, rgba(4, 12, 26, 0.92) 0%, rgba(4, 12, 26, 0.96) 100%), url('/images/hero_bg.jpg');
+  background: #050f1e;
+  /* background-image: linear-gradient(180deg, rgba(4, 12, 26, 0.92) 0%, rgba(4, 12, 26, 0.96) 100%), url('/images/hero_bg.jpg'); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -87,7 +87,7 @@
   display: flex;
   align-items: center;
   gap: 15px;
-  background: rgba(8, 24, 48, 0.6);
+  background: #001d44;
   border: 1px solid rgba(12, 192, 223, 0.2);
   border-radius: 30px;
   padding: 6px 16px;
@@ -164,7 +164,7 @@
 }
 
 .tagline_item {
-  color: #64748b;
+  color: #b6bdc8;
   font-size: 11px;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -174,7 +174,7 @@
 
 /* Main Overview Table Card */
 .main_card {
-  background: rgba(8, 24, 48, 0.75);
+  background: #001c43;
   border: 1px solid rgba(12, 192, 223, 0.25);
   border-radius: 16px;
   backdrop-filter: blur(12px);
@@ -270,7 +270,7 @@
 
 /* Bottom Feature Section */
 .bottom_card {
-  background: rgba(8, 24, 48, 0.75);
+  background: #001c43;
   border: 1px solid rgba(12, 192, 223, 0.25);
   border-radius: 16px;
   backdrop-filter: blur(12px);

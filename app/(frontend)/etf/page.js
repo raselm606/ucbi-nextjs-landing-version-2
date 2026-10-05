@@ -6,6 +6,7 @@ import EtfOverview from "@/components/sections/EtfOverview";
 import Scaleable from "@/components/sections/Scaleable";
 import SpotEtf from "@/components/sections/SpotEtf";
 import CryptoEtfDataProvider from "@/components/sections/CryptoEtfDataProvider";
+import ExchangeOverview from "@/components/sections/ExchangeOverview/ExchangeOverview";
 
 export const metadata = {
   title: "UCBI Banking - Ethereum ETF Market Data & Market Trends",
@@ -38,6 +39,7 @@ const EtfPage = () => {
         <EtfFlow />
         <SpotEtf />
         <EtfOverview />
+        <ExchangeOverview />
       </CryptoEtfDataProvider>
       <Scaleable />
       <Footer />

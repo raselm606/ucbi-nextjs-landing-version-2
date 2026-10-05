@@ -1,8 +1,8 @@
 .etf_flow_section {
   position: relative;
   margin-bottom: 100px;
-  background-color: #040c1a;
-  background-image: linear-gradient(180deg, rgba(4, 12, 26, 0.92) 0%, rgba(4, 12, 26, 0.96) 100%), url('/images/hero_bg.jpg');
+  background: #050f1e;
+  /* background-image: linear-gradient(180deg, rgba(4, 12, 26, 0.92) 0%, rgba(4, 12, 26, 0.96) 100%), url('/images/hero_bg.jpg'); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -130,7 +130,7 @@
 
 /* Main Card Container */
 .main_card {
-  background: rgba(8, 24, 48, 0.75);
+  background: #001c43;
   border: 1px solid rgba(12, 192, 223, 0.25);
   border-radius: 16px;
   backdrop-filter: blur(12px);
@@ -224,7 +224,7 @@
   padding: 12px 10px;
   font-size: 11px;
   font-weight: 700;
-  color: #94a3b8;
+  color: #ffffff;
   text-transform: uppercase;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   white-space: nowrap;
@@ -235,7 +235,7 @@
   display: block;
   font-size: 10px;
   font-weight: 400;
-  color: #64748b;
+  color: #0cc0df;
   text-transform: capitalize;
   margin-top: 2px;
 }
@@ -287,7 +287,7 @@
 
 /* Bottom Feature Section */
 .bottom_card {
-  background: rgba(8, 24, 48, 0.75);
+  background: #001c43;
   border: 1px solid rgba(12, 192, 223, 0.25);
   border-radius: 16px;
   backdrop-filter: blur(12px);
@@ -339,9 +339,16 @@
   border-radius: 25px;
   font-size: 13px;
   font-weight: 600;
+  font-family: inherit;
   text-decoration: none;
   transition: all 0.3s ease;
   white-space: nowrap;
+  cursor: pointer;
+}
+
+.analytics_btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
 }
 
 .analytics_btn:hover {

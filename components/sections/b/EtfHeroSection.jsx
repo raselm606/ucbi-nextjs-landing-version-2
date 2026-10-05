@@ -1,6 +1,11 @@
 import Partners from "@/components/sections/Partners_two";
 import Button from "@/components/ui/Button";
 import Image from "next/image";
+import {
+  LuBadgeDollarSign,
+  LuChartNoAxesColumnIncreasing,
+  LuLandmark,
+} from "react-icons/lu";
 import btc_coin from '../../../public/images/btc_coin.png';
 import eth_coin from '../../../public/images/eth_coin.png';
 import ucbi_coin from '../../../public/images/ucbi_coin.png';
@@ -8,11 +13,6 @@ import styles from "./css/Hero.module.css";
 import {
   ArrowIcon
 } from "./HeroIcons";
-import {
-  LuBadgeDollarSign,
-  LuChartNoAxesColumnIncreasing,
-  LuLandmark,
-} from "react-icons/lu";
 
 const EtfHeroSection = () => {
   return (
@@ -47,8 +47,8 @@ const EtfHeroSection = () => {
                     </span>
                   </Button>
 
-                  <Button href="#etf-overview" className={styles.secondaryBtn}>
-                    View Market Overview
+                  <Button href="#top-exchanges" className={styles.secondaryBtn}>
+                    View Top Exchanges
                     <span className={styles.btnIcon}>
                       <ArrowIcon />
                     </span>

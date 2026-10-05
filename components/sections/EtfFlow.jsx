@@ -1,8 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import styles from './EtfFlow.module.css';
 import { useCryptoEtfData } from './CryptoEtfDataProvider';
+import styles from './EtfFlow.module.css';
 
 const CalendarIcon = () => (
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0cc0df" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -86,13 +86,141 @@ const formatFlow = (value, row, currency) => {
 
 export default function EtfFlow() {
   const [currency, setCurrency] = useState('ETH');
+  const [isExporting, setIsExporting] = useState(false);
   const { data, error, loading } = useCryptoEtfData();
   const hasIssuerBreakdown = Boolean(data?.hasIssuerBreakdown);
   const rows = [...(data?.issuerFlows ?? [])].slice(-7).reverse();
   const lastUpdated = rows[0]?.date ?? data?.updatedAt;
 
+  const downloadAnalytics = async () => {
+    const allRows = [...(data?.issuerFlows ?? [])].reverse();
+    if (!allRows.length || isExporting) return;
+
+    setIsExporting(true);
+    try {
+      const [{ default: jsPDF }, { default: autoTable }] = await Promise.all([
+        import('jspdf'),
+        import('jspdf-autotable'),
+      ]);
+      const pdf = new jsPDF({ orientation: 'landscape', unit: 'mm', format: 'a4' });
+      const pageWidth = pdf.internal.pageSize.getWidth();
+      const pageHeight = pdf.internal.pageSize.getHeight();
+      const brandNavy = [4, 12, 26];
+      const brandCyan = [12, 192, 223];
+      const logoResponse = await fetch('/images/logo.png');
+      if (!logoResponse.ok) throw new Error('Could not load the UCBI logo.');
+      const logoBlob = await logoResponse.blob();
+      const logoData = await new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = () => reject(new Error('Could not read the UCBI logo.'));
+        reader.readAsDataURL(logoBlob);
+      });
+
+      const formatPdfFlow = (value, row) => {
+        const amountUsdM = Number(value ?? 0);
+        if (!amountUsdM) return '+0';
+        const sign = amountUsdM > 0 ? '+' : '−';
+        if (currency === 'USD') {
+          return `${sign}$${Math.abs(amountUsdM).toLocaleString('en-US', {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2,
+          })}M`;
+        }
+        const ethAmount = row.ethPrice > 0
+          ? amountUsdM * 1_000_000 / row.ethPrice
+          : amountUsdM * 1_000;
+        const amountText = Math.abs(ethAmount) >= 1_000
+          ? `${(Math.abs(ethAmount) / 1_000).toFixed(2)}K`
+          : Math.abs(ethAmount).toLocaleString('en-US', { maximumFractionDigits: 2 });
+        return `${sign}${amountText}`;
+      };
+
+      const pdfColumns = [
+        { header: 'Date (UTC)', dataKey: 'date' },
+        ...(hasIssuerBreakdown
+          ? columns.map(({ key, name, provider }) => ({ header: `${name}\n${provider}`, dataKey: key }))
+          : []),
+        { header: 'Total', dataKey: 'total' },
+      ];
+      const pdfRows = allRows.map((row) => ({
+        date: row.date,
+        ...(hasIssuerBreakdown
+          ? Object.fromEntries(columns.map(({ key }) => [key, formatPdfFlow(row[key], row)]))
+          : {}),
+        total: formatPdfFlow(row.total ?? row.netFlowUsdM, row),
+      }));
+
+      autoTable(pdf, {
+        columns: pdfColumns,
+        body: pdfRows,
+        startY: 39,
+        margin: { top: 39, right: 9, bottom: 16, left: 9 },
+        styles: {
+          font: 'helvetica',
+          fontSize: hasIssuerBreakdown ? 6 : 8,
+          cellPadding: hasIssuerBreakdown ? 2 : 2.5,
+          textColor: [28, 43, 62],
+          lineColor: [218, 229, 237],
+          lineWidth: 0.15,
+          halign: 'center',
+          valign: 'middle',
+        },
+        headStyles: {
+          fillColor: brandNavy,
+          textColor: [255, 255, 255],
+          fontStyle: 'bold',
+          lineColor: brandCyan,
+          lineWidth: 0.25,
+        },
+        alternateRowStyles: { fillColor: [241, 249, 252] },
+        columnStyles: { date: { halign: 'left', cellWidth: 24 }, total: { fontStyle: 'bold' } },
+        didParseCell: (hook) => {
+          if (hook.section === 'body' && hook.column.dataKey !== 'date') {
+            const cellValue = String(hook.cell.raw ?? '');
+            if (cellValue.startsWith('+') && cellValue !== '+0') hook.cell.styles.textColor = [0, 139, 92];
+            if (cellValue.startsWith('−')) hook.cell.styles.textColor = [207, 57, 69];
+          }
+        },
+        didDrawPage: () => {
+          pdf.setFillColor(...brandNavy);
+          pdf.rect(0, 0, pageWidth, 34, 'F');
+          pdf.setFillColor(255, 255, 255);
+          pdf.roundedRect(9, 7, 35, 20, 2, 2, 'F');
+          pdf.addImage(logoData, 'PNG', 10.5, 9.5, 32, 15);
+          pdf.setTextColor(255, 255, 255);
+          pdf.setFont('helvetica', 'bold');
+          pdf.setFontSize(13);
+          pdf.text(`Net Total Flow of Ethereum Spot ETF (${currency})`, 50, 15);
+          pdf.setFont('helvetica', 'normal');
+          pdf.setFontSize(8);
+          pdf.setTextColor(180, 206, 219);
+          pdf.text(`Full ETF Analytics  •  ${allRows.length} records  •  Last update (UTC): ${lastUpdated || data?.updatedAt || 'Unavailable'}`, 50, 22);
+          pdf.setDrawColor(...brandCyan);
+          pdf.setLineWidth(0.7);
+          pdf.line(9, 33.5, pageWidth - 9, 33.5);
+
+          pdf.setDrawColor(218, 229, 237);
+          pdf.setLineWidth(0.25);
+          pdf.line(9, pageHeight - 11, pageWidth - 9, pageHeight - 11);
+          pdf.setFont('helvetica', 'normal');
+          pdf.setFontSize(7);
+          pdf.setTextColor(83, 102, 120);
+          pdf.text('UCBI Group Technologies LTD — Copyright © 2026', 9, pageHeight - 6);
+          pdf.text(`Page ${pdf.internal.getNumberOfPages()}`, pageWidth - 9, pageHeight - 6, { align: 'right' });
+        },
+      });
+
+      pdf.save(`ucbi-ethereum-spot-etf-analytics-${currency.toLowerCase()}.pdf`);
+    } catch (downloadError) {
+      console.error('ETF analytics PDF download failed:', downloadError);
+    } finally {
+      setIsExporting(false);
+    }
+  };
+
   return (
-    <section className={styles.etf_flow_section}>
+    <section className={styles.etf_flow_section} >
       <div className={`container cline ${styles.section_padding_custom}`}>
         <div className="row align-items-start mb-4">
           <div className="col-lg-8">
@@ -140,7 +268,7 @@ export default function EtfFlow() {
             </div>
           </div>
 
-          <div className={styles.table_responsive}>
+          <div className={styles.table_responsive} id="etf-flow">
             <table className={styles.etf_table}>
               <thead>
                 <tr>
@@ -219,9 +347,15 @@ export default function EtfFlow() {
               </div>
             </div>
             <div className="col-lg-3 col-md-6 text-lg-end text-start">
-              <a href="#etf-analytics" className={styles.analytics_btn}>
-                View Full ETF Analytics <ArrowRightIcon />
-              </a>
+              <button
+                type="button"
+                className={styles.analytics_btn}
+                onClick={downloadAnalytics}
+                disabled={!data?.issuerFlows?.length || isExporting}
+                aria-label={`Download all Ethereum spot ETF analytics as a ${currency} PDF`}
+              >
+                {isExporting ? 'Preparing PDF…' : 'View Full ETF Analytics'} <ArrowRightIcon />
+              </button>
             </div>
           </div>
         </div>

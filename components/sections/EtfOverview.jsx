@@ -1,7 +1,7 @@
 'use client';
 
-import styles from './EtfOverview.module.css';
 import { useCryptoEtfData } from './CryptoEtfDataProvider';
+import styles from './EtfOverview.module.css';
 
 const DatabaseIcon = () => (
   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -51,7 +51,7 @@ export default function EtfOverview() {
   const rows = [...flows].reverse().slice(0, 12);
 
   return (
-    <section className={styles.etf_overview_section}>
+    <section className={styles.etf_overview_section} id="etf-overview">
       <div className={`container cline ${styles.section_padding_custom}`}>
         <div className="row align-items-start mb-4">
           <div className="col-lg-8">
