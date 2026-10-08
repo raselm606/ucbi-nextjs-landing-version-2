@@ -220,7 +220,7 @@ export default function EtfFlow() {
   };
 
   return (
-    <section className={styles.etf_flow_section} >
+    <section className={styles.etf_flow_section} id="etf-flow-section">
       <div className={`container cline ${styles.section_padding_custom}`}>
         <div className="row align-items-start mb-4">
           <div className="col-lg-8">
@@ -229,8 +229,8 @@ export default function EtfFlow() {
               Ethereum <span className={styles.cyan_text}>ETF Flows</span>
             </h2>
             <p className={styles.description}>
-              Track daily inflows and outflows for each Ethereum spot ETF, with a combined total.
-              Stay informed with institutional capital trends and market momentum.
+              Track daily inflows and outflows for each Ethereum spot ETF with a combined total
+              Stay informed with institutional capital trends and market momentum
             </p>
           </div>
           <div className="col-lg-4 d-none d-lg-block">
@@ -324,7 +324,7 @@ export default function EtfFlow() {
                 <div className={styles.feature_icon}><ChartBarIcon /></div>
                 <div>
                   <h4 className={styles.feature_title}>Institutional Capital</h4>
-                  <p className={styles.feature_desc}>ETF inflows signal growing institutional interest in Ethereum and its ecosystem.</p>
+                  <p className={styles.feature_desc}>ETF inflows signal growing institutional interest in Ethereum and its ecosystem</p>
                 </div>
               </div>
             </div>
@@ -333,7 +333,7 @@ export default function EtfFlow() {
                 <div className={styles.feature_icon}><DiamondIcon /></div>
                 <div>
                   <h4 className={styles.feature_title}>Market Momentum</h4>
-                  <p className={styles.feature_desc}>Consistent inflows support long-term price stability and ecosystem growth.</p>
+                  <p className={styles.feature_desc}>Consistent inflows support long term price stability and ecosystem growth</p>
                 </div>
               </div>
             </div>
@@ -342,7 +342,7 @@ export default function EtfFlow() {
                 <div className={styles.feature_icon}><ShieldIcon /></div>
                 <div>
                   <h4 className={styles.feature_title}>Data Transparency</h4>
-                  <p className={styles.feature_desc}>Daily fund-level flow data for informed market analysis.</p>
+                  <p className={styles.feature_desc}>Daily fund level flow data for informed market analysis</p>
                 </div>
               </div>
             </div>

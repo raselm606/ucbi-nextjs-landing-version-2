@@ -60,7 +60,7 @@ export default function EtfOverview() {
               Ethereum <span className={styles.cyan_text}>ETF Overview</span>
             </h2>
             <p className={styles.description}>
-              Aggregated Ethereum spot ETF activity and live ETH market data.
+              Aggregated Ethereum spot ETF activity and live ETH market data
             </p>
           </div>
           <div className="col-lg-4 d-none d-lg-block">
@@ -158,7 +158,7 @@ export default function EtfOverview() {
                 <div className={styles.feature_icon}><EthereumIcon /></div>
                 <div>
                   <h4 className={styles.feature_title}>Aggregated ETF Data</h4>
-                  <p className={styles.feature_desc}>Flow values represent the combined Ethereum spot ETF market, not individual funds.</p>
+                  <p className={styles.feature_desc}>Flow values represent the combined Ethereum spot ETF market not individual funds</p>
                 </div>
               </div>
             </div>
@@ -168,7 +168,7 @@ export default function EtfOverview() {
                 <div>
                   <h4 className={styles.feature_title}>Flow History</h4>
                   <p className={styles.feature_desc}>
-                    {data ? `Showing ${flows.length} trading days in the available ${data.windowDays}-day history.` : 'Recent daily flow history will appear here.'}
+                    {data ? `Showing ${flows.length} trading days in the available ${data.windowDays}-day history` : 'Recent daily flow history will appear here'}
                   </p>
                 </div>
               </div>
@@ -180,8 +180,8 @@ export default function EtfOverview() {
                   <h4 className={styles.feature_title}>Data Update</h4>
                   <p className={styles.feature_desc}>
                     {data?.updatedAt
-                      ? `Updated ${new Date(data.updatedAt).toLocaleString('en-US', { timeZone: 'UTC', dateStyle: 'medium', timeStyle: 'short' })} UTC.`
-                      : error || 'Data refreshes automatically.'}
+                      ? `Updated ${new Date(data.updatedAt).toLocaleString('en-US', { timeZone: 'UTC', dateStyle: 'medium', timeStyle: 'short' })} UTC`
+                      : error || 'Data refreshes automatically'}
                   </p>
                 </div>
               </div>

@@ -1,12 +1,17 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import styles from './SpotEtf.module.css';
-import { useCryptoEtfData } from './CryptoEtfDataProvider';
 import {
-  ResponsiveContainer, BarChart, Bar, ComposedChart, Line, XAxis, YAxis,
-  Tooltip, CartesianGrid, Cell,
+  Bar,
+  BarChart,
+  CartesianGrid, Cell,
+  ComposedChart, Line,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis, YAxis,
 } from 'recharts';
+import { useCryptoEtfData } from './CryptoEtfDataProvider';
+import styles from './SpotEtf.module.css';
 
 const CalendarIcon = () => (
   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0cc0df" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -109,13 +114,13 @@ export default function SpotEtf() {
   const hasHistoricalPrice = trendData.some((point) => point.price != null);
 
   return (
-    <section className={styles.spot_etf_section}>
+    <section className={styles.spot_etf_section} id="spot-etf-section">
       <div className={'container cline ' + styles.section_padding_custom}>
         <div className="row align-items-start mb-4">
           <div className="col-lg-8">
             <span className={styles.sub_title}>MARKET INSIGHTS</span>
             <h2 className={styles.main_title}>Ethereum <span className={styles.cyan_text}>Spot ETF Net Inflow</span></h2>
-            <p className={styles.description}>Compare daily fund flows and follow the relationship between Ethereum ETF activity and ETH price.</p>
+            <p className={styles.description}>Compare daily fund flows and follow the relationship between Ethereum ETF activity and ETH price</p>
           </div>
           <div className="col-lg-4 d-none d-lg-block">
             <div className={styles.tagline_box}>
@@ -211,9 +216,9 @@ export default function SpotEtf() {
 
         <div className={styles.bottom_card}>
           <div className="row align-items-center gy-4">
-            <div className="col-lg-4 col-md-6"><div className={styles.feature_item}><div className={styles.feature_icon}><ChartBarIcon /></div><div><h4 className={styles.feature_title}>Institutional Capital</h4><p className={styles.feature_desc}>Track each issuer’s daily net creations and redemptions.</p></div></div></div>
+            <div className="col-lg-4 col-md-6"><div className={styles.feature_item}><div className={styles.feature_icon}><ChartBarIcon /></div><div><h4 className={styles.feature_title}>Institutional Capital</h4><p className={styles.feature_desc}>Track each issuer’s daily net creations and redemptions</p></div></div></div>
             <div className="col-lg-4 col-md-6"><div className={styles.feature_item}><div className={styles.feature_icon}><EthereumIcon /></div><div><h4 className={styles.feature_title}>ETH Spot Price</h4><p className={styles.feature_desc}>{priceText}</p></div></div></div>
-            <div className="col-lg-4 col-md-6"><div className={styles.feature_item}><div className={styles.feature_icon}><CalendarIcon /></div><div><h4 className={styles.feature_title}>Recent History</h4><p className={styles.feature_desc}>Daily ETF flows and ETH prices over the latest available month.</p></div></div></div>
+            <div className="col-lg-4 col-md-6"><div className={styles.feature_item}><div className={styles.feature_icon}><CalendarIcon /></div><div><h4 className={styles.feature_title}>Recent History</h4><p className={styles.feature_desc}>Daily ETF flows and ETH prices over the latest available month</p></div></div></div>
           </div>
         </div>
       </div>

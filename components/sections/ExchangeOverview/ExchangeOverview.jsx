@@ -39,11 +39,11 @@ export default function ExchangeOverview() {
           cache: 'no-store',
         });
         const result = await response.json();
-        if (!response.ok) throw new Error(result.error || 'Exchange market data is unavailable.');
+        if (!response.ok) throw new Error(result.error || 'Exchange market data is unavailable');
         setData(result);
         setError('');
       } catch (fetchError) {
-        if (fetchError.name !== 'AbortError') setError(fetchError.message || 'Exchange market data is unavailable.');
+        if (fetchError.name !== 'AbortError') setError(fetchError.message || 'Exchange market data is unavailable');
       } finally {
         if (!controller.signal.aborted) setLoading(false);
       }
@@ -77,7 +77,7 @@ export default function ExchangeOverview() {
               Top <span className={styles.cyan_text}>Crypto Exchanges</span>
             </h2>
             <p className={styles.section_description}>
-              Compare leading centralized exchanges by reported 24-hour trading volume, market rank, and exchange details.
+              Compare leading centralized exchanges by reported 24-hour trading volume market rank and exchange details
             </p>
           </div>
           <div className="col-lg-4 d-none d-lg-block">
@@ -113,7 +113,7 @@ export default function ExchangeOverview() {
           <div className={styles.table_heading}>
             <div>
               <h3>Exchange Market Overview</h3>
-              <p>24-hour spot trading volume reported in BTC, with an estimated USD equivalent.</p>
+              <p>24-hour spot trading volume reported in BTC with an estimated USD equivalent</p>
             </div>
             <span className={styles.updated_label}>
               {data?.source ?? 'CoinGecko'} · {formatUpdated(data?.updatedAt)}
@@ -163,7 +163,7 @@ export default function ExchangeOverview() {
                 {!exchanges.length && (
                   <tr>
                     <td colSpan={7} className={styles.empty_state}>
-                      {loading ? 'Loading exchange market data…' : error || 'Exchange market data is not available right now.'}
+                      {loading ? 'Loading exchange market data…' : error || 'Exchange market data is not available right now'}
                     </td>
                   </tr>
                 )}

@@ -271,10 +271,7 @@ try {
                     </li>
                     <li className="nav-item">
                     <Link className="nav-link" data-bs-toggle="modal"   href="#submit-a-request">Submit Request</Link>
-                    </li>
-                    <li className="nav-item">
-                    <Link className="nav-link" href="/etf">ETF</Link>
-                    </li>
+                    </li> 
                     <li className="nav-item">
                     <Link className="nav-link" href="/#contact">Contact</Link>
                     </li>

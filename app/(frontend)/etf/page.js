@@ -1,12 +1,14 @@
 import Footer from "@/components/layouts/Footer";
 import Header_b from "@/components/layouts/Header_b";
 import EtfHeroSection from "@/components/sections/b/EtfHeroSection";
+import CryptoEtfDataProvider from "@/components/sections/CryptoEtfDataProvider";
 import EtfFlow from "@/components/sections/EtfFlow";
 import EtfOverview from "@/components/sections/EtfOverview";
+import EtfSectionChooser from "@/components/sections/EtfSectionChooser/EtfSectionChooser";
+import ExchangeOverview from "@/components/sections/ExchangeOverview/ExchangeOverview";
+import KrakenEthChartExchange from "@/components/sections/KrakenEthChartExchange/KrakenEthChartExchange";
 import Scaleable from "@/components/sections/Scaleable";
 import SpotEtf from "@/components/sections/SpotEtf";
-import CryptoEtfDataProvider from "@/components/sections/CryptoEtfDataProvider";
-import ExchangeOverview from "@/components/sections/ExchangeOverview/ExchangeOverview";
 
 export const metadata = {
   title: "UCBI Banking - Ethereum ETF Market Data & Market Trends",
@@ -35,7 +37,9 @@ const EtfPage = () => {
     <> 
       <Header_b /> 
       <EtfHeroSection />  
+      <EtfSectionChooser />
       <CryptoEtfDataProvider>
+        <KrakenEthChartExchange />
         <EtfFlow />
         <SpotEtf />
         <EtfOverview />

@@ -38,7 +38,7 @@ const HeroSection_b = () => {
               </p>
 
               <div className="d-flex align-items-center gap-3 flex-wrap mt-4">
-                <Button href="#about" className={styles.primaryBtn}>
+                <Button href="https://ucbibanking.io/etf" className={styles.primaryBtn}>
                   Explore UCBI
                  <span className={styles.btnIcon}>
                     <ArrowIcon />

@@ -34,9 +34,9 @@ const EtfHeroSection = () => {
                 </h1>
 
                 <p className={styles.heroText}>
-                  Comprehensive Ethereum ETF tracking, institutional inflow analysis <br />
+                  Comprehensive Ethereum ETF tracking institutional inflow analysis <br />
                   and transparent digital asset market data tailored for investors <br />
-                  and long-term market participants
+                  and long term market participants
                 </p>
 
                 <div className="d-flex align-items-center gap-3 flex-wrap mt-4">

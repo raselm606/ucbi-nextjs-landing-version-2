@@ -8,6 +8,7 @@ import logo12 from "../../public/images/partners/12.png";
 // import logo3 from "../../public/images/partners/3.jpg";
 import logo13 from "../../public/images/partners/13.png";
 import logo14 from "../../public/images/partners/14.png";
+import logo16 from "../../public/images/partners/16.png";
 import logo5 from "../../public/images/partners/5.png";
 import logo7 from "../../public/images/partners/7.png";
 import logo9 from "../../public/images/partners/9.png";
@@ -40,6 +41,9 @@ const Partners =  () => {
                         <Link href="https://github.com/UCBI-Blockchain-Banking" target="_blank">
                         <Image className="img14"  src={logo14} alt="Partner Logo" />
                         </Link> <span className="dline"> |</span>
+                        <Link href="https://blockchain.com" target="_blank">
+                        <Image style={{width:'111px !important'}} className="img10"  src={logo16} alt="Partner Logo" />
+                        </Link> <span className="dline"> |</span>
                         
 
                         <Link href="https://trustwallet.com/" target="_blank">
@@ -59,6 +63,9 @@ const Partners =  () => {
                         <Image className="img12"  src={logo12} alt="Partner Logo" /></Link> <span className="dline"> |</span>
                         <Link href="https://github.com/UCBI-Blockchain-Banking" target="_blank">
                         <Image className="img14"  src={logo14} alt="Partner Logo" />
+                        </Link> <span className="dline"> |</span>
+                        <Link href="https://blockchain.com" target="_blank">
+                        <Image style={{width:'111px !important'}} className="img10"  src={logo16} alt="Partner Logo" />
                         </Link> <span className="dline"> |</span>
                           
                     </div>
