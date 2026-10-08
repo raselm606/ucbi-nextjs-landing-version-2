@@ -39,7 +39,7 @@ const HeroSection_b = () => {
 
               <div className="d-flex align-items-center gap-3 flex-wrap mt-4">
                 <Button href="https://ucbibanking.io/etf" className={styles.primaryBtn}>
-                  Explore UCBI
+                  Ethereum ETF Data
                  <span className={styles.btnIcon}>
                     <ArrowIcon />
                   </span>
