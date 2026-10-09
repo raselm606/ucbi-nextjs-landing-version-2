@@ -96,11 +96,11 @@
 }
 
 .tagline_item {
-  color: #9fa8b5;
-  font-size: 11px;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-  margin-bottom: 4px;
+  color: #b2c7e6;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    font-size: 10px;
 }
 
 /* Main Grid Cards */

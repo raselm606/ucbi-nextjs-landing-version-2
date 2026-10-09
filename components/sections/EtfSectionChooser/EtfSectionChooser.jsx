@@ -13,6 +13,8 @@ const destinations = [
 
 export default function EtfSectionChooser() {
   const [isOpen, setIsOpen] = useState(true);
+  const [isNavOpen, setIsNavOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
 
   useEffect(() => {
     if (!isOpen) return undefined;
@@ -29,16 +31,40 @@ export default function EtfSectionChooser() {
   }, [isOpen]);
 
   const close = () => setIsOpen(false);
+  const goToSection = (id) => {
+    const target = document.getElementById(id);
+    if (!target) return;
+    const top = target.getBoundingClientRect().top + window.scrollY - 88;
+    window.scrollTo({ top, behavior: 'smooth' });
+    setActiveSection(id);
+    setIsNavOpen(false);
+  };
   const chooseSection = (id) => {
     close();
     window.setTimeout(() => {
-      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      goToSection(id);
     }, 120);
   };
 
-  if (!isOpen) return null;
+  useEffect(() => {
+    if (isOpen) return undefined;
+    const targets = destinations
+      .map(({ id }) => document.getElementById(id))
+      .filter(Boolean);
+    if (!targets.length) return undefined;
 
-  return (
+    const observer = new IntersectionObserver((entries) => {
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (visible) setActiveSection(visible.target.id);
+    }, { rootMargin: '-20% 0px -60% 0px', threshold: [0, 0.1, 0.25, 0.5] });
+
+    targets.forEach((target) => observer.observe(target));
+    return () => observer.disconnect();
+  }, [isOpen]);
+
+  return isOpen ? (
     <div className={styles.backdrop} onMouseDown={(event) => { if (event.target === event.currentTarget) close(); }}>
       <section className={styles.dialog} role="dialog" aria-modal="true" aria-labelledby="etf-chooser-title" aria-describedby="etf-chooser-description">
         <button type="button" className={styles.close_button} onClick={close} aria-label="Close section chooser">×</button>
@@ -71,6 +97,38 @@ export default function EtfSectionChooser() {
           <button type="button" className={styles.browse_button} onClick={close}>Browse page from the top <span aria-hidden="true">↓</span></button>
         </div>
       </section>
+    </div>
+  ) : (
+    <div className={styles.section_nav}>
+      {isNavOpen && (
+        <nav className={styles.section_menu} aria-label="ETF page sections">
+          <span className={styles.menu_heading}>JUMP TO SECTION</span>
+          {destinations.map((destination) => (
+            <button
+              type="button"
+              key={destination.id}
+              className={`${styles.menu_item} ${activeSection === destination.id ? styles.menu_item_active : ''}`}
+              onClick={() => goToSection(destination.id)}
+              aria-current={activeSection === destination.id ? 'location' : undefined}
+            >
+              <span className={styles.menu_number}>{destination.number}</span>
+              <span>{destination.title}</span>
+              <span className={styles.menu_arrow} aria-hidden="true">↗</span>
+            </button>
+          ))}
+        </nav>
+      )}
+      <button
+        type="button"
+        className={styles.section_nav_toggle}
+        onClick={() => setIsNavOpen((open) => !open)}
+        aria-expanded={isNavOpen}
+        aria-label={isNavOpen ? 'Close section navigation' : 'Open section navigation'}
+      >
+        <span className={styles.toggle_icon} aria-hidden="true">{isNavOpen ? '×' : '☷'}</span>
+        <span>Sections</span>
+        <span className={styles.toggle_chevron} aria-hidden="true">{isNavOpen ? '⌄' : '⌃'}</span>
+      </button>
     </div>
   );
 }

@@ -105,8 +105,11 @@ export default function EtfFlow() {
       const pdf = new jsPDF({ orientation: 'landscape', unit: 'mm', format: 'a4' });
       const pageWidth = pdf.internal.pageSize.getWidth();
       const pageHeight = pdf.internal.pageSize.getHeight();
-      const brandNavy = [4, 12, 26];
-      const brandCyan = [12, 192, 223];
+      const brandNavy = [19, 48, 82];
+      const brandCyan = [42, 190, 218];
+      const ink = [29, 56, 88];
+      const muted = [103, 126, 151];
+      const paleCyan = [235, 247, 250];
       const logoResponse = await fetch('/images/logo.png');
       if (!logoResponse.ok) throw new Error('Could not load the UCBI logo.');
       const logoBlob = await logoResponse.blob();
@@ -120,7 +123,7 @@ export default function EtfFlow() {
       const formatPdfFlow = (value, row) => {
         const amountUsdM = Number(value ?? 0);
         if (!amountUsdM) return '+0';
-        const sign = amountUsdM > 0 ? '+' : '−';
+        const sign = amountUsdM > 0 ? '+' : '-';
         if (currency === 'USD') {
           return `${sign}$${Math.abs(amountUsdM).toLocaleString('en-US', {
             minimumFractionDigits: 2,
@@ -151,65 +154,162 @@ export default function EtfFlow() {
         total: formatPdfFlow(row.total ?? row.netFlowUsdM, row),
       }));
 
-      autoTable(pdf, {
-        columns: pdfColumns,
-        body: pdfRows,
-        startY: 39,
-        margin: { top: 39, right: 9, bottom: 16, left: 9 },
-        styles: {
-          font: 'helvetica',
-          fontSize: hasIssuerBreakdown ? 6 : 8,
-          cellPadding: hasIssuerBreakdown ? 2 : 2.5,
-          textColor: [28, 43, 62],
-          lineColor: [218, 229, 237],
-          lineWidth: 0.15,
-          halign: 'center',
-          valign: 'middle',
-        },
-        headStyles: {
-          fillColor: brandNavy,
-          textColor: [255, 255, 255],
-          fontStyle: 'bold',
-          lineColor: brandCyan,
-          lineWidth: 0.25,
-        },
-        alternateRowStyles: { fillColor: [241, 249, 252] },
-        columnStyles: { date: { halign: 'left', cellWidth: 24 }, total: { fontStyle: 'bold' } },
-        didParseCell: (hook) => {
-          if (hook.section === 'body' && hook.column.dataKey !== 'date') {
-            const cellValue = String(hook.cell.raw ?? '');
-            if (cellValue.startsWith('+') && cellValue !== '+0') hook.cell.styles.textColor = [0, 139, 92];
-            if (cellValue.startsWith('−')) hook.cell.styles.textColor = [207, 57, 69];
-          }
-        },
-        didDrawPage: () => {
-          pdf.setFillColor(...brandNavy);
-          pdf.rect(0, 0, pageWidth, 34, 'F');
-          pdf.setFillColor(255, 255, 255);
-          pdf.roundedRect(9, 7, 35, 20, 2, 2, 'F');
-          pdf.addImage(logoData, 'PNG', 10.5, 9.5, 32, 15);
-          pdf.setTextColor(255, 255, 255);
-          pdf.setFont('helvetica', 'bold');
-          pdf.setFontSize(13);
-          pdf.text(`Net Total Flow of Ethereum Spot ETF (${currency})`, 50, 15);
-          pdf.setFont('helvetica', 'normal');
-          pdf.setFontSize(8);
-          pdf.setTextColor(180, 206, 219);
-          pdf.text(`Full ETF Analytics  •  ${allRows.length} records  •  Last update (UTC): ${lastUpdated || data?.updatedAt || 'Unavailable'}`, 50, 22);
-          pdf.setDrawColor(...brandCyan);
-          pdf.setLineWidth(0.7);
-          pdf.line(9, 33.5, pageWidth - 9, 33.5);
+      const formatDate = (value, options = { day: '2-digit', month: 'long', year: 'numeric', timeZone: 'UTC' }) => {
+        const parsed = new Date(value);
+        return Number.isNaN(parsed.getTime()) ? String(value ?? 'Unavailable') : parsed.toLocaleDateString('en-GB', options);
+      };
+      const dates = allRows.map((row) => new Date(row.date)).filter((date) => !Number.isNaN(date.getTime()));
+      const periodStart = dates.length ? new Date(Math.min(...dates.map((date) => date.getTime()))) : null;
+      const periodEnd = dates.length ? new Date(Math.max(...dates.map((date) => date.getTime()))) : null;
+      const period = periodStart && periodEnd
+        ? `${formatDate(periodStart, { day: '2-digit', month: 'short', timeZone: 'UTC' })} - ${formatDate(periodEnd, { day: '2-digit', month: 'short', year: 'numeric', timeZone: 'UTC' })}`
+        : 'Unavailable';
+      const coverage = hasIssuerBreakdown
+        ? `${allRows.length} records  /  ${columns.length} ETFs`
+        : `${allRows.length} aggregate records`;
+      const rowsPerPage = 15;
+      const pageCount = Math.ceil(pdfRows.length / rowsPerPage);
 
-          pdf.setDrawColor(218, 229, 237);
-          pdf.setLineWidth(0.25);
-          pdf.line(9, pageHeight - 11, pageWidth - 9, pageHeight - 11);
-          pdf.setFont('helvetica', 'normal');
-          pdf.setFontSize(7);
-          pdf.setTextColor(83, 102, 120);
-          pdf.text('UCBI Group Technologies LTD — Copyright © 2026', 9, pageHeight - 6);
-          pdf.text(`Page ${pdf.internal.getNumberOfPages()}`, pageWidth - 9, pageHeight - 6, { align: 'right' });
-        },
-      });
+      const drawReportPage = (pageNumber, firstRow, lastRow) => {
+        pdf.setFillColor(...brandNavy);
+        pdf.rect(0, 0, pageWidth, 6, 'F');
+        pdf.setFillColor(...brandCyan);
+        pdf.rect(0, 6, pageWidth, 1.5, 'F');
+
+        pdf.addImage(logoData, 'PNG', 13.5, 10, 31, 14);
+        pdf.setFont('helvetica', 'bold');
+        pdf.setFontSize(8);
+        pdf.setTextColor(...brandCyan);
+        pdf.text('UCBI GROUP TECHNOLOGIES LTD', 50, 14.5);
+        pdf.setFont('helvetica', 'normal');
+        pdf.setFontSize(8);
+        pdf.setTextColor(...muted);
+        pdf.text('Digital assets research', 50, 20);
+        pdf.setFont('helvetica', 'bold');
+        pdf.setFontSize(8);
+        pdf.setTextColor(...brandNavy);
+        pdf.text('MARKET ANALYTICS', pageWidth - 13.5, 14.5, { align: 'right' });
+        pdf.setFont('helvetica', 'normal');
+        pdf.setTextColor(...muted);
+        pdf.text('ETH / SPOT ETF', pageWidth - 13.5, 20, { align: 'right' });
+
+        pdf.setDrawColor(216, 229, 238);
+        pdf.setLineWidth(0.25);
+        pdf.line(13.5, 28.5, pageWidth - 13.5, 28.5);
+        pdf.setFont('helvetica', 'bold');
+        pdf.setFontSize(22);
+        pdf.setTextColor(...brandNavy);
+        pdf.text('Ethereum Spot ETF', 13.5, 40.5);
+        pdf.setDrawColor(...brandCyan);
+        pdf.setLineWidth(0.8);
+        pdf.line(13.5, 44, 36, 44);
+        pdf.setFont('helvetica', 'normal');
+        pdf.setFontSize(10);
+        pdf.setTextColor(...ink);
+        pdf.text(`Net Total Flow of Ethereum Spot ETF (${currency})`, 13.5, 51);
+        pdf.setTextColor(...muted);
+        pdf.setFontSize(9);
+        pdf.text('Full ETF Analytics', pageWidth - 13.5, 51, { align: 'right' });
+
+        const cardY = 55;
+        const cardH = 14;
+        const cardGap = 4.5;
+        const cardWidths = [104, 64, pageWidth - 27 - 104 - 64 - cardGap * 2];
+        const cardX = [13.5, 13.5 + cardWidths[0] + cardGap, 13.5 + cardWidths[0] + cardGap + cardWidths[1] + cardGap];
+        const cardLabels = ['REPORTING PERIOD', 'COVERAGE', 'LAST UPDATE (UTC)'];
+      const cardValues = [period, coverage, formatDate(lastUpdated || data?.updatedAt)];
+        cardWidths.forEach((cardWidth, index) => {
+          pdf.setFillColor(...paleCyan);
+          pdf.rect(cardX[index], cardY, cardWidth, cardH, 'F');
+          pdf.setFillColor(...brandCyan);
+          pdf.rect(cardX[index], cardY, 1.2, cardH, 'F');
+          pdf.setFont('helvetica', 'bold');
+          pdf.setFontSize(6.5);
+          pdf.setTextColor(...muted);
+          pdf.text(cardLabels[index], cardX[index] + 4.5, cardY + 4.7);
+          pdf.setFontSize(10);
+          pdf.setTextColor(...brandNavy);
+          pdf.text(cardValues[index], cardX[index] + 4.5, cardY + 10.8);
+        });
+
+        pdf.setFont('helvetica', 'bold');
+        pdf.setFontSize(7.5);
+        pdf.setTextColor(...brandNavy);
+        pdf.text(`${String(pageNumber).padStart(2, '0')}  /  DAILY FLOWS`, 13.5, 76);
+        pdf.setFont('helvetica', 'normal');
+        pdf.setTextColor(...muted);
+        pdf.text(`Rows ${String(firstRow).padStart(2, '0')}-${String(lastRow).padStart(2, '0')} of ${pdfRows.length}  |  Values in ${currency}`, pageWidth - 13.5, 76, { align: 'right' });
+
+        pdf.setFillColor(...brandCyan);
+        pdf.rect(0, pageHeight - 8, pageWidth, 1.5, 'F');
+        pdf.setFillColor(...brandNavy);
+        pdf.rect(0, pageHeight - 6.5, pageWidth, 6.5, 'F');
+        pdf.setFont('helvetica', 'normal');
+        pdf.setFontSize(7);
+        pdf.setTextColor(218, 231, 240);
+        pdf.text('UCBI Group Technologies LTD  |  Copyright (C) 2026', 13.5, pageHeight - 2.3);
+        pdf.text(`Page ${pageNumber} / ${pageCount}`, pageWidth - 13.5, pageHeight - 2.3, { align: 'right' });
+      };
+
+      for (let pageIndex = 0; pageIndex < pageCount; pageIndex += 1) {
+        if (pageIndex > 0) pdf.addPage();
+        const firstRow = pageIndex * rowsPerPage + 1;
+        const pageRows = pdfRows.slice(pageIndex * rowsPerPage, (pageIndex + 1) * rowsPerPage);
+        const lastRow = firstRow + pageRows.length - 1;
+        drawReportPage(pageIndex + 1, firstRow, lastRow);
+        autoTable(pdf, {
+          columns: pdfColumns,
+          body: pageRows,
+          startY: 79,
+          margin: { top: 79, right: 13.5, bottom: 13, left: 13.5 },
+          tableWidth: pageWidth - 27,
+          styles: {
+            font: 'helvetica',
+            fontSize: hasIssuerBreakdown ? 6.8 : 8,
+            cellPadding: hasIssuerBreakdown ? 1.8 : 2.5,
+            textColor: [40, 60, 80],
+            lineColor: [218, 229, 237],
+            lineWidth: 0.12,
+            halign: 'right',
+            valign: 'middle',
+            minCellHeight: 6.4,
+          },
+          headStyles: {
+            fillColor: brandNavy,
+            textColor: [255, 255, 255],
+            fontStyle: 'bold',
+            lineColor: brandCyan,
+            lineWidth: 0.3,
+            halign: 'center',
+            minCellHeight: 10.5,
+          },
+          alternateRowStyles: { fillColor: [246, 250, 252] },
+          columnStyles: {
+            date: { halign: 'left', cellWidth: hasIssuerBreakdown ? 28 : 35 },
+            total: { fontStyle: 'bold', fillColor: [230, 244, 248] },
+          },
+          didParseCell: (hook) => {
+            if (hook.section === 'body' && hook.column.dataKey !== 'date') {
+              const cellValue = String(hook.cell.raw ?? '');
+              if (cellValue.startsWith('+') && cellValue !== '+0') hook.cell.styles.textColor = [0, 139, 112];
+              if (cellValue.startsWith('-')) hook.cell.styles.textColor = [220, 52, 70];
+            }
+          },
+        });
+
+        const tableEndY = pdf.lastAutoTable?.finalY ?? 79;
+        const legendY = Math.min(tableEndY + 5, pageHeight - 12);
+        pdf.setFont('helvetica', 'bold');
+        pdf.setFontSize(7);
+        pdf.setTextColor(0, 139, 112);
+        pdf.text('+ Inflow', 13.5, legendY);
+        pdf.setTextColor(220, 52, 70);
+        pdf.text('- Outflow', 38, legendY);
+        pdf.setFont('helvetica', 'normal');
+        pdf.setTextColor(...muted);
+        pdf.text('+0 Zero reported value', 66, legendY);
+        pdf.text(currency === 'ETH' ? 'ETH = Ether  |  K = 1,000 ETH' : 'USD values are shown in millions', pageWidth - 13.5, legendY, { align: 'right' });
+      }
 
       pdf.save(`ucbi-ethereum-spot-etf-analytics-${currency.toLowerCase()}.pdf`);
     } catch (downloadError) {
@@ -354,7 +454,7 @@ export default function EtfFlow() {
                 disabled={!data?.issuerFlows?.length || isExporting}
                 aria-label={`Download all Ethereum spot ETF analytics as a ${currency} PDF`}
               >
-                {isExporting ? 'Preparing PDF…' : 'View Full ETF Analytics'} <ArrowRightIcon />
+                {isExporting ? 'Preparing PDF…' : 'Download Full ETF Analytics'} <ArrowRightIcon />
               </button>
             </div>
           </div>

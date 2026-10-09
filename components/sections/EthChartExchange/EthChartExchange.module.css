@@ -14,12 +14,12 @@
 .section_inner::after { right: 0; }
 .sub_title { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 10px; color: #0cc0df; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; }
 .sub_title::before, .sub_title::after { content: ''; display: inline-block; width: 28px; height: 2px; background: #0cc0df; }
-.section_title { margin: 0 0 15px; color: #fff; font-family: var(--title_font), sans-serif; font-size: 27px; font-weight: 700; }
+.section_title { margin: 0 0 15px; color: #fff; font-family: var(--title_font), sans-serif; font-size: 17px; font-weight: 700; }
 .exchange_tag { display: inline-block; padding: 4px 8px; border: 1px solid rgba(12, 192, 223, .28); border-radius: 5px; color: #0cc0df; font-family: inherit; font-size: 9px; letter-spacing: 1px; vertical-align: middle; }
 .cyan_text { color: #0cc0df; }
-.section_description { max-width: 650px; margin: 0; color: #fff; font-size: 13px; line-height: 1.7; }
+.section_description { max-width: 650px; margin: 0; color: #e2e2e2; font-size: 12px; line-height: 1.7; }
 .header_note { display: flex; flex-direction: column; gap: 7px; padding-top: 5px; text-align: right; }
-.header_note span { color: #b2c7e6; font-size: 10px; letter-spacing: 1.2px; }
+.header_note span { color: #b2c7e6; font-size: 10px; letter-spacing: 1px; }
 .header_note span:first-child { color: #0cc0df; font-weight: 700; }
 .market_card { overflow: hidden; border: 1px solid rgba(12, 192, 223, .25); border-radius: 16px; background: #00152f; box-shadow: 0 10px 40px rgba(0, 0, 0, .38), inset 0 0 24px rgba(12, 192, 223, .035); }
 .market_topline { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 25px 8px; }
@@ -31,7 +31,7 @@
 .live_status { display: inline-flex; align-items: center; gap: 7px; color: #68dbb0; font-size: 9px; font-weight: 700; letter-spacing: 1px; }
 .live_status i { width: 7px; height: 7px; border-radius: 50%; background: #20d69a; box-shadow: 0 0 8px rgba(32, 214, 154, .7); }
 .price_summary { display: flex; align-items: baseline; flex-wrap: wrap; gap: 11px; padding: 10px 25px 22px; }
-.current_price { color: #fff; font-size: clamp(27px, 4vw, 38px); font-weight: 700; letter-spacing: -.8px; }
+.current_price { color: #fff; font-size: 21px; font-weight: 700; letter-spacing: -.8px; }
 .change_badge { padding: 5px 9px; border-radius: 5px; font-size: 11px; font-weight: 700; }
 .change_badge span { opacity: .75; font-weight: 500; }
 .positive { background: rgba(32, 214, 154, .12); color: #26d7a0; }
@@ -52,7 +52,12 @@
 .range_controls .range_active, .chart_controls .chart_active { background: rgba(12, 192, 223, .14); color: #0cc0df; }
 .chart_controls button { font-size: 17px; }
 .chart_wrap { width: 100%; padding: 4px 10px 8px; }
+.zoom_controls { display: flex; justify-content: flex-end; gap: 5px; padding: 0 10px 4px; }
+.zoom_controls button { min-width: 30px; padding: 4px 8px; border: 1px solid rgba(12, 192, 223, .2); border-radius: 4px; background: rgba(12, 192, 223, .08); color: #9cb8d4; font: inherit; font-size: 11px; cursor: pointer; }
+.zoom_controls button:hover { border-color: rgba(12, 192, 223, .55); color: #0cc0df; }
 .chart { display: block; width: 100%; height: auto; min-height: 245px; overflow: visible; }
+.chart_interactive { cursor: grab; touch-action: none; }
+.chart_interactive:active { cursor: grabbing; }
 .grid_line { stroke: rgba(154, 174, 198, .13); stroke-dasharray: 3 5; stroke-width: 1; }
 .axis_label { fill: #71849c; font-family: inherit; font-size: 10px; }
 .price_line { fill: none; stroke: #0cc0df; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2; }

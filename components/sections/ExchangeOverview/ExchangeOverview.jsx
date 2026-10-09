@@ -139,7 +139,11 @@ export default function ExchangeOverview() {
                     <td>
                       <a className={styles.exchange_link} href={exchange.url} target="_blank" rel="noreferrer">
                         <span className={styles.exchange_identity}>
-                          {exchange.image ? <img src={exchange.image} alt="" loading="lazy" /> : null}
+                          {exchange.image ? (
+                            <span className={styles.exchange_logo}>
+                              <img src={exchange.image} alt={`${exchange.name} logo`} loading="lazy" />
+                            </span>
+                          ) : null}
                           <span>{exchange.name}</span>
                           <span className={styles.external_icon} aria-hidden="true">↗</span>
                         </span>

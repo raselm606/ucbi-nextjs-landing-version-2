@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import styles from './EthChartExchange.module.css';
 
 const RANGES = ['1H', '24H', '7D', '30D', '90D', '1Y'];
@@ -21,9 +21,11 @@ function timestampLabel(timestamp, range) {
     : { month: 'short', day: 'numeric', timeZone: 'UTC' });
 }
 
-export function MarketChart({ candles, range, chartType }) {
+export function MarketChart({ candles, range, chartType, interactive = false }) {
+  const [view, setView] = useState({ start: 0, end: 1 });
+  const dragRef = useRef(null);
   const width = 900;
-  const height = 340;
+  const height = 350;
   const left = 8;
   const right = 82;
   const top = 14;
@@ -31,24 +33,55 @@ export function MarketChart({ candles, range, chartType }) {
   const volumeTop = 290;
   const plotWidth = width - left - right;
   const plotHeight = bottom - top;
-  const values = candles.flatMap((candle) => [candle.high, candle.low]);
+  const visibleStart = Math.floor(view.start * candles.length);
+  const visibleEnd = Math.max(visibleStart + 2, Math.ceil(view.end * candles.length));
+  const visibleCandles = candles.slice(visibleStart, visibleEnd);
+  const values = visibleCandles.flatMap((candle) => [candle.high, candle.low]);
   const min = Math.min(...values);
   const max = Math.max(...values);
   const padding = (max - min || max * 0.002) * 0.1;
   const low = min - padding;
   const high = max + padding;
   const y = (price) => top + ((high - price) / (high - low)) * plotHeight;
-  const x = (index) => left + (index / Math.max(candles.length - 1, 1)) * plotWidth;
-  const maxVolume = Math.max(...candles.map((candle) => candle.volume), 1);
-  const closePath = candles.map((candle, index) => `${index ? 'L' : 'M'} ${x(index)} ${y(candle.close)}`).join(' ');
-  const areaPath = `${closePath} L ${x(candles.length - 1)} ${bottom} L ${x(0)} ${bottom} Z`;
+  const x = (index) => left + (index / Math.max(visibleCandles.length - 1, 1)) * plotWidth;
+  const maxVolume = Math.max(...visibleCandles.map((candle) => candle.volume), 1);
+  const closePath = visibleCandles.map((candle, index) => `${index ? 'L' : 'M'} ${x(index)} ${y(candle.close)}`).join(' ');
+  const areaPath = `${closePath} L ${x(visibleCandles.length - 1)} ${bottom} L ${x(0)} ${bottom} Z`;
   const ticks = Array.from({ length: 5 }, (_, index) => high - ((high - low) * index) / 4);
-  const labels = Array.from({ length: 5 }, (_, index) => Math.round((candles.length - 1) * index / 4));
-  const candleWidth = Math.max(1, Math.min(8, plotWidth / candles.length * 0.62));
+  const labels = Array.from({ length: 5 }, (_, index) => Math.round((visibleCandles.length - 1) * index / 4));
+  const candleWidth = Math.max(1, Math.min(8, plotWidth / visibleCandles.length * 0.62));
+  const zoomAt = (factor, anchor = 0.5) => setView((current) => {
+    const span = current.end - current.start;
+    const nextSpan = Math.max(0.04, Math.min(1, span * factor));
+    const point = current.start + span * anchor;
+    const start = Math.max(0, Math.min(1 - nextSpan, point - nextSpan * anchor));
+    return { start, end: start + nextSpan };
+  });
+  const handleWheel = (event) => {
+    if (!interactive) return;
+    event.preventDefault();
+    const bounds = event.currentTarget.getBoundingClientRect();
+    const anchor = Math.max(0, Math.min(1, (event.clientX - bounds.left) / bounds.width));
+    zoomAt(event.deltaY < 0 ? 0.85 : 1.18, anchor);
+  };
+  const handlePointerDown = (event) => {
+    if (!interactive) return;
+    event.currentTarget.setPointerCapture(event.pointerId);
+    dragRef.current = { x: event.clientX, start: view.start, end: view.end };
+  };
+  const handlePointerMove = (event) => {
+    if (!interactive || !dragRef.current) return;
+    const bounds = event.currentTarget.getBoundingClientRect();
+    const span = dragRef.current.end - dragRef.current.start;
+    const shift = ((event.clientX - dragRef.current.x) / bounds.width) * span;
+    const start = Math.max(0, Math.min(1 - span, dragRef.current.start - shift));
+    setView({ start, end: start + span });
+  };
 
   return (
     <div className={styles.chart_wrap}>
-      <svg className={styles.chart} viewBox={`0 0 ${width} ${height}`} role="img" aria-label={`Ethereum ${range} ${chartType} price chart`}>
+      {interactive && <div className={styles.zoom_controls} aria-label="Chart zoom controls"><button type="button" onClick={() => zoomAt(0.75)} aria-label="Zoom in">+</button><button type="button" onClick={() => zoomAt(1.33)} aria-label="Zoom out">−</button><button type="button" onClick={() => setView({ start: 0, end: 1 })}>Reset</button></div>}
+      <svg className={`${styles.chart} ${interactive ? styles.chart_interactive : ''}`} viewBox={`0 0 ${width} ${height}`} role="img" aria-label={`Ethereum ${range} ${chartType} price chart`} onWheel={handleWheel} onPointerDown={handlePointerDown} onPointerMove={handlePointerMove} onPointerUp={() => { dragRef.current = null; }} onPointerCancel={() => { dragRef.current = null; }}>
         <defs>
           <linearGradient id="ethChartFill" x1="0" x2="0" y1="0" y2="1">
             <stop offset="0%" stopColor="#0cc0df" stopOpacity=".24" />
@@ -66,7 +99,7 @@ export function MarketChart({ candles, range, chartType }) {
             <path d={areaPath} fill="url(#ethChartFill)" />
             <path d={closePath} className={styles.price_line} />
           </>
-        ) : candles.map((candle, index) => {
+        ) : visibleCandles.map((candle, index) => {
           const rising = candle.close >= candle.open;
           const colorClass = rising ? styles.candle_up : styles.candle_down;
           const candleX = x(index);
@@ -80,14 +113,14 @@ export function MarketChart({ candles, range, chartType }) {
             </g>
           );
         })}
-        {candles.map((candle, index) => (
+        {visibleCandles.map((candle, index) => (
           <rect key={`volume-${candle.time}`} x={x(index) - candleWidth / 2} y={volumeTop + 34 - (candle.volume / maxVolume) * 31} width={candleWidth} height={(candle.volume / maxVolume) * 31} className={candle.close >= candle.open ? styles.volume_up : styles.volume_down} />
         ))}
         <line x1={left} x2={width - right + 6} y1={volumeTop} y2={volumeTop} className={styles.grid_line} />
-        <text x={left} y={volumeTop + 51} className={styles.axis_label}>VOL (ETH)</text>
+        <text x={left} y={volumeTop - 6} className={styles.axis_label}>VOL (ETH)</text>
         {labels.map((index) => (
-          <text key={index} x={x(index)} y="337" textAnchor={index === 0 ? 'start' : index === candles.length - 1 ? 'end' : 'middle'} className={styles.axis_label}>
-            {timestampLabel(candles[index].time, range)}
+          <text key={index} x={x(index)} y="337" textAnchor={index === 0 ? 'start' : index === visibleCandles.length - 1 ? 'end' : 'middle'} className={styles.axis_label}>
+            {timestampLabel(visibleCandles[index].time, range)}
           </text>
         ))}
       </svg>

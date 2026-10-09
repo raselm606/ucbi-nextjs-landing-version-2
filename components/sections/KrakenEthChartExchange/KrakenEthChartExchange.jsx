@@ -61,7 +61,7 @@ export default function KrakenEthChartExchange() {
           <div className="col-lg-8">
             <span className={styles.sub_title}>KRAKEN ETHEREUM MARKET</span>
             <h2 className={styles.section_title}>Ethereum <span className={styles.cyan_text}>Price Chart</span> <small className={styles.exchange_tag}>KRAKEN</small></h2>
-            <p className={styles.section_description}>Live ETH/USD spot price, volume, market range and exchange quotes from Kraken with interactive timeframes.</p>
+            <p className={styles.section_description}>Live ETH/USD spot price volume market range and exchange quotes from Kraken with interactive timeframes</p>
           </div>
           <div className="col-lg-4 d-none d-lg-block">
             <div className={styles.header_note}>
@@ -70,7 +70,7 @@ export default function KrakenEthChartExchange() {
           </div>
         </div>
 
-        <div className={styles.market_card}>
+        <div className={styles.market_card} >
           <div className={styles.market_topline}>
             <div className={styles.asset_identity}>
               <span className={styles.eth_badge} aria-hidden="true">◆</span>
@@ -107,7 +107,7 @@ export default function KrakenEthChartExchange() {
             </div>
           </div>
 
-          {error && !data ? <div className={styles.chart_message}>{error}</div> : candles.length ? <MarketChart candles={candles} range={range} chartType={chartType} /> : <div className={styles.chart_message}>Loading Kraken Ethereum price history…</div>}
+          {error && !data ? <div className={styles.chart_message}>{error}</div> : candles.length ? <MarketChart key={range} candles={candles} range={range} chartType={chartType} interactive /> : <div className={styles.chart_message}>Loading Kraken Ethereum price history…</div>}
           {error && data && <p className={styles.stale_notice}>Showing last available prices. Refresh failed: {error}</p>}
           <div className={styles.market_footer}>
             <span>Data: Kraken · ETH/USD spot market · Updates every 30 seconds</span>
