@@ -158,7 +158,7 @@ export default function EtfOverview() {
                 <div className={styles.feature_icon}><EthereumIcon /></div>
                 <div>
                   <h4 className={styles.feature_title}>Aggregated ETF Data</h4>
-                  <p className={styles.feature_desc}>Flow values represent the combined Ethereum spot ETF market not individual funds</p>
+                  <p className={styles.feature_desc}>Flow values represent  combined Ethereum </p>
                 </div>
               </div>
             </div>
@@ -168,7 +168,7 @@ export default function EtfOverview() {
                 <div>
                   <h4 className={styles.feature_title}>Flow History</h4>
                   <p className={styles.feature_desc}>
-                    {data ? `Showing ${flows.length} trading days in the available ${data.windowDays}-day history` : 'Recent daily flow history will appear here'}
+                    {data ? ` ${flows.length} trading days  available ${data.windowDays}-day history` : 'Recent daily flow history will appear here'}
                   </p>
                 </div>
               </div>

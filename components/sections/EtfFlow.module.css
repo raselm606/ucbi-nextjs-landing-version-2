@@ -1,8 +1,12 @@
 .etf_flow_section {
   position: relative;
   margin-bottom: 100px;
-  background: #050f1e;
-  /* background-image: linear-gradient(180deg, rgba(4, 12, 26, 0.92) 0%, rgba(4, 12, 26, 0.96) 100%), url('/images/hero_bg.jpg'); */
+  background-color: #050f1e;
+  background-image:
+    radial-gradient(ellipse at 78% 20%, rgba(12, 192, 223, .15), transparent 35%),
+    repeating-linear-gradient(0deg, transparent 0 47px, rgba(53, 133, 196, .07) 48px, transparent 49px),
+    repeating-linear-gradient(90deg, transparent 0 79px, rgba(53, 133, 196, .055) 80px, transparent 81px),
+    linear-gradient(155deg, #06172b 0%, #040d1b 58%, #071a30 100%);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -14,6 +18,16 @@
   position: relative;
   padding-top: 100px;
   padding-bottom: 100px;
+  background-image:
+    linear-gradient(90deg, rgba(12, 192, 223, .62), rgba(109, 170, 207, .12) 13%, rgba(109, 170, 207, .1) 87%, rgba(12, 192, 223, .48)),
+    linear-gradient(90deg, rgba(12, 192, 223, .45), rgba(109, 170, 207, .1) 13%, rgba(109, 170, 207, .16) 87%, rgba(12, 192, 223, .58)),
+    radial-gradient(circle at 0 100%, rgba(12, 192, 223, .75) 0 2px, transparent 3px),
+    repeating-linear-gradient(135deg, transparent 0 17px, rgba(74, 151, 194, .12) 18px, transparent 19px 31px),
+    radial-gradient(circle at 100% 100%, rgba(12, 192, 223, .75) 0 2px, transparent 3px),
+    repeating-linear-gradient(45deg, transparent 0 17px, rgba(74, 151, 194, .12) 18px, transparent 19px 31px);
+  background-size: 100% 1px, 100% 1px, 220px 78px, 220px 78px, 220px 78px, 220px 78px;
+  background-position: top, bottom, left bottom, left bottom, right bottom, right bottom;
+  background-repeat: no-repeat;
 }
 
 /* Connect left & right vertical lines across the 100px margin gap */
@@ -107,9 +121,14 @@
 
 /* Top Right Tagline List */
 .tagline_box {
+  position: relative;
   text-align: right;
-  padding-top: 15px;
+  padding: 13px 17px 13px 0;
+  border-right: 1px solid rgba(12, 192, 223, .22);
 }
+.tagline_box::before, .tagline_box::after { content: ''; position: absolute; right: 0; height: 1px; pointer-events: none; }
+.tagline_box::before { top: 0; width: 48px; background: linear-gradient(90deg, transparent, rgba(12, 192, 223, .72)); }
+.tagline_box::after { bottom: 0; width: 100%; background: linear-gradient(90deg, transparent, rgba(76, 135, 178, .22) 55%, rgba(12, 192, 223, .4)); }
 
 .tagline_title {
   color: #0cc0df;
@@ -169,7 +188,7 @@
 }
 
 .header_title {
-  font-size: 17px;
+  font-size: 14px;
   font-weight: 700;
   color: #ffffff;
   margin: 0;
@@ -242,7 +261,7 @@
 
 .etf_table td {
   padding: 12px 10px;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
   white-space: nowrap;
   border-bottom: 1px solid rgba(255, 255, 255, 0.04);
@@ -315,7 +334,7 @@
 }
 
 .feature_title {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 4px;
@@ -337,7 +356,7 @@
   color: #0cc0df;
   padding: 10px 22px;
   border-radius: 25px;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   font-family: inherit;
   text-decoration: none;

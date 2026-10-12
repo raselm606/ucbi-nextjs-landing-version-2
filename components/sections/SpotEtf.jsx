@@ -123,8 +123,7 @@ export default function SpotEtf() {
             <p className={styles.description}>Compare daily fund flows and follow the relationship between Ethereum ETF activity and ETH price</p>
           </div>
           <div className="col-lg-4 d-none d-lg-block">
-            <div className={styles.tagline_box}>
-              <div className={styles.tagline_line} />
+            <div className={styles.tagline_box}> 
               <p className={styles.tagline_item}>INSTITUTIONAL FLOWS</p>
               <p className={styles.tagline_item}>FUND-LEVEL ACTIVITY</p>
               <p className={styles.tagline_item}>ETHEREUM ECOSYSTEM</p>
@@ -216,9 +215,9 @@ export default function SpotEtf() {
 
         <div className={styles.bottom_card}>
           <div className="row align-items-center gy-4">
-            <div className="col-lg-4 col-md-6"><div className={styles.feature_item}><div className={styles.feature_icon}><ChartBarIcon /></div><div><h4 className={styles.feature_title}>Institutional Capital</h4><p className={styles.feature_desc}>Track each issuer’s daily net creations and redemptions</p></div></div></div>
+            <div className="col-lg-4 col-md-6"><div className={styles.feature_item}><div className={styles.feature_icon}><ChartBarIcon /></div><div><h4 className={styles.feature_title}>Institutional Capital</h4><p className={styles.feature_desc}>Track each issuer’s daily net creations </p></div></div></div>
             <div className="col-lg-4 col-md-6"><div className={styles.feature_item}><div className={styles.feature_icon}><EthereumIcon /></div><div><h4 className={styles.feature_title}>ETH Spot Price</h4><p className={styles.feature_desc}>{priceText}</p></div></div></div>
-            <div className="col-lg-4 col-md-6"><div className={styles.feature_item}><div className={styles.feature_icon}><CalendarIcon /></div><div><h4 className={styles.feature_title}>Recent History</h4><p className={styles.feature_desc}>Daily ETF flows and ETH prices over the latest available month</p></div></div></div>
+            <div className="col-lg-4 col-md-6"><div className={styles.feature_item}><div className={styles.feature_icon}><CalendarIcon /></div><div><h4 className={styles.feature_title}>Recent History</h4><p className={styles.feature_desc}>Daily ETF flows and ETH prices  available </p></div></div></div>
           </div>
         </div>
       </div>

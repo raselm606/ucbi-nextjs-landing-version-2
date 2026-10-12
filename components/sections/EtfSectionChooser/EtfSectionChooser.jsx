@@ -4,11 +4,11 @@ import { useEffect, useState } from 'react';
 import styles from './EtfSectionChooser.module.css';
 
 const destinations = [
-  { id: 'kraken-ethereum-market', number: '01', category: 'LIVE TRADING', title: 'ETH Trading View', description: 'Live ETH/USD price, candlestick chart, volume and market stats from Kraken.', icon: '↗', featured: true },
-  { id: 'etf-flow-section', number: '02', category: 'FUND ACTIVITY', title: 'Ethereum ETF Flows', description: 'Explore daily fund inflows and outflows across Ethereum spot ETFs.', icon: '⇄' },
-  { id: 'spot-etf-section', number: '03', category: 'ETF MARKET', title: 'Spot ETF Data', description: 'Browse spot Ethereum ETF market data, issuers and performance.', icon: '◈' },
-  { id: 'etf-overview', number: '04', category: 'MARKET INSIGHTS', title: 'ETF Overview', description: 'Compare key Ethereum ETF metrics in one place.', icon: '▤' },
-  { id: 'top-exchanges', number: '05', category: 'GLOBAL MARKETS', title: 'Crypto Exchanges', description: 'See leading exchanges ranked by reported trading volume.', icon: '◎' },
+  { id: 'kraken-ethereum-market', number: '01', category: 'LIVE TRADING', title: 'ETH Trading View', description: 'Live ETH/USD price, candlestick chart volume and market stats from Kraken', icon: '↗', featured: true },
+  { id: 'etf-flow-section', number: '02', category: 'FUND ACTIVITY', title: 'Ethereum ETF Flows', description: 'Explore daily fund inflows and outflows across Ethereum spot ETFs', icon: '⇄' },
+  { id: 'spot-etf-section', number: '03', category: 'ETF MARKET', title: 'Spot ETF Data', description: 'Browse spot Ethereum ETF market data, issuers and performance', icon: '◈' },
+  { id: 'etf-overview', number: '04', category: 'MARKET INSIGHTS', title: 'ETF Overview', description: 'Compare key Ethereum ETF metrics in one place', icon: '▤' },
+  { id: 'top-exchanges', number: '05', category: 'GLOBAL MARKETS', title: 'Crypto Exchanges', description: 'See leading exchanges ranked by reported trading volume', icon: '◎' },
 ];
 
 export default function EtfSectionChooser() {
@@ -72,9 +72,9 @@ export default function EtfSectionChooser() {
         <div className={styles.heading_row}>
           <div>
             <h2 id="etf-chooser-title">What would you like to <span>explore?</span></h2>
-            <p id="etf-chooser-description">Choose a destination and we’ll take you straight there. You can explore the rest of the page anytime.</p>
+            <p id="etf-chooser-description">Choose a destination and we’ll take you straight there You can explore the rest of the page anytime</p>
           </div>
-          <div className={styles.heading_mark} aria-hidden="true">Ξ</div>
+          {/* <div className={styles.heading_mark} aria-hidden="true">Ξ</div> */}
         </div>
 
         <div className={styles.destination_grid}>

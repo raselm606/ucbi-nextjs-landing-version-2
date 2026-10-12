@@ -24,6 +24,7 @@ function timestampLabel(timestamp, range) {
 export function MarketChart({ candles, range, chartType, interactive = false }) {
   const [view, setView] = useState({ start: 0, end: 1 });
   const dragRef = useRef(null);
+  const chartRef = useRef(null);
   const width = 900;
   const height = 350;
   const left = 8;
@@ -57,13 +58,21 @@ export function MarketChart({ candles, range, chartType, interactive = false }) 
     const start = Math.max(0, Math.min(1 - nextSpan, point - nextSpan * anchor));
     return { start, end: start + nextSpan };
   });
-  const handleWheel = (event) => {
-    if (!interactive) return;
-    event.preventDefault();
-    const bounds = event.currentTarget.getBoundingClientRect();
-    const anchor = Math.max(0, Math.min(1, (event.clientX - bounds.left) / bounds.width));
-    zoomAt(event.deltaY < 0 ? 0.85 : 1.18, anchor);
-  };
+  useEffect(() => {
+    const chart = chartRef.current;
+    if (!interactive || !chart) return undefined;
+
+    const handleWheel = (event) => {
+      event.preventDefault();
+      const bounds = chart.getBoundingClientRect();
+      const anchor = Math.max(0, Math.min(1, (event.clientX - bounds.left) / bounds.width));
+      zoomAt(event.deltaY < 0 ? 0.85 : 1.18, anchor);
+    };
+
+    // React may register wheel handlers as passive, which prevents preventDefault().
+    chart.addEventListener('wheel', handleWheel, { passive: false });
+    return () => chart.removeEventListener('wheel', handleWheel);
+  }, [interactive, candles.length]);
   const handlePointerDown = (event) => {
     if (!interactive) return;
     event.currentTarget.setPointerCapture(event.pointerId);
@@ -81,7 +90,7 @@ export function MarketChart({ candles, range, chartType, interactive = false }) 
   return (
     <div className={styles.chart_wrap}>
       {interactive && <div className={styles.zoom_controls} aria-label="Chart zoom controls"><button type="button" onClick={() => zoomAt(0.75)} aria-label="Zoom in">+</button><button type="button" onClick={() => zoomAt(1.33)} aria-label="Zoom out">−</button><button type="button" onClick={() => setView({ start: 0, end: 1 })}>Reset</button></div>}
-      <svg className={`${styles.chart} ${interactive ? styles.chart_interactive : ''}`} viewBox={`0 0 ${width} ${height}`} role="img" aria-label={`Ethereum ${range} ${chartType} price chart`} onWheel={handleWheel} onPointerDown={handlePointerDown} onPointerMove={handlePointerMove} onPointerUp={() => { dragRef.current = null; }} onPointerCancel={() => { dragRef.current = null; }}>
+      <svg ref={chartRef} className={`${styles.chart} ${interactive ? styles.chart_interactive : ''}`} viewBox={`0 0 ${width} ${height}`} role="img" aria-label={`Ethereum ${range} ${chartType} price chart`} onPointerDown={handlePointerDown} onPointerMove={handlePointerMove} onPointerUp={() => { dragRef.current = null; }} onPointerCancel={() => { dragRef.current = null; }}>
         <defs>
           <linearGradient id="ethChartFill" x1="0" x2="0" y1="0" y2="1">
             <stop offset="0%" stopColor="#0cc0df" stopOpacity=".24" />
