@@ -1,16 +1,19 @@
 .exchange_section {
   position: relative;
   margin-bottom: 100px;
-  background-color: #040c1a;
-  background-image:
+  background-color: #0b1c38;
+  /* background-image:
     radial-gradient(ellipse at 85% 17%, rgba(12, 192, 223, .16), transparent 32%),
     radial-gradient(ellipse at 12% 85%, rgba(34, 93, 164, .18), transparent 38%),
     repeating-linear-gradient(0deg, transparent 0 48px, rgba(68, 142, 201, .06) 49px, transparent 50px),
-    linear-gradient(135deg, #07172a 0%, #040c1a 54%, #071629 100%);
+    linear-gradient(135deg, #07172a 0%, #040c1a 54%, #071629 100%); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: #fff;
+}
+.exchange_section :global(.cline) {
+  background: url("../../../public/images/exchange_bg.png") center / cover no-repeat;
 }
 
 .section_inner {

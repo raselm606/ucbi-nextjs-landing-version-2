@@ -1,18 +1,23 @@
 .etf_overview_section {
   position: relative;
   margin-bottom: 100px;
-  background-color: #050f1e;
-  background-image:
+
+   background-color: #0b1c38;
+  /*background-image:
     radial-gradient(ellipse at 82% 16%, rgba(12, 192, 223, .14), transparent 31%),
     radial-gradient(ellipse at 10% 90%, rgba(24, 82, 151, .2), transparent 39%),
     repeating-linear-gradient(0deg, transparent 0 55px, rgba(53, 133, 196, .055) 56px, transparent 57px),
     repeating-linear-gradient(90deg, transparent 0 95px, rgba(53, 133, 196, .045) 96px, transparent 97px),
-    linear-gradient(145deg, #071629 0%, #040d1c 55%, #071529 100%);
+    linear-gradient(145deg, #071629 0%, #040d1c 55%, #071529 100%); */
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: #ffffff;
   overflow: visible;
+}
+.etf_overview_section :global(.cline) {
+  background: url("../../public/images/etf_overview_bg.png") center / cover no-repeat;
 }
 
 .section_padding_custom {

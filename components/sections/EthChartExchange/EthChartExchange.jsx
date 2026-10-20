@@ -198,7 +198,7 @@ export default function EthChartExchange() {
           <div className={styles.market_topline}>
             <div className={styles.asset_identity}>
               <span className={styles.eth_badge} aria-hidden="true">◆</span>
-              <span><strong>Ethereum</strong><small>ETH / USDT · Binance spot</small></span>
+              <span><strong>Ethereum</strong><small> ETH / USDT · Binance spot </small></span>
             </div>
             <span className={styles.live_status}><i /> LIVE MARKET</span>
           </div>

@@ -1,12 +1,12 @@
 .etf_flow_section {
   position: relative;
   margin-bottom: 100px;
-  background-color: #050f1e;
+  /* background-color: #001c43; */
   background-image:
     radial-gradient(ellipse at 78% 20%, rgba(12, 192, 223, .15), transparent 35%),
     repeating-linear-gradient(0deg, transparent 0 47px, rgba(53, 133, 196, .07) 48px, transparent 49px),
     repeating-linear-gradient(90deg, transparent 0 79px, rgba(53, 133, 196, .055) 80px, transparent 81px),
-    linear-gradient(155deg, #06172b 0%, #040d1b 58%, #071a30 100%);
+    linear-gradient(155deg, #06172b 0%, #001c43 58%, #001c43 100%);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -386,4 +386,8 @@
   .main_title {
     font-size: 17px;
   }
+}
+
+.etf_flow_section :global(.cline) {
+  background: url("../../public/images/eth_flow_bg.png") center / cover no-repeat;
 }

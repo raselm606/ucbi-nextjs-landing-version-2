@@ -18,6 +18,7 @@ import Logo from '../../../public/images/logo.png';
 import uk from '../../../public/images/uk_flag.png';
 
 const Header_b = () => {
+    const [blockchainMenuOpen, setBlockchainMenuOpen] = useState(false);
 
     const [price, setPrice] = useState(null);
     const [change24h, setChange24h] = useState(null);
@@ -262,8 +263,25 @@ try {
                     <li className="nav-item">
                     <Link className="nav-link active" aria-current="page" href="https://advisory.ucbibanking.io">Advisory</Link>
                     </li>
-                    <li className="nav-item">
-                    <Link className="nav-link" target="_blank" href="https://etherscan.io/token/0xb42b35deca033a23401a1a89007a39343a510d0a">Blockchain</Link>
+                    <li
+                      className={`nav-item blockchain-nav-item${blockchainMenuOpen ? " is-open" : ""}`}
+                      onBlur={(event) => {
+                        if (!event.currentTarget.contains(event.relatedTarget)) setBlockchainMenuOpen(false);
+                      }}
+                    >
+                    <button
+                      className="nav-link blockchain-nav-trigger"
+                      type="button"
+                      aria-haspopup="true"
+                      aria-expanded={blockchainMenuOpen}
+                      onClick={() => setBlockchainMenuOpen((open) => !open)}
+                    >
+                      Blockchain <span className="blockchain-nav-caret" aria-hidden="true">▾</span>
+                    </button>
+                    <div className="blockchain-nav-menu" aria-label="Blockchain explorers">
+                      <Link href="https://etherscan.io/token/0xb42B35DeCA033a23401a1a89007a39343A510D0a" target="_blank" >Etherscan</Link>
+                      <Link href="https://bscscan.com/token/0xc888Dca9448D04F045Df801F5369348cDF67fb18#transactions" target="_blank" >BscScan</Link>
+                    </div>
                     </li>
                     <li className="nav-item">
                     <Link className="nav-link" href="/#treasury-management">Treasury</Link>

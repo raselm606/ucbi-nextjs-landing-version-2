@@ -2370,3 +2370,60 @@ span.dline {
 .dli {
     border-right: 4px solid #263e91 !important;
 }
+
+/* Blockchain explorer navigation dropdown */
+.top_nav .blockchain-nav-item {
+  position: relative;
+}
+.top_nav .blockchain-nav-trigger {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 0 12px;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  color: #0f317c;
+  cursor: pointer;
+}
+.blockchain-nav-caret {
+  font-size: 10px;
+}
+.blockchain-nav-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 12px;
+  z-index: 1100;
+  min-width: 142px;
+  padding: 6px 0;
+  background: #fff;
+  border: 1px solid #e2e7ee;
+  box-shadow: 0 8px 20px rgba(15, 49, 124, 0.14);
+}
+.blockchain-nav-item:hover .blockchain-nav-menu,
+.blockchain-nav-item.is-open .blockchain-nav-menu {
+  display: block;
+}
+.top_nav .blockchain-nav-menu a {
+  display: block;
+  margin: 0;
+  padding: 9px 14px;
+  color: #0f317c !important;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.top_nav .blockchain-nav-menu a:hover,
+.top_nav .blockchain-nav-menu a:focus-visible {
+  background: #f1f6fc;
+}
+@media (max-width: 991.98px) {
+  .blockchain-nav-menu {
+    position: static;
+    margin: 0 12px 8px;
+    box-shadow: none;
+  }
+}
+
