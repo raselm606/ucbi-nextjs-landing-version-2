@@ -175,7 +175,7 @@
   gap: 14px;
 }
 
-.eth_icon_badge {
+.flow_icon_badge {
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -185,6 +185,11 @@
   justify-content: center;
   color: #ffffff;
   box-shadow: 0 0 12px rgba(12, 192, 223, 0.4);
+}
+
+.flow_icon_badge svg {
+  width: 24px;
+  height: 24px;
 }
 
 .header_title {
@@ -374,6 +379,34 @@
   background: #0cc0df;
   color: #040c1a;
   box-shadow: 0 0 20px rgba(12, 192, 223, 0.5);
+}
+
+/* Shared visual treatment for the ETF insights strip */
+.bottom_card {
+  position: relative;
+  overflow: hidden;
+  padding: 17px 20px;
+  border: 1px solid rgba(12, 192, 223, .42);
+  border-radius: 17px;
+  background:
+    radial-gradient(ellipse at 12% 0%, rgba(12, 192, 223, .14), transparent 32%),
+    radial-gradient(ellipse at 92% 100%, rgba(20, 102, 190, .17), transparent 36%),
+    repeating-linear-gradient(135deg, transparent 0 27px, rgba(107, 195, 225, .025) 28px, transparent 29px 52px),
+    linear-gradient(110deg, rgba(2, 28, 64, .98), rgba(3, 34, 73, .96) 58%, rgba(2, 25, 58, .98));
+  box-shadow: inset 0 1px rgba(164, 225, 255, .08), 0 12px 34px rgba(0, 8, 24, .24), 0 0 30px rgba(12, 192, 223, .07);
+}
+.bottom_card::before { position: absolute; top: 0; left: 5%; right: 5%; height: 1px; content: ''; background: linear-gradient(90deg, transparent, rgba(12, 192, 223, .7), rgba(130, 202, 255, .36), transparent); }
+.bottom_card::after { position: absolute; top: -95px; right: -15px; width: 260px; height: 260px; content: ''; border: 1px solid rgba(77, 191, 224, .09); border-radius: 50%; box-shadow: 0 0 0 18px rgba(77, 191, 224, .025), 0 0 0 42px rgba(77, 191, 224, .018); pointer-events: none; }
+.bottom_card :global(.row) { position: relative; z-index: 1; }
+.feature_item { min-height: 48px; gap: 12px; }
+.feature_icon { width: 42px; height: 42px; min-width: 42px; border-color: rgba(12, 192, 223, .48); background: linear-gradient(145deg, rgba(12, 192, 223, .15), rgba(12, 70, 112, .2)); box-shadow: 0 0 0 4px rgba(12, 192, 223, .035), inset 0 1px rgba(168, 236, 255, .08); }
+.feature_title { margin: 0 0 3px; font-size: 12px; letter-spacing: .1px; }
+.feature_desc { font-size: 11px; line-height: 1.4; }
+.analytics_btn { padding: 9px 16px; font-size: 11px; background: rgba(12, 192, 223, .045); }
+.analytics_btn:hover { transform: translateY(-1px); }
+@media (max-width: 575px) {
+  .bottom_card { padding: 15px 14px; }
+  .analytics_btn { white-space: normal; }
 }
 
 @media (max-width: 991px) {

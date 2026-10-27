@@ -22,23 +22,39 @@ const CalendarIcon = () => (
   </svg>
 );
 
-const EthereumIcon = () => (
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-    <path d="M11.944 17.97L4.58 13.62 11.943 24l7.37-10.38-7.372 4.35zm.056-17.97l-7.37 12.25 7.37 4.36 7.37-4.36L12 0z" />
+const DailyFlowIcon = () => (
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M4 19V12m5 7V7m5 12v-4m5 4V4" />
+    <path d="m3 8 5-4 5 3 7-5" />
+    <path d="M17 2h3v3" />
   </svg>
 );
 
 const LineChartIcon = () => (
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M3 18h3l3-7 4 4 5-9 3 2" />
+    <path d="M17 6h4v4" />
   </svg>
 );
 
-const ChartBarIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <line x1="18" y1="20" x2="18" y2="10" />
-    <line x1="12" y1="20" x2="12" y2="4" />
-    <line x1="6" y1="20" x2="6" y2="14" />
+const InstitutionIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="m3 9 9-6 9 6M4 10h16M5 21h14M6 10v8m4-8v8m4-8v8m4-8v8" />
+  </svg>
+);
+
+const PriceIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M3 18h18M5 15l4-4 3 2 6-7" />
+    <path d="M15 6h3v3" />
+    <path d="M5 5v2m14 10v2" opacity=".65" />
+  </svg>
+);
+
+const HistoryIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M3 12a9 9 0 1 0 2.6-6.4L3 8" />
+    <path d="M3 3v5h5m4-1v5l3 2" />
   </svg>
 );
 
@@ -136,7 +152,7 @@ export default function SpotEtf() {
             <div className={styles.chart_card}>
               <div className={styles.card_header}>
                 <div className={styles.header_left}>
-                  <div className={styles.icon_badge}><EthereumIcon /></div>
+                  <div className={styles.icon_badge}><DailyFlowIcon /></div>
                   <div>
                     <h3 className={styles.header_title}>Daily Ethereum Spot ETF Net Inflow</h3>
                     <p className={styles.header_subtitle}><CalendarIcon /> {latestDate ? 'Latest update (UTC): ' + latestDate + ' · ' + dailyData.length + ' days' : 'Daily net flow'}</p>
@@ -215,9 +231,9 @@ export default function SpotEtf() {
 
         <div className={styles.bottom_card}>
           <div className="row align-items-center gy-4">
-            <div className="col-lg-4 col-md-6"><div className={styles.feature_item}><div className={styles.feature_icon}><ChartBarIcon /></div><div><h4 className={styles.feature_title}>Institutional Capital</h4><p className={styles.feature_desc}>Track each issuer’s daily net creations </p></div></div></div>
-            <div className="col-lg-4 col-md-6"><div className={styles.feature_item}><div className={styles.feature_icon}><EthereumIcon /></div><div><h4 className={styles.feature_title}>ETH Spot Price</h4><p className={styles.feature_desc}>{priceText}</p></div></div></div>
-            <div className="col-lg-4 col-md-6"><div className={styles.feature_item}><div className={styles.feature_icon}><CalendarIcon /></div><div><h4 className={styles.feature_title}>Recent History</h4><p className={styles.feature_desc}>Daily ETF flows and ETH prices  available </p></div></div></div>
+            <div className="col-lg-4 col-md-6"><div className={styles.feature_item}><div className={styles.feature_icon}><InstitutionIcon /></div><div><h4 className={styles.feature_title}>Institutional Capital</h4><p className={styles.feature_desc}>Track each issuer’s daily net creations.</p></div></div></div>
+            <div className="col-lg-4 col-md-6"><div className={styles.feature_item}><div className={styles.feature_icon}><PriceIcon /></div><div><h4 className={styles.feature_title}>ETH Spot Price</h4><p className={styles.feature_desc}>{priceText}</p></div></div></div>
+            <div className="col-lg-4 col-md-6"><div className={styles.feature_item}><div className={styles.feature_icon}><HistoryIcon /></div><div><h4 className={styles.feature_title}>Recent History</h4><p className={styles.feature_desc}>Daily ETF flows and ETH prices at a glance.</p></div></div></div>
           </div>
         </div>
       </div>

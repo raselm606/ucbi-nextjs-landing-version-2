@@ -303,3 +303,67 @@
   .updated_label { text-align: left; }
   .table_footer { flex-direction: column; padding: 13px 18px; }
 }
+
+/* Refined title and headline metrics */
+.section_title {
+  position: relative;
+  display: block;
+  margin-bottom: 9px;
+  font-size: 21px;
+  line-height: 1.25;
+  letter-spacing: -.25px;
+}
+.section_title .cyan_text { text-shadow: 0 0 20px rgba(12, 192, 223, .18); }
+.section_description { max-width: 700px; line-height: 1.6; }
+.stats_grid { gap: 16px; margin-top: 24px; margin-bottom: 28px; }
+.stat_card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 122px;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 19px 22px 17px;
+  border-color: rgba(24, 144, 199, .32);
+  border-radius: 15px;
+  background: linear-gradient(125deg, rgba(3, 31, 68, .98), rgba(0, 25, 58, .96) 65%, rgba(5, 39, 76, .94));
+  box-shadow: inset 0 1px rgba(150, 219, 255, .045), 0 10px 28px rgba(0, 8, 24, .2);
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+.stat_card::before {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 18px;
+  right: 18px;
+  height: 2px;
+  content: '';
+  background: linear-gradient(90deg, transparent, rgba(12, 192, 223, .76), transparent);
+}
+.stat_card::after {
+  position: absolute;
+  z-index: -1;
+  top: -42px;
+  right: -24px;
+  width: 112px;
+  height: 112px;
+  content: '';
+  border: 1px solid rgba(12, 192, 223, .11);
+  border-radius: 50%;
+  box-shadow: 0 0 0 14px rgba(12, 192, 223, .025), 0 0 0 29px rgba(12, 192, 223, .018);
+  pointer-events: none;
+}
+.stat_card:hover { transform: translateY(-2px); border-color: rgba(12, 192, 223, .5); box-shadow: inset 0 1px rgba(150, 219, 255, .06), 0 14px 32px rgba(0, 8, 24, .28); }
+.stat_label { color: #9bb5d1; font-size: 10px; letter-spacing: .8px; }
+.stat_value { font-size: 17px; line-height: 1.2; }
+.stat_hint { color: #c4d2e4; font-size: 10px; }
+.stat_card:first-child .stat_value { color: #18c9e4; }
+.stat_card:nth-child(2) .stat_value { color: #f2f7ff; }
+.stat_card:nth-child(3) .stat_value { color: #f2f7ff; }
+
+@media (max-width: 767px) {
+  .section_title { font-size: 23px; }
+  .stats_grid { gap: 11px; margin: 20px 0 24px; }
+  .stat_card { min-height: 104px; padding: 16px 18px; }
+  .stat_value { font-size: 16px; }
+}

@@ -53,29 +53,18 @@ export default function EtfOverview() {
   return (
     <section className={styles.etf_overview_section} id="etf-overview">
       <div className={`container cline ${styles.section_padding_custom}`}>
-        <div className="row align-items-start mb-4">
-          <div className="col-lg-8">
-            <span className={styles.sub_title}>ETHEREUM FLOW OVERVIEW</span>
-            <h2 className={styles.main_title}>
-              Ethereum <span className={styles.cyan_text}>ETF Overview</span>
-            </h2>
-            <p className={styles.description}>
-              Aggregated Ethereum spot ETF activity and live ETH market data
-            </p>
-          </div>
-          <div className="col-lg-4 d-none d-lg-block">
-            <div className={styles.tagline_box}>
-              <p className={styles.tagline_item}>ETHEREUM SPOT ETFS</p>
-              <p className={styles.tagline_item}>AGGREGATED NET FLOWS</p>
-              <p className={styles.tagline_item}>LIVE ETH PRICE</p>
-            </div>
-          </div>
+        <div className={styles.overview_header}>
+          <span className={styles.sub_title}>UCBI · ETHEREUM ETF DATA</span>
+          <p className={styles.header_subtitle}>Institutional fund activity and market indicators, updated daily</p>
         </div>
 
         <div className={styles.top_controls_row}>
+          <div className={styles.intro_block}>
+            <h2 className={styles.main_title}>Ethereum ETF Market Snapshot</h2>
+            <p className={styles.description}>Track fund flows, trading activity, and spot pricing.</p>
+          </div>
           <div className={styles.metric_group}>
             <div className={styles.metric_pill}>
-              <div className={styles.metric_icon}><DatabaseIcon /></div>
               <div>
                 <span className={styles.metric_label}>Latest Daily Flow</span>
                 <span className={styles.metric_val} style={{ color: flowColor(latest?.netFlowUsdM ?? 0) }}>
@@ -84,7 +73,6 @@ export default function EtfOverview() {
               </div>
             </div>
             <div className={styles.metric_pill}>
-              <div className={styles.metric_icon}><ChartUpIcon /></div>
               <div>
                 <span className={styles.metric_label}>{data ? `${data.windowDays}-Day Net Flow` : 'Period Net Flow'}</span>
                 <span className={styles.metric_val} style={{ color: flowColor(windowTotal) }}>
@@ -93,7 +81,6 @@ export default function EtfOverview() {
               </div>
             </div>
             <div className={styles.metric_pill}>
-              <div className={styles.metric_icon}><PieChartIcon /></div>
               <div>
                 <span className={styles.metric_label}>ETH Spot Price</span>
                 <span className={styles.metric_val}>
@@ -101,16 +88,15 @@ export default function EtfOverview() {
                     ? `$${data.price.priceUsd.toLocaleString('en-US', { maximumFractionDigits: 2 })}`
                     : '—'}
                 </span>
+                {data?.price && <span className={styles.price_change} style={{ color: flowColor(data.price.change24hPct) }}>{data.price.change24hPct >= 0 ? '+' : ''}{data.price.change24hPct}% <small>(24h)</small></span>}
               </div>
             </div>
           </div>
-          {data?.price && (
-            <div className={styles.view_switcher}>
-              <span className={styles.view_btn} style={{ color: flowColor(data.price.change24hPct) }}>
-                {data.price.change24hPct >= 0 ? '+' : ''}{data.price.change24hPct}% (24h)
-              </span>
-            </div>
-          )}
+          <div className={styles.tagline_box}>
+            <p className={styles.tagline_item}><DatabaseIcon /> Meta</p>
+            <p className={styles.tagline_item}><ChartUpIcon /> {data ? `${data.windowDays}-Day ${formatFlow(windowTotal)}` : 'Latest Daily Data'}</p>
+            <p className={styles.tagline_item}><PieChartIcon /> Price · <span style={{ color: flowColor(data?.price?.change24hPct ?? 0) }}>{data?.price ? `${data.price.change24hPct >= 0 ? '+' : ''}${data.price.change24hPct}% (24h)` : '—'}</span></p>
+          </div>
         </div>
 
         <div className={styles.main_card}>
@@ -121,7 +107,7 @@ export default function EtfOverview() {
                   <th style={{ width: '50px' }}>#</th>
                   <th>Date (UTC)</th>
                   <th>Asset</th>
-                  <th style={{ textAlign: 'right' }}>Aggregated Net Flow (USD millions)</th>
+                  <th>Aggregated Net Flow (USD millions)</th>
                   <th>Daily Direction</th>
                 </tr>
               </thead>
@@ -131,7 +117,7 @@ export default function EtfOverview() {
                     <td style={{ color: '#64748B', fontWeight: '600' }}>{index + 1}</td>
                     <td style={{ color: '#E2E8F0', fontWeight: '600' }}>{row.date}</td>
                     <td><span className={styles.ticker_badge}>ETH</span></td>
-                    <td style={{ textAlign: 'right', color: flowColor(row.netFlowUsdM), fontWeight: '600' }}>
+                    <td style={{ color: flowColor(row.netFlowUsdM), fontWeight: '600' }}>
                       {formatFlow(row.netFlowUsdM)}
                     </td>
                     <td style={{ color: flowColor(row.netFlowUsdM) }}>
@@ -158,7 +144,7 @@ export default function EtfOverview() {
                 <div className={styles.feature_icon}><EthereumIcon /></div>
                 <div>
                   <h4 className={styles.feature_title}>Aggregated ETF Data</h4>
-                  <p className={styles.feature_desc}>Flow values represent  combined Ethereum </p>
+                  <p className={styles.feature_desc}>Combined Ethereum spot ETF flow values.</p>
                 </div>
               </div>
             </div>

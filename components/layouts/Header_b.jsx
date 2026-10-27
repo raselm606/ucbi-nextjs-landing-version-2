@@ -280,8 +280,15 @@ try {
                       Blockchain <span className="blockchain-nav-caret" aria-hidden="true">▾</span>
                     </button>
                     <div className="blockchain-nav-menu" aria-label="Blockchain explorers">
-                      <Link href="https://etherscan.io/token/0xb42B35DeCA033a23401a1a89007a39343A510D0a" target="_blank" rel="noopener noreferrer">Etherscan</Link>
-                      <Link href="https://bscscan.com/token/0xc888Dca9448D04F045Df801F5369348cDF67fb18#transactions" target="_blank" rel="noopener noreferrer">BscScan</Link>
+                      
+                      <Link className="blockchain-explorer-link" href="https://bscscan.com/token/0xc888Dca9448D04F045Df801F5369348cDF67fb18#transactions" target="_blank" rel="noopener noreferrer">
+                        <svg className="blockchain-explorer-icon bnb-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="m16 2.4 4.1 4.1L16 10.6l-4.1-4.1L16 2.4Zm-7.3 7.3 4.1 4.1-4.1 4.1-4.1-4.1 4.1-4.1Zm14.6 0 4.1 4.1-4.1 4.1-4.1-4.1 4.1-4.1ZM16 16.9l4.1 4.1-4.1 4.1-4.1-4.1 4.1-4.1Zm0-3.8 2.9 2.9-2.9 2.9-2.9-2.9 2.9-2.9Z" fill="currentColor"/></svg>
+                        <span>BscScan</span><span className="blockchain-explorer-network">BNB Chain</span>
+                      </Link>
+                      <Link className="blockchain-explorer-link" href="https://etherscan.io/token/0xb42B35DeCA033a23401a1a89007a39343A510D0a" target="_blank" rel="noopener noreferrer">
+                        <svg className="blockchain-explorer-icon ethereum-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2.5 7.3 16.7 16 21.8l8.7-5.1L16 2.5Zm0 27 8.7-11.2L16 23.4l-8.7-5.1L16 29.5Z" fill="currentColor"/><path d="m16 2.5-8.7 14.2L16 12.8V2.5Zm0 20.9v6.1l8.7-11.2-8.7 5.1Z" fill="currentColor" opacity=".62"/></svg>
+                        <span>Etherscan</span><span className="blockchain-explorer-network">Ethereum</span>
+                      </Link>
                     </div>
                     </li>
                     <li className="nav-item">

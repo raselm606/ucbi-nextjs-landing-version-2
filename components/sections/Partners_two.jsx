@@ -9,8 +9,8 @@ import logo12 from "../../public/images/partners/12.png";
 import logo13 from "../../public/images/partners/13.png";
 import logo14 from "../../public/images/partners/14.png";
 import logo16 from "../../public/images/partners/16.png";
-import logo17 from "../../public/images/partners/17.png";
-import logo18 from "../../public/images/partners/18.png";
+import logo19 from "../../public/images/partners/19.png";
+import logo20 from "../../public/images/partners/20.png";
 import logo5 from "../../public/images/partners/5.png";
 import logo7 from "../../public/images/partners/7.png";
 import logo9 from "../../public/images/partners/9.png";
@@ -31,10 +31,10 @@ const Partners =  () => {
                     <Image className="img9"  src={logo9} alt="Partner Logo" /></Link> <span className="dline"> |</span>
                     
                     <Link href="https://bscscan.com/token/0xc888Dca9448D04F045Df801F5369348cDF67fb18" target="_blank">
-                    <Image className="img9"  src={logo17} alt="Partner Logo" /></Link> <span className="dline"> |</span>
+                    <Image className="img19"  src={logo19} alt="Partner Logo" /></Link> <span className="dline"> |</span>
                     
                     <Link href="https://blockspot.io/coin/ucbi-holding-ucbi/" target="_blank">
-                    <Image className="img9"  src={logo18} alt="Partner Logo" /></Link> <span className="dline"> |</span>
+                    <Image className="img20"  src={logo20} alt="Partner Logo" /></Link> <span className="dline"> |</span>
 
 
                     <Link href="https://www.cyberscope.io/audits/ucbi" target="_blank">
@@ -63,10 +63,10 @@ const Partners =  () => {
                     <Image className="img9"  src={logo9} alt="Partner Logo" /></Link> <span className="dline"> |</span>
                     
                     <Link href="https://bscscan.com/token/0xc888Dca9448D04F045Df801F5369348cDF67fb18" target="_blank">
-                    <Image className="img9"  src={logo17} alt="Partner Logo" /></Link> <span className="dline"> |</span>
+                    <Image className="img19"  src={logo19} alt="Partner Logo" /></Link> <span className="dline"> |</span>
                     
                     <Link href="https://blockspot.io/coin/ucbi-holding-ucbi/" target="_blank">
-                    <Image className="img9"  src={logo18} alt="Partner Logo" /></Link> <span className="dline"> |</span>
+                    <Image className="img20"  src={logo20} alt="Partner Logo" /></Link> <span className="dline"> |</span>
 
                     <Link href="https://www.cyberscope.io/audits/ucbi" target="_blank">
                         <Image className="img13"  src={logo13} alt="Partner Logo" /></Link> <span className="dline"> |</span>

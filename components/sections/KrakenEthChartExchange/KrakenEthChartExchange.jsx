@@ -73,7 +73,12 @@ export default function KrakenEthChartExchange() {
         <div className={styles.market_card} >
           <div className={styles.market_topline}>
             <div className={styles.asset_identity}>
-              <span className={styles.eth_badge} aria-hidden="true">◆</span>
+              <span className={styles.eth_badge} aria-hidden="true">
+                <svg viewBox="0 0 32 32" focusable="false">
+                  <path d="M16 2.5 7.3 16.7 16 21.8l8.7-5.1L16 2.5Zm0 27 8.7-11.2L16 23.4l-8.7-5.1L16 29.5Z" fill="currentColor" />
+                  <path d="m16 2.5-8.7 14.2L16 12.8V2.5Zm0 20.9v6.1l8.7-11.2-8.7 5.1Z" fill="currentColor" opacity=".62" />
+                </svg>
+              </span>
               <span><strong>Ethereum</strong><small>ETH / USD · Kraken spot</small></span>
             </div>
             <span className={styles.live_status}><i /> LIVE MARKET</span>
@@ -107,7 +112,7 @@ export default function KrakenEthChartExchange() {
             </div>
           </div>
 
-          {error && !data ? <div className={styles.chart_message}>{error}</div> : candles.length ? <MarketChart key={range} candles={candles} range={range} chartType={chartType} interactive /> : <div className={styles.chart_message}>Loading Kraken Ethereum price history…</div>}
+          {error && !data ? <div className={`${styles.chart_message} ${styles.chart_message_compact}`}>{error}</div> : candles.length ? <MarketChart key={range} candles={candles} range={range} chartType={chartType} interactive compact /> : <div className={`${styles.chart_message} ${styles.chart_message_compact}`}>Loading Kraken Ethereum price history…</div>}
           {error && data && <p className={styles.stale_notice}>Showing last available prices. Refresh failed: {error}</p>}
           <div className={styles.market_footer}>
             <span>Data: Kraken · ETH/USD spot market · Updates every 30 seconds</span>

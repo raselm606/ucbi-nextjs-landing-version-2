@@ -13,29 +13,32 @@ const CalendarIcon = () => (
   </svg>
 );
 
-const EthereumIcon = () => (
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-    <path d="M11.944 17.97L4.58 13.62 11.943 24l7.37-10.38-7.372 4.35zm.056-17.97l-7.37 12.25 7.37 4.36 7.37-4.36L12 0z" />
+const FlowIcon = () => (
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M7 20V7m0 0L3.5 10.5M7 7l3.5 3.5" />
+    <path d="M17 4v13m0 0 3.5-3.5M17 17l-3.5-3.5" />
+    <path d="M4 22h16" />
   </svg>
 );
 
-const ChartBarIcon = () => (
+const InstitutionIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <line x1="18" y1="20" x2="18" y2="10" />
-    <line x1="12" y1="20" x2="12" y2="4" />
-    <line x1="6" y1="20" x2="6" y2="14" />
+    <path d="m3 9 9-6 9 6" />
+    <path d="M5 10h14M4 21h16M6 10v8m4-8v8m4-8v8m4-8v8" />
   </svg>
 );
 
-const DiamondIcon = () => (
+const MomentumIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <polygon points="12 2 2 9 12 22 22 9 12 2" />
+    <path d="M3 17 9 11l4 4 8-9" />
+    <path d="M15 6h6v6" />
   </svg>
 );
 
-const ShieldIcon = () => (
+const TransparencyIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+    <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z" />
+    <circle cx="12" cy="12" r="3" />
   </svg>
 );
 
@@ -346,7 +349,7 @@ export default function EtfFlow() {
         <div className={styles.main_card}>
           <div className={styles.card_header}>
             <div className={styles.header_info}>
-              <div className={styles.eth_icon_badge}><EthereumIcon /></div>
+              <div className={styles.flow_icon_badge}><FlowIcon /></div>
               <div>
                 <h3 className={styles.header_title}>Net Total Flow of Ethereum Spot ETF ({currency})</h3>
                 <p className={styles.header_subtitle}>
@@ -421,28 +424,28 @@ export default function EtfFlow() {
           <div className="row align-items-center gy-4">
             <div className="col-lg-3 col-md-6">
               <div className={styles.feature_item}>
-                <div className={styles.feature_icon}><ChartBarIcon /></div>
+                <div className={styles.feature_icon}><InstitutionIcon /></div>
                 <div>
                   <h4 className={styles.feature_title}>Institutional Capital</h4>
-                  <p className={styles.feature_desc}>ETF inflows signal growing </p>
+                  <p className={styles.feature_desc}>Spot ETF activity can reflect institutional demand.</p>
                 </div>
               </div>
             </div>
             <div className="col-lg-3 col-md-6">
               <div className={styles.feature_item}>
-                <div className={styles.feature_icon}><DiamondIcon /></div>
+                <div className={styles.feature_icon}><MomentumIcon /></div>
                 <div>
                   <h4 className={styles.feature_title}>Market Momentum</h4>
-                  <p className={styles.feature_desc}>Consistent inflows support </p>
+                  <p className={styles.feature_desc}>Follow daily changes in aggregate net flows.</p>
                 </div>
               </div>
             </div>
             <div className="col-lg-3 col-md-6">
               <div className={styles.feature_item}>
-                <div className={styles.feature_icon}><ShieldIcon /></div>
+                <div className={styles.feature_icon}><TransparencyIcon /></div>
                 <div>
                   <h4 className={styles.feature_title}>Data Transparency</h4>
-                  <p className={styles.feature_desc}>Daily fund level flow data </p>
+                  <p className={styles.feature_desc}>Review transparent, issuer-level flow data.</p>
                 </div>
               </div>
             </div>

@@ -21,17 +21,17 @@ function timestampLabel(timestamp, range) {
     : { month: 'short', day: 'numeric', timeZone: 'UTC' });
 }
 
-export function MarketChart({ candles, range, chartType, interactive = false }) {
+export function MarketChart({ candles, range, chartType, interactive = false, compact = false }) {
   const [view, setView] = useState({ start: 0, end: 1 });
   const dragRef = useRef(null);
   const chartRef = useRef(null);
   const width = 900;
-  const height = 350;
+  const height = compact ? 245 : 350;
   const left = 8;
   const right = 82;
   const top = 14;
-  const bottom = 270;
-  const volumeTop = 290;
+  const bottom = compact ? 170 : 270;
+  const volumeTop = compact ? 185 : 290;
   const plotWidth = width - left - right;
   const plotHeight = bottom - top;
   const visibleStart = Math.floor(view.start * candles.length);
@@ -88,9 +88,9 @@ export function MarketChart({ candles, range, chartType, interactive = false }) 
   };
 
   return (
-    <div className={styles.chart_wrap}>
+    <div className={`${styles.chart_wrap} ${compact ? styles.chart_wrap_compact : ''}`}>
       {interactive && <div className={styles.zoom_controls} aria-label="Chart zoom controls"><button type="button" onClick={() => zoomAt(0.75)} aria-label="Zoom in">+</button><button type="button" onClick={() => zoomAt(1.33)} aria-label="Zoom out">−</button><button type="button" onClick={() => setView({ start: 0, end: 1 })}>Reset</button></div>}
-      <svg ref={chartRef} className={`${styles.chart} ${interactive ? styles.chart_interactive : ''}`} viewBox={`0 0 ${width} ${height}`} role="img" aria-label={`Ethereum ${range} ${chartType} price chart`} onPointerDown={handlePointerDown} onPointerMove={handlePointerMove} onPointerUp={() => { dragRef.current = null; }} onPointerCancel={() => { dragRef.current = null; }}>
+      <svg ref={chartRef} className={`${styles.chart} ${compact ? styles.chart_compact : ''} ${interactive ? styles.chart_interactive : ''}`} viewBox={`0 0 ${width} ${height}`} preserveAspectRatio={compact ? 'none' : undefined} role="img" aria-label={`Ethereum ${range} ${chartType} price chart`} onPointerDown={handlePointerDown} onPointerMove={handlePointerMove} onPointerUp={() => { dragRef.current = null; }} onPointerCancel={() => { dragRef.current = null; }}>
         <defs>
           <linearGradient id="ethChartFill" x1="0" x2="0" y1="0" y2="1">
             <stop offset="0%" stopColor="#0cc0df" stopOpacity=".24" />
@@ -123,12 +123,12 @@ export function MarketChart({ candles, range, chartType, interactive = false }) 
           );
         })}
         {visibleCandles.map((candle, index) => (
-          <rect key={`volume-${candle.time}`} x={x(index) - candleWidth / 2} y={volumeTop + 34 - (candle.volume / maxVolume) * 31} width={candleWidth} height={(candle.volume / maxVolume) * 31} className={candle.close >= candle.open ? styles.volume_up : styles.volume_down} />
+          <rect key={`volume-${candle.time}`} x={x(index) - candleWidth / 2} y={volumeTop + (compact ? 27 : 34) - (candle.volume / maxVolume) * (compact ? 25 : 31)} width={candleWidth} height={(candle.volume / maxVolume) * (compact ? 25 : 31)} className={candle.close >= candle.open ? styles.volume_up : styles.volume_down} />
         ))}
         <line x1={left} x2={width - right + 6} y1={volumeTop} y2={volumeTop} className={styles.grid_line} />
         <text x={left} y={volumeTop - 6} className={styles.axis_label}>VOL (ETH)</text>
         {labels.map((index) => (
-          <text key={index} x={x(index)} y="337" textAnchor={index === 0 ? 'start' : index === visibleCandles.length - 1 ? 'end' : 'middle'} className={styles.axis_label}>
+          <text key={index} x={x(index)} y={compact ? '238' : '337'} textAnchor={index === 0 ? 'start' : index === visibleCandles.length - 1 ? 'end' : 'middle'} className={styles.axis_label}>
             {timestampLabel(visibleCandles[index].time, range)}
           </text>
         ))}
