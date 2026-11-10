@@ -1,0 +1,18 @@
+.section { background:#fff; color:#10243d; }
+.intro { display:grid; grid-template-columns:1fr 1fr; min-height:390px; }
+.copy { align-self:center; width:100%; padding:58px 28px 58px max(88px, calc((100vw - 1440px) / 2 + 88px)); justify-self:stretch; }
+.eyebrow { display:flex; align-items:center; gap:12px; margin:0 0 26px; color:#68778a; font-size:9px; letter-spacing:.25em; text-transform:uppercase; }
+.eyebrow span { height:12px; border-left:1px solid #bdc7d2; }
+.copy h1 { max-width:760px; margin:0 0 18px; color:#10243d; font-size:clamp(26px,2.8vw,40px); line-height:1.12; font-weight:500; letter-spacing:-.03em; }
+.copy h1 em { color:#00aeea; font-style:normal; }
+.description { max-width:520px; margin:0 0 24px; color:#6e7b8e; font-size:14px; line-height:1.6; }
+.button { display:inline-flex; align-items:center; gap:12px; border:1px solid #00aeea; padding:12px 20px; color:#10243d; font-size:12px; text-decoration:none; }
+.button svg { color:#00aeea; }
+.imagePlaceholder { min-height:390px; background:#17354d url("/images/corporate/section_img/about.jfif") center 48% / cover no-repeat; }
+.pillars { min-height:clamp(142px,15vw,180px); display:grid; grid-template-columns:repeat(3,1fr); align-items:center; border-top:1px solid #e3e8ee; border-bottom:1px solid #e3e8ee; padding:26px max(28px, calc((100vw - 1440px) / 2 + 28px)) 26px max(88px, calc((100vw - 1440px) / 2 + 88px)); }
+.pillar { display:grid; grid-template-columns:42px 1fr; gap:18px; padding:0 28px; border-right:1px solid #e3e8ee; }
+.pillar:first-child { padding-left:0; }.pillar:last-child { border:0; padding-right:0; }
+.icon { width:34px; height:34px; color:#10243d; stroke-width:1.35; }
+.pillar h2 { margin:0 0 7px; color:#10243d; font-size:15px; font-weight:600; }
+.pillar p { max-width:290px; margin:0; color:#738093; font-size:12px; line-height:1.5; }
+@media(max-width:760px){.intro{grid-template-columns:1fr}.copy{justify-self:stretch;padding:36px 22px}.imagePlaceholder{min-height:240px}.pillars{grid-template-columns:1fr;padding:8px 22px}.pillar,.pillar:first-child,.pillar:last-child{padding:18px 0;border-right:0;border-bottom:1px solid #e3e8ee}.pillar:last-child{border-bottom:0}}

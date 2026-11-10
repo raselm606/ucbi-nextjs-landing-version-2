@@ -1,0 +1,52 @@
+.partnerBlack {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.partnerTrack {
+  display: flex;
+  align-items: center;
+  min-height: 64px;
+}
+
+.partnerItem {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 30px;
+  border-right: 1px solid #d5d9df;
+  white-space: nowrap;
+}
+
+.partnerIdentity {
+  display: inline-flex;
+  align-items: center;
+}
+
+.partnerLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.partnerLogo {
+  display: block;
+  width: 30px !important;
+  height: 30px !important;
+  flex: 0 0 auto;
+  object-fit: contain;
+}
+
+.partnerName {
+  color: #10243d;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .015em;
+}
+
+@media (max-width: 720px) {
+  .partnerTrack { min-height: 52px; }
+  .partnerItem { padding: 0 18px; }
+  .partnerName { font-size: 10px; }
+}
