@@ -4,8 +4,8 @@ import styles from "./GlobalPresence.module.css";
 
 const regions = [
   { name: "UK", x: "41%", y: "30%", delay: "0s" },
-  { name: "Europe", x: "50%", y: "35%", delay: "0.35s" },
-  { name: "Middle East", x: "64%", y: "46%", delay: "0.7s" },
+  { name: "Europe", x: "52.5%", y: "24%", delay: "0.35s" },
+  { name: "Middle East", x: "67%", y: "40%", delay: "0.7s" },
   { name: "APAC", x: "83%", y: "62%", delay: "1.05s" },
 ];
 
