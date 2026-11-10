@@ -6,6 +6,6 @@ export default function Commitment() {
   return <section className={styles.section} aria-labelledby="commitment-title">
     <div className={styles.imagePlaceholder} role="img" aria-label="Modern architecture image placeholder" />
     <div className={styles.overlay}/>
-    <div className={styles.content}><p className={styles.eyebrow}>Our Commitment</p><h2 id="commitment-title">Bridging Traditional Finance<br />and the <em>Digital Asset Economy</em></h2><p>We work with institutional partners to develop secure, regulated and innovative solutions for the future of finance.</p><Link className={styles.button} href="/contact">Get in touch <FiArrowRight /></Link></div>
+    <div className={styles.content}><p className={styles.eyebrow}>Our Commitment</p><h2 id="commitment-title">Bridging Traditional Finance<br />and the <em>Digital Asset Economy</em></h2><p>We work with institutional partners to develop secure regulated and innovative solutions for the future of finance</p><Link className={styles.button} href="/contact">Get in touch <FiArrowRight /></Link></div>
   </section>;
 }

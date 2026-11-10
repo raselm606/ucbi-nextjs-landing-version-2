@@ -3,7 +3,7 @@ import Link from "next/link";
 import Logo from "../../public/images/corporate/logo.png";
 import styles from "./corporate.module.css";
 
-const links = ["Home", "About", "Products", "Markets", "Advisory", "ETF", "Blog", "Contact"];
+const links = ["Home", "About",  "Markets", "Advisory", "ETF", "Blog", "Contact"];
 
 export default function CorporateNavbar() {
   return (

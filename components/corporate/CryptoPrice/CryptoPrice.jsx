@@ -4,24 +4,18 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
+import { SiBitcoin, SiDogecoin, SiEthereum, SiRipple } from "react-icons/si";
 import styles from "./CryptoPrice.module.css";
-import atomIcon from "@/public/images/atom.png";
-import btcIcon from "@/public/images/btc.png";
-import dogecoinIcon from "@/public/images/dogecoin.png";
-import ethIcon from "@/public/images/eth.png";
-import hypeIcon from "@/public/images/hype.png";
-import rippleIcon from "@/public/images/ripple.png";
 import ucbiIcon from "@/public/images/ucbi.png";
-import worldcoinIcon from "@/public/images/worldcoin.png";
 
 const assets = [
-  { id: "btc", name: "Bitcoin", symbol: "BTC", image: btcIcon },
-  { id: "eth", name: "Ethereum", symbol: "ETH", image: ethIcon },
-  { id: "atom", name: "Cosmos", symbol: "ATOM", image: atomIcon },
-  { id: "xrp", name: "Ripple", symbol: "XRP", image: rippleIcon },
-  { id: "hype", name: "Hyperliquid", symbol: "HYPE", image: hypeIcon },
-  { id: "dogecoin", name: "Dogecoin", symbol: "DOGE", image: dogecoinIcon },
-  { id: "worldcoin", name: "Worldcoin", symbol: "WLD", image: worldcoinIcon },
+  { id: "btc", name: "Bitcoin", symbol: "BTC", Icon: SiBitcoin },
+  { id: "eth", name: "Ethereum", symbol: "ETH", Icon: SiEthereum },
+  { id: "atom", name: "Cosmos", symbol: "ATOM", image: "/images/corporate/crypto-icons/cosmos.svg" },
+  { id: "xrp", name: "Ripple", symbol: "XRP", Icon: SiRipple },
+  { id: "hype", name: "Hyperliquid", symbol: "HYPE", image: "/images/corporate/crypto-icons/hyperliquid.svg" },
+  { id: "dogecoin", name: "Dogecoin", symbol: "DOGE", Icon: SiDogecoin },
+  { id: "worldcoin", name: "Worldcoin", symbol: "WLD", image: "/images/corporate/crypto-icons/worldcoin.jpeg" },
   { id: "ucbi", name: "UCBI Holding", symbol: "UCBI", image: ucbiIcon },
 ];
 
@@ -127,7 +121,9 @@ export default function CryptoPrice() {
             const change = item?.change;
             return <article className={styles.card} data-market-card key={asset.id}>
               <div className={styles.asset}>
-                <Image src={asset.image} alt="" width={44} height={44} className={styles.coinIcon} />
+              {asset.id === "ucbi" ? <Image src={asset.image} alt="" width={44} height={44} className={styles.coinIcon} /> : <span className={`${styles.coinBadge} ${styles[`${asset.id}Badge`]}`} aria-hidden="true">
+                {asset.Icon ? <asset.Icon className={styles.coinGlyph} /> : <Image src={asset.image} alt="" width={44} height={44} className={styles.badgeImage} />}
+              </span>}
                 <div className={styles.assetName}><h3>{asset.name}</h3><span>{asset.symbol}</span></div>
               </div>
               <p className={styles.price}>${formatPrice(item?.price)}</p>

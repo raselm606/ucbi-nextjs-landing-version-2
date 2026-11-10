@@ -3,10 +3,10 @@ import Link from "next/link";
 import styles from "./corporate.module.css";
 
 const features = [
-  { title: "Infrastructure", copy: "Custody, OTC and market access for digital assets.", image: "/images/corporate/fo/fo1.png" },
-  { title: "Investment", copy: "Private equity, ventures and strategic opportunities.", image: "/images/corporate/fo/fo2.png" },
-  { title: "Compliance", copy: "KYC, AML and risk management within international standards.", image: "/images/corporate/fo/fo3.png" },
-  { title: "Global Reach", copy: "A network of partners across Europe, Middle East and APAC.", image: "/images/corporate/fo/fo4.png" },
+  { title: "Infrastructure", copy: "Custody OTC and market access for digital assets", image: "/images/corporate/fo/fo1.png" },
+  { title: "Investment", copy: "Private equity ventures and strategic opportunities", image: "/images/corporate/fo/fo2.png" },
+  { title: "Compliance", copy: "KYC AML and risk management within international standards", image: "/images/corporate/fo/fo3.png" },
+  { title: "Global Reach", copy: "A network of partners across Europe Middle East and APAC", image: "/images/corporate/fo/fo4.png" },
 ];
 
 export default function CorporateFeatures() {

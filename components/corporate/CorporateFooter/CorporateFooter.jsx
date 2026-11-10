@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+import { FaLinkedinIn, FaXTwitter, FaYoutube } from "react-icons/fa6";
 import { FiArrowRight, FiLock } from "react-icons/fi";
-import { FaLinkedinIn, FaXTwitter, FaYoutube, FaTelegram } from "react-icons/fa6";
 import Logo from "../../../public/images/corporate/logo.png";
 import navStyles from "../corporate.module.css";
 import styles from "./CorporateFooter.module.css";
@@ -44,13 +44,12 @@ export default function CorporateFooter() {
   return <footer className={styles.footer}>
     <div className={styles.main}>
       <div className={styles.brand}>
-        <Link href="/" className={styles.logo} aria-label="UCBI Banking home"><Image src={Logo} width={130} height={44} alt="UCBI Banking" /></Link>
-        <p>A blockchain private equity holding providing institutional-grade infrastructure, market access and advisory in digital assets.</p>
+        <Link href="/" className={styles.logo} aria-label="UCBI Banking home"><Image src={Logo} width={120} height={40} alt="UCBI Banking" /></Link>
+        <p style={{textAlign:'justify'}}>A blockchain private equity holding providing institutional-grade infrastructure market access and advisory in digital assets</p>
         <div className={styles.socials}>
           <a href="https://www.linkedin.com/company/ucbi-banking/" aria-label="LinkedIn"><FaLinkedinIn /></a>
           <a href="https://x.com/" aria-label="X"><FaXTwitter /></a>
-          <a href="https://youtube.com/" aria-label="YouTube"><FaYoutube /></a>
-          <a href="https://telegram.org/" aria-label="Telegram"><FaTelegram /></a>
+          <a href="https://youtube.com/" aria-label="YouTube"><FaYoutube /></a> 
         </div>
       </div>
       {groups.map((group) => <nav className={styles.linkGroup} key={group.title} aria-label={group.title}>
@@ -69,8 +68,8 @@ export default function CorporateFooter() {
       </div>
     </div>
     <div className={styles.bottom}>
-      <p>© 2026 UCBI Banking. All rights reserved.</p>
-      <nav className={styles.legal} aria-label="Legal"><Link href="/privacy-policy">Privacy Policy</Link><Link href="/terms-of-use">Terms of Use</Link><Link href="/legal">Legal</Link><Link href="/cookie-settings">Cookie Settings</Link></nav>
+      <p>UCBI Group Technologies LTD — Copyright © 2026 — A member of <Link style={{color:'#0cc0df'}} href="https://ucbiholding.com/" aria-label="UCBI Holding">UCBI Capital Holding</Link></p>
+      <nav className={styles.legal} aria-label="Legal"><Link href="/privacy-policy">Privacy Policy</Link><Link href="/terms-of-use">Terms of Use</Link><Link href="/legal">Legal</Link> </nav>
       <details className={`${navStyles.language} ${styles.footerLanguage}`}>
         <summary aria-label="Select language">
           <svg className={navStyles.languageIcon} viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M3.5 9h17M3.5 15h17M12 3c2.3 2.4 3.5 5.4 3.5 9s-1.2 6.6-3.5 9c-2.3-2.4-3.5-5.4-3.5-9S9.7 5.4 12 3Z" /></svg>

@@ -2,7 +2,7 @@
 .navbar { position: absolute; z-index: 5; inset: 0 0 auto; height: 86px; border-bottom: 1px solid rgba(255,255,255,.2); background: rgb(5 25 44 / 93%); color: white; }
 .navInner { height: 100%; max-width: 1380px; padding: 0 32px; margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
 .brand { flex: 0 0 auto; display: flex; align-items: center; }
-.brand :global(img) { width:130px; height:auto; }
+.brand :global(img) { width:100px; height:auto; }
 .navLinks { display: flex; align-items: center; justify-content: center; gap: clamp(18px, 3vw, 48px); list-style: none; padding: 0; margin: 0; }
 .navLinks a { position:relative; display:inline-flex; align-items:center; height:48px; color: #fff; text-decoration: none; font-size: 12px; font-weight:500; transition: color .2s; }
 .navLinks a::after { content:""; position:absolute; left:0; right:0; bottom:0; height:2px; background:var(--blue); transform:scaleX(0); transform-origin:left; transition:transform .2s; }
@@ -81,7 +81,7 @@
 }
 @media (max-width: 720px) {
  .navbar { height:auto; min-height:72px; } .navInner { min-height:72px; flex-wrap:wrap; padding:12px 18px; gap:12px; }
- .brand :global(img) { width:104px; height:auto; }
+ .brand :global(img) { width:100px; height:auto; }
  .navLinks { order:3; width:100%; overflow:auto; justify-content:flex-start; padding:8px 0 2px; gap:22px; } .navLinks a { white-space:nowrap; font-size:12px; }
  .navActions { margin-left:auto; } .language::after { right:-8px; height:26px; } .memberButton { padding:10px 12px; font-size:12px; }
  .hero { min-height:590px; background-position:58% center; } .hero::before { background:linear-gradient(90deg,rgba(3,23,41,.95),rgba(4,28,49,.73)); }

@@ -12,6 +12,7 @@ import ApproachVision from "@/components/corporate/ApproachVision/ApproachVision
 import Commitment from "@/components/corporate/Commitment/Commitment";
 import CryptoPrice from "@/components/corporate/CryptoPrice/CryptoPrice";
 import CorporateFooter from "@/components/corporate/CorporateFooter/CorporateFooter";
+import CorporateBlogs from "@/components/corporate/CorporateBlogs/CorporateBlogs";
 
 export default function Corporate() {
   return (
@@ -29,6 +30,7 @@ export default function Corporate() {
       <ApproachVision />
       <Commitment />
       <CryptoPrice />
+      <CorporateBlogs />
       <CorporateFooter />
     </main>
   );

@@ -2,9 +2,9 @@ import Link from "next/link";
 import styles from "./corporate.module.css";
 
 const steps = [
-  { number: "01", title: "Institutional Focus", copy: "Long-term value creation in digital assets." },
-  { number: "02", title: "Expertise", copy: "Finance, technology and regulatory knowledge." },
-  { number: "03", title: "Global Perspective", copy: "Opportunities across key markets." },
+  { number: "01", title: "Institutional Focus", copy: "Long-term value creation in digital assets" },
+  { number: "02", title: "Expertise", copy: "Finance, technology and regulatory knowledge" },
+  { number: "03", title: "Global Perspective", copy: "Opportunities across key markets" },
 ];
 
 export default function OurApproach() {
@@ -14,7 +14,7 @@ export default function OurApproach() {
         <div className={styles.approachIntro}>
           <p className={styles.eyebrow}>Our Approach</p>
           <h2 className={styles.approachTitle}>Bridging Traditional Finance<br />and the Digital Asset Economy</h2>
-          <p className={styles.approachCopy}>UCBI develops and operates institutional solutions for the digital asset market, combining investment expertise, advanced technology and a global network of partners.</p>
+          <p  className={styles.approachCopy}>UCBI are always committed to building a solid foundation and driving sustainable growth through a clear stategy strong partnerships and institutional excellence</p>
           <Link className={styles.textLink} href="/#about">Discover our approach &nbsp; →</Link>
         </div>
         {steps.map(({ number, title, copy }) => (

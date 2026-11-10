@@ -1,19 +1,20 @@
 import Link from "next/link";
-import { FiArrowRight, FiDatabase, FiTrendingUp, FiBox, FiGlobe } from "react-icons/fi";
+import Image from "next/image";
+import { FiArrowRight, FiBox, FiDatabase, FiGlobe, FiTrendingUp } from "react-icons/fi";
 import styles from "./WhatWeDo.module.css";
 
 const services = [
-  { Icon: FiDatabase, title: "Infrastructure", copy: "Custody, OTC and market access for digital assets." },
-  { Icon: FiTrendingUp, title: "Investment", copy: "Private equity, ventures and strategic opportunities." },
-  { Icon: FiBox, title: "Advisory", copy: "Institutional advisory on digital assets and blockchain technologies." },
-  { Icon: FiGlobe, title: "Markets", copy: "Access to global markets through a network of regulated partners." },
+  { image: "/images/corporate/ucbi_blue_bold.jfif", title: "Infrastructure", copy: "Blockchain-powered treasury management and strategic Ethereum accumulation" },
+  { Icon: FiTrendingUp, title: "Investment", copy: "Private equity ventures and strategic opportunities" },
+  { Icon: FiBox, title: "Advisory", copy: "Institutional advisory on digital assets and blockchain technologies" },
+  { Icon: FiGlobe, title: "Markets", copy: "Access to global markets through a network of regulated partners" },
 ];
 
 export default function WhatWeDo() {
   return <section className={styles.section} aria-labelledby="services-title">
     <div className={styles.inner}>
-      <div className={styles.intro}><p className={styles.eyebrow}>What We Do</p><h2 id="services-title">A Complete Institutional<br /><em>Ecosystem</em></h2><p>UCBI provides a full range of institutional services across the digital asset value chain, from infrastructure to investment opportunities.</p><Link className={styles.button} href="/#solutions">Our Solutions <FiArrowRight /></Link></div>
-      <div className={styles.services}>{services.map(({ Icon, title, copy }) => <article className={styles.service} key={title}><Icon aria-hidden="true" /><div><h3>{title}</h3><p>{copy}</p></div></article>)}</div>
+      <div className={styles.intro}><p className={styles.eyebrow}>What We Do</p><h2 id="services-title">A Complete Institutional<br /><em>Ecosystem</em></h2><p>UCBI provides a full range of institutional services across the digital asset value chain from infrastructure to investment opportunities</p><Link className={styles.button} href="/#solutions">Our Solutions <FiArrowRight /></Link></div>
+      <div className={styles.services}>{services.map(({ Icon, image, title, copy }) => <article className={styles.service} key={title}>{image ? <Image className={styles.serviceImage} src={image} alt="UCBI" width={29} height={29} /> : <Icon aria-hidden="true" />}<div><h3>{title}</h3><p>{copy}</p></div></article>)}</div>
     </div>
   </section>;
 }

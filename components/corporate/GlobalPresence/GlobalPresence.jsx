@@ -3,15 +3,15 @@ import { FiArrowRight } from "react-icons/fi";
 import styles from "./GlobalPresence.module.css";
 
 const regions = [
-  { name: "UK", x: "41%", y: "37%", delay: "0s" },
-  { name: "Europe", x: "49%", y: "44%", delay: "0.35s" },
-  { name: "Middle East", x: "62%", y: "60%", delay: "0.7s" },
-  { name: "APAC", x: "82%", y: "73%", delay: "1.05s" },
+  { name: "UK", x: "41%", y: "33%", delay: "0s" },
+  { name: "Europe", x: "50%", y: "38%", delay: "0.35s" },
+  { name: "Middle East", x: "64%", y: "49%", delay: "0.7s" },
+  { name: "APAC", x: "83%", y: "65%", delay: "1.05s" },
 ];
 
 function DottedWorldMap() {
   return (
-    <svg className={styles.worldMap} viewBox="0 0 800 380" aria-hidden="true" focusable="false">
+    <svg className={styles.worldMap} viewBox="0 0 800 380" preserveAspectRatio="none" aria-hidden="true" focusable="false">
       <defs>
         <pattern id="world-dots" width="8" height="8" patternUnits="userSpaceOnUse">
           <circle cx="2" cy="2" r="1.55" fill="#b8c6d5" />
@@ -39,7 +39,7 @@ export default function GlobalPresence() {
         <div className={styles.copy}>
           <p className={styles.eyebrow}>Global Presence</p>
           <h2 id="global-title">A Network Across<br /><em>Key Markets</em></h2>
-          <p>UCBI operates through a network of partners and representatives across Europe, the Middle East and APAC, supporting institutional access and development opportunities.</p>
+          <p>UCBI operates through a network of partners and representatives across Europe the Middle East and APAC supporting institutional access and development opportunities</p>
           <Link className={styles.button} href="/contact">Our Global Network <FiArrowRight /></Link>
         </div>
 
