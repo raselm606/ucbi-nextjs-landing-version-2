@@ -3,10 +3,10 @@ import { FiArrowRight } from "react-icons/fi";
 import styles from "./GlobalPresence.module.css";
 
 const regions = [
-  { name: "UK", x: "41%", y: "33%", delay: "0s" },
-  { name: "Europe", x: "50%", y: "38%", delay: "0.35s" },
-  { name: "Middle East", x: "64%", y: "49%", delay: "0.7s" },
-  { name: "APAC", x: "83%", y: "65%", delay: "1.05s" },
+  { name: "UK", x: "41%", y: "30%", delay: "0s" },
+  { name: "Europe", x: "50%", y: "35%", delay: "0.35s" },
+  { name: "Middle East", x: "64%", y: "46%", delay: "0.7s" },
+  { name: "APAC", x: "83%", y: "62%", delay: "1.05s" },
 ];
 
 function DottedWorldMap() {

@@ -68,7 +68,7 @@ export default function CorporateFooter() {
       </div>
     </div>
     <div className={styles.bottom}>
-      <p>UCBI Group Technologies LTD — Copyright © 2026 — A member of <Link style={{color:'#0cc0df'}} href="https://ucbiholding.com/" aria-label="UCBI Holding">UCBI Capital Holding</Link></p>
+      <p>&copy; 2026 UCBI Group Technologies Ltd All rights reserved | Trading as UCBI Banking | Registered in England & Wales No. 16774681</p>
       <nav className={styles.legal} aria-label="Legal"><Link href="/privacy-policy">Privacy Policy</Link><Link href="/terms-of-use">Terms of Use</Link><Link href="/legal">Legal</Link> </nav>
       <details className={`${navStyles.language} ${styles.footerLanguage}`}>
         <summary aria-label="Select language">
