@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { FaLinkedinIn, FaXTwitter, FaYoutube } from "react-icons/fa6";
-import { FiArrowRight, FiLock } from "react-icons/fi";
+import { FiArrowRight } from "react-icons/fi";
 import Logo from "../../../public/images/corporate/logo.png";
 import navStyles from "../corporate.module.css";
 import styles from "./CorporateFooter.module.css";
@@ -64,12 +64,13 @@ export default function CorporateFooter() {
           <input id="corporate-footer-email" type="email" value={email} onChange={(event) => setEmail(event.target.value)} placeholder="Your email address" required />
           <button type="submit" disabled={submitting} aria-label="Subscribe"><FiArrowRight /></button>
         </form>
-        {notice ? <p className={styles.notice} role="status">{notice}</p> : <p className={styles.privacy}><FiLock /> We respect your privacy.</p>}
+        {notice ? <p className={styles.notice} role="status">{notice}</p> : <p className={styles.privacy}>
+          &nbsp; </p>}
       </div>
     </div>
     <div className={styles.bottom}>
       <p>&copy; 2026 UCBI Group Technologies Ltd All rights reserved | Trading as UCBI Banking | Registered in England & Wales No. 16774681</p>
-      <nav className={styles.legal} aria-label="Legal"><Link href="/privacy-policy">Privacy Policy</Link><Link href="/terms-of-use">Terms of Use</Link><Link href="/legal">Legal</Link> </nav>
+      <nav className={styles.legal} aria-label="Legal"><Link href="/privacy-policy">Privacy Policy</Link><Link href="/terms-of-use">Terms of Use</Link><Link href="#">Press Kit</Link> </nav>
       <details className={`${navStyles.language} ${styles.footerLanguage}`}>
         <summary aria-label="Select language">
           <svg className={navStyles.languageIcon} viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M3.5 9h17M3.5 15h17M12 3c2.3 2.4 3.5 5.4 3.5 9s-1.2 6.6-3.5 9c-2.3-2.4-3.5-5.4-3.5-9S9.7 5.4 12 3Z" /></svg>

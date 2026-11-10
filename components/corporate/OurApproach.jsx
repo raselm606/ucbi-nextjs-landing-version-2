@@ -14,7 +14,7 @@ export default function OurApproach() {
         <div className={styles.approachIntro}>
           <p className={styles.eyebrow}>Our Approach</p>
           <h2 className={styles.approachTitle}>Bridging Traditional Finance<br />and the Digital Asset Economy</h2>
-          <p  className={styles.approachCopy}>UCBI are always committed to building a solid foundation and driving sustainable growth through a clear stategy strong partnerships and institutional excellence</p>
+          <p style={{textAlign:'justify'}}  className={styles.approachCopy}>UCBI Group Technologies is shaping the future of institutional digital asset treasury management through strategic capital allocation Ethereum accumulation and blockchain innovation connecting traditional finance with decentralized financial infrastructure to support long term value creation sustainable growth and institutional excellence</p>
           <Link className={styles.textLink} href="/#about">Discover our approach &nbsp; →</Link>
         </div>
         {steps.map(({ number, title, copy }) => (
