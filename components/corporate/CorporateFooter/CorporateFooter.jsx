@@ -62,7 +62,7 @@ export default function CorporateFooter() {
     <div className={styles.main}>
       <div className={styles.brand}>
         <Link href="/" className={styles.logo} aria-label="UCBI Banking home"><Image src={Logo} width={120} height={40} alt="UCBI Banking" /></Link>
-        <p style={{textAlign:'justify'}}>Our blockchain private equity holding providing institutional-grade infrastructure market access and advisory in digital assets</p>
+        <p style={{textAlign:'justify'}}>Our UCBI blockchain private equity holding providing institutional-grade infrastructure market access and the advisory in digital assets</p>
         <div className={styles.socials}>
           <a href="https://www.linkedin.com/company/ucbi-banking/" aria-label="LinkedIn"><FaLinkedinIn /></a>
           <a href="https://x.com/" aria-label="X"><FaXTwitter /></a>

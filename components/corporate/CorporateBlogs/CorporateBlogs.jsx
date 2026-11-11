@@ -4,9 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { A11y } from "swiper/modules";
 import "swiper/css";
+import { A11y } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import styles from "./CorporateBlogs.module.css";
 
 const articles = [
@@ -50,7 +50,7 @@ export default function CorporateBlogs() {
         <div className={styles.intro}>
           <p className={styles.eyebrow}>Latest News</p>
           <h2 id="corporate-news-title">Insights<br />on the <em>Digital<br className={styles.mobileBreak} /> Asset Market</em></h2>
-          <p style={{textAlign:'justify'}} className={styles.description}>Stay informed with UCBI for  the latest developments in digital assets regulation and institutional adoption sourced from leading global media</p>
+          <p style={{textAlign:'justify'}} className={styles.description}>Stay informed with our UCBI for  the latest developments in digital assets regulation and institutional adoption sourced from leading global media</p>
           <Link className={styles.allNews} href="/news">View all news <FiArrowRight aria-hidden="true" /></Link>
         </div>
         <div className={styles.news}>
