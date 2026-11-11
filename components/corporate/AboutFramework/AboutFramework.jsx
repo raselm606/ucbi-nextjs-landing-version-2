@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { FaEthereum } from "react-icons/fa";
 import { FiArrowRight, FiLayers, FiShield } from "react-icons/fi";
 import styles from "./AboutFramework.module.css";
@@ -17,7 +16,7 @@ export default function AboutFramework() {
           <p className={styles.eyebrow}>About UCBI <span /> Our Institutional Framework</p>
           <h1 id="framework-title">A Disciplined Approach<br />to <em>Digital Asset Infrastructure</em></h1>
           <p style={{ textAlign:'justify' }} className={styles.description}>UCBI Group Technologies Ltd operates as a private blockchain holding focused on digital asset infrastructure treasury and strategic private investments combining institutional expertise and long-term value creation</p>
-          <Link className={styles.button} href="/contact">Learn more about UCBI <FiArrowRight /></Link>
+          <a className={styles.button} href="https://doc.ucbibanking.io/ucbi_whitepaper" target="_blank" rel="noopener noreferrer">Learn more about UCBI <FiArrowRight /></a>
         </div>
         <div className={styles.imagePlaceholder} role="img" aria-label="Building image placeholder" />
       </div>

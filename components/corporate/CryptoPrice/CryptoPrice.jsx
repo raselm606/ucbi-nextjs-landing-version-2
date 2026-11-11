@@ -9,6 +9,7 @@ import styles from "./CryptoPrice.module.css";
 import ucbiIcon from "@/public/images/ucbi.png";
 
 const assets = [
+  { id: "ucbi", name: "UCBI Holding", symbol: "UCBI", image: ucbiIcon },
   { id: "btc", name: "Bitcoin", symbol: "BTC", Icon: SiBitcoin },
   { id: "eth", name: "Ethereum", symbol: "ETH", Icon: SiEthereum },
   { id: "atom", name: "Cosmos", symbol: "ATOM", image: "/images/corporate/crypto-icons/cosmos.svg" },
@@ -16,7 +17,6 @@ const assets = [
   { id: "hype", name: "Hyperliquid", symbol: "HYPE", image: "/images/corporate/crypto-icons/hyperliquid.svg" },
   { id: "dogecoin", name: "Dogecoin", symbol: "DOGE", Icon: SiDogecoin },
   { id: "worldcoin", name: "Worldcoin", symbol: "WLD", image: "/images/corporate/crypto-icons/worldcoin.jpeg" },
-  { id: "ucbi", name: "UCBI Holding", symbol: "UCBI", image: ucbiIcon },
 ];
 
 function readMarketMetrics(payload) {
@@ -129,9 +129,15 @@ export default function CryptoPrice() {
       const card = track.querySelector("[data-market-card]");
       if (!card) return;
       const gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap) || 0;
-      const visible = Math.max(1, Math.floor((track.clientWidth + gap) / (card.getBoundingClientRect().width + gap)));
-      setPageCount(Math.max(1, Math.ceil(assets.length / visible)));
-      setActivePage(Math.min(Math.max(0, Math.round(track.scrollLeft / ((card.getBoundingClientRect().width + gap) * visible))), Math.ceil(assets.length / visible) - 1));
+      const step = card.getBoundingClientRect().width + gap;
+      const visible = Math.max(1, Math.floor((track.clientWidth + gap) / step));
+      const pages = Math.max(1, Math.ceil(assets.length / visible));
+      const maxScroll = track.scrollWidth - track.clientWidth;
+      const page = maxScroll > 0 && pages > 1
+        ? Math.round((track.scrollLeft / maxScroll) * (pages - 1))
+        : 0;
+      setPageCount(pages);
+      setActivePage(Math.min(Math.max(0, page), pages - 1));
     };
     const observer = new ResizeObserver(updatePages);
     observer.observe(track);
@@ -145,8 +151,14 @@ export default function CryptoPrice() {
     const card = track?.querySelector("[data-market-card]");
     if (!track || !card) return;
     const gap = parseFloat(getComputedStyle(track).gap) || 0;
-    const visible = Math.max(1, Math.floor((track.clientWidth + gap) / (card.getBoundingClientRect().width + gap)));
-    track.scrollBy({ left: direction * visible * (card.getBoundingClientRect().width + gap), behavior: "smooth" });
+    const step = card.getBoundingClientRect().width + gap;
+    const visible = Math.max(1, Math.floor((track.clientWidth + gap) / step));
+    const pages = Math.max(1, Math.ceil(assets.length / visible));
+    const maxScroll = track.scrollWidth - track.clientWidth;
+    const currentPage = maxScroll > 0 && pages > 1 ? Math.round((track.scrollLeft / maxScroll) * (pages - 1)) : 0;
+    const targetPage = Math.min(Math.max(currentPage + direction, 0), pages - 1);
+    const targetLeft = targetPage === pages - 1 ? maxScroll : targetPage * visible * step;
+    track.scrollTo({ left: targetLeft, behavior: "smooth" });
   };
 
   const goToPage = (page) => {
@@ -155,7 +167,11 @@ export default function CryptoPrice() {
     if (!track || !card) return;
     const gap = parseFloat(getComputedStyle(track).gap) || 0;
     const visible = Math.max(1, Math.floor((track.clientWidth + gap) / (card.getBoundingClientRect().width + gap)));
-    track.scrollTo({ left: page * visible * (card.getBoundingClientRect().width + gap), behavior: "smooth" });
+    const maxScroll = track.scrollWidth - track.clientWidth;
+    const pages = Math.max(1, Math.ceil(assets.length / visible));
+    const targetPage = Math.min(Math.max(page, 0), pages - 1);
+    const targetLeft = targetPage === pages - 1 ? maxScroll : targetPage * visible * (card.getBoundingClientRect().width + gap);
+    track.scrollTo({ left: targetLeft, behavior: "smooth" });
   };
 
   return <section className={styles.section} aria-labelledby="crypto-price-title">
