@@ -5,7 +5,7 @@
 .eyebrow span { height:12px; border-left:1px solid #bdc7d2; }
 .copy h1 { max-width:760px; margin:0 0 18px; color:#10243d; font-size:clamp(26px,2.8vw,40px); line-height:1.12; font-weight:500; letter-spacing:-.03em; }
 .copy h1 em { color:#00aeea; font-style:normal; }
-.description { max-width:520px; margin:0 0 24px; color:#6e7b8e; font-size:14px; line-height:1.6; }
+.description { max-width:520px; margin:0 0 24px; color:#6e7b8e; font-size:12px; line-height:1.6; }
 .button { display:inline-flex; align-items:center; gap:12px; border:1px solid #00aeea; padding:12px 20px; color:#10243d; font-size:12px; text-decoration:none; }
 .button svg { color:#00aeea; }
 .imagePlaceholder { min-height:390px; background:#17354d url("/images/corporate/section_img/about.jfif") center 48% / cover no-repeat; }

@@ -19,14 +19,35 @@ const assets = [
   { id: "ucbi", name: "UCBI Holding", symbol: "UCBI", image: ucbiIcon },
 ];
 
-function readPrice(payload) {
-  if (!payload || typeof payload !== "object") return null;
-  if (typeof payload.price === "number") return payload.price;
-  for (const value of Object.values(payload)) {
-    const price = readPrice(value);
-    if (price !== null) return price;
+function readMarketMetrics(payload) {
+  if (!payload || typeof payload !== "object") return {};
+  if (Array.isArray(payload)) {
+    for (const item of payload) {
+      const metrics = readMarketMetrics(item);
+      if (metrics.price != null || metrics.change != null) return metrics;
+    }
+    return {};
   }
-  return null;
+
+  const price = typeof payload.price === "number"
+    ? payload.price
+    : typeof payload.p === "number"
+      ? payload.p
+      : null;
+  const change = typeof payload.change24h === "number"
+    ? payload.change24h
+    : typeof payload.percent_change_24h === "number"
+      ? payload.percent_change_24h
+      : typeof payload.pc24h === "number"
+        ? payload.pc24h
+        : null;
+  if (price !== null || change !== null) return { price, change };
+
+  for (const value of Object.values(payload)) {
+    const metrics = readMarketMetrics(value);
+    if (metrics.price != null || metrics.change != null) return metrics;
+  }
+  return {};
 }
 
 function formatPrice(value) {
@@ -37,13 +58,30 @@ function formatPrice(value) {
   });
 }
 
-function Sparkline({ seed, positive }) {
-  const points = Array.from({ length: 22 }, (_, index) => {
-    const wave = Math.sin((index + seed) * 1.19) * 5 + Math.cos((index + seed) * 0.47) * 3;
-    const trend = positive ? index * 0.45 : -index * 0.28;
-    return `${index * 10},${22 - wave - trend}`;
-  }).join(" ");
-  return <svg className={styles.sparkline} viewBox="0 0 210 34" preserveAspectRatio="none" aria-hidden="true"><polyline points={points} /></svg>;
+function Sparkline({ prices, symbol }) {
+  const values = (prices || []).map((point) => Number(point[1])).filter(Number.isFinite);
+  const count = Math.min(values.length, 24);
+  const sampled = count > 1
+    ? Array.from({ length: count }, (_, index) => values[Math.round(index * (values.length - 1) / (count - 1))])
+    : [];
+  const min = sampled.length ? Math.min(...sampled) : 0;
+  const max = sampled.length ? Math.max(...sampled) : 0;
+  const spread = max - min || Math.max(Math.abs(max) * 0.002, 1);
+  const coords = sampled.map((value, index) => {
+    const x = (index / Math.max(1, sampled.length - 1)) * 210;
+    const y = 28 - ((value - min) / spread) * 21;
+    return `${x.toFixed(1)},${y.toFixed(1)}`;
+  });
+  const positive = sampled.length < 2 || sampled[sampled.length - 1] >= sampled[0];
+  const linePoints = coords.join(" ");
+  const areaPath = coords.length > 1 ? `M ${coords[0]} L ${coords.slice(1).join(" L ")} L 210,34 L 0,34 Z` : "";
+
+  return <svg className={styles.sparkline} viewBox="0 0 210 34" preserveAspectRatio="none" role="img" aria-label={`${symbol} actual price movement over the last 24 hours`}>
+    {sampled.length > 1 ? <>
+      <path d={areaPath} className={`${styles.chartArea} ${positive ? styles.chartPositive : styles.chartNegative}`} />
+      <polyline points={linePoints} className={positive ? styles.chartPositive : styles.chartNegative} />
+    </> : <line x1="0" y1="28" x2="210" y2="28" className={styles.chartUnavailable} />}
+  </svg>;
 }
 
 export default function CryptoPrice() {
@@ -57,10 +95,22 @@ export default function CryptoPrice() {
     const load = async () => {
       const results = await Promise.all(assets.map(async (asset) => {
         try {
-          const response = await fetch(asset.id === "ucbi" ? "/api/ucbi/market" : `/api/price/${asset.id}`, { cache: "no-store" });
+          const [response, historyResponse] = await Promise.all([
+            fetch(asset.id === "ucbi" ? "/api/ucbi/market" : `/api/price/${asset.id}`, { cache: "no-store" }),
+            fetch(asset.id === "ucbi" ? "/api/ucbi/market-history" : `/api/price/${asset.id}/history`, { cache: "no-store" }),
+          ]);
           const payload = await response.json();
-          if (!response.ok) return [asset.id, null];
-          return [asset.id, { price: readPrice(payload), change: typeof payload.change24h === "number" ? payload.change24h : asset.id === "ucbi" ? 1.82 : null }];
+          if (!response.ok && asset.id !== "ucbi") return [asset.id, null];
+          const metrics = readMarketMetrics(payload);
+          const history = historyResponse?.ok ? await historyResponse.json() : null;
+          const prices = history?.prices || [];
+          if (asset.id === "ucbi" && prices.length > 1 && metrics.price == null) {
+            const firstPrice = Number(prices[0][1]);
+            const latestPrice = Number(prices[prices.length - 1][1]);
+            if (Number.isFinite(latestPrice)) metrics.price = latestPrice;
+            if (firstPrice > 0 && Number.isFinite(latestPrice)) metrics.change = ((latestPrice - firstPrice) / firstPrice) * 100;
+          }
+          return [asset.id, { ...metrics, prices }];
         } catch {
           return [asset.id, null];
         }
@@ -68,7 +118,8 @@ export default function CryptoPrice() {
       if (alive) setMarket(Object.fromEntries(results));
     };
     load();
-    return () => { alive = false; };
+    const interval = setInterval(load, 90_000);
+    return () => { alive = false; clearInterval(interval); };
   }, []);
 
   useEffect(() => {
@@ -116,7 +167,7 @@ export default function CryptoPrice() {
       <div className={styles.carousel}>
         <button className={`${styles.arrow} ${styles.previous}`} type="button" aria-label="Previous market assets" onClick={() => scrollPage(-1)}><FiArrowLeft /></button>
         <div className={styles.track} ref={trackRef}>
-          {assets.map((asset, index) => {
+          {assets.map((asset) => {
             const item = market[asset.id];
             const change = item?.change;
             return <article className={styles.card} data-market-card key={asset.id}>
@@ -128,7 +179,7 @@ export default function CryptoPrice() {
               </div>
               <p className={styles.price}>${formatPrice(item?.price)}</p>
               <p className={`${styles.change} ${change == null ? styles.neutral : change >= 0 ? styles.up : styles.down}`}>{change == null ? "—" : `${change > 0 ? "+" : ""}${change.toFixed(2)}%`}</p>
-              <div className={styles.chartRow}><Sparkline seed={index + 2} positive={change == null || change >= 0} /><span>24h</span></div>
+              <div className={styles.chartRow}><Sparkline prices={item?.prices} symbol={asset.symbol} /><span>24h</span></div>
             </article>;
           })}
         </div>

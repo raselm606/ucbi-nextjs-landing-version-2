@@ -2260,7 +2260,7 @@ span.dline {
     background-size: cover; 
 }
 
-.swiper-slide.swiper-slide-active{
+.swiper_blog .swiper-slide.swiper-slide-active{
     border: 6px solid #fff !important; 
     width: 380px !important;
     border-radius: 22px;
@@ -2268,7 +2268,7 @@ span.dline {
 
 } 
 
-.swiper-slide.swiper-slide-active:hover{
+.swiper_blog .swiper-slide.swiper-slide-active:hover{
     transform: translateY(-6px);
 
 } 

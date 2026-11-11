@@ -4,7 +4,7 @@ import { FiArrowRight, FiLayers, FiShield } from "react-icons/fi";
 import styles from "./AboutFramework.module.css";
 
 const pillars = [
-  { Icon: FiLayers, title: "Private Holding", copy: "A long-term investment holding integrating private equity digital assets and strategic capital allocation" },
+  { Icon: FiLayers, title: "Private Holding", copy: "A long-term investment holding integrating private equity digital assets and strategic capital allocation Focused on lasting institutional value" },
   { Icon: FaEthereum, title: "Ethereum Treasury", copy: "An institutional treasury strategy focused on Ethereum accumulation and long-term capital appreciation" },
   { Icon: FiShield, title: "Institutional Governance", copy: "A disciplined governance framework built on transparency financial integrity and sustainable value creation" },
 ];

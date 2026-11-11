@@ -33,7 +33,7 @@ export async function cmcGet(path, params = {}) {
   }
 
   // CMC response conventionally has status object
-  if (data?.status?.error_code && data.status.error_code !== 0) {
+  if (data?.status?.error_code != null && Number(data.status.error_code) !== 0) {
     return NextResponse.json(
       { ok: false, error: data.status.error_message || "CMC API error", cmc_status: data.status },
       { status: 502 }

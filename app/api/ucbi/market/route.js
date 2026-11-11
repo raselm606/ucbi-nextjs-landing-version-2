@@ -1,11 +1,11 @@
 import { cmcGet } from "@/app/api/_lib/cmc";
 
-export async function GET() {
-  const symbol = process.env.UCBI_SYMBOL || "UCBI";
+const UCBI_BSC_CONTRACT = "0xc888dca9448d04f045df801f5369348cdf67fb18";
 
-  // /v1/cryptocurrency/quotes/latest returns price/market cap/volume etc.
-  return cmcGet("/v1/cryptocurrency/quotes/latest", {
-    symbol,
-    convert: "USD",
+export async function GET() {
+  // Query the DEX token endpoint by the supplied BNB Smart Chain contract.
+  return cmcGet("/v1/dex/token/price", {
+    platform: "bsc",
+    address: UCBI_BSC_CONTRACT,
   });
 }

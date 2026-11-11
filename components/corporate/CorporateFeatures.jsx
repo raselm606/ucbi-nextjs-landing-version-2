@@ -3,7 +3,7 @@ import Link from "next/link";
 import styles from "./corporate.module.css";
 
 const features = [
-  { title: "Holding Token", copy: "Blockchain-powered treasury management and strategic Ethereum ", image: "/images/corporate/ucbi_blue_bold.jfif" },
+  { title: "Holding Token", copy: "Token Holding Participation in Strategic Ethereum Treasury Accumulation ", image: "/images/corporate/ucbi_blue_bold.jfif" },
   { title: "Investment", copy: "Private equity ventures and strategic opportunities", image: "/images/corporate/fo/fo2.png" },
   { title: "Advisory", copy: "KYC AML and risk management within international standards", image: "/images/corporate/fo/fo3.png" },
   { title: "Markets", copy: "A network of partners across Europe Middle East and APAC", image: "/images/corporate/fo/fo4.png" },

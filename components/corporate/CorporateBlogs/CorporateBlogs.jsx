@@ -4,6 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { A11y } from "swiper/modules";
+import "swiper/css";
 import styles from "./CorporateBlogs.module.css";
 
 const articles = [
@@ -34,14 +37,11 @@ const articles = [
 ];
 
 export default function CorporateBlogs() {
-  const trackRef = useRef(null);
+  const swiperRef = useRef(null);
 
   const move = (direction) => {
-    const track = trackRef.current;
-    if (!track) return;
-    const card = track.querySelector("[data-news-card]");
-    const gap = Number.parseFloat(getComputedStyle(track).gap) || 0;
-    track.scrollBy({ left: direction * ((card?.getBoundingClientRect().width || track.clientWidth) + gap), behavior: "smooth" });
+    if (direction < 0) swiperRef.current?.slidePrev();
+    else swiperRef.current?.slideNext();
   };
 
   return (
@@ -58,19 +58,34 @@ export default function CorporateBlogs() {
             <button type="button" aria-label="Previous articles" onClick={() => move(-1)}><FiArrowLeft /></button>
             <button type="button" aria-label="Next articles" onClick={() => move(1)}><FiArrowRight /></button>
           </div>
-          <div className={styles.track} ref={trackRef}>
+          <Swiper
+            className={styles.track}
+            modules={[A11y]}
+            onSwiper={(swiper) => { swiperRef.current = swiper; }}
+            slidesPerView={2.35}
+            spaceBetween={14}
+            speed={500}
+            watchOverflow
+            breakpoints={{
+              0: { slidesPerView: 1.08, spaceBetween: 12 },
+              701: { slidesPerView: 1.8, spaceBetween: 14 },
+              1101: { slidesPerView: 2.35, spaceBetween: 14 },
+            }}
+          >
             {articles.map((article) => (
-              <article className={styles.card} data-news-card key={article.category}>
-                <Image className={styles.image} src={article.image} alt={article.alt} width={720} height={360} />
-                <div className={styles.cardBody}>
-                  <p className={styles.meta}>{article.category}<span />{article.date}</p>
-                  <h3>{article.title}</h3>
-                  <p className={styles.excerpt}>{article.excerpt}</p>
-                  <Link className={styles.readMore} href="/news">Read more <FiArrowRight aria-hidden="true" /></Link>
-                </div>
-              </article>
+              <SwiperSlide key={article.category} className={styles.slide}>
+                <article className={styles.card}>
+                  <Image className={styles.image} src={article.image} alt={article.alt} width={720} height={360} />
+                  <div className={styles.cardBody}>
+                    <p className={styles.meta}>{article.category}<span />{article.date}</p>
+                    <h3>{article.title}</h3>
+                    <p className={styles.excerpt}>{article.excerpt}</p>
+                    <Link className={styles.readMore} href="/news">Read more <FiArrowRight aria-hidden="true" /></Link>
+                  </div>
+                </article>
+              </SwiperSlide>
             ))}
-          </div>
+          </Swiper>
         </div>
       </div>
     </section>

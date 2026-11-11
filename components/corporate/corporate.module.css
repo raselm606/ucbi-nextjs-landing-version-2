@@ -19,17 +19,18 @@
 .languageMenu { position:absolute; top:calc(100% + 16px); right:-12px; min-width:76px; padding:6px; border:1px solid rgba(255,255,255,.16); background:#071d33; box-shadow:0 10px 24px rgba(0,0,0,.25); }
 .languageMenu a { display:block; padding:9px 11px; color:#fff; text-decoration:none; font-size:12px; }
 .languageMenu a:hover,.languageMenu a[aria-current="page"] { background:rgba(0,174,234,.18); color:var(--blue); }
-.memberButton,.primaryButton { display:inline-flex; align-items:center; justify-content:center; gap:12px; background:var(--blue); color:#06223a; border:1px solid var(--blue); border-radius:4px; padding:12px 22px; text-decoration:none; font-size:12px; font-weight:600; transition:background .2s; }
+.memberButton,.primaryButton { display:inline-flex; align-items:center; justify-content:center; gap:12px; background:var(--blue); color:#06223a; border:1px solid var(--blue); border-radius:4px; padding:12px 22px; text-decoration:none; font-size:12px; font-weight:600; font-family:inherit; cursor:pointer; transition:background .2s; }
 .memberButton:hover,.primaryButton:hover { background:#20c2f4; color:#06223a; }
 
-.hero { 
-    min-height: 550px; position:relative; display:flex; align-items:center; overflow:hidden; 
-    background: #071d33 url('/images/corporate/hero_bg.jpg') center 42%/cover no-repeat; 
-    color:#fff; 
+.hero {
+    min-height: 550px; position:relative; display:flex; align-items:center; overflow:hidden;
+    background: #071d33 url('/images/corporate/hero_bg.jpg') center 42%/cover no-repeat;
+    color:#fff;
 }
 
 .hero::before { content:""; position:absolute; inset:0; background:linear-gradient(90deg,rgba(3,23,41,.97) 0%,rgba(4,28,49,.88) 34%,rgba(4,28,49,.27) 70%,rgba(4,28,49,.25) 100%); }
 .heroInner { width:min(1400px,100%); margin:0 auto; padding:145px 35px 72px 80px; position:relative; }
+.heroCopyColumn { max-width:600px; position:relative; z-index:1; }
 .eyebrow { margin:0 0 24px; color:inherit; font-size:10px; letter-spacing:.34em; text-transform:uppercase; }
 
 .heroTitle {
