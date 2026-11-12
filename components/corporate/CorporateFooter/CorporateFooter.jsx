@@ -30,6 +30,7 @@ const groups = [
 const legalLinks = [
   ["Terms & Conditions", "https://doc.ucbibanking.io/ucbi_terms_condition"],
   ["Privacy Policy", "https://doc.ucbibanking.io/ucbi_terms_condition"],
+  ["Press Kit", "https://doc.ucbibanking.io/#"],
 ];
 
 export default function CorporateFooter() {

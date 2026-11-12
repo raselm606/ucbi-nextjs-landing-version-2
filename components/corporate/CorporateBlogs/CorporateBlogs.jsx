@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
 import { useRef } from "react";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 import "swiper/css";
@@ -9,34 +7,7 @@ import { A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import styles from "./CorporateBlogs.module.css";
 
-const articles = [
-  {
-    category: "Markets",
-    date: "05 Nov  2026",
-    title: "Ethereum and the future of institutional digital asset treasuries",
-    excerpt: "Explore how institutions are approaching Ethereum as part of a long-term digital asset strategy",
-    image: "/images/corporate/section_img/eth.jfif",
-    alt: "Ethereum displayed against a dark blue background",
-  },
-  {
-    category: "Institutional",
-    date: "03 Nov 2026",
-    title: "Building trusted infrastructure for digital asset markets",
-    excerpt: "Institutional grade infrastructure is helping bring confidence and scale to a changing market",
-    image: "/images/corporate/section_img/about.jfif",
-    alt: "Modern glass office towers viewed from below",
-  },
-  {
-    category: "Regulation",
-    date: "29 Oct 2026",
-    title: "Why governance matters in a global digital economy",
-    excerpt: "Clear governance and thoughtful regulation support sustainable participation across markets",
-    image: "/images/corporate/section_img/commitment.jfif",
-    alt: "Modern architecture representing global finance",
-  },
-];
-
-export default function CorporateBlogs() {
+export default function CorporateBlogs({ articles = [] }) {
   const swiperRef = useRef(null);
 
   const move = (direction) => {
@@ -51,7 +22,7 @@ export default function CorporateBlogs() {
           <p className={styles.eyebrow}>Latest News</p>
           <h2 id="corporate-news-title">Insights<br />on the <em>Digital<br className={styles.mobileBreak} /> Asset Market</em></h2>
           <p style={{textAlign:'justify'}} className={styles.description}>Stay informed with our UCBI for  the latest developments in digital assets regulation and institutional adoption sourced from leading global media</p>
-          <Link className={styles.allNews} href="/news">View all news <FiArrowRight aria-hidden="true" /></Link>
+            <a className={styles.allNews} href="https://www.coindesk.com/business" target="_blank" rel="noopener noreferrer">View all news <FiArrowRight aria-hidden="true" /></a>
         </div>
         <div className={styles.news}>
           <div className={styles.controls}>
@@ -73,14 +44,14 @@ export default function CorporateBlogs() {
             }}
           >
             {articles.map((article) => (
-              <SwiperSlide key={article.category} className={styles.slide}>
+              <SwiperSlide key={article.guid || article.url} className={styles.slide}>
                 <article className={styles.card}>
-                  <Image className={styles.image} src={article.image} alt={article.alt} width={720} height={360} />
+                  {article.image ? <img className={styles.image} src={article.image} alt={article.title} /> : <div className={styles.imagePlaceholder} aria-hidden="true" />}
                   <div className={styles.cardBody}>
-                    <p className={styles.meta}>{article.category}<span />{article.date}</p>
+                    <p className={styles.meta}>{article.category || "News"}<span />{article.published_date}</p>
                     <h3>{article.title}</h3>
-                    <p className={styles.excerpt}>{article.excerpt}</p>
-                    <Link className={styles.readMore} href="/news">Read more <FiArrowRight aria-hidden="true" /></Link>
+                    <p className={styles.excerpt}>{article.description}</p>
+                    <a className={styles.readMore} href={article.url} target="_blank" rel="noopener noreferrer">Read more <FiArrowRight aria-hidden="true" /></a>
                   </div>
                 </article>
               </SwiperSlide>

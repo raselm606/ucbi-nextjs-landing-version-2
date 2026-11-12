@@ -1,4 +1,6 @@
-import Link from "next/link";
+"use client";
+
+import { useEffect, useRef } from "react";
 import { FiArrowRight } from "react-icons/fi";
 import styles from "./GlobalPresence.module.css";
 
@@ -32,7 +34,30 @@ function DottedWorldMap() {
   );
 }
 
-export default function GlobalPresence() {
+export default function   GlobalPresence() {
+  const modalRef = useRef(null);
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const modal = modalRef.current;
+    const video = videoRef.current;
+    if (!modal || !video) return;
+
+    const playVideo = () => {
+      video.src = "https://www.youtube-nocookie.com/embed/tbBN3FEzyKg?autoplay=1&rel=0";
+    };
+    const stopVideo = () => {
+      video.src = "";
+    };
+
+    modal.addEventListener("shown.bs.modal", playVideo);
+    modal.addEventListener("hidden.bs.modal", stopVideo);
+    return () => {
+      modal.removeEventListener("shown.bs.modal", playVideo);
+      modal.removeEventListener("hidden.bs.modal", stopVideo);
+    };
+  }, []);
+
   return (
     <section className={styles.section} aria-labelledby="global-title">
       <div className={styles.inner}>
@@ -40,7 +65,9 @@ export default function GlobalPresence() {
           <p className={styles.eyebrow}>Global Presence</p>
           <h2 id="global-title">A Network Across<br /><em>Key Markets</em></h2>
           <p>UCBI operates through a network of partners and representatives across Europe the Middle East and APAC supporting institutional access and development opportunities</p>
-          <Link className={styles.button} href="/contact">Our Global Network <FiArrowRight /></Link>
+          <button className={styles.button} type="button" data-bs-toggle="modal" data-bs-target="#corporate-film-modal">
+            View Corporate Film <FiArrowRight />
+          </button>
         </div>
 
         <div className={styles.map} role="img" aria-label="Dotted world map showing UCBI's global regions">
@@ -51,6 +78,19 @@ export default function GlobalPresence() {
               <span>{region.name}</span>
             </div>
           ))}
+        </div>
+      </div>
+      <div className="modal fade" id="corporate-film-modal" ref={modalRef} tabIndex="-1" aria-labelledby="corporate-film-title" aria-hidden="true">
+        <div className={`modal-dialog modal-dialog-centered modal-xl ${styles.videoDialog}`}>
+          <div className={`modal-content ${styles.videoContent}`}>
+            <div className={styles.videoHeader}>
+              <h2 className={styles.videoTitle} id="corporate-film-title">UCBI Corporate Film</h2>
+              <button type="button" className="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close video" />
+            </div>
+            <div className={styles.videoFrame}>
+              <iframe ref={videoRef} title="UCBI Corporate Film" src="" allow="autoplay; encrypted-media; picture-in-picture; web-share" allowFullScreen />
+            </div>
+          </div>
         </div>
       </div>
     </section>

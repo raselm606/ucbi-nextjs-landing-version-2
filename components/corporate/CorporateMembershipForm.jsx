@@ -1,24 +1,24 @@
 "use client";
 
+import countriesData from "@/lib/mock-data/countriesData";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import Link from "next/link";
-import Select from "react-select";
-import { HiUsers } from "react-icons/hi";
+import { CgNotes } from "react-icons/cg";
 import { FaRegCommentDots, FaRegPaperPlane, FaRegUser } from "react-icons/fa";
 import { FiGlobe } from "react-icons/fi";
+import { HiUsers } from "react-icons/hi";
 import { HiOutlineEnvelope } from "react-icons/hi2";
-import { MdLocalPhone } from "react-icons/md";
-import { CgNotes } from "react-icons/cg";
 import { IoShieldCheckmarkSharp } from "react-icons/io5";
-import countriesData from "@/lib/mock-data/countriesData";
+import { MdLocalPhone } from "react-icons/md";
+import Select from "react-select";
 import styles from "./CorporateMembershipForm.module.css";
 
 const subjects = [
-  { value: "membership application", label: "Membership application" },
-  { value: "request for information", label: "Request for information" },
-  { value: "partnership request", label: "Partnership request" },
-  { value: "Token launch support", label: "Token launch support" },
+  { value: "General Enquiries", label: "General Enquiries" },
+  { value: "Membership Application", label: "Membership Application" },
+  { value: "Strategic Partnership", label: "Strategic Partnership" },
+  { value: "Advisory Services", label: "Advisory Services" },
 ];
 
 const initialForm = { name: "", surname: "", email: "", country: "", phoneCode: "", phone: "", subject: "", comments: "" };
@@ -60,7 +60,16 @@ export default function CorporateMembershipForm() {
     }
   }
 
-  const selectProps = { className: "corporate-select", classNamePrefix: "corporate-select", isSearchable: true, isClearable: true };
+  const selectProps = {
+    className: "corporate-select",
+    classNamePrefix: "corporate-select",
+    isSearchable: true,
+    isClearable: true,
+    styles: {
+      container: (base) => ({ ...base, flex: "1 1 0%", width: "100%", minWidth: 0 }),
+      control: (base) => ({ ...base, width: "100%", cursor: "text" }),
+    },
+  };
 
   if (!mounted) return null;
 
