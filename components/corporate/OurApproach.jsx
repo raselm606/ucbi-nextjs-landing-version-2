@@ -3,7 +3,7 @@ import styles from "./corporate.module.css";
 
 const steps = [
   { number: "01", title: "Institutional Focus", copy: "Long-term value creation in digital assets" },
-  { number: "02", title: "Expertise", copy: "Finance, technology and regulatory knowledge" },
+  { number: "02", title: "Expertise", copy: "Finance technology and regulatory knowledge" },
   { number: "03", title: "Global Perspective", copy: "Opportunities across key markets" },
 ];
 

@@ -60,12 +60,16 @@
   color: #00aeea;
 }
 
-.videoDialog { max-width: 1100px; }
-.videoContent { overflow: hidden; border: 0; border-radius: 12px; background: #071d33; }
-.videoHeader { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 20px; color: #fff; }
-.videoTitle { margin: 0; font-size: 16px; font-weight: 500; }
-.videoFrame { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; }
+.videoDialog { max-width: 940px; }
+.videoContent { overflow: hidden; border: 1px solid rgb(0 174 234 / 28%); border-radius: 16px; background: linear-gradient(145deg, #102b45, #071d33 58%, #06182b); box-shadow: 0 28px 90px rgb(0 0 0 / 55%), 0 0 34px rgb(0 174 234 / 12%); }
+.videoHeader { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 24px 14px; color: #fff; }
+.videoTitle { margin: 0; color: #fff; font-size: 19px; font-weight: 650; letter-spacing: -.02em; }
+.videoSubtitle { margin: 5px 0 0; color: #9db2c6; font-size: 12px; }
+.videoHeader :global(.btn-close) { width: 38px; height: 38px; padding: 12px; border: 1px solid rgb(0 174 234 / 28%); border-radius: 50%; background-color: rgb(0 174 234 / 10%); background-size: 11px; opacity: .9; transition: background-color .2s, transform .2s; }
+.videoHeader :global(.btn-close:hover) { background-color: rgb(0 174 234 / 24%); transform: rotate(90deg); }
+.videoFrame { position: relative; width: calc(100% - 32px); margin: 0 16px 16px; aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid rgb(0 174 234 / 16%); border-radius: 9px; background: #000; }
 .videoFrame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+:global(body:has(#corporate-film-modal.show) .modal-backdrop.show) { opacity: .94; backdrop-filter: blur(8px); }
 
 .map {
   position: relative;
@@ -143,5 +147,8 @@
   .marker i { width: 8px; height: 8px; flex-basis: 8px; }
   .marker span { padding: 4px 7px; font-size: 9px; }
   .videoDialog { margin: 12px; }
-  .videoHeader { padding: 13px 15px; }
+  .videoHeader { padding: 16px 16px 12px; }
+  .videoTitle { font-size: 16px; }
+  .videoSubtitle { font-size: 11px; }
+  .videoFrame { width: calc(100% - 20px); margin: 0 10px 10px; }
 }

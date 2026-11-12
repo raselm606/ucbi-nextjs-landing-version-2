@@ -7,6 +7,8 @@ import { A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import styles from "./CorporateBlogs.module.css";
 
+const withoutDotsAndCommas = (text = "") => text.replace(/[.,]/g, " ").replace(/\s+/g, " ").trim();
+
 export default function CorporateBlogs({ articles = [] }) {
   const swiperRef = useRef(null);
 
@@ -21,7 +23,7 @@ export default function CorporateBlogs({ articles = [] }) {
         <div className={styles.intro}>
           <p className={styles.eyebrow}>Latest News</p>
           <h2 id="corporate-news-title">Insights<br />on the <em>Digital<br className={styles.mobileBreak} /> Asset Market</em></h2>
-          <p style={{textAlign:'justify'}} className={styles.description}>Stay informed with our UCBI for  the latest developments in digital assets regulation and institutional adoption sourced from leading global media</p>
+          <p style={{ textAlign: "justify", textAlignLast: "left" }} className={styles.description}>Follow digital asset markets with the latest news regulation updates and insights on institutional adoption</p>
             <a className={styles.allNews} href="https://www.coindesk.com/business" target="_blank" rel="noopener noreferrer">View all news <FiArrowRight aria-hidden="true" /></a>
         </div>
         <div className={styles.news}>
@@ -49,8 +51,8 @@ export default function CorporateBlogs({ articles = [] }) {
                   {article.image ? <img className={styles.image} src={article.image} alt={article.title} /> : <div className={styles.imagePlaceholder} aria-hidden="true" />}
                   <div className={styles.cardBody}>
                     <p className={styles.meta}>{article.category || "News"}<span />{article.published_date}</p>
-                    <h3>{article.title}</h3>
-                    <p className={styles.excerpt}>{article.description}</p>
+                    <h3>{withoutDotsAndCommas(article.title)}</h3>
+                    <p className={styles.excerpt}>{withoutDotsAndCommas(article.description)}</p>
                     <a className={styles.readMore} href={article.url} target="_blank" rel="noopener noreferrer">Read more <FiArrowRight aria-hidden="true" /></a>
                   </div>
                 </article>

@@ -12,7 +12,7 @@ import styles from "./CorporateFooter.module.css";
 const groups = [
   { title: "Company", links: [
     { label: "Blockchain", href: "https://etherscan.io/token/0xb42b35deca033a23401a1a89007a39343a510d0a", target: "_blank" },
-    { label: "Submit a Request", href: "#corporate-membership-modal", modal: true },
+    { label: "Submit Inquiry", href: "#corporate-membership-modal", modal: true },
     { label: "Advisory Services", href: "#corporate-membership-modal", modal: true },
     { label: "UCBI Become a Member", href: "https://advisory.ucbibanking.io", target: "_blank" },
   ] },

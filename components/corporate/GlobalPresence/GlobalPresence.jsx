@@ -44,7 +44,7 @@ export default function   GlobalPresence() {
     if (!modal || !video) return;
 
     const playVideo = () => {
-      video.src = "https://www.youtube-nocookie.com/embed/tbBN3FEzyKg?autoplay=1&rel=0";
+      video.src = "https://www.youtube-nocookie.com/embed/tbBN3FEzyKg?autoplay=1&controls=1&rel=0&iv_load_policy=3&playsinline=1&loop=1&playlist=tbBN3FEzyKg";
     };
     const stopVideo = () => {
       video.src = "";
@@ -84,7 +84,10 @@ export default function   GlobalPresence() {
         <div className={`modal-dialog modal-dialog-centered modal-xl ${styles.videoDialog}`}>
           <div className={`modal-content ${styles.videoContent}`}>
             <div className={styles.videoHeader}>
-              <h2 className={styles.videoTitle} id="corporate-film-title">UCBI Corporate Film</h2>
+              <div>
+                <h2 className={styles.videoTitle} id="corporate-film-title">UCBI Corporate Film</h2>
+                <p className={styles.videoSubtitle}>UCBI Group Technologies · Corporate Overview</p>
+              </div>
               <button type="button" className="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close video" />
             </div>
             <div className={styles.videoFrame}>

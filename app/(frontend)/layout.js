@@ -28,17 +28,17 @@ const ogImage = "/bg_fav.jpg";
   // base URL 
   metadataBase: new URL(siteUrl),
   title: {
-    default: "UCBI Banking - Blockchain Private Equity Treasury Holding",
+    default: "UCBI Banking - Blockchain Private Equity & Digital Asset Treasury",
     template: "%s | UCBI",
   },
   description:
-    "Exclusive private investment platform combining private equity crypto-finance and strategic treasury management to support long-term technological value creation within the UCBI Holding structure reserved for selected partners",
+    "UCBI Group Technologies combines private equity blockchain financial infrastructure and strategic Ethereum treasury management to support long term value creation alongside selected partners",
   keywords: ["investissement blockchain", "investissement blockchain France", "conseil blockchain", "consultant blockchain", "blockchain consulting", "stratégie blockchain", "investissement digital", "actifs numériques", "investissement privé", "private equity", "capital-investissement", "finance digitale", "innovation financière", "stratégie d’investissement", "gestion d’actifs numériques", "investissement institutionnel", "transformation financière", "technologie blockchain", "solutions blockchain", "infrastructure financière", "stratégie financière", "conseil en investissement", "finance numérique", "actifs digitaux", "Web3 finance", "blockchain finance", "investissement Web3", "conseil Web3", "stratégie d’actifs numériques"],
   
   openGraph: {
-    title: "UCBI Banking - Blockchain Private Equity Treasury Holding",
+    title: "UCBI Banking - Blockchain Private Equity & Digital Asset Treasury",
     description:
-      "Exclusive private investment platform combining private equity crypto-finance and strategic treasury management to support long-term technological value creation within the UCBI Holding structure reserved for selected partners",
+      "UCBI Group Technologies combines private equity blockchain financial infrastructure and strategic Ethereum treasury management to support long term value creation alongside selected partners",
     url: siteUrl,
     siteName: "ucbibanking.io",
     type: "website",
@@ -55,9 +55,9 @@ const ogImage = "/bg_fav.jpg";
   
   twitter: {
     card: "summary",
-    title: "UCBI Banking - Blockchain Private Equity Treasury Holding",
+    title: "UCBI Banking - Blockchain Private Equity & Digital Asset Treasury",
     description:
-      "Exclusive private investment platform combining private equity crypto-finance and strategic treasury management to support long-term technological value creation within the UCBI Holding structure reserved for selected partners",
+      "UCBI Group Technologies combines private equity blockchain financial infrastructure and strategic Ethereum treasury management to support long term value creation alongside selected partners",
     images: ["/bg_fav.jpg"],
     creator: "@ucbi_banking",
   },

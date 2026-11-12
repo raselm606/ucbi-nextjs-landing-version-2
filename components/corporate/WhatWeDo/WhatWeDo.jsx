@@ -4,7 +4,7 @@ import { FiArrowRight, FiBox, FiGlobe, FiTrendingUp } from "react-icons/fi";
 import styles from "./WhatWeDo.module.css";
 
 const services = [
-  { image: "/images/corporate/ucbi_blue_bold.jfif", title: "Holding Token", copy: "Token Holding Participation in Strategic Ethereum Treasury Accumulation" },
+  { image: "/images/corporate/fo/fo6.png", title: "Holding Token", copy: "Token Holding Participation in Strategic Ethereum Treasury Accumulation" },
   { Icon: FiTrendingUp, title: "Investment", copy: "Private equity ventures and strategic opportunities Focused on long-term value creation" },
   { Icon: FiBox, title: "Advisory", copy: "Institutional advisory on digital assets and blockchain technologies" },
   { Icon: FiGlobe, title: "Markets", copy: "Access to global markets through a network of regulated partners" },

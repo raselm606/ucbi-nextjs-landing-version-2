@@ -1,6 +1,4 @@
 import BootstrapProvider from '@/components/layouts/BootstrapProvider';
- 
-
 
 import tasaOrbiter from '@/lib/fonts/tasaOrbiter';
 import { Inter } from "next/font/google";
@@ -29,20 +27,20 @@ const ogImage = "/logo_ucbi.jpg";
   // base URL 
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Submit a Request - Private Blockchain Data Banking",
+    default: "UCBI Banking - Institutional Inquiries and Partnerships",
     template: "%s | UCBI",
   },
   description:
-    "contact us to submit a request for our private blockchain data banking services, including inquiries about investment opportunities, treasury management solutions, and partnership collaborations. Our team is here to assist you with any questions or specific requests related to our exclusive private equity crypto-finance offerings within the UCBI Holding structure.",
+    "Contact UCBI Group Technologies for inquiries about private equity digital asset treasury management blockchain advisory services and strategic partnerships",
   keywords: ["ucbi", "ucbi banking", "private equity", "crypto finance", "crypto treasury", 
     "microstrategy", "blackrock", "treasury management", "private investors", "fidelity", 
     "coinshare", "ethereum", "bitmine", "staking", "coinmarketcap", "yahoo finance", 
     "coinbase", "jp morgan"],
   
   openGraph: {
-    title: "Submit a Request - Private Blockchain Data Banking",
+    title: "UCBI Banking - Institutional Inquiries and Partnerships",
     description:
-      "contact us to submit a request for our private blockchain data banking services, including inquiries about investment opportunities, treasury management solutions, and partnership collaborations. Our team is here to assist you with any questions or specific requests related to our exclusive private equity crypto-finance offerings within the UCBI Holding structure.",
+      "Contact UCBI Group Technologies for inquiries about private equity digital asset treasury management blockchain advisory services and strategic partnerships",
     url: siteUrl,
     siteName: "ucbibanking.io",
     type: "website",
@@ -59,9 +57,9 @@ const ogImage = "/logo_ucbi.jpg";
   
   twitter: {
     card: "summary",
-    title: "Submit a Request - Private Blockchain Data Banking ",
+    title: "UCBI Banking - Institutional Inquiries and Partnerships",
     description:
-      "contact us to submit a request for our private blockchain data banking services, including inquiries about investment opportunities, treasury management solutions, and partnership collaborations. Our team is here to assist you with any questions or specific requests related to our exclusive private equity crypto-finance offerings within the UCBI Holding structure.",
+      "Contact UCBI Group Technologies for inquiries about private equity digital asset treasury management blockchain advisory services and strategic partnerships",
     images: ["/logo_ucbi.jpg"],
     creator: "@ucbi_banking",
   },

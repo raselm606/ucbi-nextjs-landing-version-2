@@ -4,8 +4,8 @@ import styles from "./AboutFramework.module.css";
 
 const pillars = [
   { Icon: FiLayers, title: "Private Holding", copy: "A long-term investment holding integrating private equity digital assets and strategic capital allocation Focused on lasting institutional value" },
-  { Icon: FaEthereum, title: "Ethereum Treasury", copy: "An institutional treasury strategy focused on Ethereum accumulation and long-term capital appreciation" },
-  { Icon: FiShield, title: "Institutional Governance", copy: "A disciplined governance framework built on transparency financial integrity and sustainable value creation" },
+  { Icon: FaEthereum, title: "Ethereum Treasury", copy: " Institutional Ethereum treasury strategy focused on  accumulation and long term capital appreciation for institutional investors" },
+  { Icon: FiShield, title: "Institutional Governance", copy: "A disciplined governance framework built on transparency financial integrity and sustainable value creation " },
 ];
 
 export default function AboutFramework() {
@@ -25,7 +25,7 @@ export default function AboutFramework() {
           <Icon className={styles.icon} aria-hidden="true" />
           <div>
             <h2>{title}</h2>
-          <p style={{textAlign:'justify'}}>{copy}</p>
+          <p>{copy}</p>
           </div>
         </article>)}
       </div>

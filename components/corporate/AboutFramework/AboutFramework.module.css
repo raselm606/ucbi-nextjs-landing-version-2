@@ -14,5 +14,5 @@
 .pillar:first-child { padding-left:0; }.pillar:last-child { border:0; padding-right:0; }
 .icon { width:34px; height:34px; color:#10243d; stroke-width:1.35; }
 .pillar h2 { margin:0 0 7px; color:#10243d; font-size:15px; font-weight:600; }
-.pillar p { max-width:290px; margin:0; color:#738093; font-size:12px; line-height:1.5; }
+.pillar p { max-width:290px; margin:0; color:#738093; font-size:12px; line-height:1.5; text-align:justify; }
 @media(max-width:760px){.intro{grid-template-columns:1fr}.copy{justify-self:stretch;padding:36px 22px}.imagePlaceholder{min-height:240px}.pillars{grid-template-columns:1fr;padding:8px 22px}.pillar,.pillar:first-child,.pillar:last-child{padding:18px 0;border-right:0;border-bottom:1px solid #e3e8ee}.pillar:last-child{border-bottom:0}}
