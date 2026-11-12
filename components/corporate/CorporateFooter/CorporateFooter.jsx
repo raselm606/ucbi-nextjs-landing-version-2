@@ -65,9 +65,9 @@ export default function CorporateFooter() {
         <Link href="/" className={styles.logo} aria-label="UCBI Banking home"><Image src={Logo} width={120} height={40} alt="UCBI Banking" /></Link>
         <p style={{textAlign:'justify'}}>Our UCBI blockchain private equity holding providing institutional-grade infrastructure market access and the advisory in digital assets</p>
         <div className={styles.socials}>
-          <a href="https://www.linkedin.com/company/ucbi-banking/" aria-label="LinkedIn"><FaLinkedinIn /></a>
-          <a href="https://x.com/" aria-label="X"><FaXTwitter /></a>
-          <a href="https://youtube.com/" aria-label="YouTube"><FaYoutube /></a> 
+          <a target="_blank" href="https://www.linkedin.com/company/ucbi-banking/" aria-label="LinkedIn"><FaLinkedinIn /></a>
+          <a target="_blank" href="https://x.com/UCBI_Holding" aria-label="X"><FaXTwitter /></a>
+          <a target="_blank" href="https://www.youtube.com/@UCBI_Banking" aria-label="YouTube"><FaYoutube /></a> 
         </div>
       </div>
       {groups.map((group) => <nav className={styles.linkGroup} key={group.title} aria-label={group.title}>

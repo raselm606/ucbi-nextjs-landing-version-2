@@ -1,12 +1,11 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import ucbiIcon from "@/public/images/ucbi.png";
 import Image from "next/image";
-import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 import { SiBitcoin, SiDogecoin, SiEthereum, SiRipple } from "react-icons/si";
 import styles from "./CryptoPrice.module.css";
-import ucbiIcon from "@/public/images/ucbi.png";
 
 const assets = [
   { id: "ucbi", name: "UCBI Holding", symbol: "UCBI", image: ucbiIcon },
@@ -178,7 +177,7 @@ export default function CryptoPrice() {
     <div className={styles.inner}>
       <div className={styles.headingRow}>
         <div><p className={styles.eyebrow}>Crypto Market Trends</p><h2 id="crypto-price-title">Real-Time <span>Market Insights</span></h2></div>
-        <Link className={styles.allMarkets} href="/markets">View all markets <FiArrowRight aria-hidden="true" /></Link>
+        
       </div>
       <div className={styles.carousel}>
         <button className={`${styles.arrow} ${styles.previous}`} type="button" aria-label="Previous market assets" onClick={() => scrollPage(-1)}><FiArrowLeft /></button>
