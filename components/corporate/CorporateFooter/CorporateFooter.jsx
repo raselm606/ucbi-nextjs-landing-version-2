@@ -14,7 +14,7 @@ const groups = [
     { label: "Blockchain", href: "https://etherscan.io/token/0xb42b35deca033a23401a1a89007a39343a510d0a", target: "_blank" },
     { label: "Submit Inquiry", href: "#corporate-membership-modal", modal: true },
     { label: "Advisory Services", href: "#corporate-membership-modal", modal: true },
-    { label: "UCBI Become a Member", href: "https://advisory.ucbibanking.io", target: "_blank" },
+    { label: "Become a Member", href: "https://advisory.ucbibanking.io", target: "_blank" },
   ] },
   { title: "Resources", offset: 1, links: [
     { label: "Yahoo Finance", href: "https://finance.yahoo.com/quote/UCBI-USD/", target: "_blank" },

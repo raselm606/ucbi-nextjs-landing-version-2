@@ -1,4 +1,6 @@
 .modal :global(.modal-dialog){max-width:860px}
+:global(body.modal-open){overflow-y:scroll!important;padding-right:0!important}
+:global(body.modal-open .fixed-top),:global(body.modal-open .sticky-top),:global(body.modal-open .is-fixed),:global(body.modal-open .sticky-stacked){padding-right:0!important}
 .modalContent{overflow:hidden;border:0!important;border-radius:16px!important;background:transparent!important;box-shadow:0 30px 90px rgba(1,15,29,.42)}
 .card{position:relative;width:100%;max-height:calc(100vh - 40px);overflow:auto;border:1px solid rgba(255,255,255,.72);border-radius:16px;background:#fbfdff;color:#10243d}
 .close{position:absolute;top:22px;right:24px;z-index:3;width:34px;height:34px;padding:10px;border:1px solid rgba(255,255,255,.3);border-radius:50%;background-color:rgba(255,255,255,.12);background-size:11px;filter:invert(1);opacity:.88;transition:background-color .2s,transform .2s}

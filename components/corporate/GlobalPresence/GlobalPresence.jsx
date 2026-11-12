@@ -80,15 +80,11 @@ export default function   GlobalPresence() {
           ))}
         </div>
       </div>
-      <div className="modal fade" id="corporate-film-modal" ref={modalRef} tabIndex="-1" aria-labelledby="corporate-film-title" aria-hidden="true">
+      <div className="modal fade" id="corporate-film-modal" ref={modalRef} tabIndex="-1" aria-label="Corporate film video" aria-hidden="true">
         <div className={`modal-dialog modal-dialog-centered modal-xl ${styles.videoDialog}`}>
           <div className={`modal-content ${styles.videoContent}`}>
             <div className={styles.videoHeader}>
-              <div>
-                <h2 className={styles.videoTitle} id="corporate-film-title">UCBI Corporate Film</h2>
-                <p className={styles.videoSubtitle}>UCBI Group Technologies · Corporate Overview</p>
-              </div>
-              <button type="button" className="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close video" />
+              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close video" />
             </div>
             <div className={styles.videoFrame}>
               <iframe ref={videoRef} title="UCBI Corporate Film" src="" allow="autoplay; encrypted-media; picture-in-picture; web-share" allowFullScreen />
