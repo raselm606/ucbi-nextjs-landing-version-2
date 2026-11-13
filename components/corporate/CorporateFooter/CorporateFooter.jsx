@@ -6,6 +6,8 @@ import { useState } from "react";
 import { FaLinkedinIn, FaXTwitter, FaYoutube } from "react-icons/fa6";
 import { FiArrowRight } from "react-icons/fi";
 import Logo from "../../../public/images/corporate/logo.png";
+import fr from '../../../public/images/france.png';
+import uk from '../../../public/images/uk.png';
 import navStyles from "../corporate.module.css";
 import styles from "./CorporateFooter.module.css";
 
@@ -63,7 +65,7 @@ export default function CorporateFooter() {
     <div className={styles.main}>
       <div className={styles.brand}>
         <Link href="/" className={styles.logo} aria-label="UCBI Banking home"><Image src={Logo} width={120} height={40} alt="UCBI Banking" /></Link>
-        <p style={{textAlign:'justify'}}>Our UCBI blockchain private equity holding providing institutional-grade infrastructure market access and the advisory in digital assets</p>
+        <p style={{textAlign:'justify', textJustify:'inter-character'}}>Our UCBI blockchain private equity holding providing institutional-grade infrastructure market access and the advisory in digital assets</p>
         <div className={styles.socials}>
           <a target="_blank" href="https://www.linkedin.com/company/ucbi-banking/" aria-label="LinkedIn"><FaLinkedinIn /></a>
           <a target="_blank" href="https://x.com/UCBI_Holding" aria-label="X"><FaXTwitter /></a>
@@ -89,6 +91,12 @@ export default function CorporateFooter() {
         </form>
         {notice ? <p className={styles.notice} role="status">{notice}</p> : <p className={styles.privacy}>
           &nbsp; </p>}
+
+          <p className="mb-1"><Link href="tel:+442034456388"  >+44 203 445 63 88 
+                            <Image style={{width:"12px", height: "13px", marginTop:'-3px', marginLeft:'6px'}} src={uk} alt="uk"/></Link></p>
+
+                            <p  className="mb-1"><Link  href="tel:+33184160139"  >+33 184 160 139 
+                  <Image style={{width: "12px", height: "13px", marginTop:'-3px', marginLeft: "6px"}} src={fr} alt="france"/> </Link></p>
       </div>
     </div>
     <div className={styles.bottom}>

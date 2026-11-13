@@ -1467,8 +1467,8 @@ textarea.form-control {
 }
 .btnModal {
     color: #fff;
-    background: linear-gradient(135deg, #00c7ff, #0078ff);
-    border: 1px solid #00c7ff80;
+    background: var(--primary_color);
+    border: 1px solid var(--primary_color);
     font-size: 11px;
     /* box-shadow: 0 12px 32px #008cff40; */
 }

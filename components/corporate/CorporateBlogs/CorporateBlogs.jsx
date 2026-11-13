@@ -23,7 +23,7 @@ export default function CorporateBlogs({ articles = [] }) {
         <div className={styles.intro}>
           <p className={styles.eyebrow}>Latest News</p>
           <h2 id="corporate-news-title">Insights<br />on the <em>Digital<br className={styles.mobileBreak} /> Asset Market</em></h2>
-          <p style={{ textAlign: "justify", textAlignLast: "left" }} className={styles.description}>Follow digital asset markets with the latest news regulation updates and insights on institutional adoption</p>
+          <p className={styles.description}>Stay informed on digital asset markets with timely reports on regulatory change and institutional investment developments worldwide</p>
             <a className={styles.allNews} href="https://www.coindesk.com/business" target="_blank" rel="noopener noreferrer">View all news <FiArrowRight aria-hidden="true" /></a>
         </div>
         <div className={styles.news}>

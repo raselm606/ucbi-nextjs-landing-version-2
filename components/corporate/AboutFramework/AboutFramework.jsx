@@ -5,7 +5,7 @@ import styles from "./AboutFramework.module.css";
 const pillars = [
   { Icon: FiLayers, title: "Private Holding", copy: "A long-term investment holding integrating private equity digital assets and strategic capital allocation Focused on lasting institutional value" },
   { Icon: FaEthereum, title: "Ethereum Treasury", copy: " Institutional Ethereum treasury strategy focused on  accumulation and long term capital appreciation for institutional investors" },
-  { Icon: FiShield, title: "Institutional Governance", copy: "A disciplined governance framework built on transparency financial integrity and sustainable value creation " },
+  { Icon: FiShield, title: "Institutional Governance", copy: "Clear governance rules protect assets and guide sound decisions while building lasting institutional value for stakeholders" },
 ];
 
 export default function AboutFramework() {
