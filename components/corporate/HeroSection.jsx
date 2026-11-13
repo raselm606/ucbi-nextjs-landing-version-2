@@ -12,7 +12,7 @@ export default function HeroSection() {
           <p className={styles.heroCopy}>UCBI is a blockchain private equity holding providing institutional-grade infrastructure <br /> market access and advisory in digital assets</p>
           <div className={styles.heroActions}>
             <button className={styles.primaryButton} type="button" data-bs-toggle="modal" data-bs-target="#corporate-membership-modal">Submit Inquiry <span aria-hidden="true">→</span></button>
-            <Link className={styles.secondaryButton} href="#">Acquire UCBI</Link>
+            <Link className={styles.secondaryButton} href="#"> Token Markets</Link>
           </div>
         </div>
         <CorporateMembershipForm />

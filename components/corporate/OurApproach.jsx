@@ -2,9 +2,9 @@ import Link from "next/link";
 import styles from "./corporate.module.css";
 
 const steps = [
-  { number: "01", title: "Institutional Focus", copy: "Long-term value creation in digital assets" },
-  { number: "02", title: "Expertise", copy: "Finance technology and regulatory knowledge" },
-  { number: "03", title: "Global Perspective", copy: "Opportunities across key markets" },
+  { number: "01", title: "Private Equity", copy: "Private subscription for company shares" },
+  { number: "02", title: "Ethereum Treasury", copy: "Long-term corporate Ethereum accumulation" },
+  { number: "03", title: "Blockchain Infrastructure", copy: "Multichain infrastructure for token liquidity" },
 ];
 
 export default function OurApproach() {
