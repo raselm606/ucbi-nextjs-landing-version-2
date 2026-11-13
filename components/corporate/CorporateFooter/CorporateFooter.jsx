@@ -92,10 +92,10 @@ export default function CorporateFooter() {
         {notice ? <p className={styles.notice} role="status">{notice}</p> : <p className={styles.privacy}>
           &nbsp; </p>}
 
-          <p className="mb-1"><Link href="tel:+442034456388"  >+44 203 445 63 88 
+          <p className="mb-1"><Link href="tel:+442034456388"  >+44 20 34 45 63 88 
                             <Image style={{width:"12px", height: "13px", marginTop:'-3px', marginLeft:'6px'}} src={uk} alt="uk"/></Link></p>
 
-                            <p  className="mb-1"><Link  href="tel:+33184160139"  >+33 184 160 139 
+                            <p  className="mb-1"><Link  href="tel:+33184160139"  >+33 18 41 60 13 9 
                   <Image style={{width: "12px", height: "13px", marginTop:'-3px', marginLeft: "6px"}} src={fr} alt="france"/> </Link></p>
       </div>
     </div>
