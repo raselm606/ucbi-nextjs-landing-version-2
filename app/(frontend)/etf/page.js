@@ -13,7 +13,7 @@ import SpotEtf from "@/components/sections/SpotEtf";
 export const metadata = {
   title: "UCBI Banking - Ethereum ETF Market Data & Market Trends",
   description:
-    "UCBI Banking tracks Ethereum ETFs with market data inflows and outflows trading volumes and trends to monitor the evolution of Ethereum investments",
+    "An institutional overview of the Ethereum ETF market featuring fund level data and performance metrics to support comparative analysis and ongoing monitoring of market trends",
   keywords: [
     "UCBI Banking",
     "Ethereum ETFs",

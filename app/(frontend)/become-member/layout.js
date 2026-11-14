@@ -27,20 +27,20 @@ const ogImage = "/logo_ucbi.jpg";
   // base URL 
   metadataBase: new URL(siteUrl),
   title: {
-    default: "UCBI Banking - Institutional Inquiries and Partnerships",
+    default: "Submit Inquiry - Blockchain Private Equity & Digital Asset Treasury",
     template: "%s | UCBI",
   },
   description:
-    "Contact UCBI Group Technologies for inquiries about private equity digital asset treasury management blockchain advisory services and strategic partnerships",
+    "Submit an enquiry to UCBI Group Technologies regarding private equity participation strategic partnerships blockchain advisory services or digital asset treasury management",
   keywords: ["ucbi", "ucbi banking", "private equity", "crypto finance", "crypto treasury", 
     "microstrategy", "blackrock", "treasury management", "private investors", "fidelity", 
     "coinshare", "ethereum", "bitmine", "staking", "coinmarketcap", "yahoo finance", 
     "coinbase", "jp morgan"],
   
   openGraph: {
-    title: "UCBI Banking - Institutional Inquiries and Partnerships",
+    title: "Submit Inquiry - Blockchain Private Equity & Digital Asset Treasury",
     description:
-      "Contact UCBI Group Technologies for inquiries about private equity digital asset treasury management blockchain advisory services and strategic partnerships",
+      "Submit an enquiry to UCBI Group Technologies regarding private equity participation strategic partnerships blockchain advisory services or digital asset treasury management",
     url: siteUrl,
     siteName: "ucbibanking.io",
     type: "website",
@@ -57,9 +57,9 @@ const ogImage = "/logo_ucbi.jpg";
   
   twitter: {
     card: "summary",
-    title: "UCBI Banking - Institutional Inquiries and Partnerships",
+    title: "Submit Inquiry - Blockchain Private Equity & Digital Asset Treasury",
     description:
-      "Contact UCBI Group Technologies for inquiries about private equity digital asset treasury management blockchain advisory services and strategic partnerships",
+      "Submit an enquiry to UCBI Group Technologies regarding private equity participation strategic partnerships blockchain advisory services or digital asset treasury management",
     images: ["/logo_ucbi.jpg"],
     creator: "@ucbi_banking",
   },
