@@ -13,15 +13,15 @@ import styles from "./CorporateFooter.module.css";
 
 const groups = [
   { title: "Company", links: [
-    { label: "Blockchain", href: "https://etherscan.io/token/0xb42b35deca033a23401a1a89007a39343a510d0a", target: "_blank" },
+    { label: "Blockchain", href: "https://bscscan.com/token/0xc888Dca9448D04F045Df801F5369348cDF67fb18#transactions", target: "_blank" },
     { label: "Submit Inquiry", href: "#corporate-membership-modal", modal: true },
-    { label: "Advisory Services", href: "#corporate-membership-modal", modal: true },
-    { label: "Become a Member", href: "https://advisory.ucbibanking.io", target: "_blank" },
+    { label: "Advisory Services", href: "https://advisory.ucbibanking.io", target: "_blank" },
+    { label: "Become a Member", href: "#corporate-membership-modal", modal: true  },
   ] },
   { title: "Resources", offset: 1, links: [
     { label: "Yahoo Finance", href: "https://finance.yahoo.com/quote/UCBI-USD/", target: "_blank" },
     { label: "Coinmarketcap", href: "https://coinmarketcap.com/currencies/ucbi-banking/", target: "_blank" },
-    { label: "Blockchain Explorer", href: "https://etherscan.io/token/0xb42b35deca033a23401a1a89007a39343a510d0a", target: "_blank" },
+    { label: "Blockchain Explorer", href: "https://bscscan.com/token/0xc888Dca9448D04F045Df801F5369348cDF67fb18#transactions", target: "_blank" },
   ] },
   { title: "Contact", offset: 2, links: [
     { label: "Contact@ucbibanking.io", href: "mailto:contact@ucbibanking.io" },
@@ -32,7 +32,7 @@ const groups = [
 const legalLinks = [
   ["Terms & Conditions", "https://doc.ucbibanking.io/ucbi_terms_condition"],
   ["Privacy Policy", "https://doc.ucbibanking.io/ucbi_terms_condition"],
-  ["Press Kit", "https://doc.ucbibanking.io/#"],
+  ["Press Kit", "https://doc.ucbibanking.io/ucbi_terms_condition"],
 ];
 
 export default function CorporateFooter() {
