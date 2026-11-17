@@ -2,7 +2,7 @@ import Link from "next/link";
 import styles from "./corporate.module.css";
 
 const steps = [
-  { number: "01", title: "Private Equity", copy: "Private subscription for company shares" },
+  { number: "01", title: "Private Equity", copy: "Private Subscription for Ordinary Company Shares" },
   { number: "02", title: "Ethereum Treasury", copy: "Long-term corporate Ethereum accumulation" },
   { number: "03", title: "Blockchain Infrastructure", copy: "Multichain infrastructure for token liquidity" },
 ];

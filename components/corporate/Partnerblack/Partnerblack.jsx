@@ -15,6 +15,7 @@ const partners = [
   { name: "BSCSCAN", image: "/images/corporate/partners_black/bsc.png", href: "https://bscscan.com/token/0xc888Dca9448D04F045Df801F5369348cDF67fb18" },
   { name: "BLOCKSPOT", image: "/images/corporate/partners_black/blockspot.png", href: "https://blockspot.io/coin/ucbi-holding-ucbi/" },
   { name: "CYBERSCOPE", image: "/images/corporate/partners_black/cyberscope.png", href: "https://www.cyberscope.io/audits/ucbi" },
+  { name: "OKX", image: "/images/corporate/partners_black/okx.png", href: "https://web3.okx.com/fr/token/bsc/0xc888dca9448d04f045df801f5369348cdf67fb18" },
 ];
 
 const Partnerblack = () => (
