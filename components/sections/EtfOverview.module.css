@@ -587,3 +587,6 @@
   .metric_pill { min-height: 66px; padding: 11px 13px; }
   .tagline_box { display: block; }
 }
+
+/* Keep ETF section labels quiet and text-only. */
+.sub_title::after { display: none; }

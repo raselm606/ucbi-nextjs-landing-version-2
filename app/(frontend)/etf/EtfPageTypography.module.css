@@ -1,0 +1,8 @@
+.etfPage :global(section:not([role="dialog"]) h1),
+.etfPage :global(section:not([role="dialog"]) h2),
+.etfPage :global(.scaleable_content h2) {
+  font-family: Arial, sans-serif !important;
+  font-size: 34px !important;
+  font-weight: 500 !important;
+  line-height: 1.2;
+}

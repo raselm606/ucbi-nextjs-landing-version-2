@@ -1,0 +1,118 @@
+.pulse {
+  position: relative;
+  overflow: hidden;
+  color: #f5f9ff;
+  background:
+    radial-gradient(ellipse at 78% 0%, rgba(20, 167, 201, .13), transparent 38%),
+    linear-gradient(115deg, #071d33 0%, #092641 55%, #071d33 100%);
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.3fr);
+  align-items: center;
+  gap: clamp(40px, 7vw, 110px);
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 48px 88px;
+}
+
+.eyebrow {
+  margin: 0 0 13px;
+  color: #83a2bc;
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: .28em;
+}
+
+.intro h2 {
+  max-width: 580px;
+  margin: 0 0 12px;
+  color: #f5f9ff;
+  font-family: Arial, sans-serif;
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: -.8px;
+}
+
+.intro h2 span { color: #16b5d5; }
+
+.copy {
+  max-width: 570px;
+  margin: 0;
+  color: #bdcddd;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.item {
+  position: relative;
+  min-height: 112px;
+  padding: 0 20px 16px;
+  border-left: 1px solid rgba(191, 218, 238, .2);
+}
+
+.index {
+  display: block;
+  margin-bottom: 6px;
+  color: #93aac0;
+  font-size: 10px;
+  letter-spacing: .08em;
+}
+
+.value {
+  display: block;
+  margin-bottom: 7px;
+  color: #fff;
+  font-size: clamp(21px, 2vw, 29px);
+  font-weight: 600;
+  letter-spacing: -.6px;
+  white-space: nowrap;
+}
+
+.item h3 {
+  margin: 0 0 5px;
+  color: #eaf2fa;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.item p {
+  margin: 0;
+  color: #9db2c6;
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.accent {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  width: 24px;
+  height: 2px;
+  background: #16b5d5;
+}
+
+@media (max-width: 1000px) {
+  .inner { grid-template-columns: 1fr; gap: 28px; padding: 42px 28px; }
+}
+
+@media (max-width: 575px) {
+  .inner { gap: 24px; padding: 34px 20px; }
+  .intro h2 { font-size: 34px; }
+  .item { min-height: 110px; padding-right: 10px; padding-left: 12px; }
+  .value { font-size: 18px; }
+  .item h3 { font-size: 10px; }
+  .item p { font-size: 8px; }
+  .accent { left: 12px; }
+}

@@ -20,8 +20,11 @@ export async function GET() {
     ]);
 
     if (!response.ok) {
+      const error = response.status === 429
+        ? "CoinGecko rate limit reached (429). Configure COINGECKO_API_KEY or retry after the limit resets."
+        : `Exchange market data is temporarily unavailable (${response.status}).`;
       return Response.json(
-        { error: `Exchange market data is temporarily unavailable (${response.status}).` },
+        { error },
         { status: 502 },
       );
     }

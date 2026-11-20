@@ -367,3 +367,6 @@
   .stat_card { min-height: 104px; padding: 16px 18px; }
   .stat_value { font-size: 16px; }
 }
+
+/* Use the clean, text-only eyebrow style on the ETF page. */
+.sub_title::before, .sub_title::after { display: none; }

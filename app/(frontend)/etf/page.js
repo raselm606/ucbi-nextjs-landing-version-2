@@ -1,14 +1,20 @@
-import Footer from "@/components/layouts/Footer";
-import Header_b from "@/components/layouts/Header_b";
-import EtfHeroSection from "@/components/sections/b/EtfHeroSection";
+import EtfCorporateNavbar from "@/components/corporate_etf/EtfCorporateNavbar";
+import EtfHeroSection from "@/components/corporate_etf/EtfHeroSection";
+import EtfPartnersCP from "@/components/corporate_etf/EtfPartnersCP";
+import EtfOurApproach from "@/components/corporate_etf/EtfOurApproach";
 import CryptoEtfDataProvider from "@/components/sections/CryptoEtfDataProvider";
-import EtfFlow from "@/components/sections/EtfFlow";
-import EtfOverview from "@/components/sections/EtfOverview";
+import EtfFlow_etf from "@/components/corporate_etf/EtfFlow_etf";
+import EtfMarketSnapshot_etf from "@/components/corporate_etf/EtfMarketSnapshot_etf";
 import EtfSectionChooser from "@/components/sections/EtfSectionChooser/EtfSectionChooser";
-import ExchangeOverview from "@/components/sections/ExchangeOverview/ExchangeOverview";
-import KrakenEthChartExchange from "@/components/sections/KrakenEthChartExchange/KrakenEthChartExchange";
-import Scaleable from "@/components/sections/Scaleable";
-import SpotEtf from "@/components/sections/SpotEtf";
+import EtfExchangeOverview from "@/components/corporate_etf/EtfExchangeOverview/EtfExchangeOverview";
+import KrakenEthChartExchange_etf from "@/components/corporate_etf/KrakenEthChartExchange_etf";
+import EtfMarketPulse from "@/components/corporate_etf/EtfMarketPulse";
+import SpotEtf_etf from "@/components/corporate_etf/SpotEtf_etf";
+import EtfCommitment from "@/components/corporate_etf/EtfCommitment/EtfCommitment";
+import EtfCryptoPrice from "@/components/corporate_etf/EtfCryptoPrice/EtfCryptoPrice";
+import EtfCorporateBlogsFeed from "@/components/corporate_etf/EtfCorporateBlogs/EtfCorporateBlogsFeed";
+import EtfCorporateFooter from "@/components/corporate_etf/EtfCorporateFooter/EtfCorporateFooter";
+import typography from "./EtfPageTypography.module.css";
 
 export const metadata = {
   title: "UCBI Banking - Ethereum ETF Market Data & Market Trends",
@@ -35,18 +41,25 @@ export const metadata = {
 const EtfPage = () => {
   return (
     <> 
-      <Header_b /> 
+      <EtfCorporateNavbar />
+      <div className={typography.etfPage}>
       <EtfHeroSection />  
+      <EtfPartnersCP />
+      <EtfOurApproach />
       <EtfSectionChooser />
       <CryptoEtfDataProvider>
-        <KrakenEthChartExchange />
-        <EtfFlow />
-        <SpotEtf />
-        <EtfOverview />
-        <ExchangeOverview />
+        <KrakenEthChartExchange_etf />
+        <EtfMarketPulse />
+        <EtfFlow_etf />
+        <SpotEtf_etf />
+        <EtfMarketSnapshot_etf />
+        <EtfExchangeOverview />
       </CryptoEtfDataProvider>
-      <Scaleable />
-      <Footer />
+      <EtfCommitment />
+      <EtfCryptoPrice />
+      <EtfCorporateBlogsFeed />
+      <EtfCorporateFooter />
+      </div>
     </>
   );
 };
