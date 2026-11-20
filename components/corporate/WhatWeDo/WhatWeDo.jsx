@@ -4,9 +4,9 @@ import { FiArrowRight, FiBox, FiGlobe, FiTrendingUp } from "react-icons/fi";
 import styles from "./WhatWeDo.module.css";
 
 const services = [
+   { Icon: FiTrendingUp, title: "Investment", copy: "Private equity ventures and strategic opportunities Focused on long-term value creation" },
   { image: "/images/corporate/fo/fo6.png", title: "Token Overview", copy: "Multichain token used in the Group’s liquidity operations" },
-  { Icon: FiTrendingUp, title: "Investment", copy: "Private equity ventures and strategic opportunities Focused on long-term value creation" },
-  { Icon: FiBox, title: "Advisory", copy: "Institutional advisory on digital assets and blockchain technologies" },
+ { Icon: FiBox, title: "Advisory", copy: "Institutional advisory on digital assets and blockchain technologies" },
   { Icon: FiGlobe, title: "Markets", copy: "Access to global markets through a network of regulated partners" },
 ];
 
