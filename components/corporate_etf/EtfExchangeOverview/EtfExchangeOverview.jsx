@@ -170,8 +170,8 @@ export default function EtfExchangeOverview() {
             </table>
           </div>
           <div className={styles.table_footer}>
-            <span>Volume and exchange data provided by CoinGecko.</span>
-            <span>Volume values are estimates and can vary by data provider.</span>
+            <span>Volume and exchange data provided by CoinGecko</span>
+            <span>Volume values are estimates and can vary by data provider</span>
           </div>
         </div>
       </div>

@@ -27,7 +27,7 @@ const ogImage = "/logo_ucbi.jpg";
   // base URL 
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Submit Inquiry - Blockchain Private Equity & Digital Asset Treasury",
+    default: "Submit Inquiry - Blockchain Private Equity & Digital Asset ",
     template: "%s | UCBI",
   },
   description:
@@ -38,7 +38,7 @@ const ogImage = "/logo_ucbi.jpg";
     "coinbase", "jp morgan"],
   
   openGraph: {
-    title: "Submit Inquiry - Blockchain Private Equity & Digital Asset Treasury",
+    title: "Submit Inquiry - Blockchain Private Equity & Digital Asset ",
     description:
       "Submit an enquiry to UCBI Group Technologies regarding private equity participation strategic partnerships blockchain advisory services or digital asset treasury management",
     url: siteUrl,
@@ -57,7 +57,7 @@ const ogImage = "/logo_ucbi.jpg";
   
   twitter: {
     card: "summary",
-    title: "Submit Inquiry - Blockchain Private Equity & Digital Asset Treasury",
+    title: "Submit Inquiry - Blockchain Private Equity & Digital Asset ",
     description:
       "Submit an enquiry to UCBI Group Technologies regarding private equity participation strategic partnerships blockchain advisory services or digital asset treasury management",
     images: ["/logo_ucbi.jpg"],

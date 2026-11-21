@@ -18,7 +18,7 @@ export default function CorporateBlogs({ articles = [] }) {
   };
 
   return (
-    <section className={styles.section} aria-labelledby="corporate-news-title">
+    <section className={styles.section} aria-labelledby="corporate-news-title" id="blog">
       <div className={styles.inner}>
         <div className={styles.intro}>
           <p className={styles.eyebrow}>Latest News</p>

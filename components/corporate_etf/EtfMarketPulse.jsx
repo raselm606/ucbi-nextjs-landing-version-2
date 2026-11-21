@@ -1,9 +1,9 @@
 import styles from './EtfMarketPulse.module.css';
 
 const highlights = [
-  { value: '11', label: 'Tracked ETF products', detail: 'Issuer level daily flow coverage' },
+  { value: '11', label: 'Tracked ETF products', detail: 'Daily ETF flow data for each tracked issuer' },
   { value: 'ETH / USD', label: 'Flexible reporting', detail: 'Switch between ether and dollar values' },
-  { value: 'Daily', label: 'Capital flow view', detail: 'See inflows, outflows and net totals' },
+  { value: 'Daily', label: 'Capital flow view', detail: 'See inflows outflows and net totals' },
 ];
 
 export default function EtfMarketPulse() {
@@ -13,10 +13,10 @@ export default function EtfMarketPulse() {
         <div className={styles.intro}>
           <p className={styles.eyebrow}>ETF MARKET PULSE</p>
           <h2 id="etf-market-pulse-title">
-            Follow the capital <span>behind Ethereum.</span>
+            Follow the capital <span>behind Ethereum</span>
           </h2>
           <p className={styles.copy}>
-            A clear view of spot ETF activity, from individual issuers to the combined daily flow.
+           Monitor daily net flows for spot Ethereum ETFs by issuer and across all tracked funds
           </p>
         </div>
         <div className={styles.highlights}>

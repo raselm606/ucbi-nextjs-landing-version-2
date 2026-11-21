@@ -303,7 +303,7 @@ export default function EtfFlow_etf() {
               Ethereum <span className={styles.cyan_text}>ETF Flows</span>
             </h2>
             <p className={styles.description}>
-              Track daily inflows and outflows across Ethereum spot ETFs, with the combined net flow in one view.
+             Monitor daily inflows and outflows across spot Ethereum ETFs and view the combined net flow in a single dashboard
             </p>
           </div>
           <div className={styles.currency_switcher} aria-label="Flow display currency">
@@ -369,7 +369,7 @@ export default function EtfFlow_etf() {
                 {!rows.length && (
                   <tr>
                     <td colSpan={hasIssuerBreakdown ? columns.length + 2 : 2} style={{ textAlign: 'center', padding: '24px' }}>
-                      {error || (loading ? 'Loading Ethereum ETF flows…' : 'No ETF flow history is available yet.')}
+                      {error || (loading ? 'Loading Ethereum ETF flows…' : 'No ETF flow history is available yet')}
                     </td>
                   </tr>
                 )}

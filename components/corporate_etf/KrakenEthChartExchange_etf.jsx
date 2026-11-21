@@ -61,7 +61,7 @@ export default function KrakenEthChartExchange_etf() {
           <div className="col-lg-4">
             <span className={styles.sub_title}>KRAKEN ETHEREUM MARKET</span>
             <h2 className={styles.section_title}>Ethereum <span className={styles.cyan_text}>Price Chart</span></h2>
-            <p className={styles.section_description}>Follow live ETH/USD pricing, trading activity and market depth from Kraken.</p>
+            <p className={styles.section_description}>Monitor real time ETH/USD pricing and trading activity using Kraken market data</p>
             <div className={styles.header_note}>
               <span>KRAKEN SPOT MARKET</span><span>ETH / USD · LIVE PRICING</span><span>UPDATED EVERY 30 SECONDS</span>
             </div>

@@ -68,7 +68,7 @@ export default function EtfCorporateFooter() {
         <p style={{textAlign:'justify', textJustify:'inter-character'}}>Our UCBI blockchain private equity holding providing institutional-grade infrastructure market access and the advisory in digital assets</p>
         <div className={styles.socials}>
           <a target="_blank" href="https://www.linkedin.com/company/ucbi-banking/" aria-label="LinkedIn"><FaLinkedinIn /></a>
-          <a target="_blank" href="https://x.com/UCBI_Holding" aria-label="X"><FaXTwitter /></a>
+          <a target="_blank" href="https://x.com/UCBI_Group" aria-label="X"><FaXTwitter /></a>
           <a target="_blank" href="https://www.youtube.com/@UCBI_Banking" aria-label="YouTube"><FaYoutube /></a> 
         </div>
       </div>

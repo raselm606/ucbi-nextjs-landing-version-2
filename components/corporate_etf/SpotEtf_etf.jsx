@@ -136,7 +136,9 @@ export default function SpotEtf_etf() {
           <div className="col-12">
             <span className={styles.sub_title}>MARKET INSIGHTS</span>
             <h2 className={styles.main_title}>Ethereum <span className={styles.cyan_text}>Spot ETF Net Inflow</span></h2>
-            <p className={styles.description}>Compare daily fund flows and follow the relationship between Ethereum ETF activity and ETH price</p>
+            <p className={styles.description}>
+              Compare daily flows across spot Ethereum ETFs and see how they relate to ETH price movements
+            </p>
           </div>
         </div>
 

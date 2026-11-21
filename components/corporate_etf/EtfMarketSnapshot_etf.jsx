@@ -48,13 +48,13 @@ export default function EtfMarketSnapshot_etf() {
       <div className={styles.section_padding_custom}>
         <div className={styles.overview_header}>
           <span className={styles.sub_title}>UCBI · ETHEREUM ETF DATA</span>
-          <p className={styles.header_subtitle}>Institutional fund activity and market indicators, updated daily</p>
+          <p className={styles.header_subtitle}>Daily updates on institutional fund flows and key market indicators</p>
         </div>
 
         <div className={styles.top_controls_row}>
           <div className={styles.intro_block}>
             <h2 className={styles.main_title}>Ethereum ETF <span className={styles.cyan_text}>Market Snapshot</span></h2>
-            <p className={styles.description}>Track fund flows, trading activity, and spot pricing.</p>
+            <p className={styles.description}>Ethereum ETF flows alongside spot ETH pricing and trading activity</p>
           </div>
           <div className={styles.metric_group}>
             <div className={styles.metric_pill}>
@@ -132,7 +132,7 @@ export default function EtfMarketSnapshot_etf() {
                 <div className={styles.feature_icon}><EthereumIcon /></div>
                 <div>
                   <h4 className={styles.feature_title}>Aggregated ETF Data</h4>
-                  <p className={styles.feature_desc}>Combined Ethereum spot ETF flow values.</p>
+                  <p className={styles.feature_desc}>Combined Ethereum spot ETF flow values</p>
                 </div>
               </div>
             </div>

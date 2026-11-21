@@ -28,7 +28,7 @@ const ogImage = "/bg_fav.jpg";
   // base URL 
   metadataBase: new URL(siteUrl),
   title: {
-    default: "UCBI Banking - Blockchain Private Equity & Digital Asset Treasury",
+    default: "UCBI Banking - Blockchain Private Equity & Digital Asset ",
     template: "%s | UCBI",
   },
   description:
@@ -36,7 +36,7 @@ const ogImage = "/bg_fav.jpg";
   keywords: ["investissement blockchain", "investissement blockchain France", "conseil blockchain", "consultant blockchain", "blockchain consulting", "stratégie blockchain", "investissement digital", "actifs numériques", "investissement privé", "private equity", "capital-investissement", "finance digitale", "innovation financière", "stratégie d’investissement", "gestion d’actifs numériques", "investissement institutionnel", "transformation financière", "technologie blockchain", "solutions blockchain", "infrastructure financière", "stratégie financière", "conseil en investissement", "finance numérique", "actifs digitaux", "Web3 finance", "blockchain finance", "investissement Web3", "conseil Web3", "stratégie d’actifs numériques"],
   
   openGraph: {
-    title: "UCBI Banking - Blockchain Private Equity & Digital Asset Treasury",
+    title: "UCBI Banking - Blockchain Private Equity & Digital Asset ",
     description:
       "UCBI Group Technologies combines private equity blockchain financial infrastructure and strategic Ethereum treasury management to support long term value creation alongside selected partners",
     url: siteUrl,
@@ -55,7 +55,7 @@ const ogImage = "/bg_fav.jpg";
   
   twitter: {
     card: "summary",
-    title: "UCBI Banking - Blockchain Private Equity & Digital Asset Treasury",
+    title: "UCBI Banking - Blockchain Private Equity & Digital Asset ",
     description:
       "UCBI Group Technologies combines private equity blockchain financial infrastructure and strategic Ethereum treasury management to support long term value creation alongside selected partners",
     images: ["/bg_fav.jpg"],

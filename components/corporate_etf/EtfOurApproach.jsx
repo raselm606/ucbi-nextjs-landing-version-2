@@ -2,9 +2,9 @@ import Link from "next/link";
 import styles from "../corporate/corporate.module.css";
 
 const steps = [
-  { number: "01", title: "Ethereum Spot ETFs", copy: "Real-time tracking of top issuers." },
-  { number: "02", title: "Real-Time Inflows", copy: "Net creation and redemption flows." },
-  { number: "03", title: "Institutional Analytics", copy: "Synchronized 30s pricing feeds." },
+  { number: "01", title: "Spot Ethereum ETFs", copy: "Track spot Ethereum ETFs from leading issuers in real time" },
+  { number: "02", title: "Real-Time ETF Flows", copy: "Track net inflows and outflows across spot Ethereum ETFs" },
+  { number: "03", title: "Institutional Analytics", copy: "Synchronized pricing data refreshed every 30 seconds" },
 ];
 
 export default function EtfOurApproach() {
@@ -14,7 +14,8 @@ export default function EtfOurApproach() {
         <div className={styles.approachIntro}>
           <p className={styles.eyebrow}>ETF Approach</p>
           <h2 className={styles.approachTitle}>Institutional Transparency<br />Across Spot Markets</h2>
-          <p style={{ textAlign: "justify", fontSize: "12px" }} className={styles.approachCopy}>Real-time tracking of US Ethereum Spot ETFs with market insights tailored for investors.</p>
+          <p style={{ textAlign: "justify", fontSize: "12px" }} className={styles.approachCopy}>
+            Real-time tracking of US Ethereum Spot ETFs with market insights tailored for investors</p>
           <Link className={styles.textLink} href="#etf-flows">Discover ETF flows &nbsp; →</Link>
         </div>
         {steps.map(({ number, title, copy }) => (

@@ -3,7 +3,15 @@ import Link from "next/link";
 import Logo from "../../public/images/corporate/logo.png";
 import styles from "./corporate.module.css";
 
-const links = ["Home", "About",  "Markets", "Advisory", "ETF", "Blog", "Contact"];
+const links = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "#about" },
+  { label: "Markets", href: "#markets" },
+  { label: "Advisory", href: "https://advisory.ucbibanking.io" },
+  { label: "ETF", href: "/etf" },
+  { label: "Blog", href: "#blog" },
+  { label: "Contact", href: "#contact" },
+];
 
 export default function CorporateNavbar() {
   return (
@@ -13,9 +21,16 @@ export default function CorporateNavbar() {
           <Image src={Logo} width={130} height={44} alt="UCBI Banking" priority />
         </Link>
         <ul className={styles.navLinks}>
-          {links.map((label, index) => (
-            <li key={label}><Link className={index === 0 ? styles.active : ""} href={index === 0 ? "/" : `/#${label.toLowerCase()}`}>{label}</Link></li>
-          ))}
+          {links.map((item, index) => (
+  <li key={item.label}>
+    <Link 
+      className={index === 0 ? styles.active : ""} 
+      href={item.href}
+    >
+      {item.label}
+    </Link>
+  </li>
+))}
         </ul>
         <div className={styles.navActions}>
           <details className={styles.language}>
