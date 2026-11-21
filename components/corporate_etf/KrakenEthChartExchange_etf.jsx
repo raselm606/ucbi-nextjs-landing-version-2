@@ -103,13 +103,9 @@ export default function KrakenEthChartExchange_etf() {
             <div className={styles.range_controls} aria-label="Chart time range">
               {RANGES.map((item) => <button key={item} type="button" onClick={() => setRange(item)} className={range === item ? styles.range_active : ''} aria-pressed={range === item}>{item}</button>)}
             </div>
-            <div className={styles.chart_controls} aria-label="Chart display type">
-              <button type="button" onClick={() => setChartType('candles')} className={chartType === 'candles' ? styles.chart_active : ''} aria-pressed={chartType === 'candles'} title="Candlestick chart">▥</button>
-              <button type="button" onClick={() => setChartType('line')} className={chartType === 'line' ? styles.chart_active : ''} aria-pressed={chartType === 'line'} title="Line chart">⌁</button>
-            </div>
           </div>
 
-          {error && !data ? <div className={`${styles.chart_message} ${styles.chart_message_compact}`}>{error}</div> : candles.length ? <MarketChart key={range} candles={candles} range={range} chartType={chartType} interactive compact /> : <div className={`${styles.chart_message} ${styles.chart_message_compact}`}>Loading Kraken Ethereum price history…</div>}
+          {error && !data ? <div className={`${styles.chart_message} ${styles.chart_message_compact}`}>{error}</div> : candles.length ? <MarketChart key={range} candles={candles} range={range} chartType={chartType} onChartTypeChange={setChartType} inlineChartControls interactive compact /> : <div className={`${styles.chart_message} ${styles.chart_message_compact}`}>Loading Kraken Ethereum price history…</div>}
           {error && data && <p className={styles.stale_notice}>Showing last available prices. Refresh failed: {error}</p>}
           <div className={styles.market_footer}>
             <span>Data: Kraken · ETH/USD spot market · Updates every 30 seconds</span>

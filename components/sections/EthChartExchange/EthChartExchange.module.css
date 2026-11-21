@@ -80,9 +80,14 @@
 .range_controls button:hover, .chart_controls button:hover { color: #fff; }
 .range_controls .range_active, .chart_controls .chart_active { background: rgba(12, 192, 223, .14); color: #0cc0df; }
 .chart_controls button { font-size: 17px; }
-.chart_wrap { width: 100%; padding: 4px 10px 8px; }
+.chart_wrap { position: relative; width: 100%; padding: 4px 10px 8px; }
 .chart_wrap_compact { padding-top: 0; padding-bottom: 4px; }
 .zoom_controls { display: flex; justify-content: flex-end; gap: 5px; padding: 0 10px 4px; }
+.zoom_controls_inline { position: absolute; z-index: 1; top: -34px; right: 17px; align-items: center; padding: 0; }
+.zoom_controls_inline .chart_controls { display: flex; align-items: center; gap: 3px; margin-right: 3px; }
+.zoom_controls_inline .chart_controls button { min-width: 38px; padding: 7px 9px; border: 0; background: transparent; color: #65758a; font-size: 17px; }
+.zoom_controls_inline .chart_controls button:hover { color: #162e49; }
+.zoom_controls_inline .chart_controls .chart_active { background: #e6f6fa; color: #118eaf; }
 .zoom_controls button { min-width: 30px; padding: 4px 8px; border: 1px solid rgba(12, 192, 223, .2); border-radius: 4px; background: rgba(12, 192, 223, .08); color: #9cb8d4; font: inherit; font-size: 11px; cursor: pointer; }
 .zoom_controls button:hover { border-color: rgba(12, 192, 223, .55); color: #0cc0df; }
 .chart { display: block; width: 100%; height: auto; min-height: 245px; overflow: visible; }
@@ -115,6 +120,7 @@
   .stats_strip span { font-size: 7px; }
   .stats_strip strong { font-size: 10px; }
   .chart_toolbar { padding: 12px 12px 0; }
+  .zoom_controls_inline { top: -32px; right: 12px; }
   .range_controls { gap: 0; }
   .range_controls button { min-width: 31px; padding: 7px 5px; font-size: 9px; }
   .chart_wrap { padding: 0 3px 8px; }

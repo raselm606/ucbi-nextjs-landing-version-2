@@ -21,7 +21,7 @@ function timestampLabel(timestamp, range) {
     : { month: 'short', day: 'numeric', timeZone: 'UTC' });
 }
 
-export function MarketChart({ candles, range, chartType, interactive = false, compact = false }) {
+export function MarketChart({ candles, range, chartType, onChartTypeChange, inlineChartControls = false, interactive = false, compact = false }) {
   const [view, setView] = useState({ start: 0, end: 1 });
   const dragRef = useRef(null);
   const chartRef = useRef(null);
@@ -89,7 +89,13 @@ export function MarketChart({ candles, range, chartType, interactive = false, co
 
   return (
     <div className={`${styles.chart_wrap} ${compact ? styles.chart_wrap_compact : ''}`}>
-      {interactive && <div className={styles.zoom_controls} aria-label="Chart zoom controls"><button type="button" onClick={() => zoomAt(0.75)} aria-label="Zoom in">+</button><button type="button" onClick={() => zoomAt(1.33)} aria-label="Zoom out">−</button><button type="button" onClick={() => setView({ start: 0, end: 1 })}>Reset</button></div>}
+      {interactive && <div className={`${styles.zoom_controls} ${inlineChartControls ? styles.zoom_controls_inline : ''}`} aria-label="Chart controls">
+        {inlineChartControls && <div className={styles.chart_controls} aria-label="Chart display type">
+          <button type="button" onClick={() => onChartTypeChange('candles')} className={chartType === 'candles' ? styles.chart_active : ''} aria-pressed={chartType === 'candles'} title="Candlestick chart">▥</button>
+          <button type="button" onClick={() => onChartTypeChange('line')} className={chartType === 'line' ? styles.chart_active : ''} aria-pressed={chartType === 'line'} title="Line chart">⌁</button>
+        </div>}
+        <button type="button" onClick={() => zoomAt(0.75)} aria-label="Zoom in">+</button><button type="button" onClick={() => zoomAt(1.33)} aria-label="Zoom out">−</button><button type="button" onClick={() => setView({ start: 0, end: 1 })}>Reset</button>
+      </div>}
       <svg ref={chartRef} className={`${styles.chart} ${compact ? styles.chart_compact : ''} ${interactive ? styles.chart_interactive : ''}`} viewBox={`0 0 ${width} ${height}`} preserveAspectRatio={compact ? 'none' : undefined} role="img" aria-label={`Ethereum ${range} ${chartType} price chart`} onPointerDown={handlePointerDown} onPointerMove={handlePointerMove} onPointerUp={() => { dragRef.current = null; }} onPointerCancel={() => { dragRef.current = null; }}>
         <defs>
           <linearGradient id="ethChartFill" x1="0" x2="0" y1="0" y2="1">
